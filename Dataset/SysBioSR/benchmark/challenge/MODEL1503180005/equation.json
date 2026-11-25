@@ -1,0 +1,72 @@
+{
+  "const_description": "c_0: R1__V1, c_1: R1__K1, c_2: R0__KI, c_3: R0__V0, c_4: X0, c_5: R0__K0, c_6: R2__V2, c_7: R2__K2, c_8: R3__V3, c_9: R3__K3",
+  "const_names": [
+    "R1__V1",
+    "R1__K1",
+    "R0__KI",
+    "R0__V0",
+    "X0",
+    "R0__K0",
+    "R2__V2",
+    "R2__K2",
+    "R3__V3",
+    "R3__K3"
+  ],
+  "consts": [
+    [
+      1.1,
+      0.1,
+      0.1,
+      22.0,
+      1.0,
+      1.0,
+      1.1,
+      0.1,
+      1.1,
+      0.1
+    ]
+  ],
+  "dataset_model_id": "MODEL1503180005",
+  "dataset_model_name": "Smallbone2015",
+  "dim": 3,
+  "eq": "-c_0*x_0/(c_1 + x_0) + c_2*c_3*c_4/((c_2 + x_2)*(c_4 + c_5)) | c_0*x_0/(c_1 + x_0) - c_6*x_1/(c_7 + x_1) | c_6*x_1/(c_7 + x_1) - c_8*x_2/(c_9 + x_2)",
+  "eq_raw": "R0__KI*R0__V0*X0/((R0__K0 + X0)*(R0__KI + X3)) - R1__V1*X1/(R1__K1 + X1) | R1__V1*X1/(R1__K1 + X1) - R2__V2*X2/(R2__K2 + X2) | R2__V2*X2/(R2__K2 + X2) - R3__V3*X3/(R3__K3 + X3)",
+  "id": "MODEL1503180005",
+  "init": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.799280388903548,
+      0.48088511538848044,
+      0.7916726519683045
+    ]
+  ],
+  "init_description": "x_0: X1, x_1: X2, x_2: X3",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Smallbone2015 - pathway feedback",
+  "source_xml": "Smallbone2015.xml",
+  "state_names": [
+    "X1",
+    "X2",
+    "X3"
+  ],
+  "substituted": [
+    [
+      "-1.1*x_0/(x_0 + 0.1) + 1.1/(x_2 + 0.1)",
+      "1.1*x_0/(x_0 + 0.1) - 1.1*x_1/(x_1 + 0.1)",
+      "1.1*x_1/(x_1 + 0.1) - 1.1*x_2/(x_2 + 0.1)"
+    ]
+  ]
+}

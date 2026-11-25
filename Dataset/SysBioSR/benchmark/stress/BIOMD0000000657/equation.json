@@ -1,0 +1,151 @@
+{
+  "dataset_model_id": "BIOMD0000000657",
+  "dataset_model_name": "Araujo2016",
+  "id": "BIOMD0000000657",
+  "name": "Araujo2016",
+  "source_xml": "Araujo2016.xml",
+  "dim": 3,
+  "eq": "1*c_21*(c_0 - c_1*x_0 - c_2*x_1^c_12*x_0/(c_11^c_12 + x_1^c_12) + (c_3 + c_4*x_0^c_6/(c_5^c_6 + x_0^c_6))*(x_2 - x_0) - (c_7 + c_8*c_9^c_10/(c_9^c_10 + x_0^c_10))*x_0)/c_21 | 1*c_21*((c_13 + c_14*(x_0/200)^c_16/((x_0/200)^c_16 + c_15^c_16))*(1 - x_1) - (c_17 + c_18*c_19^c_20/(x_1^c_20 + c_19^c_20))*x_1)/c_21 | 1*c_21*(c_0 - c_1*x_2 - c_2*x_1^c_12*x_2/(c_11^c_12 + x_1^c_12))/c_21",
+  "eq_raw": "1*Cell*(Ks - Adeg*Cdk1CycB - Bdeg*APC^n_apc*Cdk1CycB/(EC50apc^n_apc + APC^n_apc) + (Acdc + Bcdc*Cdk1CycB^n_cdc/(EC50cdc^n_cdc + Cdk1CycB^n_cdc))*(CycB - Cdk1CycB) - (Awee + Bwee*EC50wee^n_wee/(EC50wee^n_wee + Cdk1CycB^n_wee))*Cdk1CycB)/Cell | 1*Cell*((AK + BK*(Cdk1CycB/200)^n_K/((Cdk1CycB/200)^n_K + EC50K^n_K))*(1 - APC) - (AP + BP*EC50P^n_P/(APC^n_P + EC50P^n_P))*APC)/Cell | 1*Cell*(Ks - Adeg*CycB - Bdeg*APC^n_apc*CycB/(EC50apc^n_apc + APC^n_apc))/Cell",
+  "consts": [
+    [
+      0.1,
+      0.001,
+      0.02,
+      0.5,
+      1.5,
+      30.0,
+      10.0,
+      0.5,
+      1.0,
+      30.0,
+      10.0,
+      0.5,
+      10.0,
+      0.0,
+      0.25,
+      0.18,
+      5.0,
+      0.025,
+      0.5,
+      0.18,
+      5.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      20.0,
+      0.0,
+      59.9999999999999
+    ]
+  ],
+  "substituted": [
+    [
+      "1*1*(0.1 - 0.001*x_0 - 0.02*x_1^10*x_0/(0.5^10 + x_1^10) + (0.5 + 1.5*x_0^10/(30^10 + x_0^10))*(x_2 - x_0) - (0.5 + 1*30^10/(30^10 + x_0^10))*x_0)/1",
+      "1*1*((0 + 0.25*(x_0/200)^5/((x_0/200)^5 + 0.18^5))*(1 - x_1) - (0.025 + 0.5*0.18^5/(x_1^5 + 0.18^5))*x_1)/1",
+      "1*1*(0.1 - 0.001*x_2 - 0.02*x_1^10*x_2/(0.5^10 + x_1^10))/1"
+    ]
+  ],
+  "state_names": [
+    "Cdk1CycB",
+    "APC",
+    "CycB"
+  ],
+  "const_names": [
+    "Ks",
+    "Adeg",
+    "Bdeg",
+    "Acdc",
+    "Bcdc",
+    "EC50cdc",
+    "n_cdc",
+    "Awee",
+    "Bwee",
+    "EC50wee",
+    "n_wee",
+    "EC50apc",
+    "n_apc",
+    "AK",
+    "BK",
+    "EC50K",
+    "n_K",
+    "AP",
+    "BP",
+    "EC50P",
+    "n_P",
+    "Cell"
+  ],
+  "init_description": "x_0: Cdk1CycB, x_1: APC, x_2: CycB",
+  "const_description": "c_0: Ks, c_1: Adeg, c_2: Bdeg, c_3: Acdc, c_4: Bcdc, c_5: EC50cdc, c_6: n_cdc, c_7: Awee, c_8: Bwee, c_9: EC50wee, c_10: n_wee, c_11: EC50apc, c_12: n_apc, c_13: AK, c_14: BK, c_15: EC50K, c_16: n_K, c_17: AP, c_18: BP, c_19: EC50P, c_20: n_P, c_21: Cell",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 3,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 <-> Cdk1CycB",
+      "0 <-> CycB",
+      "0 <-> APC"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Cdk1CycB",
+      "Cdk1CycB -> 0",
+      "0 -> CycB",
+      "CycB -> 0",
+      "0 -> APC",
+      "APC -> 0"
+    ],
+    "maple_odes": [
+      "1*k[22]*(k[1] - k[2]*x[1] - k[3]*x[2]^k[13]*x[1]/(k[12]^k[13] + x[2]^k[13]) + (k[4] + k[5]*x[1]^k[7]/(k[6]^k[7] + x[1]^k[7]))*(x[3] - x[1]) - (k[8] + k[9]*k[10]^k[11]/(k[10]^k[11] + x[1]^k[11]))*x[1])/k[22]",
+      "1*k[22]*((k[14] + k[15]*(x[1]/200)^k[17]/((x[1]/200)^k[17] + k[16]^k[17]))*(1 - x[2]) - (k[18] + k[19]*k[20]^k[21]/(x[2]^k[21] + k[20]^k[21]))*x[2])/k[22]",
+      "1*k[22]*(k[1] - k[2]*x[3] - k[3]*x[2]^k[13]*x[3]/(k[12]^k[13] + x[2]^k[13]))/k[22]"
+    ],
+    "species_index_map": {
+      "x_0": "Cdk1CycB",
+      "x_1": "APC",
+      "x_2": "CycB"
+    },
+    "const_index_map": {
+      "c_0": "Ks",
+      "c_1": "Adeg",
+      "c_2": "Bdeg",
+      "c_3": "Acdc",
+      "c_4": "Bcdc",
+      "c_5": "EC50cdc",
+      "c_6": "n_cdc",
+      "c_7": "Awee",
+      "c_8": "Bwee",
+      "c_9": "EC50wee",
+      "c_10": "n_wee",
+      "c_11": "EC50apc",
+      "c_12": "n_apc",
+      "c_13": "AK",
+      "c_14": "BK",
+      "c_15": "EC50K",
+      "c_16": "n_K",
+      "c_17": "AP",
+      "c_18": "BP",
+      "c_19": "EC50P",
+      "c_20": "n_P",
+      "c_21": "Cell"
+    }
+  }
+}

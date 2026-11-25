@@ -1,0 +1,67 @@
+{
+  "const_description": "c_0: compartment, c_1: r, c_2: A, c_3: beta, c_4: ModelValue_3, c_5: ModelValue_5, c_6: gamma",
+  "const_names": [
+    "compartment",
+    "r",
+    "A",
+    "beta",
+    "ModelValue_3",
+    "ModelValue_5",
+    "gamma"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.0155,
+      0.1155,
+      2.7516,
+      2.7516,
+      0.45,
+      2.1272
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000851",
+  "dataset_model_name": "Ho2019",
+  "dim": 5,
+  "eq": "-c_0*c_1*(1 - x_2/c_2) - c_0*c_3*x_0*x_3 | c_0*c_1*(1 - x_2/c_2) - c_0*c_4*x_1*x_3*(-c_5 + 1) | c_0*c_1*(1 - x_2/c_2) | c_0*c_3*x_0*x_3 + c_0*c_4*x_1*x_3*(-c_5 + 1) - c_0*c_6*x_3 | c_0*c_6*x_3",
+  "eq_raw": "-I*S*beta*compartment - compartment*r*(1 - V_e/A) | -I*ModelValue_3*V*compartment*(-ModelValue_5 + 1) + compartment*r*(1 - V_e/A) | compartment*r*(1 - V_e/A) | I*ModelValue_3*V*compartment*(-ModelValue_5 + 1) + I*S*beta*compartment - I*compartment*gamma | I*compartment*gamma",
+  "id": "Ho2019___Mathematical_models_of_transmission_dynamics_and_vaccine_strategies_in_Hong_Kong_during_the_2017_2018_winter_influenza_season__Simple",
+  "init": [
+    [
+      0.9424,
+      0.0565,
+      0.0565,
+      0.0012,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: V, x_2: V_e, x_3: I, x_4: R",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 6,
+    "n_events": 0,
+    "n_initial_assignments": 2,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Ho2019 - Mathematical models of transmission dynamics and vaccine strategies in Hong Kong during the 2017-2018 winter influenza season (Simple)",
+  "source_xml": "Ho2019.xml",
+  "state_names": [
+    "S",
+    "V",
+    "V_e",
+    "I",
+    "R"
+  ],
+  "substituted": [
+    [
+      "-2.7516*x_0*x_3 + 0.134199134199134*x_2 - 0.0155",
+      "-1.51338*x_1*x_3 - 0.134199134199134*x_2 + 0.0155",
+      "-0.134199134199134*x_2 + 0.0155",
+      "2.7516*x_0*x_3 + 1.51338*x_1*x_3 - 2.1272*x_3",
+      "2.1272*x_3"
+    ]
+  ]
+}

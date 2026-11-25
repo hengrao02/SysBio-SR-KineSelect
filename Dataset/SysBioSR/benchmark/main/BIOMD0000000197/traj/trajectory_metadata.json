@@ -1,0 +1,104 @@
+{
+  "system_id": "BIOMD0000000197",
+  "state_names": [
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5"
+  ],
+  "const_names": [
+    "p4",
+    "p7",
+    "p1",
+    "p12",
+    "basolat",
+    "apical",
+    "p3",
+    "p6",
+    "p8",
+    "p10",
+    "p2",
+    "p5",
+    "p9",
+    "p11"
+  ],
+  "default_consts": [
+    0.0827,
+    0.0397,
+    0.0025,
+    0.0003,
+    1.0,
+    1.5,
+    0.0013,
+    6.4e-05,
+    1000.0,
+    1.6,
+    0.0784,
+    0.0091,
+    0.0098,
+    1000.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        88.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        69.53042808740375,
+        14.808540217483666,
+        0.19899350223562515,
+        1.2139093795667808,
+        20.882030622285576
+      ],
+      "relative_scale_vs_default": [
+        0.7901185009932244,
+        null,
+        null,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -18.46957191259625,
+        14.808540217483666,
+        0.19899350223562515,
+        1.2139093795667808,
+        20.882030622285576
+      ],
+      "state_scale_from_default_trajectory": [
+        88.0,
+        49.36180072494555,
+        0.6633116741187505,
+        4.046364598555936,
+        69.60676874095192
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 105730958,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.30080015395245224,
+        "peak_ratio_per_state": [
+          0.7901185009932242,
+          0.9733206676720509,
+          0.983808672387322,
+          0.983897623343091,
+          1.2168973042121327
+        ],
+        "max_peak_ratio": 1.2168973042121327
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

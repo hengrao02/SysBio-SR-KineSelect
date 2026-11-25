@@ -1,0 +1,122 @@
+{
+  "dataset_model_id": "BIOMD0000001012",
+  "dataset_model_name": "Triana2020",
+  "id": "BIOMD0000001012",
+  "name": "Triana2020",
+  "source_xml": "Triana2020.xml",
+  "dim": 4,
+  "eq": "(1*c_8*(1/4*c_3*(x_1 + x_2)*x_0 + 1/4*c_3*c_5*c_7/(1 + x_0/c_6)) + (-1)*c_8*1/c_2*x_0)/c_8 | (1*c_8*c_1*x_1 + (-1)*c_8*c_3*x_1*x_0)/c_8 | ((-1)*c_8*(c_3*x_2*x_0 + 1/c_0*x_2) + 1*c_8*c_7/c_4/(1 + x_0/c_6))/c_8 | ((-1)*c_8*c_7/c_4/(1 + x_0/c_6) + 1*c_8*c_7)/c_8",
+  "eq_raw": "(1*Whole_organism_blood*(1/4*alpha*(Leukaemic_B_cells + B_cells_healthy)*CAR_T_cells + 1/4*alpha*beta*I_0/(1 + CAR_T_cells/C_50)) + (-1)*Whole_organism_blood*1/tao_C*CAR_T_cells)/Whole_organism_blood | (1*Whole_organism_blood*rho_L*Leukaemic_B_cells + (-1)*Whole_organism_blood*alpha*Leukaemic_B_cells*CAR_T_cells)/Whole_organism_blood | ((-1)*Whole_organism_blood*(alpha*B_cells_healthy*CAR_T_cells + 1/tao_B*B_cells_healthy) + 1*Whole_organism_blood*I_0/tao_I/(1 + CAR_T_cells/C_50))/Whole_organism_blood | ((-1)*Whole_organism_blood*I_0/tao_I/(1 + CAR_T_cells/C_50) + 1*Whole_organism_blood*I_0)/Whole_organism_blood",
+  "consts": [
+    [
+      60.0,
+      0.03333333333,
+      14.0,
+      4.5e-11,
+      6.0,
+      0.1,
+      1000000000.0,
+      10000000.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      10000000.0,
+      50000000000.0,
+      25000000000.0,
+      10000000.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*(1/4*4.5e-11*(x_1 + x_2)*x_0 + 1/4*4.5e-11*0.1*10000000/(1 + x_0/1000000000)) + (-1)*1*1/14*x_0)/1",
+      "(1*1*0.03333333333*x_1 + (-1)*1*4.5e-11*x_1*x_0)/1",
+      "((-1)*1*(4.5e-11*x_2*x_0 + 1/60*x_2) + 1*1*10000000/6/(1 + x_0/1000000000))/1",
+      "((-1)*1*10000000/6/(1 + x_0/1000000000) + 1*1*10000000)/1"
+    ]
+  ],
+  "state_names": [
+    "CAR_T_cells",
+    "Leukaemic_B_cells",
+    "B_cells_healthy",
+    "B_cell_progenitors"
+  ],
+  "const_names": [
+    "tao_B",
+    "rho_L",
+    "tao_C",
+    "alpha",
+    "tao_I",
+    "beta",
+    "C_50",
+    "I_0",
+    "Whole_organism_blood"
+  ],
+  "init_description": "x_0: CAR_T_cells, x_1: Leukaemic_B_cells, x_2: B_cells_healthy, x_3: B_cell_progenitors",
+  "const_description": "c_0: tao_B, c_1: rho_L, c_2: tao_C, c_3: alpha, c_4: tao_I, c_5: beta, c_6: C_50, c_7: I_0, c_8: Whole_organism_blood",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 7,
+    "n_reconfigured_reactions": 7,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> CAR_T_cells",
+      "CAR_T_cells -> 0",
+      "0 -> Leukaemic_B_cells",
+      "Leukaemic_B_cells -> 0",
+      "B_cells_healthy -> 0",
+      "B_cell_progenitors -> B_cells_healthy",
+      "0 -> B_cell_progenitors"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> CAR_T_cells",
+      "CAR_T_cells -> 0",
+      "0 -> Leukaemic_B_cells",
+      "Leukaemic_B_cells -> 0",
+      "B_cells_healthy -> 0",
+      "B_cell_progenitors -> B_cells_healthy",
+      "0 -> B_cell_progenitors"
+    ],
+    "maple_odes": [
+      "(1*k[11]*(1/4*k[5]*(x[2] + x[3])*x[1] + 1/4*k[5]*k[8]*k[10]/(1 + x[1]/k[9])) + (-1)*k[11]*1/k[3]*x[1])/k[11]",
+      "(1*k[11]*k[2]*x[2] + (-1)*k[11]*k[5]*x[2]*x[1])/k[11]",
+      "((-1)*k[11]*(k[5]*x[3]*x[1] + 1/k[1]*x[3]) + 1*k[11]*k[10]/k[7]/(1 + x[1]/k[9]))/k[11]",
+      "((-1)*k[11]*k[10]/k[7]/(1 + x[1]/k[9]) + 1*k[11]*k[10])/k[11]"
+    ],
+    "species_index_map": {
+      "x_0": "CAR_T_cells",
+      "x_1": "Leukaemic_B_cells",
+      "x_2": "B_cells_healthy",
+      "x_3": "B_cell_progenitors"
+    },
+    "const_index_map": {
+      "c_0": "tao_B",
+      "c_1": "rho_L",
+      "c_2": "tao_C",
+      "c_3": "alpha",
+      "c_4": "tao_I",
+      "c_5": "beta",
+      "c_6": "C_50",
+      "c_7": "I_0",
+      "c_8": "Whole_organism_blood"
+    }
+  }
+}

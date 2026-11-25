@@ -1,0 +1,104 @@
+{
+  "dataset_model_id": "BIOMD0000000299",
+  "dataset_model_name": "Leloup1999",
+  "id": "BIOMD0000000299",
+  "name": "Leloup1999",
+  "source_xml": "Leloup1999.xml",
+  "dim": 3,
+  "eq": "c_0*c_3^c_4/(c_3^c_4 + x_2^c_4) - c_1*x_0/(c_2 + x_0) | c_5*x_0 + c_9*x_2 - (c_6*x_1/(c_7 + x_1) + c_8*x_1) | c_8*x_1 - c_9*x_2",
+  "eq_raw": "vs*KI^n/(KI^n + FN^n) - vm*M/(Km + M) | ks*M + k2*FN - (vd*FC/(Kd + FC) + k1*FC) | k1*FC - k2*FN",
+  "consts": [
+    [
+      1.6,
+      0.505,
+      0.5,
+      1.0,
+      4.0,
+      0.5,
+      1.4,
+      0.13,
+      0.5,
+      0.6
+    ]
+  ],
+  "init": [
+    [
+      4.95382004497908,
+      1.7552479757933654,
+      0.8331378725127524
+    ]
+  ],
+  "substituted": [
+    [
+      "1.6*1^4/(1^4 + x_2^4) - 0.505*x_0/(0.5 + x_0)",
+      "0.5*x_0 + 0.6*x_2 - (1.4*x_1/(0.13 + x_1) + 0.5*x_1)",
+      "0.5*x_1 - 0.6*x_2"
+    ]
+  ],
+  "state_names": [
+    "M",
+    "FC",
+    "FN"
+  ],
+  "const_names": [
+    "vs",
+    "vm",
+    "Km",
+    "KI",
+    "n",
+    "ks",
+    "vd",
+    "Kd",
+    "k1",
+    "k2"
+  ],
+  "init_description": "x_0: M, x_1: FC, x_2: FN",
+  "const_description": "c_0: vs, c_1: vm, c_2: Km, c_3: KI, c_4: n, c_5: ks, c_6: vd, c_7: Kd, c_8: k1, c_9: k2",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 0,
+    "n_reconfigured_reactions": 0,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [],
+    "reconfigured_reaction_network": [],
+    "maple_odes": [
+      "k[1]*k[4]^k[5]/(k[4]^k[5] + x[3]^k[5]) - k[2]*x[1]/(k[3] + x[1])",
+      "k[7]*x[1] + k[11]*x[3] - (k[8]*x[2]/(k[9] + x[2]) + k[10]*x[2])",
+      "k[10]*x[2] - k[11]*x[3]"
+    ],
+    "species_index_map": {
+      "x_0": "M",
+      "x_1": "FC",
+      "x_2": "FN"
+    },
+    "const_index_map": {
+      "c_0": "vs",
+      "c_1": "vm",
+      "c_2": "Km",
+      "c_3": "KI",
+      "c_4": "n",
+      "c_5": "ks",
+      "c_6": "vd",
+      "c_7": "Kd",
+      "c_8": "k1",
+      "c_9": "k2"
+    }
+  }
+}

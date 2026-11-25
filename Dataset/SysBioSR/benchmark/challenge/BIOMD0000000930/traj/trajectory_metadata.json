@@ -1,0 +1,105 @@
+{
+  "system_id": "BIOMD0000000930",
+  "state_names": [
+    "Tumor_Cell_Population__T",
+    "Effector_immune_cell_population__N",
+    "Circulating_lymphocyte_population__C",
+    "Chemotherapeutic_drug_concentration__M"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c1",
+    "mu",
+    "g",
+    "s",
+    "Kc",
+    "Kn",
+    "Kt",
+    "kt",
+    "p",
+    "alpha1",
+    "alpha2",
+    "beta",
+    "gamma",
+    "Vm",
+    "eta",
+    "Tumor_Microenvironment"
+  ],
+  "default_consts": [
+    0.431,
+    1.02e-14,
+    3.41e-10,
+    0.0412,
+    0.015,
+    20.2,
+    0.6,
+    0.6,
+    0.8,
+    3.2e-09,
+    2e-11,
+    12000.0,
+    750000000.0,
+    0.012,
+    0.9,
+    0.45,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        10000000.0,
+        300000.0,
+        62500000000.0,
+        0.45
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        5373709.996833949,
+        360538.0004300292,
+        45643152047.90535,
+        0.5209291424020723
+      ],
+      "relative_scale_vs_default": [
+        0.537370999683395,
+        1.201793334766764,
+        0.7302904327664856,
+        1.1576203164490495
+      ],
+      "absolute_offset_from_default": [
+        -4626290.003166051,
+        60538.00043002918,
+        -16856847952.09465,
+        0.07092914240207232
+      ],
+      "state_scale_from_default_trajectory": [
+        98038954227270.7,
+        300000.0,
+        62500000000.0,
+        0.47920189849167294
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3443677755,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9439991195207155,
+        "peak_ratio_per_state": [
+          1.0000000002636202,
+          1.201793334766764,
+          0.9950773362810088,
+          1.0870765413111658
+        ],
+        "max_peak_ratio": 1.201793334766764
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

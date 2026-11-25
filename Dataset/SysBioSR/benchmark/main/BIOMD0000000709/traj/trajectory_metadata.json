@@ -1,0 +1,102 @@
+{
+  "system_id": "BIOMD0000000709",
+  "state_names": [
+    "S_a",
+    "I_a",
+    "S_h",
+    "I_h",
+    "R_h"
+  ],
+  "const_names": [
+    "r_a",
+    "beta_a",
+    "mu_a",
+    "delta_a",
+    "pi_h",
+    "beta_h",
+    "mu_h",
+    "gamma",
+    "delta_h",
+    "M_a",
+    "m_a",
+    "compartment",
+    "Avian_population"
+  ],
+  "default_consts": [
+    0.005,
+    1.8e-08,
+    0.00034246,
+    0.0004,
+    30.0,
+    6e-09,
+    3.91e-05,
+    0.1,
+    0.3445,
+    50000.0,
+    800.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        100000.0,
+        1000.0,
+        1000000.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        63194.416612613,
+        1101.6522596410643,
+        1357919.727244412,
+        4.088521124600865,
+        23.486788931937436
+      ],
+      "relative_scale_vs_default": [
+        0.63194416612613,
+        1.1016522596410643,
+        1.3579197272444121,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -36805.583387387,
+        101.65225964106435,
+        357919.72724441206,
+        4.088521124600865,
+        23.486788931937436
+      ],
+      "state_scale_from_default_trajectory": [
+        100000.0,
+        1010.9666528455474,
+        1000000.0,
+        13.62840374866955,
+        78.28929643979146
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 827271662,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.8053832497184921,
+        "peak_ratio_per_state": [
+          0.63194416612613,
+          1.1007187080316037,
+          1.3579197272444121,
+          1.4939529593128875,
+          1.805383249718492
+        ],
+        "max_peak_ratio": 1.805383249718492
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

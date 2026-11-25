@@ -1,0 +1,81 @@
+{
+  "const_description": "c_0: p4, c_1: p7, c_2: p1, c_3: p12, c_4: basolat, c_5: apical, c_6: p3, c_7: p6, c_8: p8, c_9: p10, c_10: p2, c_11: p5, c_12: p9, c_13: p11",
+  "const_names": [
+    "p4",
+    "p7",
+    "p1",
+    "p12",
+    "basolat",
+    "apical",
+    "p3",
+    "p6",
+    "p8",
+    "p10",
+    "p2",
+    "p5",
+    "p9",
+    "p11"
+  ],
+  "consts": [
+    [
+      0.0827,
+      0.0397,
+      0.0025,
+      0.0003,
+      1.0,
+      1.5,
+      0.0013,
+      6.4e-05,
+      1000.0,
+      1.6,
+      0.0784,
+      0.0091,
+      0.0098,
+      1000.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000197",
+  "dataset_model_name": "Bartholome2007",
+  "dim": 5,
+  "eq": "c_0*x_2 + c_1*x_1 - c_2*x_0 - c_3*(-x_4/c_5 + x_0/c_4) - c_6*x_0 - c_7*x_0*(c_8 - x_1) | -c_1*x_1 + c_7*x_0*(c_8 - x_1) | -c_0*x_2 - c_10*x_2 - c_11*x_2 - c_12*x_2*(c_13 - x_3) + c_2*x_0 + c_6*x_0 + c_9*x_3 | c_12*x_2*(c_13 - x_3) - c_9*x_3 | c_10*x_2 + c_11*x_2 + c_3*(-x_4/c_5 + x_0/c_4)",
+  "eq_raw": "-p1*x1 - p12*(x1/basolat - x5/apical) - p3*x1 + p4*x3 - p6*x1*(p8 - x2) + p7*x2 | p6*x1*(p8 - x2) - p7*x2 | p1*x1 + p10*x4 - p2*x3 + p3*x1 - p4*x3 - p5*x3 - p9*x3*(p11 - x4) | -p10*x4 + p9*x3*(p11 - x4) | p12*(x1/basolat - x5/apical) + p2*x3 + p5*x3",
+  "id": "MDCKII_Transport",
+  "init": [
+    [
+      88.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: x1, x_1: x2, x_2: x3, x_3: x4, x_4: x5",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 2,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Bartholome2007_MDCKII",
+  "source_xml": "Bartholome2007.xml",
+  "state_names": [
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5"
+  ],
+  "substituted": [
+    [
+      "-6.4e-5*x_0*(-x_1 + 1000.0) - 0.0041*x_0 + 0.0397*x_1 + 0.0827*x_2 + 0.0002*x_4",
+      "6.4e-5*x_0*(-x_1 + 1000.0) - 0.0397*x_1",
+      "0.0038*x_0 - 0.0098*x_2*(-x_3 + 1000.0) - 0.1702*x_2 + 1.6*x_3",
+      "0.0098*x_2*(-x_3 + 1000.0) - 1.6*x_3",
+      "0.0003*x_0 + 0.0875*x_2 - 0.0002*x_4"
+    ]
+  ]
+}

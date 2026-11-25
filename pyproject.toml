@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=78.1.1", "wheel>=0.46.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysbiosr"
+version = "1.0.0rc5"
+description = "A reproducible benchmark and symbolic-regression codebase for biological ODE systems."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8,<4",
+  "jsonschema>=4.23,<5",
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<3",
+  "PyYAML>=6,<7",
+  "scipy>=1.11,<2",
+  "sympy>=1.12,<2",
+  "tqdm>=4.66,<5",
+  "zstandard>=0.23,<1",
+]
+
+[project.optional-dependencies]
+ffx = ["ffx==2.1.0", "pysindy==2.1.0", "scikit-learn>=1.6,<2"]
+odeformer = ["torch>=2.6,<3", "numexpr>=2.10,<3", "scikit-learn>=1.6,<2"]
+sindy = ["pysindy==2.1.0"]
+pysr = ["pysr==1.5.10", "pysindy==2.1.0", "numexpr>=2.10,<3"]
+
+[project.scripts]
+sysbiosr = "run:main"
+sysbiosr-kineselectsr-evaluate-front = "Runners.kineselectsr.saved_front:main"
+sysbiosr-kineselectsr-aggregate-selectors = "Runners.kineselectsr.selector_aggregation:main"
+
+[tool.setuptools]
+py-modules = ["run"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["Methods*", "Baseline*", "Runners*", "Wrappers*", "DataAdapters*", "Metrics*", "Utils*", "Configs"]
+exclude = ["Dataset*"]
+
+[tool.setuptools.package-data]
+"Runners.core.schemas" = ["result_record.schema.json"]
+"Runners.kineselectsr.schemas" = ["selection_record.schema.json"]

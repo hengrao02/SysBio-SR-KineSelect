@@ -1,0 +1,109 @@
+{
+  "system_id": "MODEL1909100002",
+  "state_names": [
+    "C",
+    "P",
+    "R",
+    "T"
+  ],
+  "const_names": [
+    "compartment",
+    "C_0",
+    "k_c",
+    "ModelValue_2",
+    "ModelValue_1",
+    "lambda_c",
+    "K_c",
+    "lambda_p",
+    "P_0",
+    "k_p",
+    "ModelValue_6",
+    "ModelValue_0",
+    "k_r",
+    "lambda_r",
+    "gamma_c",
+    "ModelValue_11",
+    "ModelValue_9",
+    "lambda_t",
+    "k_t",
+    "K_t"
+  ],
+  "default_consts": [
+    1.0,
+    1000000.0,
+    0.075,
+    0.075,
+    100000.0,
+    1e-07,
+    0.1,
+    0.15,
+    100000.0,
+    0.2,
+    0.2,
+    1000000.0,
+    0.2,
+    0.22,
+    0.02,
+    0.22,
+    0.15,
+    0.3,
+    3300.0,
+    0.1
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        200.0,
+        99250.0,
+        0.0,
+        0.091
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        128.3258291010364,
+        52092.82267678145,
+        0.011548412022947459,
+        0.13053765627757152
+      ],
+      "relative_scale_vs_default": [
+        0.6416291455051819,
+        0.5248647121086292,
+        null,
+        1.4344797393139728
+      ],
+      "absolute_offset_from_default": [
+        -71.67417089896361,
+        -47157.17732321855,
+        0.011548412022947459,
+        0.039537656277571526
+      ],
+      "state_scale_from_default_trajectory": [
+        92646.31012791152,
+        99250.0,
+        0.0384947067431582,
+        180.74753122652436
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2692448032,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.8654204802942492,
+        "peak_ratio_per_state": [
+          0.8152569367723124,
+          0.9670081420057032,
+          1.5462802042742414,
+          1.8509767322172648
+        ],
+        "max_peak_ratio": 1.8509767322172648
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

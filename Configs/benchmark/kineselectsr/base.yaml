@@ -1,0 +1,6 @@
+# Formal benchmark settings; smoke and ablations use the method config directly.
+inherits: ../../kineselectsr/formal/method_fpms.yaml
+
+formal_config_marker: kineselectsr-formal-v2
+batch_num_workers: 32
+verbose: false

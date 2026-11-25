@@ -1,0 +1,111 @@
+{
+  "system_id": "MODEL1907310002",
+  "state_names": [
+    "E",
+    "T",
+    "I",
+    "S"
+  ],
+  "const_names": [
+    "compartment",
+    "mu_1",
+    "c",
+    "gamma",
+    "g_1",
+    "p_1",
+    "q_1",
+    "q_2",
+    "r",
+    "K",
+    "p_2",
+    "g_3",
+    "a",
+    "g_2",
+    "mu_2",
+    "p_3",
+    "alpha",
+    "g_4",
+    "mu_3",
+    "p_4",
+    "tau_c"
+  ],
+  "default_consts": [
+    1.0,
+    0.03,
+    5e-06,
+    1.0,
+    20000000.0,
+    0.1245,
+    0.1121,
+    2000000.0,
+    0.18,
+    1000000000.0,
+    0.27,
+    20000000.0,
+    1.0,
+    100000.0,
+    10.0,
+    5.0,
+    0.001,
+    1000.0,
+    10.0,
+    5e-05,
+    1000000.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1000.0,
+        1.0,
+        1000.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1140.7025610069704,
+        1.4678843050605692,
+        1387.186760578174,
+        1.4999985006710478e-06
+      ],
+      "relative_scale_vs_default": [
+        1.1407025610069703,
+        1.4678843050605692,
+        1.387186760578174,
+        null
+      ],
+      "absolute_offset_from_default": [
+        140.70256100697043,
+        0.4678843050605692,
+        387.186760578174,
+        1.4999985006710478e-06
+      ],
+      "state_scale_from_default_trajectory": [
+        168617.9702895561,
+        999244487.4074532,
+        84307.65299345404,
+        4.999995002236826e-06
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 30934095,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3,
+        "peak_ratio_per_state": [
+          1.000276874682516,
+          0.9999999754375247,
+          1.0002776837452267,
+          0.9999999983437461
+        ],
+        "max_peak_ratio": 1.0002776837452267
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

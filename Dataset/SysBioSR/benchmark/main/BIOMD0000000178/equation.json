@@ -1,0 +1,65 @@
+{
+  "const_description": "c_0: bulk_movement__kS, c_1: extracellular, c_2: binding__kB, c_3: endocytosis__kT, c_4: endosome, c_5: translocation__kL",
+  "const_names": [
+    "bulk_movement__kS",
+    "extracellular",
+    "binding__kB",
+    "endocytosis__kT",
+    "endosome",
+    "translocation__kL"
+  ],
+  "consts": [
+    [
+      0.00015,
+      1.0,
+      0.058,
+      0.141,
+      1.0,
+      0.013
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000178",
+  "dataset_model_name": "Lebeda2008",
+  "dim": 5,
+  "eq": "-c_0*c_1*x_0 | c_0*c_1*x_0 - c_1*c_2*x_1 | c_1*c_2*x_1 - c_1*c_3*x_2 | c_1*c_3*x_2 - c_4*c_5*x_3 | c_4*c_5*x_3",
+  "eq_raw": "-bulk*bulk_movement__kS*extracellular | -binding__kB*extracellular*free + bulk*bulk_movement__kS*extracellular | binding__kB*extracellular*free - bound*endocytosis__kT*extracellular | bound*endocytosis__kT*extracellular - endosome*translocate*translocation__kL | endosome*translocate*translocation__kL",
+  "id": "Lebeda2008_BoTN_Paralysis_4stepModel",
+  "init": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: bulk, x_1: free, x_2: bound, x_3: translocate, x_4: lytic",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 2,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Lebeda2008 - BoTN Paralysis (4 step model)",
+  "source_xml": "Lebeda2008.xml",
+  "state_names": [
+    "bulk",
+    "free",
+    "bound",
+    "translocate",
+    "lytic"
+  ],
+  "substituted": [
+    [
+      "-0.00015*x_0",
+      "0.00015*x_0 - 0.058*x_1",
+      "0.058*x_1 - 0.141*x_2",
+      "0.141*x_2 - 0.013*x_3",
+      "0.013*x_3"
+    ]
+  ]
+}

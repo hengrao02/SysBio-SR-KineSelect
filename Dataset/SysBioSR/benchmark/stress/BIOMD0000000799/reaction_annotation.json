@@ -1,0 +1,218 @@
+{
+  "model_id": "BIOMD0000000799",
+  "dataset_model_name": "Cucuianu2010",
+  "dim": 2,
+  "state_names": [
+    "x_Normal_Hematopoietic_Stem_Cell",
+    "y_Leukemic_Cell"
+  ],
+  "equations_expanded": [
+    "-0.1*x_0 + 0.3*x_0/(0.5*x_0 + 0.5*x_1 + 1)",
+    "-0.1*x_1 + 0.3*x_1/(0.5*x_0 + 0.5*x_1 + 1)"
+  ],
+  "reactions": [
+    {
+      "reaction_id": "R1",
+      "equation_idx": 0,
+      "reactants": [
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.1,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R2",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0
+      ],
+      "coefficient": 0.3,
+      "kinetic_factor": "x_0/(0.5*x_0 + 0.5*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R3",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.1,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R4",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1
+      ],
+      "coefficient": 0.3,
+      "kinetic_factor": "x_1/(0.5*x_0 + 0.5*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "merged_reactions": [
+    {
+      "reaction_id": "MR1",
+      "equation_idx": -1,
+      "reactants": [
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.1,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR2",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.1,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR3",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0
+      ],
+      "coefficient": 0.3,
+      "kinetic_factor": "x_0/(0.5*x_0 + 0.5*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR4",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1
+      ],
+      "coefficient": 0.3,
+      "kinetic_factor": "x_1/(0.5*x_0 + 0.5*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "validation_symbolic": true,
+  "validation_numerical": true,
+  "validation_symbolic_errors": [],
+  "validation_notes": [],
+  "max_abs_error": 0.0,
+  "max_rel_error": 0.0,
+  "status": "success",
+  "failure_reason": null,
+  "difficulty": "hard_rational_saturation"
+}

@@ -1,0 +1,170 @@
+{
+  "dataset_model_id": "BIOMD0000000881",
+  "dataset_model_name": "Kogan2013",
+  "id": "BIOMD0000000881",
+  "name": "Kogan2013",
+  "source_xml": "Kogan2013.xml",
+  "dim": 4,
+  "eq": "(1*c_22*(1 + c_14*c_21/(c_21 + c_15))*c_1*c_2/(c_2 + x_3) + (-1)*c_22*c_0*x_0)/c_22 | (1*c_22*(c_16 + (1 - c_16)*c_15/(c_21 + c_15))*c_1*c_3/(c_3 + x_2) + (-1)*c_22*c_0*x_1)/c_22 | (1*c_22*c_6*(1 + c_17*c_21/(c_21 + c_18)) + 1*c_22*c_5*x_0*(c_7 + (1 - c_7)*c_8/(x_3 + c_8))*(1 + c_19*c_21/(c_21 + c_20)) + (-1)*c_22*c_4*x_2)/c_22 | (1*c_22*c_11*(c_12 + (1 - c_12)*c_13/(x_2 + c_13)) + 1*c_22*c_10*x_1 + (-1)*c_22*c_9*x_3)/c_22",
+  "eq_raw": "(1*compartment*(1 + c_1*L/(L + d_1))*r_T*b_1/(b_1 + I) + (-1)*compartment*mu_T*T_1)/compartment | (1*compartment*(c_2 + (1 - c_2)*d_1/(L + d_1))*r_T*b_2/(b_2 + G) + (-1)*compartment*mu_T*T_2)/compartment | (1*compartment*p_G*(1 + c_G*L/(L + d_G)) + 1*compartment*q_G*T_1*(a_G + (1 - a_G)*b_G/(I + b_G))*(1 + e_G*L/(L + f_G)) + (-1)*compartment*mu_G*G)/compartment | (1*compartment*p_I*(a_I + (1 - a_I)*b_I/(G + b_I)) + 1*compartment*q_I*T_2 + (-1)*compartment*mu_I*I)/compartment",
+  "consts": [
+    [
+      0.001,
+      1000.0,
+      0.35,
+      0.18,
+      0.6,
+      1e-07,
+      0.016,
+      0.59,
+      0.13,
+      0.36,
+      1e-07,
+      0.5,
+      0.12,
+      0.025,
+      30.0,
+      0.8,
+      0.1,
+      12.0,
+      0.05,
+      5.4,
+      0.22,
+      0.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      500000.0,
+      1000000.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*(1 + 30*0/(0 + 0.8))*1000*0.35/(0.35 + x_3) + (-1)*1*0.001*x_0)/1",
+      "(1*1*(0.1 + (1 - 0.1)*0.8/(0 + 0.8))*1000*0.18/(0.18 + x_2) + (-1)*1*0.001*x_1)/1",
+      "(1*1*0.016*(1 + 12*0/(0 + 0.05)) + 1*1*1e-07*x_0*(0.59 + (1 - 0.59)*0.13/(x_3 + 0.13))*(1 + 5.4*0/(0 + 0.22)) + (-1)*1*0.6*x_2)/1",
+      "(1*1*0.5*(0.12 + (1 - 0.12)*0.025/(x_2 + 0.025)) + 1*1*1e-07*x_1 + (-1)*1*0.36*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "T_1",
+    "T_2",
+    "G",
+    "I"
+  ],
+  "const_names": [
+    "mu_T",
+    "r_T",
+    "b_1",
+    "b_2",
+    "mu_G",
+    "q_G",
+    "p_G",
+    "a_G",
+    "b_G",
+    "mu_I",
+    "q_I",
+    "p_I",
+    "a_I",
+    "b_I",
+    "c_1",
+    "d_1",
+    "c_2",
+    "c_G",
+    "d_G",
+    "e_G",
+    "f_G",
+    "L",
+    "compartment"
+  ],
+  "init_description": "x_0: T_1, x_1: T_2, x_2: G, x_3: I",
+  "const_description": "c_0: mu_T, c_1: r_T, c_2: b_1, c_3: b_2, c_4: mu_G, c_5: q_G, c_6: p_G, c_7: a_G, c_8: b_G, c_9: mu_I, c_10: q_I, c_11: p_I, c_12: a_I, c_13: b_I, c_14: c_1, c_15: d_1, c_16: c_2, c_17: c_G, c_18: d_G, c_19: e_G, c_20: f_G, c_21: L, c_22: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 10,
+    "n_reconfigured_reactions": 10,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> T_1",
+      "T_1 -> 0",
+      "0 -> T_2",
+      "T_2 -> 0",
+      "0 -> G",
+      "0 -> G",
+      "G -> 0",
+      "0 -> I",
+      "0 -> I",
+      "I -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> T_1",
+      "T_1 -> 0",
+      "0 -> T_2",
+      "T_2 -> 0",
+      "0 -> G",
+      "0 -> G",
+      "G -> 0",
+      "0 -> I",
+      "0 -> I",
+      "I -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[28]*(1 + k[17]*k[25]/(k[25] + k[18]))*k[2]*k[4]/(k[4] + x[4]) + (-1)*k[28]*k[1]*x[1])/k[28]",
+      "(1*k[28]*(k[20] + (1 - k[20])*k[18]/(k[25] + k[18]))*k[2]*k[6]/(k[6] + x[3]) + (-1)*k[28]*k[1]*x[2])/k[28]",
+      "(1*k[28]*k[9]*(1 + k[21]*k[25]/(k[25] + k[22])) + 1*k[28]*k[8]*x[1]*(k[10] + (1 - k[10])*k[11]/(x[4] + k[11]))*(1 + k[23]*k[25]/(k[25] + k[24])) + (-1)*k[28]*k[7]*x[3])/k[28]",
+      "(1*k[28]*k[14]*(k[15] + (1 - k[15])*k[16]/(x[3] + k[16])) + 1*k[28]*k[13]*x[2] + (-1)*k[28]*k[12]*x[4])/k[28]"
+    ],
+    "species_index_map": {
+      "x_0": "T_1",
+      "x_1": "T_2",
+      "x_2": "G",
+      "x_3": "I"
+    },
+    "const_index_map": {
+      "c_0": "mu_T",
+      "c_1": "r_T",
+      "c_2": "b_1",
+      "c_3": "b_2",
+      "c_4": "mu_G",
+      "c_5": "q_G",
+      "c_6": "p_G",
+      "c_7": "a_G",
+      "c_8": "b_G",
+      "c_9": "mu_I",
+      "c_10": "q_I",
+      "c_11": "p_I",
+      "c_12": "a_I",
+      "c_13": "b_I",
+      "c_14": "c_1",
+      "c_15": "d_1",
+      "c_16": "c_2",
+      "c_17": "c_G",
+      "c_18": "d_G",
+      "c_19": "e_G",
+      "c_20": "f_G",
+      "c_21": "L",
+      "c_22": "compartment"
+    }
+  }
+}

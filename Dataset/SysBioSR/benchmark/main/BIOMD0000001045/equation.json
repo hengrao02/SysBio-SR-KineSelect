@@ -1,0 +1,53 @@
+{
+  "const_description": "c_0: New_York_1968_69, c_1: k, c_2: beta",
+  "const_names": [
+    "New_York_1968_69",
+    "k",
+    "beta"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.33,
+      0.5
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000001045",
+  "dataset_model_name": "Moore2004",
+  "dim": 3,
+  "eq": "-c_0*c_1*x_0 + c_0*c_2*x_0*x_2 | c_0*c_1*x_0 | -c_0*c_2*x_0*x_2",
+  "eq_raw": "Infected*New_York_1968_69*Susceptible*beta - Infected*New_York_1968_69*k | Infected*New_York_1968_69*k | -Infected*New_York_1968_69*Susceptible*beta",
+  "id": "Smith_Moore2004___The_SIR_Model_for_Spread_of_Disease",
+  "init": [
+    [
+      1.27e-06,
+      0.0,
+      0.999999999999998
+    ]
+  ],
+  "init_description": "x_0: Infected, x_1: Recovered, x_2: Susceptible",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Smith&Moore2004 - The SIR model for the spread of HongKong Flu",
+  "source_xml": "Moore2004.xml",
+  "state_names": [
+    "Infected",
+    "Recovered",
+    "Susceptible"
+  ],
+  "substituted": [
+    [
+      "0.5*x_0*x_2 - 0.33*x_0",
+      "0.33*x_0",
+      "-0.5*x_0*x_2"
+    ]
+  ]
+}

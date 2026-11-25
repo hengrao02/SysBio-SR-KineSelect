@@ -1,0 +1,65 @@
+{
+  "const_description": "c_0: K_dim, c_1: compartment, c_2: K_undim, c_3: K_ar, c_4: K_af, c_5: alpha3, c_6: C, c_7: alpha1, c_8: alpha2",
+  "const_names": [
+    "K_dim",
+    "compartment",
+    "K_undim",
+    "K_ar",
+    "K_af",
+    "alpha3",
+    "C",
+    "alpha1",
+    "alpha2"
+  ],
+  "consts": [
+    [
+      10.0,
+      1.0,
+      1.0,
+      3.0,
+      1.0,
+      0.1,
+      1.0,
+      1.5,
+      10.0
+    ]
+  ],
+  "dataset_model_id": "MODEL2005130001",
+  "dataset_model_name": "Ma2005",
+  "dim": 3,
+  "eq": "c_0*c_1*x_1^2/2 - c_1*c_2*x_0 | -c_1*(c_0*x_1^2 + c_4*x_1*(c_5*x_2 + c_6*c_7 + c_6*c_8*x_2)) + c_1*(2*c_2*x_0 + c_3*x_2) | -c_1*c_3*x_2 + c_1*c_4*x_1*(c_5*x_2 + c_6*c_7 + c_6*c_8*x_2)",
+  "eq_raw": "ATM^2*K_dim*compartment/2 - ATM_D*K_undim*compartment | -compartment*(ATM^2*K_dim + ATM*K_af*(ATM_star*C*alpha2 + ATM_star*alpha3 + C*alpha1)) + compartment*(2*ATM_D*K_undim + ATM_star*K_ar) | ATM*K_af*compartment*(ATM_star*C*alpha2 + ATM_star*alpha3 + C*alpha1) - ATM_star*K_ar*compartment",
+  "id": "Ma2005_digital_response_of_p53_to_DNA_damage_ATM_Activation_Module",
+  "init": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: ATM_D, x_1: ATM, x_2: ATM_star",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Ma2005-digital response of p53 to DNA damage-ATM Activation Module",
+  "source_xml": "Ma2005.xml",
+  "state_names": [
+    "ATM_D",
+    "ATM",
+    "ATM_star"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0 + 5.0*x_1^2",
+      "2.0*x_0 - 10.0*x_1^2 - 1.0*x_1*(10.1*x_2 + 1.5) + 3.0*x_2",
+      "1.0*x_1*(10.1*x_2 + 1.5) - 3.0*x_2"
+    ]
+  ]
+}

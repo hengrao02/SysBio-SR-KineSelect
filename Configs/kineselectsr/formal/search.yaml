@@ -1,0 +1,19 @@
+# Frozen GA contract. alpha/eps affect tournament pressure as well as Alpha
+# selection, so they remain search parameters even when FPMS selects the winner.
+method: kineselectsr
+random_seed: 42
+population_size: 2000
+num_generations: 20
+elitism: 0.10
+min_reactions: 2
+max_reactions: 12
+mutation_rate: 0.30
+crossover_rate: 0.70
+tournament_size: 20
+alpha: 1.05
+eps: 1.0e-12
+
+selection_objective: rollout
+rollout_per_island: 32
+island_early_stop_patience: 4
+island_early_stop_min_rel_improvement: 1.0e-4

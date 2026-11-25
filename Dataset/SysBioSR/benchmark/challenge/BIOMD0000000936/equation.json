@@ -1,0 +1,85 @@
+{
+  "dataset_model_id": "BIOMD0000000936",
+  "dataset_model_name": "ferrel2011",
+  "id": "BIOMD0000000936",
+  "name": "ferrel2011",
+  "source_xml": "ferrel2011.xml",
+  "dim": 1,
+  "eq": "(1*c_4*c_0 + (-1)*c_4*c_1*x_0^(c_3 + 1)/(c_2^c_3 + x_0^c_3))/c_4",
+  "eq_raw": "(1*compartment*a1 + (-1)*compartment*b1*CDK1_active^(n1 + 1)/(k1^n1 + CDK1_active^n1))/compartment",
+  "consts": [
+    [
+      0.1,
+      1.0,
+      0.5,
+      8.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.1 + (-1)*1*1*x_0^(8 + 1)/(0.5^8 + x_0^8))/1"
+    ]
+  ],
+  "state_names": [
+    "CDK1_active"
+  ],
+  "const_names": [
+    "a1",
+    "b1",
+    "k1",
+    "n1",
+    "compartment"
+  ],
+  "init_description": "x_0: CDK1_active",
+  "const_description": "c_0: a1, c_1: b1, c_2: k1, c_3: n1, c_4: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 2,
+    "n_reconfigured_reactions": 2,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> CDK1_active",
+      "CDK1_active -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> CDK1_active",
+      "CDK1_active -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[5]*k[1] + (-1)*k[5]*k[2]*x[1]^(k[4] + 1)/(k[3]^k[4] + x[1]^k[4]))/k[5]"
+    ],
+    "species_index_map": {
+      "x_0": "CDK1_active"
+    },
+    "const_index_map": {
+      "c_0": "a1",
+      "c_1": "b1",
+      "c_2": "k1",
+      "c_3": "n1",
+      "c_4": "compartment"
+    }
+  }
+}

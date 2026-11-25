@@ -1,0 +1,166 @@
+{
+  "dataset_model_id": "BIOMD0000000756",
+  "dataset_model_name": "Figueredo2013",
+  "id": "BIOMD0000000756",
+  "name": "Figueredo2013",
+  "source_xml": "Figueredo2013.xml",
+  "dim": 4,
+  "eq": "(1*c_20*c_0*x_0 + (-1)*c_20*c_0*x_0^2/c_19 + (-1)*c_20*c_2*x_1*x_0/(c_3 + x_0) + 1*c_20*c_7*x_3*x_0/(c_8 + x_3))/c_20 | ((-1)*c_20*c_13*x_1 + 1*c_20*c_1*x_0/(1 + c_12*x_3) + 1*c_20*c_5*x_1*x_2/(c_6 + x_2)*(c_5 - c_16*x_3/(c_17 + x_3)))/c_20 | ((-1)*c_20*c_4*x_2 + 1*c_20*c_14*x_1*x_0/((c_11 + x_0)*(1 + c_10*x_3)))/c_20 | (1*c_20*c_15*x_0^2/(c_18^2 + x_0^2) + (-1)*c_20*c_9*x_3)/c_20",
+  "eq_raw": "(1*tumor_microenvironment*a*T + (-1)*tumor_microenvironment*a*T^2/k + (-1)*tumor_microenvironment*aa*E*T/(g2 + T) + 1*tumor_microenvironment*p2*S*T/(g3 + S))/tumor_microenvironment | ((-1)*tumor_microenvironment*u1*E + 1*tumor_microenvironment*c*T/(1 + gamma*S) + 1*tumor_microenvironment*p1*E*I/(g1 + I)*(p1 - q1*S/(q2 + S)))/tumor_microenvironment | ((-1)*tumor_microenvironment*u2*I + 1*tumor_microenvironment*p3*E*T/((g4 + T)*(1 + alpha*S)))/tumor_microenvironment | (1*tumor_microenvironment*p4*T^2/(theta^2 + T^2) + (-1)*tumor_microenvironment*u3*S)/tumor_microenvironment",
+  "consts": [
+    [
+      0.18,
+      0.035,
+      1.0,
+      100000.0,
+      10.0,
+      0.1245,
+      20000000.0,
+      0.27,
+      20000000.0,
+      10.0,
+      0.001,
+      1000.0,
+      10.0,
+      0.03,
+      5.0,
+      2.84,
+      10.0,
+      0.1121,
+      1000000.0,
+      10000000000.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0,
+      10.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.18*x_0 + (-1)*1*0.18*x_0^2/10000000000 + (-1)*1*1*x_1*x_0/(100000 + x_0) + 1*1*0.27*x_3*x_0/(20000000 + x_3))/1",
+      "((-1)*1*0.03*x_1 + 1*1*0.035*x_0/(1 + 10*x_3) + 1*1*0.1245*x_1*x_2/(20000000 + x_2)*(0.1245 - 10*x_3/(0.1121 + x_3)))/1",
+      "((-1)*1*10*x_2 + 1*1*5*x_1*x_0/((1000 + x_0)*(1 + 0.001*x_3)))/1",
+      "(1*1*2.84*x_0^2/(1000000^2 + x_0^2) + (-1)*1*10*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "T",
+    "E",
+    "I",
+    "S"
+  ],
+  "const_names": [
+    "a",
+    "c",
+    "aa",
+    "g2",
+    "u2",
+    "p1",
+    "g1",
+    "p2",
+    "g3",
+    "u3",
+    "alpha",
+    "g4",
+    "gamma",
+    "u1",
+    "p3",
+    "p4",
+    "q1",
+    "q2",
+    "theta",
+    "k",
+    "tumor_microenvironment"
+  ],
+  "init_description": "x_0: T, x_1: E, x_2: I, x_3: S",
+  "const_description": "c_0: a, c_1: c, c_2: aa, c_3: g2, c_4: u2, c_5: p1, c_6: g1, c_7: p2, c_8: g3, c_9: u3, c_10: alpha, c_11: g4, c_12: gamma, c_13: u1, c_14: p3, c_15: p4, c_16: q1, c_17: q2, c_18: theta, c_19: k, c_20: tumor_microenvironment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 11,
+    "n_reconfigured_reactions": 11,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> 0",
+      "E -> 0",
+      "0 -> E",
+      "0 -> E",
+      "I -> 0",
+      "0 -> I",
+      "0 -> T",
+      "0 -> S",
+      "S -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> 0",
+      "E -> 0",
+      "0 -> E",
+      "0 -> E",
+      "I -> 0",
+      "0 -> I",
+      "0 -> T",
+      "0 -> S",
+      "S -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[21]*k[1]*x[1] + (-1)*k[21]*k[1]*x[1]^2/k[20] + (-1)*k[21]*k[3]*x[2]*x[1]/(k[4] + x[1]) + 1*k[21]*k[8]*x[4]*x[1]/(k[9] + x[4]))/k[21]",
+      "((-1)*k[21]*k[14]*x[2] + 1*k[21]*k[2]*x[1]/(1 + k[13]*x[4]) + 1*k[21]*k[6]*x[2]*x[3]/(k[7] + x[3])*(k[6] - k[17]*x[4]/(k[18] + x[4])))/k[21]",
+      "((-1)*k[21]*k[5]*x[3] + 1*k[21]*k[15]*x[2]*x[1]/((k[12] + x[1])*(1 + k[11]*x[4])))/k[21]",
+      "(1*k[21]*k[16]*x[1]^2/(k[19]^2 + x[1]^2) + (-1)*k[21]*k[10]*x[4])/k[21]"
+    ],
+    "species_index_map": {
+      "x_0": "T",
+      "x_1": "E",
+      "x_2": "I",
+      "x_3": "S"
+    },
+    "const_index_map": {
+      "c_0": "a",
+      "c_1": "c",
+      "c_2": "aa",
+      "c_3": "g2",
+      "c_4": "u2",
+      "c_5": "p1",
+      "c_6": "g1",
+      "c_7": "p2",
+      "c_8": "g3",
+      "c_9": "u3",
+      "c_10": "alpha",
+      "c_11": "g4",
+      "c_12": "gamma",
+      "c_13": "u1",
+      "c_14": "p3",
+      "c_15": "p4",
+      "c_16": "q1",
+      "c_17": "q2",
+      "c_18": "theta",
+      "c_19": "k",
+      "c_20": "tumor_microenvironment"
+    }
+  }
+}

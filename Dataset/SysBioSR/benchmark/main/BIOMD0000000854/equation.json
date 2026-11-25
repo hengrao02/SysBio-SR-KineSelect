@@ -1,0 +1,60 @@
+{
+  "const_description": "c_0: compartment, c_1: kin, c_2: koff, c_3: alpha1, c_4: beta1",
+  "const_names": [
+    "compartment",
+    "kin",
+    "koff",
+    "alpha1",
+    "beta1"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.55,
+      0.35,
+      0.014,
+      2.2
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000854",
+  "dataset_model_name": "Gray2016",
+  "dim": 4,
+  "eq": "-c_0*c_1*c_3*x_0 + c_0*c_1*x_2 + c_0*c_2*x_1 | -c_0*c_1*c_3*x_1 + c_0*c_1*x_3 - c_0*c_2*x_1 | c_0*c_1*c_3*x_0 - c_0*c_1*x_2 - c_0*c_2*c_4*x_2 + c_0*c_2*x_3 | c_0*c_1*c_3*x_1 - c_0*c_1*x_3 + c_0*c_2*c_4*x_2 - c_0*c_2*x_3",
+  "eq_raw": "-Ac*alpha1*compartment*kin + Ap*compartment*kin + Pc*compartment*koff | -Pc*alpha1*compartment*kin - Pc*compartment*koff + Pp*compartment*kin | Ac*alpha1*compartment*kin - Ap*beta1*compartment*koff - Ap*compartment*kin + Pp*compartment*koff | Ap*beta1*compartment*koff + Pc*alpha1*compartment*kin - Pp*compartment*kin - Pp*compartment*koff",
+  "id": "Gray2016___The_Akt_switch_model",
+  "init": [
+    [
+      0.95,
+      0.0,
+      0.05,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: Ac, x_1: Pc, x_2: Ap, x_3: Pp",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Gray2016 - The Akt switch model",
+  "source_xml": "Gray2016.xml",
+  "state_names": [
+    "Ac",
+    "Pc",
+    "Ap",
+    "Pp"
+  ],
+  "substituted": [
+    [
+      "-0.0077*x_0 + 0.35*x_1 + 0.55*x_2",
+      "-0.3577*x_1 + 0.55*x_3",
+      "0.0077*x_0 - 1.32*x_2 + 0.35*x_3",
+      "0.0077*x_1 + 0.77*x_2 - 0.9*x_3"
+    ]
+  ]
+}

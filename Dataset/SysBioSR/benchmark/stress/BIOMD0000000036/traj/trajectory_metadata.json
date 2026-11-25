@@ -1,0 +1,77 @@
+{
+  "system_id": "BIOMD0000000036",
+  "state_names": [
+    "M",
+    "P"
+  ],
+  "const_names": [
+    "CYTOPLASM",
+    "TC__Vm",
+    "TC__Pcrit",
+    "TC__Keq",
+    "mRNAD__D",
+    "TL__V",
+    "ProteinD__D",
+    "DBT__J",
+    "DBT__k2",
+    "DBT__k1",
+    "DBT__Keq"
+  ],
+  "default_consts": [
+    1.0,
+    1.0,
+    0.1,
+    200.0,
+    0.1,
+    0.5,
+    0.1,
+    0.05,
+    0.03,
+    10.0,
+    200.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.6538061583132869,
+        1.0894510167068208
+      ],
+      "relative_scale_vs_default": [
+        0.6538061583132869,
+        1.0894510167068208
+      ],
+      "absolute_offset_from_default": [
+        -0.3461938416867131,
+        0.08945101670682076
+      ],
+      "state_scale_from_default_trajectory": [
+        2.644052703120669,
+        3.2438151808401074
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3076947160,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.4269684816688307,
+        "peak_ratio_per_state": [
+          1.0001381465173278,
+          0.9999842638080112
+        ],
+        "max_peak_ratio": 1.0001381465173278
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

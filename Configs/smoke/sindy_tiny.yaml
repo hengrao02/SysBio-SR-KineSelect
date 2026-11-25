@@ -1,0 +1,6 @@
+# Execution smoke only, not the formal 540-candidate search.
+inherits: [../sindy/single_system.yaml]
+experiment_id: sysbiosr-sindy-smoke-v1
+optimize_hyperparams: false
+polynomial_degree: 2
+optimizer_max_iter: 20

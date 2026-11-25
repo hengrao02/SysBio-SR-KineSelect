@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+# Source SBML/XML is an immutable byte-level provenance artifact. Some upstream
+# files intentionally use CRLF, so Git must not normalize them on checkout.
+*.xml binary
+*.zst binary

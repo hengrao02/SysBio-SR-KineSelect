@@ -1,0 +1,21 @@
+# CPU demonstration: two-state photosynthesis model with nonlinear coupling.
+# Reduced search budget; formal benchmark profiles are under Configs/benchmark/.
+inherits:
+  - ../kineselectsr/formal/method_fpms.yaml
+
+experiment_id: kineselectsr-example
+run_type: single
+results_root: ../../Results
+system_dir: ../../Dataset/SysBioSR/benchmark/main/BIOMD0000000386
+benchmark_definition: ../../Dataset/SysBioSR/benchmark/benchmark.yaml
+benchmark_partition: main
+dataset_version: sysbiosr-1.0.0-rc.2
+trajectory_name: default
+eval_trajectory_names: [perturbed]
+
+population_size: 400
+num_generations: 10
+min_reactions: 2
+max_reactions: 8
+random_seed: 42
+verbose: false

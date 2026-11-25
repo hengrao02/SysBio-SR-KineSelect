@@ -1,0 +1,80 @@
+{
+  "system_id": "MODEL2003060002",
+  "state_names": [
+    "auxin",
+    "IAA",
+    "ARF"
+  ],
+  "const_names": [
+    "compartment",
+    "Sauxin",
+    "Tauxin",
+    "SIAA",
+    "TIAA",
+    "alpha_reg",
+    "SARF",
+    "TARF",
+    "beta"
+  ],
+  "default_consts": [
+    1.0,
+    0.02,
+    10.0,
+    1.0,
+    333.0,
+    150.0,
+    25.0,
+    2.0,
+    0.003
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        -350.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.5631253993766742,
+        -238.63594636307494,
+        0.610607968163156
+      ],
+      "relative_scale_vs_default": [
+        0.5631253993766742,
+        0.6818169896087856,
+        0.610607968163156
+      ],
+      "absolute_offset_from_default": [
+        -0.43687460062332584,
+        111.36405363692506,
+        -0.389392031836844
+      ],
+      "state_scale_from_default_trajectory": [
+        1.0,
+        350.0,
+        49.992814158462785
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 455500320,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.43687460062332584,
+        "peak_ratio_per_state": [
+          0.5631253993766742,
+          0.6818169896087855,
+          0.999971658994689
+        ],
+        "max_peak_ratio": 0.999971658994689
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

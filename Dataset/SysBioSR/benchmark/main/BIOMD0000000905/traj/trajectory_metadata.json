@@ -1,0 +1,108 @@
+{
+  "system_id": "BIOMD0000000905",
+  "state_names": [
+    "P",
+    "I",
+    "M",
+    "T",
+    "U"
+  ],
+  "const_names": [
+    "beta",
+    "gamma",
+    "beta0",
+    "mu",
+    "a",
+    "b",
+    "n",
+    "alpha",
+    "alpha0",
+    "Q0",
+    "delta_0",
+    "theta_0",
+    "delta_1",
+    "k1",
+    "n1",
+    "compartment"
+  ],
+  "default_consts": [
+    0.5,
+    0.05,
+    0.2,
+    0.04,
+    0.8,
+    0.3,
+    0.1,
+    2.4,
+    0.1,
+    5.0,
+    0.4,
+    1.2,
+    0.02,
+    0.6,
+    0.5,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        2.0,
+        0.8,
+        0.0,
+        2.0,
+        0.0
+      ],
+      "relative_scale_vs_default": [
+        2.0,
+        0.8,
+        0.0,
+        2.0,
+        0.0
+      ],
+      "absolute_offset_from_default": [
+        1.0,
+        -0.19999999999999996,
+        -1.0,
+        1.0,
+        -1.0
+      ],
+      "state_scale_from_default_trajectory": [
+        2.4999333907436765,
+        1.0,
+        59.81395355436976,
+        12.499999999562265,
+        510.2968693596742
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 3132342775,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.400010657764974,
+        "peak_ratio_per_state": [
+          1.0000000351679765,
+          0.8,
+          1.0004221089588954,
+          1.0000000000019005,
+          1.001241159007076
+        ],
+        "max_peak_ratio": 1.001241159007076
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

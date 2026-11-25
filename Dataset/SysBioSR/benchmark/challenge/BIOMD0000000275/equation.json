@@ -1,0 +1,88 @@
+{
+  "const_description": "c_0: PSM, c_1: kd5, c_2: RALDH2_0, c_3: ks1, c_4: x, c_5: L, c_6: kd1, c_7: V0, c_8: Vsc, c_9: n, c_10: Ka, c_11: kd3, c_12: ks2, c_13: kd2, c_14: kd4, c_15: M_0, c_16: ks3, c_17: Ki, c_18: m",
+  "const_names": [
+    "PSM",
+    "kd5",
+    "RALDH2_0",
+    "ks1",
+    "x",
+    "L",
+    "kd1",
+    "V0",
+    "Vsc",
+    "n",
+    "Ka",
+    "kd3",
+    "ks2",
+    "kd2",
+    "kd4",
+    "M_0",
+    "ks3",
+    "Ki",
+    "m"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.0,
+      7.1,
+      1.0,
+      15.0,
+      50.0,
+      1.0,
+      0.365,
+      7.1,
+      2.0,
+      0.2,
+      1.0,
+      1.0,
+      0.28,
+      1.0,
+      5.0,
+      1.0,
+      0.2,
+      2.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000275",
+  "dataset_model_name": "Goldbeter2007",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 + c_0*c_2*c_3*(-c_4/c_5 + 1) - c_0*c_6*x_0*x_2 | -c_0*c_11*x_1 + c_0*(c_7 + c_8*x_3^c_9/(c_10^c_9 + x_3^c_9)) | c_0*c_12*x_1 - c_0*c_13*x_2 | -c_0*c_14*x_3 + c_0*c_15*c_16*c_17^c_18*c_4/(c_5*(c_17^c_18 + x_0^c_18))",
+  "eq_raw": "-C*PSM*RA*kd1 - PSM*RA*kd5 + PSM*RALDH2_0*ks1*(1 - x/L) | -M_C*PSM*kd3 + PSM*(F^n*Vsc/(F^n + Ka^n) + V0) | -C*PSM*kd2 + M_C*PSM*ks2 | -F*PSM*kd4 + Ki^m*M_0*PSM*ks3*x/(L*(Ki^m + RA^m))",
+  "id": "goldbeter2007",
+  "init": [
+    [
+      0.1,
+      0.1,
+      0.1,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: RA, x_1: M_C, x_2: C, x_3: F",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 5,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Goldbeter2007_Somitogenesis_Switch",
+  "source_xml": "Goldbeter2007.xml",
+  "state_names": [
+    "RA",
+    "M_C",
+    "C",
+    "F"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0*x_2 + 4.97",
+      "-1.0*x_1 + 7.1*x_3^2.0/(x_3^2.0 + 0.04) + 0.365",
+      "1.0*x_1 - 0.28*x_2",
+      "-1.0*x_3 + 0.06/(x_0^2.0 + 0.04)"
+    ]
+  ]
+}

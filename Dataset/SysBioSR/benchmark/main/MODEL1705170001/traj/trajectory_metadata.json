@@ -1,0 +1,92 @@
+{
+  "system_id": "MODEL1705170001",
+  "state_names": [
+    "IL1",
+    "miR140",
+    "miR140_gene",
+    "ADAMTS5_mRNA",
+    "ADAMTS5_mRNA_miR140"
+  ],
+  "const_names": [
+    "kdegIL1",
+    "kdegADAMTS5mRNA",
+    "krelADAMTS5mRNAmiR140",
+    "ksynmiR140",
+    "kdegmiR140",
+    "kbinADAMTS5mRNAmiR140",
+    "kdegmiR140byIL1",
+    "ksynADAMTS5mRNA"
+  ],
+  "default_consts": [
+    0.0004,
+    0.00014,
+    0.01,
+    0.0018,
+    8e-06,
+    5e-05,
+    8e-07,
+    0.001
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        500.0,
+        500.0,
+        2.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        288.1445667368098,
+        691.2119247261852,
+        1.829761279533613,
+        4.668639653250324,
+        2.749567170113526
+      ],
+      "relative_scale_vs_default": [
+        0.5762891334736195,
+        1.3824238494523704,
+        0.9148806397668064,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -211.8554332631902,
+        191.2119247261852,
+        -0.1702387204663871,
+        4.668639653250324,
+        2.749567170113526
+      ],
+      "state_scale_from_default_trajectory": [
+        500.0,
+        500.0,
+        2.0,
+        15.562132177501079,
+        9.16522390037842
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1013329935,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.43881646008695635,
+        "peak_ratio_per_state": [
+          0.5762891334736195,
+          1.3824238494523704,
+          0.9148806397668064,
+          0.6231890591924413,
+          1.3021727828281218
+        ],
+        "max_peak_ratio": 1.3824238494523704
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

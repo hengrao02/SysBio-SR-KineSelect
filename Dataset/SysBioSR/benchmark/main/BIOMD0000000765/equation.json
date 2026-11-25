@@ -1,0 +1,132 @@
+{
+  "dataset_model_id": "BIOMD0000000765",
+  "dataset_model_name": "Mager2005",
+  "id": "BIOMD0000000765",
+  "name": "Mager2005",
+  "source_xml": "Mager2005.xml",
+  "dim": 4,
+  "eq": "((-1)*c_9*c_2*x_2*x_0 + 1*c_9*c_6*x_3 + (-1)*c_9*(c_0 + c_8)*x_0 + 1*c_7*x_1/c_1)/c_9 | (1*c_8*x_0*c_1 + (-1)*c_10*c_7*x_1)/c_10 | ((-1)*c_9*c_2*x_2*x_0 + 1*c_9*c_6*x_3 + 1*c_9*c_5 + (-1)*c_9*c_4*x_2)/c_9 | (1*c_9*c_2*x_2*x_0 + (-1)*c_9*(c_6 + c_3)*x_3)/c_9",
+  "eq_raw": "((-1)*Central*k_on*R*C + 1*Central*k_off*RC + (-1)*Central*(k_el + k_pt)*C + 1*k_tp*A_T/V_c)/Central | (1*k_pt*C*V_c + (-1)*Peripheral_Tissue*k_tp*A_T)/Peripheral_Tissue | ((-1)*Central*k_on*R*C + 1*Central*k_off*RC + 1*Central*k_syn + (-1)*Central*k_deg*R)/Central | (1*Central*k_on*R*C + (-1)*Central*(k_off + k_int)*RC)/Central",
+  "consts": [
+    [
+      1.0,
+      10.0,
+      0.1,
+      0.0,
+      0.566,
+      0.0,
+      0.1,
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      4000.0,
+      0.0,
+      53.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "((-1)*1*0.1*x_2*x_0 + 1*1*0.1*x_3 + (-1)*1*(1 + 0)*x_0 + 1*0*x_1/10)/1",
+      "(1*0*x_0*10 + (-1)*1*0*x_1)/1",
+      "((-1)*1*0.1*x_2*x_0 + 1*1*0.1*x_3 + 1*1*0 + (-1)*1*0.566*x_2)/1",
+      "(1*1*0.1*x_2*x_0 + (-1)*1*(0.1 + 0)*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "C",
+    "A_T",
+    "R",
+    "RC"
+  ],
+  "const_names": [
+    "k_el",
+    "V_c",
+    "k_on",
+    "k_int",
+    "k_deg",
+    "k_syn",
+    "k_off",
+    "k_tp",
+    "k_pt",
+    "Central",
+    "Peripheral_Tissue"
+  ],
+  "init_description": "x_0: C, x_1: A_T, x_2: R, x_3: RC",
+  "const_description": "c_0: k_el, c_1: V_c, c_2: k_on, c_3: k_int, c_4: k_deg, c_5: k_syn, c_6: k_off, c_7: k_tp, c_8: k_pt, c_9: Central, c_10: Peripheral_Tissue",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 9,
+    "n_reconfigured_reactions": 9,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "C + R -> RC",
+      "0 -> C + R",
+      "RC -> 0",
+      "C -> 0",
+      "0 -> C",
+      "0 -> A_T",
+      "A_T -> 0",
+      "0 -> R",
+      "R -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "C + R -> RC",
+      "0 -> C + R",
+      "RC -> 0",
+      "C -> 0",
+      "0 -> C",
+      "0 -> A_T",
+      "A_T -> 0",
+      "0 -> R",
+      "R -> 0"
+    ],
+    "maple_odes": [
+      "((-1)*k[14]*k[3]*x[3]*x[1] + 1*k[14]*k[8]*x[4] + (-1)*k[14]*(k[1] + k[10])*x[1] + 1*k[9]*x[2]/k[2])/k[14]",
+      "(1*k[10]*x[1]*k[2] + (-1)*k[15]*k[9]*x[2])/k[15]",
+      "((-1)*k[14]*k[3]*x[3]*x[1] + 1*k[14]*k[8]*x[4] + 1*k[14]*k[7] + (-1)*k[14]*k[6]*x[3])/k[14]",
+      "(1*k[14]*k[3]*x[3]*x[1] + (-1)*k[14]*(k[8] + k[5])*x[4])/k[14]"
+    ],
+    "species_index_map": {
+      "x_0": "C",
+      "x_1": "A_T",
+      "x_2": "R",
+      "x_3": "RC"
+    },
+    "const_index_map": {
+      "c_0": "k_el",
+      "c_1": "V_c",
+      "c_2": "k_on",
+      "c_3": "k_int",
+      "c_4": "k_deg",
+      "c_5": "k_syn",
+      "c_6": "k_off",
+      "c_7": "k_tp",
+      "c_8": "k_pt",
+      "c_9": "Central",
+      "c_10": "Peripheral_Tissue"
+    }
+  }
+}

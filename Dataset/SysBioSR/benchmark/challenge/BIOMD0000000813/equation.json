@@ -1,0 +1,131 @@
+{
+  "dataset_model_id": "BIOMD0000000813",
+  "dataset_model_name": "Anderson2015",
+  "id": "BIOMD0000000813",
+  "name": "Anderson2015",
+  "source_xml": "Anderson2015.xml",
+  "dim": 3,
+  "eq": "(1*c_12*c_0*x_0*(1 - x_0/c_1) + (-1)*c_12*c_2*x_0*x_2/(c_3 + x_0))/c_12 | (1*c_12*c_4*x_0*x_1/(c_5 + x_0) + (-1)*c_12*c_6*x_1 + 1*c_12*c_10)/c_12 | (1*c_12*c_7*x_0*x_1/(c_8 + x_0) + (-1)*c_12*c_9*x_2 + 1*c_12*c_11)/c_12",
+  "eq_raw": "(1*compartment*r*x_Tumor_Cells*(1 - x_Tumor_Cells/K) + (-1)*compartment*delta*x_Tumor_Cells*z_Cytokine/(m + x_Tumor_Cells))/compartment | (1*compartment*beta*x_Tumor_Cells*y_CD4_T_Cells/(k + x_Tumor_Cells) + (-1)*compartment*a*y_CD4_T_Cells + 1*compartment*I_1)/compartment | (1*compartment*alpha*x_Tumor_Cells*y_CD4_T_Cells/(b + x_Tumor_Cells) + (-1)*compartment*mu*z_Cytokine + 1*compartment*I_2)/compartment",
+  "consts": [
+    [
+      0.03,
+      1000.0,
+      0.1,
+      1.0,
+      0.02,
+      10.0,
+      0.02,
+      0.1,
+      0.1,
+      47.0,
+      10.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.5,
+      0.01,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.03*x_0*(1 - x_0/1000) + (-1)*1*0.1*x_0*x_2/(1 + x_0))/1",
+      "(1*1*0.02*x_0*x_1/(10 + x_0) + (-1)*1*0.02*x_1 + 1*1*10)/1",
+      "(1*1*0.1*x_0*x_1/(0.1 + x_0) + (-1)*1*47*x_2 + 1*1*0)/1"
+    ]
+  ],
+  "state_names": [
+    "x_Tumor_Cells",
+    "y_CD4_T_Cells",
+    "z_Cytokine"
+  ],
+  "const_names": [
+    "r",
+    "K",
+    "delta",
+    "m",
+    "beta",
+    "k",
+    "a",
+    "alpha",
+    "b",
+    "mu",
+    "I_1",
+    "I_2",
+    "compartment"
+  ],
+  "init_description": "x_0: x_Tumor_Cells, x_1: y_CD4_T_Cells, x_2: z_Cytokine",
+  "const_description": "c_0: r, c_1: K, c_2: delta, c_3: m, c_4: beta, c_5: k, c_6: a, c_7: alpha, c_8: b, c_9: mu, c_10: I_1, c_11: I_2, c_12: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 8,
+    "n_reconfigured_reactions": 8,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> x_Tumor_Cells",
+      "x_Tumor_Cells -> 0",
+      "0 -> y_CD4_T_Cells",
+      "y_CD4_T_Cells -> 0",
+      "0 -> y_CD4_T_Cells",
+      "0 -> z_Cytokine",
+      "z_Cytokine -> 0",
+      "0 -> z_Cytokine"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> x_Tumor_Cells",
+      "x_Tumor_Cells -> 0",
+      "0 -> y_CD4_T_Cells",
+      "y_CD4_T_Cells -> 0",
+      "0 -> y_CD4_T_Cells",
+      "0 -> z_Cytokine",
+      "z_Cytokine -> 0",
+      "0 -> z_Cytokine"
+    ],
+    "maple_odes": [
+      "(1*k[13]*k[1]*x[1]*(1 - x[1]/k[2]) + (-1)*k[13]*k[3]*x[1]*x[3]/(k[4] + x[1]))/k[13]",
+      "(1*k[13]*k[5]*x[1]*x[2]/(k[6] + x[1]) + (-1)*k[13]*k[7]*x[2] + 1*k[13]*k[11])/k[13]",
+      "(1*k[13]*k[8]*x[1]*x[2]/(k[9] + x[1]) + (-1)*k[13]*k[10]*x[3] + 1*k[13]*k[12])/k[13]"
+    ],
+    "species_index_map": {
+      "x_0": "x_Tumor_Cells",
+      "x_1": "y_CD4_T_Cells",
+      "x_2": "z_Cytokine"
+    },
+    "const_index_map": {
+      "c_0": "r",
+      "c_1": "K",
+      "c_2": "delta",
+      "c_3": "m",
+      "c_4": "beta",
+      "c_5": "k",
+      "c_6": "a",
+      "c_7": "alpha",
+      "c_8": "b",
+      "c_9": "mu",
+      "c_10": "I_1",
+      "c_11": "I_2",
+      "c_12": "compartment"
+    }
+  }
+}

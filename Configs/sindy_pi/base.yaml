@@ -1,0 +1,26 @@
+method: sindy_pi
+experiment_id: sysbiosr-sindy-pi-v1
+polynomial_degree: 2
+implicit_denominator_degree: 1
+include_constant: true
+threshold: 0.05
+threshold_grid:
+- 0.01
+- 0.025
+- 0.05
+- 0.1
+- 0.2
+stlsq_iterations: 20
+normalize_library: true
+optimize_hyperparams: true
+hyper_opt_eval_fraction: 0.3
+sparsity_selection_tolerance: 0.05
+min_denominator_abs: 1.0e-08
+max_lhs_candidates: null
+finite_difference_order: 2
+smoother_window_length: null
+drop_boundary_points: true
+ode_integrator: solve_ivp
+rollout_rtol: 0.001
+rollout_atol: 1.0e-06
+rollout_timeout: 1.0

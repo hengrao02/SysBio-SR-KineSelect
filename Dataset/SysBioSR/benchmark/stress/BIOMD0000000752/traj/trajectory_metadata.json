@@ -1,0 +1,80 @@
+{
+  "system_id": "BIOMD0000000752",
+  "state_names": [
+    "C",
+    "I",
+    "R"
+  ],
+  "const_names": [
+    "a",
+    "K",
+    "a0",
+    "y",
+    "Ie",
+    "u",
+    "b",
+    "f",
+    "tumor_microenvironment"
+  ],
+  "default_consts": [
+    0.2,
+    10000000000.0,
+    0.0001,
+    0.2,
+    100.0,
+    0.001,
+    0.2,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        9000.0,
+        100.0,
+        1000.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        11902.636498597683,
+        71.1808857194652,
+        597.4180997397154
+      ],
+      "relative_scale_vs_default": [
+        1.3225151665108537,
+        0.7118088571946519,
+        0.5974180997397155
+      ],
+      "absolute_offset_from_default": [
+        2902.6364985976834,
+        -28.819114280534805,
+        -402.58190026028456
+      ],
+      "state_scale_from_default_trajectory": [
+        76471.3735059105,
+        12349.969181878727,
+        8496.819278434497
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1586839521,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9125993957321316,
+        "peak_ratio_per_state": [
+          1.7940465399948042,
+          1.110341712716841,
+          0.8104223693675959
+        ],
+        "max_peak_ratio": 1.7940465399948042
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "dataset_model_id": "BIOMD0000000716",
+  "dataset_model_name": "Lee2018",
+  "id": "BIOMD0000000716",
+  "name": "Lee2018",
+  "source_xml": "Lee2018.xml",
+  "dim": 4,
+  "eq": "(1*c_1*2060/365 + (-1)*c_1*1/(2*365)*x_0 + (-1)*c_1*45685/(439197*30)*x_0*x_1)/c_1 | (1*c_1*45685/(439197*30)*x_0*x_1 + (-1)*c_1*45682/(439197*30)*x_1 + (-1)*c_1*1/(2*365)*x_1)/c_1 | (1*c_2*237/10*c_0/365000 + (-1)*c_2*1/(346/5*365)*x_2 + (-1)*16/(108*1000000*1825/2)*x_2*x_1)/c_2 | (1*16/(108*1000000*1825/2)*x_2*x_1 + (-1)*c_2*6/(108*1000000*1825/2)*x_3 + (-1)*c_2*1/(346/5*365)*x_3)/c_2",
+  "eq_raw": "(1*compartment*2060/365 + (-1)*compartment*1/(2*365)*S_b + (-1)*compartment*45685/(439197*30)*S_b*I_b)/compartment | (1*compartment*45685/(439197*30)*S_b*I_b + (-1)*compartment*45682/(439197*30)*I_b + (-1)*compartment*1/(2*365)*I_b)/compartment | (1*Human_Population*237/10*ModelValue_1/365000 + (-1)*Human_Population*1/(346/5*365)*S_h + (-1)*16/(108*1000000*1825/2)*S_h*I_b)/Human_Population | (1*16/(108*1000000*1825/2)*S_h*I_b + (-1)*Human_Population*6/(108*1000000*1825/2)*I_a + (-1)*Human_Population*1/(346/5*365)*I_a)/Human_Population",
+  "consts": [
+    [
+      171977.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      244956.0,
+      36485.0,
+      171977.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*2060/365 + (-1)*1*1/(2*365)*x_0 + (-1)*1*45685/(439197*30)*x_0*x_1)/1",
+      "(1*1*45685/(439197*30)*x_0*x_1 + (-1)*1*45682/(439197*30)*x_1 + (-1)*1*1/(2*365)*x_1)/1",
+      "(1*1*237/10*171977/365000 + (-1)*1*1/(346/5*365)*x_2 + (-1)*16/(108*1000000*1825/2)*x_2*x_1)/1",
+      "(1*16/(108*1000000*1825/2)*x_2*x_1 + (-1)*1*6/(108*1000000*1825/2)*x_3 + (-1)*1*1/(346/5*365)*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "S_b",
+    "I_b",
+    "S_h",
+    "I_a"
+  ],
+  "const_names": [
+    "ModelValue_1",
+    "compartment",
+    "Human_Population"
+  ],
+  "init_description": "x_0: S_b, x_1: I_b, x_2: S_h, x_3: I_a",
+  "const_description": "c_0: ModelValue_1, c_1: compartment, c_2: Human_Population",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 10,
+    "n_reconfigured_reactions": 10,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> S_b",
+      "S_b -> 0",
+      "S_b -> I_b",
+      "I_b -> 0",
+      "I_b -> 0",
+      "0 -> S_h",
+      "S_h -> 0",
+      "S_h -> I_a",
+      "I_a -> 0",
+      "I_a -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> S_b",
+      "S_b -> 0",
+      "S_b -> I_b",
+      "I_b -> 0",
+      "I_b -> 0",
+      "0 -> S_h",
+      "S_h -> 0",
+      "S_h -> I_a",
+      "I_a -> 0",
+      "I_a -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[21]*2060/365 + (-1)*k[21]*1/(2*365)*x[1] + (-1)*k[21]*45685/(439197*30)*x[1]*x[2])/k[21]",
+      "(1*k[21]*45685/(439197*30)*x[1]*x[2] + (-1)*k[21]*45682/(439197*30)*x[2] + (-1)*k[21]*1/(2*365)*x[2])/k[21]",
+      "(1*k[22]*237/10*k[20]/365000 + (-1)*k[22]*1/(346/5*365)*x[3] + (-1)*16/(108*1000000*1825/2)*x[3]*x[2])/k[22]",
+      "(1*16/(108*1000000*1825/2)*x[3]*x[2] + (-1)*k[22]*6/(108*1000000*1825/2)*x[4] + (-1)*k[22]*1/(346/5*365)*x[4])/k[22]"
+    ],
+    "species_index_map": {
+      "x_0": "S_b",
+      "x_1": "I_b",
+      "x_2": "S_h",
+      "x_3": "I_a"
+    },
+    "const_index_map": {
+      "c_0": "ModelValue_1",
+      "c_1": "compartment",
+      "c_2": "Human_Population"
+    }
+  }
+}

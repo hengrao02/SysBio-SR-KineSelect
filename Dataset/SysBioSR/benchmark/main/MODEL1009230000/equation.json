@@ -1,0 +1,55 @@
+{
+  "const_description": "c_0: beta, c_1: zeta, c_2: alpha, c_3: delta",
+  "const_names": [
+    "beta",
+    "zeta",
+    "alpha",
+    "delta"
+  ],
+  "consts": [
+    [
+      0.0095,
+      0.0001,
+      0.005,
+      0.0001
+    ]
+  ],
+  "dataset_model_id": "MODEL1009230000",
+  "dataset_model_name": "Munz2009",
+  "dim": 3,
+  "eq": "-c_0*x_0*x_1 | c_0*x_0*x_1 + c_1*x_2 - c_2*x_0*x_1 | -c_1*x_2 + c_2*x_0*x_1 + c_3*x_0",
+  "eq_raw": "-S*Z*beta | R*zeta - S*Z*alpha + S*Z*beta | -R*zeta + S*Z*alpha + S*delta",
+  "id": "MODEL1009230000",
+  "init": [
+    [
+      500.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: Z, x_2: R",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Munz2009 - Zombie basic SZR",
+  "source_xml": "Munz2009.xml",
+  "state_names": [
+    "S",
+    "Z",
+    "R"
+  ],
+  "substituted": [
+    [
+      "-0.0095*x_0*x_1",
+      "0.0045*x_0*x_1 + 0.0001*x_2",
+      "0.005*x_0*x_1 + 0.0001*x_0 - 0.0001*x_2"
+    ]
+  ]
+}

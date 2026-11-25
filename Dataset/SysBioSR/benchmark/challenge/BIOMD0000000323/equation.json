@@ -1,0 +1,109 @@
+{
+  "dataset_model_id": "BIOMD0000000323",
+  "dataset_model_name": "Kim2011",
+  "id": "BIOMD0000000323",
+  "name": "Kim2011",
+  "source_xml": "Kim2011.xml",
+  "dim": 3,
+  "eq": "(1*c_3*c_0/(c_5^c_2 + x_1^c_2) + (-1)*c_3*x_0/c_1/(1 + x_0/c_1))/c_3 | (1*c_3*c_0/(c_6^c_2 + x_2^c_2) + (-1)*c_3*x_1/c_1/(1 + x_1/c_1))/c_3 | (1*c_3*c_0/(c_4^c_2 + x_0^c_2) + (-1)*c_3*x_2/c_1/(1 + x_2/c_1))/c_3",
+  "eq_raw": "(1*compartment_1*parameter_1/(__lp_r3_Shalve^parameter_3 + species_2^parameter_3) + (-1)*compartment_1*species_1/parameter_2/(1 + species_1/parameter_2))/compartment_1 | (1*compartment_1*parameter_1/(__lp_r4_Shalve^parameter_3 + species_3^parameter_3) + (-1)*compartment_1*species_2/parameter_2/(1 + species_2/parameter_2))/compartment_1 | (1*compartment_1*parameter_1/(__lp_r2_Shalve^parameter_3 + species_1^parameter_3) + (-1)*compartment_1*species_3/parameter_2/(1 + species_3/parameter_2))/compartment_1",
+  "consts": [
+    [
+      1.0,
+      0.3,
+      5.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.077263224711098,
+      1.1126122502624984,
+      0.12041166991529113
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*1/(1^5 + x_1^5) + (-1)*1*x_0/0.3/(1 + x_0/0.3))/1",
+      "(1*1*1/(1^5 + x_2^5) + (-1)*1*x_1/0.3/(1 + x_1/0.3))/1",
+      "(1*1*1/(1^5 + x_0^5) + (-1)*1*x_2/0.3/(1 + x_2/0.3))/1"
+    ]
+  ],
+  "state_names": [
+    "species_1",
+    "species_2",
+    "species_3"
+  ],
+  "const_names": [
+    "parameter_1",
+    "parameter_2",
+    "parameter_3",
+    "compartment_1",
+    "__lp_r2_Shalve",
+    "__lp_r3_Shalve",
+    "__lp_r4_Shalve"
+  ],
+  "init_description": "x_0: species_1, x_1: species_2, x_2: species_3",
+  "const_description": "c_0: parameter_1, c_1: parameter_2, c_2: parameter_3, c_3: compartment_1, c_4: __lp_r2_Shalve, c_5: __lp_r3_Shalve, c_6: __lp_r4_Shalve",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "species_1 -> species_1 + species_3",
+      "species_2 -> species_1 + species_2",
+      "species_3 -> species_2 + species_3",
+      "species_1 -> 0",
+      "species_2 -> 0",
+      "species_3 -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "species_1 -> species_1 + species_3",
+      "species_2 -> species_1 + species_2",
+      "species_3 -> species_2 + species_3",
+      "species_1 -> 0",
+      "species_2 -> 0",
+      "species_3 -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[4]*k[1]/(k[6]^k[3] + x[2]^k[3]) + (-1)*k[4]*x[1]/k[2]/(1 + x[1]/k[2]))/k[4]",
+      "(1*k[4]*k[1]/(k[7]^k[3] + x[3]^k[3]) + (-1)*k[4]*x[2]/k[2]/(1 + x[2]/k[2]))/k[4]",
+      "(1*k[4]*k[1]/(k[5]^k[3] + x[1]^k[3]) + (-1)*k[4]*x[3]/k[2]/(1 + x[3]/k[2]))/k[4]"
+    ],
+    "species_index_map": {
+      "x_0": "species_1",
+      "x_1": "species_2",
+      "x_2": "species_3"
+    },
+    "const_index_map": {
+      "c_0": "parameter_1",
+      "c_1": "parameter_2",
+      "c_2": "parameter_3",
+      "c_3": "compartment_1",
+      "c_4": "__lp_r2_Shalve",
+      "c_5": "__lp_r3_Shalve",
+      "c_6": "__lp_r4_Shalve"
+    }
+  }
+}

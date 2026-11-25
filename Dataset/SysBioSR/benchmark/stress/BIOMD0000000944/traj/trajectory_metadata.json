@@ -1,0 +1,88 @@
+{
+  "system_id": "BIOMD0000000944",
+  "state_names": [
+    "Cyclin",
+    "Active_Cdc2_kinase",
+    "Active_APC"
+  ],
+  "const_names": [
+    "K1",
+    "K3",
+    "K4",
+    "Kc",
+    "Kd",
+    "kd",
+    "V2",
+    "V4",
+    "vs",
+    "vd",
+    "Vm1",
+    "Vm3",
+    "compartment"
+  ],
+  "default_consts": [
+    0.002,
+    0.01,
+    0.01,
+    0.5,
+    0.001,
+    0.046,
+    2.0,
+    0.7,
+    0.06,
+    0.25,
+    4.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.01,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.2,
+        0.1,
+        0.4
+      ],
+      "relative_scale_vs_default": [
+        20.0,
+        10.0,
+        40.0
+      ],
+      "absolute_offset_from_default": [
+        0.19,
+        0.09000000000000001,
+        0.39
+      ],
+      "state_scale_from_default_trajectory": [
+        0.6362080477124057,
+        0.978361146607291,
+        0.8162226127903216
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 3704563961,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9999382175193202,
+        "peak_ratio_per_state": [
+          0.9999987503974769,
+          1.0000093466806028,
+          0.9999847276912944
+        ],
+        "max_peak_ratio": 1.0000093466806028
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

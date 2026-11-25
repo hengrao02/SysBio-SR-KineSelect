@@ -1,0 +1,65 @@
+{
+  "system_id": "MODEL1608100000",
+  "state_names": [
+    "mRNA",
+    "Protein"
+  ],
+  "const_names": [
+    "R1__v",
+    "compartment",
+    "R2__k1",
+    "R3__k1",
+    "R4__k1"
+  ],
+  "default_consts": [
+    5.0,
+    1.0,
+    0.03,
+    0.1,
+    0.03
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        10.0,
+        100.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        50.0,
+        150.0
+      ],
+      "relative_scale_vs_default": [
+        5.0,
+        1.5
+      ],
+      "absolute_offset_from_default": [
+        40.0,
+        50.0
+      ],
+      "state_scale_from_default_trajectory": [
+        166.54970154037557,
+        552.4082814270386
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 115718298,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.2401685480673351,
+        "peak_ratio_per_state": [
+          1.0001793053296462,
+          1.0013650230167215
+        ],
+        "max_peak_ratio": 1.0013650230167215
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

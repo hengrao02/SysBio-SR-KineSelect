@@ -1,0 +1,67 @@
+{
+  "const_description": "c_0: Compartment, c_1: k_g, c_2: k_ma, c_3: E_bile, c_4: k_el, c_5: k_g_prime, c_6: k_out",
+  "const_names": [
+    "Compartment",
+    "k_g",
+    "k_ma",
+    "E_bile",
+    "k_el",
+    "k_g_prime",
+    "k_out"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.067,
+      0.24,
+      0.0239,
+      0.27,
+      0.00971,
+      0.00972
+    ]
+  ],
+  "dataset_model_id": "MODEL2003030002",
+  "dataset_model_name": "Back2018",
+  "dim": 5,
+  "eq": "-c_0*c_1*x_0 | c_0*c_1*x_0 - c_0*c_2*x_1*(c_3*x_4 + 1) | c_0*c_2*x_1*(c_3*x_4 + 1) - c_0*c_4*x_2 | -c_0*c_5*x_3 | c_0*c_5*x_3 - c_0*c_6*x_4",
+  "eq_raw": "-Compartment*X1*k_g | Compartment*X1*k_g - Compartment*X2*k_ma*(E_bile*X5 + 1) | Compartment*X2*k_ma*(E_bile*X5 + 1) - Compartment*X3*k_el | -Compartment*X4*k_g_prime | Compartment*X4*k_g_prime - Compartment*X5*k_out",
+  "id": "New_Model",
+  "init": [
+    [
+      250.0,
+      1e-05,
+      1e-05,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: X1, x_1: X2, x_2: X3, x_3: X4, x_4: X5",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Back2018 - Mechanistic PK model of Fenofibrate",
+  "source_xml": "Back2018.xml",
+  "state_names": [
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5"
+  ],
+  "substituted": [
+    [
+      "-0.067*x_0",
+      "0.067*x_0 - 0.24*x_1*(0.0239*x_4 + 1)",
+      "0.24*x_1*(0.0239*x_4 + 1) - 0.27*x_2",
+      "-0.00971*x_3",
+      "0.00971*x_3 - 0.00972*x_4"
+    ]
+  ]
+}

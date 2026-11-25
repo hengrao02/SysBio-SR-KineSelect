@@ -1,0 +1,68 @@
+{
+  "system_id": "BIOMD0000001045",
+  "state_names": [
+    "Infected",
+    "Recovered",
+    "Susceptible"
+  ],
+  "const_names": [
+    "New_York_1968_69",
+    "k",
+    "beta"
+  ],
+  "default_consts": [
+    1.0,
+    0.33,
+    0.5
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.27e-06,
+        0.0,
+        0.999999999999998
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        7.502241668101279e-07,
+        0.17775510742765285,
+        1.2758748387687706
+      ],
+      "relative_scale_vs_default": [
+        0.5907276904016755,
+        null,
+        1.275874838768773
+      ],
+      "absolute_offset_from_default": [
+        -5.197758331898721e-07,
+        0.17775510742765285,
+        0.2758748387687726
+      ],
+      "state_scale_from_default_trajectory": [
+        0.06576103817932746,
+        0.5925170247588428,
+        0.9999999999999981
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 811774519,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 2.704655348266949,
+        "peak_ratio_per_state": [
+          2.749883463173373,
+          1.9743639407333402,
+          1.275874838768773
+        ],
+        "max_peak_ratio": 2.749883463173373
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

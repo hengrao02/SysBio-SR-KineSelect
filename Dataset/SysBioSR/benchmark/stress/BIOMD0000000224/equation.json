@@ -1,0 +1,72 @@
+{
+  "const_description": "c_0: L, c_1: A, c_2: k1, c_3: B, c_4: k2, c_5: C, c_6: k3, c_7: R, c_8: D, c_9: F, c_10: E",
+  "const_names": [
+    "L",
+    "A",
+    "k1",
+    "B",
+    "k2",
+    "C",
+    "k3",
+    "R",
+    "D",
+    "F",
+    "E"
+  ],
+  "consts": [
+    [
+      0.01,
+      20.0,
+      0.5,
+      40.0,
+      0.15,
+      1.1,
+      1.0,
+      0.09,
+      2.0,
+      0.02,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000224",
+  "dataset_model_name": "Meyer1991",
+  "dim": 4,
+  "eq": "-0.0001*c_3*x_0^2/(c_4^2 + 0.0001*x_0^2) + x_2*(-x_3 + 1)*(c_0 + 0.0625*c_1*x_1^4/(c_2 + 0.5*x_1)^4) | c_5*(-c_6/((c_6 + 0.01*x_0)*(c_7 + 1)) + 1) - 0.5*c_8*x_1 | 0.0001*c_3*x_0^2/(c_4^2 + 0.0001*x_0^2) - x_2*(-x_3 + 1)*(c_0 + 0.0625*c_1*x_1^4/(c_2 + 0.5*x_1)^4) | 1.0e-8*c_10*x_0^4*(-x_3 + 1) - c_9",
+  "eq_raw": "-0.0001*B*CaI^2/(0.0001*CaI^2 + k2^2) + CaS*(-g + 1)*(0.0625*A*IP3^4/(0.5*IP3 + k1)^4 + L) | C*(-k3/((0.01*CaI + k3)*(R + 1)) + 1) - 0.5*D*IP3 | 0.0001*B*CaI^2/(0.0001*CaI^2 + k2^2) - CaS*(-g + 1)*(0.0625*A*IP3^4/(0.5*IP3 + k1)^4 + L) | 1.0e-8*CaI^4*E*(-g + 1) - F",
+  "id": "Meyer1991_CalciumSpike_ICC",
+  "init": [
+    [
+      0.1,
+      0.05,
+      1100.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: CaI, x_1: IP3, x_2: CaS, x_3: g",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Meyer1991_CalciumSpike_ICC",
+  "source_xml": "Meyer1991.xml",
+  "state_names": [
+    "CaI",
+    "IP3",
+    "CaS",
+    "g"
+  ],
+  "substituted": [
+    [
+      "-0.004*x_0^2/(0.0001*x_0^2 + 0.0225) + x_2*(-x_3 + 1)*(20.0*x_1^4/(x_1 + 1)^4 + 0.01)",
+      "-1.0*x_1 + 1.1 - 1.00917431192661/(0.01*x_0 + 1.0)",
+      "0.004*x_0^2/(0.0001*x_0^2 + 0.0225) - x_2*(-x_3 + 1)*(20.0*x_1^4/(x_1 + 1)^4 + 0.01)",
+      "1.0e-8*x_0^4*(-x_3 + 1) - 0.02"
+    ]
+  ]
+}

@@ -1,0 +1,7 @@
+# Installation smoke only; not a historical numerical-equivalence budget.
+inherits: [../sisr/single_system.yaml]
+experiment_id: sysbiosr-sisr-smoke-v1
+island_pop: 20
+island_generations: 2
+random_seed: 42
+verbosity: 0

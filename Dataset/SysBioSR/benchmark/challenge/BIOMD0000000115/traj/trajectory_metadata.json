@@ -1,0 +1,75 @@
+{
+  "system_id": "BIOMD0000000115",
+  "state_names": [
+    "x",
+    "y"
+  ],
+  "const_names": [
+    "k",
+    "alpha",
+    "n",
+    "a",
+    "k1",
+    "beta",
+    "gamma",
+    "Cytosol",
+    "ER",
+    "Extracellular"
+  ],
+  "default_consts": [
+    0.01,
+    10.0,
+    4.0,
+    1.4,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.8927398384922851,
+        1.394005990402896
+      ],
+      "relative_scale_vs_default": [
+        0.8927398384922851,
+        1.394005990402896
+      ],
+      "absolute_offset_from_default": [
+        -0.10726016150771489,
+        0.3940059904028961
+      ],
+      "state_scale_from_default_trajectory": [
+        4.35026802041318,
+        2.0961474265785998
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3129505152,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.4626284167506163,
+        "peak_ratio_per_state": [
+          0.9982102747864225,
+          0.9984662378806858
+        ],
+        "max_peak_ratio": 0.9984662378806858
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

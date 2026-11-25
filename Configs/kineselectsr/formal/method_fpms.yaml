@@ -1,0 +1,14 @@
+inherits:
+  - formulation.yaml
+  - fitting.yaml
+  - search.yaml
+  - final_selector_fpms.yaml
+
+experiment_id: sysbiosr-paper
+
+# KFI evaluates the complete configured kinetic-law space, then selects the
+# highest-contribution variant for each proposed reaction.
+sindy_selector_mode: kfi
+sindy_collinearity_pruning: true
+sindy_collinearity_cos_threshold: 0.999
+sindy_hill_collinearity_cos_threshold: 0.995

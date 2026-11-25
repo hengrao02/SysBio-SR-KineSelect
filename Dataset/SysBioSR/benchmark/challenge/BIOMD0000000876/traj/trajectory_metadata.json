@@ -1,0 +1,89 @@
+{
+  "system_id": "BIOMD0000000876",
+  "state_names": [
+    "C_Uninfected_CD4",
+    "I_Infected_CD4",
+    "F_CTL",
+    "V_Virus"
+  ],
+  "const_names": [
+    "C_ast",
+    "N",
+    "beta",
+    "lambda",
+    "a",
+    "k",
+    "rho",
+    "b",
+    "e",
+    "compartment"
+  ],
+  "default_consts": [
+    1000.0,
+    2000.0,
+    5.75e-05,
+    0.01,
+    1.0,
+    23.0,
+    1.0,
+    0.1,
+    0.001,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1000.0,
+        1.0,
+        1.0,
+        200.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1468.2229029740622,
+        1.1992804839729985,
+        1.312527732133936,
+        290.58055959410655
+      ],
+      "relative_scale_vs_default": [
+        1.468222902974062,
+        1.1992804839729985,
+        1.312527732133936,
+        1.4529027979705327
+      ],
+      "absolute_offset_from_default": [
+        468.2229029740622,
+        0.19928048397299847,
+        0.3125277321339359,
+        90.58055959410655
+      ],
+      "state_scale_from_default_trajectory": [
+        1000.0,
+        38.73186428095038,
+        9.378196555206642,
+        3316.6110107930313
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3444936208,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 1.5916629804415687,
+        "peak_ratio_per_state": [
+          1.468222902974062,
+          1.0592871478474972,
+          1.9600758362378152,
+          1.0613112259790056
+        ],
+        "max_peak_ratio": 1.9600758362378152
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

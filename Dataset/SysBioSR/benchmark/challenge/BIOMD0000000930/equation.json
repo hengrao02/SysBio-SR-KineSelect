@@ -1,0 +1,163 @@
+{
+  "dataset_model_id": "BIOMD0000000930",
+  "dataset_model_name": "Liu2017",
+  "id": "BIOMD0000000930",
+  "name": "Liu2017",
+  "source_xml": "Liu2017.xml",
+  "dim": 4,
+  "eq": "(1*c_17*c_0*x_0*(1 - c_1*x_0) + (-1)*c_17*c_2*x_1*x_0 + (-1)*c_17*c_8*x_3*x_0)/c_17 | (1*c_17*c_11 + 1*c_17*c_4*x_0/(c_5 + x_0)*x_1 + (-1)*c_17*c_3*x_1 + (-1)*c_17*c_10*x_0*x_1 + (-1)*c_17*c_7*(1 - c_16)*x_3*x_1)/c_17 | (1*c_17*c_12 + (-1)*c_17*c_13*x_2 + (-1)*c_17*c_6*(1 - c_16)*x_3*x_2)/c_17 | ((-1)*c_17*c_14*x_3 + 1*c_17*c_15 + (-1)*c_17*c_9*x_0*x_3)/c_17",
+  "eq_raw": "(1*Tumor_Microenvironment*a*Tumor_Cell_Population__T*(1 - b*Tumor_Cell_Population__T) + (-1)*Tumor_Microenvironment*c1*Effector_immune_cell_population__N*Tumor_Cell_Population__T + (-1)*Tumor_Microenvironment*Kt*Chemotherapeutic_drug_concentration__M*Tumor_Cell_Population__T)/Tumor_Microenvironment | (1*Tumor_Microenvironment*alpha1 + 1*Tumor_Microenvironment*g*Tumor_Cell_Population__T/(s + Tumor_Cell_Population__T)*Effector_immune_cell_population__N + (-1)*Tumor_Microenvironment*mu*Effector_immune_cell_population__N + (-1)*Tumor_Microenvironment*p*Tumor_Cell_Population__T*Effector_immune_cell_population__N + (-1)*Tumor_Microenvironment*Kn*(1 - eta)*Chemotherapeutic_drug_concentration__M*Effector_immune_cell_population__N)/Tumor_Microenvironment | (1*Tumor_Microenvironment*alpha2 + (-1)*Tumor_Microenvironment*beta*Circulating_lymphocyte_population__C + (-1)*Tumor_Microenvironment*Kc*(1 - eta)*Chemotherapeutic_drug_concentration__M*Circulating_lymphocyte_population__C)/Tumor_Microenvironment | ((-1)*Tumor_Microenvironment*gamma*Chemotherapeutic_drug_concentration__M + 1*Tumor_Microenvironment*Vm + (-1)*Tumor_Microenvironment*kt*Tumor_Cell_Population__T*Chemotherapeutic_drug_concentration__M)/Tumor_Microenvironment",
+  "consts": [
+    [
+      0.431,
+      1.02e-14,
+      3.41e-10,
+      0.0412,
+      0.015,
+      20.2,
+      0.6,
+      0.6,
+      0.8,
+      3.2e-09,
+      2e-11,
+      12000.0,
+      750000000.0,
+      0.012,
+      0.9,
+      0.45,
+      0.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      10000000.0,
+      300000.0,
+      62500000000.0,
+      0.45
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.431*x_0*(1 - 1.02e-14*x_0) + (-1)*1*3.41e-10*x_1*x_0 + (-1)*1*0.8*x_3*x_0)/1",
+      "(1*1*12000 + 1*1*0.015*x_0/(20.2 + x_0)*x_1 + (-1)*1*0.0412*x_1 + (-1)*1*2e-11*x_0*x_1 + (-1)*1*0.6*(1 - 0)*x_3*x_1)/1",
+      "(1*1*750000000 + (-1)*1*0.012*x_2 + (-1)*1*0.6*(1 - 0)*x_3*x_2)/1",
+      "((-1)*1*0.9*x_3 + 1*1*0.45 + (-1)*1*3.2e-09*x_0*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "Tumor_Cell_Population__T",
+    "Effector_immune_cell_population__N",
+    "Circulating_lymphocyte_population__C",
+    "Chemotherapeutic_drug_concentration__M"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c1",
+    "mu",
+    "g",
+    "s",
+    "Kc",
+    "Kn",
+    "Kt",
+    "kt",
+    "p",
+    "alpha1",
+    "alpha2",
+    "beta",
+    "gamma",
+    "Vm",
+    "eta",
+    "Tumor_Microenvironment"
+  ],
+  "init_description": "x_0: Tumor_Cell_Population__T, x_1: Effector_immune_cell_population__N, x_2: Circulating_lymphocyte_population__C, x_3: Chemotherapeutic_drug_concentration__M",
+  "const_description": "c_0: a, c_1: b, c_2: c1, c_3: mu, c_4: g, c_5: s, c_6: Kc, c_7: Kn, c_8: Kt, c_9: kt, c_10: p, c_11: alpha1, c_12: alpha2, c_13: beta, c_14: gamma, c_15: Vm, c_16: eta, c_17: Tumor_Microenvironment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 14,
+    "n_reconfigured_reactions": 14,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> Tumor_Cell_Population__T",
+      "Tumor_Cell_Population__T -> 0",
+      "Tumor_Cell_Population__T -> 0",
+      "0 -> Effector_immune_cell_population__N",
+      "0 -> Effector_immune_cell_population__N",
+      "Effector_immune_cell_population__N -> 0",
+      "Effector_immune_cell_population__N -> 0",
+      "Effector_immune_cell_population__N -> 0",
+      "0 -> Circulating_lymphocyte_population__C",
+      "Circulating_lymphocyte_population__C -> 0",
+      "Circulating_lymphocyte_population__C -> 0",
+      "Chemotherapeutic_drug_concentration__M -> 0",
+      "0 -> Chemotherapeutic_drug_concentration__M",
+      "Chemotherapeutic_drug_concentration__M -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Tumor_Cell_Population__T",
+      "Tumor_Cell_Population__T -> 0",
+      "Tumor_Cell_Population__T -> 0",
+      "0 -> Effector_immune_cell_population__N",
+      "0 -> Effector_immune_cell_population__N",
+      "Effector_immune_cell_population__N -> 0",
+      "Effector_immune_cell_population__N -> 0",
+      "Effector_immune_cell_population__N -> 0",
+      "0 -> Circulating_lymphocyte_population__C",
+      "Circulating_lymphocyte_population__C -> 0",
+      "Circulating_lymphocyte_population__C -> 0",
+      "Chemotherapeutic_drug_concentration__M -> 0",
+      "0 -> Chemotherapeutic_drug_concentration__M",
+      "Chemotherapeutic_drug_concentration__M -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[18]*k[1]*x[1]*(1 - k[2]*x[1]) + (-1)*k[18]*k[3]*x[2]*x[1] + (-1)*k[18]*k[9]*x[4]*x[1])/k[18]",
+      "(1*k[18]*k[12] + 1*k[18]*k[5]*x[1]/(k[6] + x[1])*x[2] + (-1)*k[18]*k[4]*x[2] + (-1)*k[18]*k[11]*x[1]*x[2] + (-1)*k[18]*k[8]*(1 - k[17])*x[4]*x[2])/k[18]",
+      "(1*k[18]*k[13] + (-1)*k[18]*k[14]*x[3] + (-1)*k[18]*k[7]*(1 - k[17])*x[4]*x[3])/k[18]",
+      "((-1)*k[18]*k[15]*x[4] + 1*k[18]*k[16] + (-1)*k[18]*k[10]*x[1]*x[4])/k[18]"
+    ],
+    "species_index_map": {
+      "x_0": "Tumor_Cell_Population__T",
+      "x_1": "Effector_immune_cell_population__N",
+      "x_2": "Circulating_lymphocyte_population__C",
+      "x_3": "Chemotherapeutic_drug_concentration__M"
+    },
+    "const_index_map": {
+      "c_0": "a",
+      "c_1": "b",
+      "c_2": "c1",
+      "c_3": "mu",
+      "c_4": "g",
+      "c_5": "s",
+      "c_6": "Kc",
+      "c_7": "Kn",
+      "c_8": "Kt",
+      "c_9": "kt",
+      "c_10": "p",
+      "c_11": "alpha1",
+      "c_12": "alpha2",
+      "c_13": "beta",
+      "c_14": "gamma",
+      "c_15": "Vm",
+      "c_16": "eta",
+      "c_17": "Tumor_Microenvironment"
+    }
+  }
+}

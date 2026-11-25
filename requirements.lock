@@ -1,0 +1,30 @@
+# Fully pinned validation environment refreshed on 2026-07-14.
+# Platform: CPython 3.13, Linux x86_64. This records direct and transitive
+# versions; optional training dependencies are installed separately.
+attrs==24.3.0
+contourpy==1.3.1
+cycler==0.11.0
+fonttools==4.60.2
+jsonschema==4.23.0
+jsonschema-specifications==2023.7.1
+kiwisolver==1.4.8
+matplotlib==3.10.0
+mpmath==1.3.0
+numpy==2.1.3
+packaging==24.2
+pandas==2.2.3
+pillow==12.3.0
+pyparsing==3.2.0
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyYAML==6.0.2
+referencing==0.30.2
+rpds-py==0.22.3
+scipy==1.15.3
+setuptools==78.1.1
+six==1.17.0
+sympy==1.13.3
+tqdm==4.67.1
+tzdata==2025.2
+wheel==0.46.2
+zstandard==0.23.0

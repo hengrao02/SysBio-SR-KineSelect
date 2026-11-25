@@ -1,0 +1,56 @@
+{
+  "const_description": "c_0: SRK, c_1: tu, c_2: SR, c_3: VVE, c_4: SRK2, c_5: SR2",
+  "const_names": [
+    "SRK",
+    "tu",
+    "SR",
+    "VVE",
+    "SRK2",
+    "SR2"
+  ],
+  "consts": [
+    [
+      5.0,
+      1.0,
+      1.0,
+      0.743224,
+      10000.0,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "MODEL0910896131",
+  "dataset_model_name": "Guyton1972",
+  "dim": 2,
+  "eq": "(c_2*(c_3 - 0.74) - x_0)/(c_0*c_1) | (c_5*(c_3 - 0.74) - x_1)/(c_1*c_4)",
+  "eq_raw": "(SR*(VVE - 0.74) - VV7)/(SRK*tu) | (SR2*(VVE - 0.74) - VV6)/(SRK2*tu)",
+  "id": "Guyton1972_StressRelaxation",
+  "init": [
+    [
+      0.00366525,
+      0.0101913
+    ]
+  ],
+  "init_description": "x_0: VV7, x_1: VV6",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 2,
+    "warnings": []
+  },
+  "name": "Guyton1972_StressRelaxation",
+  "source_xml": "Guyton1972.xml",
+  "state_names": [
+    "VV7",
+    "VV6"
+  ],
+  "substituted": [
+    [
+      "-0.2*x_0 + 0.000644800000000001",
+      "-0.0001*x_1 + 3.22400000000001e-7"
+    ]
+  ]
+}

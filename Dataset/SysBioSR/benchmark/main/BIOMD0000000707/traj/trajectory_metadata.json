@@ -1,0 +1,98 @@
+{
+  "system_id": "BIOMD0000000707",
+  "state_names": [
+    "Normal_Th_cells",
+    "Pathogen_Virus",
+    "Single_Infected_Th_Cells",
+    "Recombinant_Virus",
+    "Double_Infected_Th_Cells"
+  ],
+  "const_names": [
+    "d",
+    "lamda",
+    "beta",
+    "a",
+    "alpha",
+    "b",
+    "k",
+    "u",
+    "c",
+    "q",
+    "Plasma"
+  ],
+  "default_consts": [
+    0.01,
+    2.0,
+    0.004,
+    0.33,
+    0.004,
+    2.0,
+    50.0,
+    2.0,
+    2000.0,
+    2.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        3.0,
+        149.0,
+        6.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        2.7280614872284605,
+        187.7522886526215,
+        7.025959213307914,
+        1.3347409932987884,
+        1.1687769891954465
+      ],
+      "relative_scale_vs_default": [
+        0.9093538290761535,
+        1.2600824741786678,
+        1.1709932022179856,
+        1.3347409932987884,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -0.27193851277153946,
+        38.7522886526215,
+        1.0259592133079138,
+        0.33474099329878837,
+        1.1687769891954465
+      ],
+      "state_scale_from_default_trajectory": [
+        32.9334761819986,
+        149.12906690107644,
+        6.0,
+        2858.420310585025,
+        3.895923297318155
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 64721031,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 1.0299313965635934,
+        "peak_ratio_per_state": [
+          0.9997120726677938,
+          1.2589919091840458,
+          1.1709932022179856,
+          1.0808835322112094,
+          1.1327049555027846
+        ],
+        "max_peak_ratio": 1.2589919091840458
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

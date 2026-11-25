@@ -1,0 +1,118 @@
+{
+  "dataset_model_id": "BIOMD0000000906",
+  "dataset_model_name": "Dubey2007",
+  "id": "BIOMD0000000906",
+  "name": "Dubey2007",
+  "source_xml": "Dubey2007.xml",
+  "dim": 3,
+  "eq": "(1*c_9*c_0*x_0 + (-1)*c_9*(c_1*x_1*x_0 + c_2*x_0*x_0))/c_9 | (1*c_9*(c_3 + c_5*x_1*x_0) + (-1)*c_9*(c_4*x_1 + c_6*c_1*x_1*x_0))/c_9 | (1*c_9*c_7*x_0 + (-1)*c_9*c_8*x_2)/c_9",
+  "eq_raw": "(1*compartment*beta*P + (-1)*compartment*(gamma*I*P + beta0*P*P))/compartment | (1*compartment*(mu + b*I*P) + (-1)*compartment*(a*I + n*gamma*I*P))/compartment | (1*compartment*alpha*P + (-1)*compartment*alpha0*M)/compartment",
+  "consts": [
+    [
+      0.9,
+      0.05,
+      0.2,
+      0.04,
+      0.8,
+      0.3,
+      0.1,
+      2.4,
+      0.1,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.9*x_0 + (-1)*1*(0.05*x_1*x_0 + 0.2*x_0*x_0))/1",
+      "(1*1*(0.04 + 0.3*x_1*x_0) + (-1)*1*(0.8*x_1 + 0.1*0.05*x_1*x_0))/1",
+      "(1*1*2.4*x_0 + (-1)*1*0.1*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "P",
+    "I",
+    "M"
+  ],
+  "const_names": [
+    "beta",
+    "gamma",
+    "beta0",
+    "mu",
+    "a",
+    "b",
+    "n",
+    "alpha",
+    "alpha0",
+    "compartment"
+  ],
+  "init_description": "x_0: P, x_1: I, x_2: M",
+  "const_description": "c_0: beta, c_1: gamma, c_2: beta0, c_3: mu, c_4: a, c_5: b, c_6: n, c_7: alpha, c_8: alpha0, c_9: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> P",
+      "P -> 0",
+      "0 -> I",
+      "I -> 0",
+      "0 -> M",
+      "M -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> P",
+      "P -> 0",
+      "0 -> I",
+      "I -> 0",
+      "0 -> M",
+      "M -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[10]*k[1]*x[1] + (-1)*k[10]*(k[2]*x[2]*x[1] + k[3]*x[1]*x[1]))/k[10]",
+      "(1*k[10]*(k[4] + k[6]*x[2]*x[1]) + (-1)*k[10]*(k[5]*x[2] + k[7]*k[2]*x[2]*x[1]))/k[10]",
+      "(1*k[10]*k[8]*x[1] + (-1)*k[10]*k[9]*x[3])/k[10]"
+    ],
+    "species_index_map": {
+      "x_0": "P",
+      "x_1": "I",
+      "x_2": "M"
+    },
+    "const_index_map": {
+      "c_0": "beta",
+      "c_1": "gamma",
+      "c_2": "beta0",
+      "c_3": "mu",
+      "c_4": "a",
+      "c_5": "b",
+      "c_6": "n",
+      "c_7": "alpha",
+      "c_8": "alpha0",
+      "c_9": "compartment"
+    }
+  }
+}

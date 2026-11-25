@@ -1,0 +1,90 @@
+{
+  "system_id": "BIOMD0000001036",
+  "state_names": [
+    "Effector_cells",
+    "Tumor_cells",
+    "IL_2"
+  ],
+  "const_names": [
+    "c",
+    "mu2",
+    "p1",
+    "g1",
+    "s1",
+    "r2",
+    "b",
+    "a",
+    "g2",
+    "p2",
+    "g3",
+    "mu3",
+    "s2",
+    "Tumor_microenvironment"
+  ],
+  "default_consts": [
+    1.009,
+    0.0378,
+    0.044,
+    0.02,
+    0.0,
+    0.123,
+    1.0,
+    0.018,
+    0.0001,
+    0.9,
+    1e-05,
+    1.8,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1e-05,
+        1e-05,
+        1e-05
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.002,
+        1e-05,
+        0.0004
+      ],
+      "relative_scale_vs_default": [
+        200.0,
+        1.0,
+        40.0
+      ],
+      "absolute_offset_from_default": [
+        0.00199,
+        0.0,
+        0.00039
+      ],
+      "state_scale_from_default_trajectory": [
+        0.001961591716687403,
+        0.00011758841353261425,
+        0.0008669954150215375
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 2948310233,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 1.0144822610489868,
+        "peak_ratio_per_state": [
+          1.0195801618582783,
+          0.7953018568563617,
+          0.8395342348660566
+        ],
+        "max_peak_ratio": 1.0195801618582783
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

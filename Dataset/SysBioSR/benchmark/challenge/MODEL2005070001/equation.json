@@ -1,0 +1,85 @@
+{
+  "const_description": "c_0: compartment, c_1: VC_s, c_2: E, c_3: Vs_m, c_4: Ks_E, c_5: Kp, c_6: V2_m, c_7: gamma, c_8: K2, c_9: Vd_E_m, c_10: Kd_C, c_11: V1_m, c_12: K1_C, c_13: K1, c_14: V4_m, c_15: K4, c_16: RE, c_17: V3_m, c_18: K3",
+  "const_names": [
+    "compartment",
+    "VC_s",
+    "E",
+    "Vs_m",
+    "Ks_E",
+    "Kp",
+    "V2_m",
+    "gamma",
+    "K2",
+    "Vd_E_m",
+    "Kd_C",
+    "V1_m",
+    "K1_C",
+    "K1",
+    "V4_m",
+    "K4",
+    "RE",
+    "V3_m",
+    "K3"
+  ],
+  "consts": [
+    [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.1,
+      1.0,
+      40.0,
+      1.0,
+      0.0001,
+      1000.0,
+      0.005,
+      50.0,
+      0.1,
+      0.0001,
+      3.0,
+      0.0001,
+      1.0,
+      3000.0,
+      0.0001
+    ]
+  ],
+  "dataset_model_id": "MODEL2005070001",
+  "dataset_model_name": "Hatzimanikatis1999",
+  "dim": 3,
+  "eq": "c_0*(c_1 + c_2*c_3/(c_2 + c_4) + c_5*c_6*c_7/(c_5 + c_8)) - c_0*(c_11*c_7*x_0*x_1/((c_12 + x_0)*(c_13 + x_1)) + c_2*c_9*x_0/(c_10 + x_0) + x_0) | -c_0*c_11*x_0*x_1/((c_12 + x_0)*(c_13 + x_1)) + c_0*c_5*c_6/(c_5 + c_8) | -c_0*c_14*x_2/(c_15 + x_2) + c_0*c_16*c_17*c_5/(c_16 + c_18)",
+  "eq_raw": "compartment*(E*Vs_m/(E + Ks_E) + Kp*V2_m*gamma/(K2 + Kp) + VC_s) - compartment*(C*E*Vd_E_m/(C + Kd_C) + C*K*V1_m*gamma/((C + K1_C)*(K + K1)) + C) | -C*K*V1_m*compartment/((C + K1_C)*(K + K1)) + Kp*V2_m*compartment/(K2 + Kp) | Kp*RE*V3_m*compartment/(K3 + RE) - Rp*V4_m*compartment/(K4 + Rp)",
+  "id": "Hatzimanikatis1999",
+  "init": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: C, x_1: K, x_2: Rp",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Hatzimanikatis1999-Regulation of the G1-S transition of the mammalian cell cycle.",
+  "source_xml": "Hatzimanikatis1999.xml",
+  "state_names": [
+    "C",
+    "K",
+    "Rp"
+  ],
+  "substituted": [
+    [
+      "-50.0*x_0*x_1/((x_0 + 0.1)*(x_1 + 0.0001)) - 1.0*x_0 - 1000.0*x_0/(x_0 + 0.005) + 41.9050913090509",
+      "-50.0*x_0*x_1/((x_0 + 0.1)*(x_1 + 0.0001)) + 39.99600039996",
+      "-3.0*x_2/(x_2 + 0.0001) + 2999.700029997"
+    ]
+  ]
+}

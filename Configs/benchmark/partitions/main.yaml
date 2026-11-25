@@ -1,0 +1,4 @@
+inherits: ../base.yaml
+
+systems_root: ../../../Dataset/SysBioSR/benchmark/main
+benchmark_partition: main

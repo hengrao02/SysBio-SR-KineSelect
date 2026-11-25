@@ -1,0 +1,74 @@
+{
+  "const_description": "c_0: Enzyme_dilution__mu, c_1: compartment, c_2: Enzyme_synthesis__Ot, c_3: Enzyme_synthesis__k1, c_4: Enzyme_synthesis__ki1, c_5: Enzyme_synthesis__nH, c_6: Tex, c_7: Tomax, c_8: e_val, c_9: f_val, c_10: tryptophan_dilution__mu, c_11: tryptophan_consumption__g, c_12: tryptophan_consumption__Kg, c_13: tryptophan_synthesis__Ki2, c_14: tryptophan_synthesis__k2",
+  "const_names": [
+    "Enzyme_dilution__mu",
+    "compartment",
+    "Enzyme_synthesis__Ot",
+    "Enzyme_synthesis__k1",
+    "Enzyme_synthesis__ki1",
+    "Enzyme_synthesis__nH",
+    "Tex",
+    "Tomax",
+    "e_val",
+    "f_val",
+    "tryptophan_dilution__mu",
+    "tryptophan_consumption__g",
+    "tryptophan_consumption__Kg",
+    "tryptophan_synthesis__Ki2",
+    "tryptophan_synthesis__k2"
+  ],
+  "consts": [
+    [
+      0.01,
+      1.0,
+      0.0033,
+      65.0,
+      3.53,
+      1.92,
+      0.14,
+      100.0,
+      0.9,
+      380.0,
+      0.01,
+      25.0,
+      0.2,
+      810.0,
+      25.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000062",
+  "dataset_model_name": "Bhartiya2003",
+  "dim": 2,
+  "eq": "-c_0*c_1*x_0 + c_1*c_2*c_3*c_4^c_5/(c_4^c_5 + (c_6*c_7/(c_6*(1 + x_1/c_9) + c_8) + x_1)^c_5) | -c_1*c_10*x_1 - c_1*c_11*x_1/(c_12 + x_1) + c_1*c_13*c_14*x_0/(c_13 + c_6*c_7/(c_6*(1 + x_1/c_9) + c_8) + x_1)",
+  "eq_raw": "-Enz*Enzyme_dilution__mu*compartment + Enzyme_synthesis__Ot*Enzyme_synthesis__k1*Enzyme_synthesis__ki1^Enzyme_synthesis__nH*compartment/(Enzyme_synthesis__ki1^Enzyme_synthesis__nH + (Tex*Tomax/(Tex*(Ts/f_val + 1) + e_val) + Ts)^Enzyme_synthesis__nH) | Enz*compartment*tryptophan_synthesis__Ki2*tryptophan_synthesis__k2/(Tex*Tomax/(Tex*(Ts/f_val + 1) + e_val) + Ts + tryptophan_synthesis__Ki2) - Ts*compartment*tryptophan_consumption__g/(Ts + tryptophan_consumption__Kg) - Ts*compartment*tryptophan_dilution__mu",
+  "id": "Bhartiya2003_Tryptophan_operon",
+  "init": [
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: Enz, x_1: Ts",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 6,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Bhartiya2003_Tryptophan_operon",
+  "source_xml": "Bhartiya2003.xml",
+  "state_names": [
+    "Enz",
+    "Ts"
+  ],
+  "substituted": [
+    [
+      "-0.01*x_0 + 2.41632157053072/(158.69594452552*(0.0714285714285714*x_1 + 1/(0.000368421052631579*x_1 + 1.04))^1.92 + 11.2649024267166)",
+      "20250.0*x_0/(x_1 + 810.0 + 14.0/(0.000368421052631579*x_1 + 1.04)) - 0.01*x_1 - 25.0*x_1/(x_1 + 0.2)"
+    ]
+  ]
+}

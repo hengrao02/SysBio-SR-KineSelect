@@ -1,0 +1,115 @@
+{
+  "system_id": "BIOMD0000000881",
+  "state_names": [
+    "T_1",
+    "T_2",
+    "G",
+    "I"
+  ],
+  "const_names": [
+    "mu_T",
+    "r_T",
+    "b_1",
+    "b_2",
+    "mu_G",
+    "q_G",
+    "p_G",
+    "a_G",
+    "b_G",
+    "mu_I",
+    "q_I",
+    "p_I",
+    "a_I",
+    "b_I",
+    "c_1",
+    "d_1",
+    "c_2",
+    "c_G",
+    "d_G",
+    "e_G",
+    "f_G",
+    "L",
+    "compartment"
+  ],
+  "default_consts": [
+    0.001,
+    1000.0,
+    0.35,
+    0.18,
+    0.6,
+    1e-07,
+    0.016,
+    0.59,
+    0.13,
+    0.36,
+    1e-07,
+    0.5,
+    0.12,
+    0.025,
+    30.0,
+    0.8,
+    0.1,
+    12.0,
+    0.05,
+    5.4,
+    0.22,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        500000.0,
+        1000000.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        325742.86661880004,
+        1178702.6742533012,
+        1.180597543121058,
+        0.7107997034547577
+      ],
+      "relative_scale_vs_default": [
+        0.6514857332376001,
+        1.1787026742533013,
+        1.180597543121058,
+        0.7107997034547577
+      ],
+      "absolute_offset_from_default": [
+        -174257.13338119996,
+        178702.67425330123,
+        0.18059754312105802,
+        -0.28920029654524226
+      ],
+      "state_scale_from_default_trajectory": [
+        500000.0,
+        1000000.0,
+        1.0,
+        1.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2178427469,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3485142667623998,
+        "peak_ratio_per_state": [
+          0.6518630498523027,
+          1.1787026742533013,
+          1.180597543121058,
+          0.8430162685233055
+        ],
+        "max_peak_ratio": 1.180597543121058
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "const_description": "c_0: chloroplast, c_1: CO2, c_2: E, c_3: kc, c_4: Kc, c_5: O2, c_6: Ko, c_7: RuBP, c_8: Nt, c_9: Rp, c_10: I, c_11: f",
+  "const_names": [
+    "chloroplast",
+    "CO2",
+    "E",
+    "kc",
+    "Kc",
+    "O2",
+    "Ko",
+    "RuBP",
+    "Nt",
+    "Rp",
+    "I",
+    "f"
+  ],
+  "consts": [
+    [
+      1.0,
+      230.0,
+      1.33846153846154,
+      2.5,
+      460.0,
+      210.0,
+      330.0,
+      2.0,
+      0.5,
+      3.2,
+      1000.0,
+      0.23
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000383",
+  "dataset_model_name": "Arnold2011",
+  "dim": 2,
+  "eq": "-c_0*c_2*c_3*x_0*x_1/(c_8*c_9) + 2*c_0*(c_1*c_2*c_3/(2*(c_1 + c_4*(c_5/c_6 + 1))) + c_1*c_3*c_7/(2*(c_1 + c_4*(c_5/c_6 + 1))) - Abs(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) - c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1)))/2) + 0.1575*c_0*c_4*c_5*(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) + c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1)) - Abs(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) - c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1))))/(c_1*c_6) | -2*c_0*(c_1*c_2*c_3/(2*(c_1 + c_4*(c_5/c_6 + 1))) + c_1*c_3*c_7/(2*(c_1 + c_4*(c_5/c_6 + 1))) - Abs(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) - c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1)))/2) + c_0*(c_8 - x_1)*(Abs(c_10*(c_11 - 1)/2 - 467)/130 - Abs(c_10*(c_11 - 1)/2 + 467)/130)/(2*c_8) - 0.21*c_0*c_4*c_5*(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) + c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1)) - Abs(c_1*c_2*c_3/(c_1 + c_4*(c_5/c_6 + 1)) - c_1*c_3*c_7/(c_1 + c_4*(c_5/c_6 + 1))))/(c_1*c_6)",
+  "eq_raw": "-E*NADPH*PGA*chloroplast*kc/(Nt*Rp) + 2*chloroplast*(CO2*E*kc/(2*(CO2 + Kc*(1 + O2/Ko))) + CO2*RuBP*kc/(2*(CO2 + Kc*(1 + O2/Ko))) - Abs(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) - CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko)))/2) + 0.1575*Kc*O2*chloroplast*(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) + CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko)) - Abs(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) - CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko))))/(CO2*Ko) | -2*chloroplast*(CO2*E*kc/(2*(CO2 + Kc*(1 + O2/Ko))) + CO2*RuBP*kc/(2*(CO2 + Kc*(1 + O2/Ko))) - Abs(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) - CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko)))/2) + chloroplast*(-NADPH + Nt)*(Abs(I*(f - 1)/2 - 467)/130 - Abs(I*(f - 1)/2 + 467)/130)/(2*Nt) - 0.21*Kc*O2*chloroplast*(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) + CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko)) - Abs(CO2*E*kc/(CO2 + Kc*(1 + O2/Ko)) - CO2*RuBP*kc/(CO2 + Kc*(1 + O2/Ko))))/(CO2*Ko)",
+  "id": "Model_1",
+  "init": [
+    [
+      2.4,
+      0.21
+    ]
+  ],
+  "init_description": "x_0: PGA, x_1: NADPH",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Arnold2011_Farquhar1980_RuBisCO-CalvinCycle",
+  "source_xml": "Arnold2011.xml",
+  "state_names": [
+    "PGA",
+    "NADPH"
+  ],
+  "substituted": [
+    [
+      "-2.09134615384616*x_0*x_1 + 1.88025368248773",
+      "-5.92307692307692*x_1 + 0.976628477905071"
+    ]
+  ]
+}

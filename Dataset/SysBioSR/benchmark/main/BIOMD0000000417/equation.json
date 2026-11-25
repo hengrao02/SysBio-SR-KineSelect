@@ -1,0 +1,59 @@
+{
+  "const_description": "c_0: ___r2____RATE__, c_1: ks, c_2: Kd, c_3: ka, c_4: Ksp, c_5: P, c_6: s, c_7: h, c_8: k0",
+  "const_names": [
+    "___r2____RATE__",
+    "ks",
+    "Kd",
+    "ka",
+    "Ksp",
+    "P",
+    "s",
+    "h",
+    "k0"
+  ],
+  "consts": [
+    [
+      0.1,
+      10.0,
+      1e-05,
+      40.0,
+      0.001,
+      40.0,
+      1000.0,
+      2.0,
+      0.1
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000417",
+  "dataset_model_name": "Ratushny2012",
+  "dim": 1,
+  "eq": "-c_0*x_0 + c_1*(c_8 + (c_2*(-((1 + c_4*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)/c_2)^2 - c_4^2*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)^2/c_2^2)^0.5 + 1 + c_4*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)/c_2)/(2*c_3))^c_7)/((c_2*(-((1 + c_4*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)/c_2)^2 - c_4^2*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)^2/c_2^2)^0.5 + 1 + c_4*(-((1 + (c_5 + c_6)/c_4)^2 - 4*c_5*c_6/c_4^2)^0.5 + 1 + (c_5 + c_6)/c_4)/c_2)/(2*c_3))^c_7 + 1)",
+  "eq_raw": "-Target*___r2____RATE__ + ks*(k0 + (Kd*(-((1 + Ksp*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)/Kd)^2 - Ksp^2*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)^2/Kd^2)^0.5 + 1 + Ksp*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)/Kd)/(2*ka))^h)/((Kd*(-((1 + Ksp*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)/Kd)^2 - Ksp^2*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)^2/Kd^2)^0.5 + 1 + Ksp*(-((1 + (P + s)/Ksp)^2 - 4*P*s/Ksp^2)^0.5 + 1 + (P + s)/Ksp)/Kd)/(2*ka))^h + 1)",
+  "id": "Ratushny2012_NF",
+  "init": [
+    [
+      10.0
+    ]
+  ],
+  "init_description": "x_0: Target",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 2,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Ratushny2012_NF",
+  "source_xml": "Ratushny2012.xml",
+  "state_names": [
+    "Target"
+  ],
+  "substituted": [
+    [
+      "-0.1*x_0 + 5.49774531154325"
+    ]
+  ]
+}

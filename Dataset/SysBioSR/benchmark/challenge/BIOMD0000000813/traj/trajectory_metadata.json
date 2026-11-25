@@ -1,0 +1,88 @@
+{
+  "system_id": "BIOMD0000000813",
+  "state_names": [
+    "x_Tumor_Cells",
+    "y_CD4_T_Cells",
+    "z_Cytokine"
+  ],
+  "const_names": [
+    "r",
+    "K",
+    "delta",
+    "m",
+    "beta",
+    "k",
+    "a",
+    "alpha",
+    "b",
+    "mu",
+    "I_1",
+    "I_2",
+    "compartment"
+  ],
+  "default_consts": [
+    0.03,
+    1000.0,
+    0.1,
+    1.0,
+    0.02,
+    10.0,
+    0.02,
+    0.1,
+    0.1,
+    47.0,
+    10.0,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.5,
+        0.01,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.735382874081452,
+        0.010689638550694984,
+        0.231714464824756
+      ],
+      "relative_scale_vs_default": [
+        1.470765748162904,
+        1.0689638550694984,
+        null
+      ],
+      "absolute_offset_from_default": [
+        0.23538287408145198,
+        0.0006896385506949838,
+        0.231714464824756
+      ],
+      "state_scale_from_default_trajectory": [
+        0.8480955897104582,
+        502.0678736699852,
+        0.7723815494158534
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2789142850,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9210326254516877,
+        "peak_ratio_per_state": [
+          1.7238566433708864,
+          1.0153095544999657,
+          1.2131506843123225
+        ],
+        "max_peak_ratio": 1.7238566433708864
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

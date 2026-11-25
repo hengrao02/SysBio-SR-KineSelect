@@ -1,0 +1,92 @@
+{
+  "const_description": "c_0: compartment, c_1: mu_1, c_2: c, c_3: gamma, c_4: g_1, c_5: p_1, c_6: q_1, c_7: q_2, c_8: r, c_9: K, c_10: p_2, c_11: g_3, c_12: a, c_13: g_2, c_14: mu_2, c_15: p_3, c_16: alpha, c_17: g_4, c_18: mu_3, c_19: p_4, c_20: tau_c",
+  "const_names": [
+    "compartment",
+    "mu_1",
+    "c",
+    "gamma",
+    "g_1",
+    "p_1",
+    "q_1",
+    "q_2",
+    "r",
+    "K",
+    "p_2",
+    "g_3",
+    "a",
+    "g_2",
+    "mu_2",
+    "p_3",
+    "alpha",
+    "g_4",
+    "mu_3",
+    "p_4",
+    "tau_c"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.03,
+      5e-06,
+      1.0,
+      20000000.0,
+      0.1245,
+      0.1121,
+      2000000.0,
+      0.18,
+      1000000000.0,
+      0.27,
+      20000000.0,
+      1.0,
+      100000.0,
+      10.0,
+      5.0,
+      0.001,
+      1000.0,
+      10.0,
+      5e-05,
+      1000000.0
+    ]
+  ],
+  "dataset_model_id": "MODEL1907310002",
+  "dataset_model_name": "Arciero2004",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 + c_0*c_2*x_1/(c_3*x_3 + 1) + c_0*x_0*x_2*(c_5 - c_6*x_3/(c_7 + x_3))/(c_4 + x_2) | c_0*c_10*x_1*x_3/(c_11 + x_3) - c_0*c_12*x_0*x_1/(c_13 + x_1) + c_0*c_8*x_1*(1 - x_1/c_9) | -c_0*c_14*x_2 + c_0*c_15*x_0*x_1/((c_17 + x_1)*(c_16*x_3 + 1)) | -c_0*c_18*x_3 + c_0*c_19*x_1^2/(c_20^2 + x_1^2)",
+  "eq_raw": "E*I*compartment*(-S*q_1/(S + q_2) + p_1)/(I + g_1) - E*compartment*mu_1 + T*c*compartment/(S*gamma + 1) | -E*T*a*compartment/(T + g_2) + S*T*compartment*p_2/(S + g_3) + T*compartment*r*(1 - T/K) | E*T*compartment*p_3/((T + g_4)*(S*alpha + 1)) - I*compartment*mu_2 | -S*compartment*mu_3 + T^2*compartment*p_4/(T^2 + tau_c^2)",
+  "id": "Arciero2004___A_mathematical_model_of_tumor_immune_evasion_and_siRNA_treatment",
+  "init": [
+    [
+      1000.0,
+      1.0,
+      1000.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: E, x_1: T, x_2: I, x_3: S",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Arciero2004 - A mathematical model of tumor-immune evasion and siRNA treatment",
+  "source_xml": "Arciero2004.xml",
+  "state_names": [
+    "E",
+    "T",
+    "I",
+    "S"
+  ],
+  "substituted": [
+    [
+      "1.0*x_0*x_2*(-0.1121*x_3/(x_3 + 2000000.0) + 0.1245)/(x_2 + 20000000.0) - 0.03*x_0 + 5.0e-6*x_1/(1.0*x_3 + 1)",
+      "-1.0*x_0*x_1/(x_1 + 100000.0) + 0.27*x_1*x_3/(x_3 + 20000000.0) + 0.18*x_1*(-1.0e-9*x_1 + 1)",
+      "5.0*x_0*x_1/((x_1 + 1000.0)*(0.001*x_3 + 1)) - 10.0*x_2",
+      "5.0e-5*x_1^2/(x_1^2 + 1000000000000.0) - 10.0*x_3"
+    ]
+  ]
+}

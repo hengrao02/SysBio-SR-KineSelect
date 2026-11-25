@@ -1,0 +1,58 @@
+{
+  "system_id": "BIOMD0000000414",
+  "state_names": [
+    "VENUS"
+  ],
+  "const_names": [
+    "p1_star",
+    "p2",
+    "lambda_star",
+    "qj_star",
+    "cell"
+  ],
+  "default_consts": [
+    0.056,
+    0.0053,
+    0.52,
+    0.16,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.2
+      ],
+      "relative_scale_vs_default": [
+        0.2
+      ],
+      "absolute_offset_from_default": [
+        -0.8
+      ],
+      "state_scale_from_default_trajectory": [
+        1.0
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 2764911455,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.8,
+        "peak_ratio_per_state": [
+          0.2
+        ],
+        "max_peak_ratio": 0.2
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

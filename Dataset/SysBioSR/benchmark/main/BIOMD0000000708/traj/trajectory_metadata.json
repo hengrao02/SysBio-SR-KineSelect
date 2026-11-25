@@ -1,0 +1,100 @@
+{
+  "system_id": "BIOMD0000000708",
+  "state_names": [
+    "S_a",
+    "I_a",
+    "S_h",
+    "I_h",
+    "R_h"
+  ],
+  "const_names": [
+    "r_a",
+    "K_a",
+    "beta_a",
+    "mu_a",
+    "delta_a",
+    "pi_h",
+    "beta_h",
+    "mu_h",
+    "gamma",
+    "delta_h",
+    "compartment",
+    "Avian_population"
+  ],
+  "default_consts": [
+    0.005,
+    50000.0,
+    2e-08,
+    0.00034246,
+    0.0004,
+    30.0,
+    6e-09,
+    3.91e-05,
+    0.1,
+    0.3445,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        100000.0,
+        1000.0,
+        1000000.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        70388.77590844731,
+        1334.3429277772823,
+        1326079.319185658,
+        4.497604998144628,
+        52.60905524812728
+      ],
+      "relative_scale_vs_default": [
+        0.7038877590844731,
+        1.3343429277772823,
+        1.326079319185658,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -29611.224091552693,
+        334.3429277772823,
+        326079.3191856579,
+        4.497604998144628,
+        52.60905524812728
+      ],
+      "state_scale_from_default_trajectory": [
+        100000.0,
+        1114.4319568332764,
+        1000000.0,
+        14.992016660482093,
+        175.3635174937576
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 4020617718,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 1.029297894723101,
+        "peak_ratio_per_state": [
+          0.7038877590844732,
+          1.279906656825202,
+          1.326079319185658,
+          1.6960301145801508,
+          2.029297894723101
+        ],
+        "max_peak_ratio": 2.029297894723101
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

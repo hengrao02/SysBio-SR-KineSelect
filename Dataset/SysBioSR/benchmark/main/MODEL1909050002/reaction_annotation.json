@@ -1,0 +1,218 @@
+{
+  "model_id": "MODEL1909050002",
+  "dataset_model_name": "Ribba2018",
+  "dim": 2,
+  "state_names": [
+    "A_1_b",
+    "C_4_T"
+  ],
+  "equations_expanded": [
+    "-0.0200000011662222*x_0 + 1.11335348140726e-18*x_1",
+    "3.25760397268777e-10*x_0 - 0.00199999999986667*x_1"
+  ],
+  "reactions": [
+    {
+      "reaction_id": "R1",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0
+      ],
+      "coefficient": 1.11335348140726e-18,
+      "kinetic_factor": "x_1",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 1,
+          "law": "linear",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ]
+    },
+    {
+      "reaction_id": "R2",
+      "equation_idx": 0,
+      "reactants": [
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.0200000011662222,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R3",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1
+      ],
+      "coefficient": 3.25760397268777e-10,
+      "kinetic_factor": "x_0",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 0,
+          "law": "linear",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ]
+    },
+    {
+      "reaction_id": "R4",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.00199999999986667,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "merged_reactions": [
+    {
+      "reaction_id": "MR1",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.00199999999986667,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR2",
+      "equation_idx": -1,
+      "reactants": [
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0
+      ],
+      "coefficient": 0.0200000011662222,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR3",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0
+      ],
+      "coefficient": 1.11335348140726e-18,
+      "kinetic_factor": "x_1",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 1,
+          "law": "linear",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ]
+    },
+    {
+      "reaction_id": "MR4",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1
+      ],
+      "coefficient": 3.25760397268777e-10,
+      "kinetic_factor": "x_0",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 0,
+          "law": "linear",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ]
+    }
+  ],
+  "validation_symbolic": true,
+  "validation_numerical": true,
+  "validation_symbolic_errors": [],
+  "validation_notes": [],
+  "max_abs_error": 0.0,
+  "max_rel_error": 0.0,
+  "status": "success",
+  "failure_reason": null,
+  "difficulty": "easy_observed_ma"
+}

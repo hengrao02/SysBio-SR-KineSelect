@@ -1,0 +1,71 @@
+{
+  "const_description": "c_0: MKP3, c_1: k4cat, c_2: uVol, c_3: Km4, c_4: Km5, c_5: Km3, c_6: MAPKK, c_7: k1cat, c_8: Km1, c_9: Km2, c_10: k3cat, c_11: k2cat",
+  "const_names": [
+    "MKP3",
+    "k4cat",
+    "uVol",
+    "Km4",
+    "Km5",
+    "Km3",
+    "MAPKK",
+    "k1cat",
+    "Km1",
+    "Km2",
+    "k3cat",
+    "k2cat"
+  ],
+  "consts": [
+    [
+      100.0,
+      0.06,
+      1.0,
+      18.0,
+      78.0,
+      22.0,
+      50.0,
+      0.01,
+      50.0,
+      500.0,
+      0.084,
+      15.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000027",
+  "dataset_model_name": "Markevich2004",
+  "dim": 3,
+  "eq": "c_0*c_1*c_2*x_1/(c_3*(1 + x_2/c_5 + x_0/c_4 + x_1/c_3)) - c_2*c_6*c_7*x_0/(c_8*(1 + x_1/c_9 + x_0/c_8)) | -c_0*c_1*c_2*x_1/(c_3*(1 + x_2/c_5 + x_0/c_4 + x_1/c_3)) + c_0*c_10*c_2*x_2/(c_5*(1 + x_2/c_5 + x_0/c_4 + x_1/c_3)) - c_11*c_2*c_6*x_1/(c_9*(1 + x_1/c_9 + x_0/c_8)) + c_2*c_6*c_7*x_0/(c_8*(1 + x_1/c_9 + x_0/c_8)) | -c_0*c_10*c_2*x_2/(c_5*(1 + x_2/c_5 + x_0/c_4 + x_1/c_3)) + c_11*c_2*c_6*x_1/(c_9*(1 + x_1/c_9 + x_0/c_8))",
+  "eq_raw": "MKP3*Mp*k4cat*uVol/(Km4*(1 + M/Km5 + Mp/Km4 + Mpp/Km3)) - M*MAPKK*k1cat*uVol/(Km1*(1 + Mp/Km2 + M/Km1)) | -MKP3*Mp*k4cat*uVol/(Km4*(1 + M/Km5 + Mp/Km4 + Mpp/Km3)) + MKP3*Mpp*k3cat*uVol/(Km3*(1 + M/Km5 + Mp/Km4 + Mpp/Km3)) - MAPKK*Mp*k2cat*uVol/(Km2*(1 + Mp/Km2 + M/Km1)) + M*MAPKK*k1cat*uVol/(Km1*(1 + Mp/Km2 + M/Km1)) | -MKP3*Mpp*k3cat*uVol/(Km3*(1 + M/Km5 + Mp/Km4 + Mpp/Km3)) + MAPKK*Mp*k2cat*uVol/(Km2*(1 + Mp/Km2 + M/Km1))",
+  "id": "Markevich2004_MAPK_orderedMM",
+  "init": [
+    [
+      500.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: M, x_1: Mp, x_2: Mpp",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Markevich2004 - MAPK double phosphorylation,  ordered Michaelis-Menton",
+  "source_xml": "Markevich2004.xml",
+  "state_names": [
+    "M",
+    "Mp",
+    "Mpp"
+  ],
+  "substituted": [
+    [
+      "-0.01*x_0/(0.02*x_0 + 0.002*x_1 + 1) + 0.333333333333333*x_1/(0.0128205128205128*x_0 + 0.0555555555555556*x_1 + 0.0454545454545455*x_2 + 1)",
+      "0.01*x_0/(0.02*x_0 + 0.002*x_1 + 1) - 0.333333333333333*x_1/(0.0128205128205128*x_0 + 0.0555555555555556*x_1 + 0.0454545454545455*x_2 + 1) - 1.5*x_1/(0.02*x_0 + 0.002*x_1 + 1) + 0.381818181818182*x_2/(0.0128205128205128*x_0 + 0.0555555555555556*x_1 + 0.0454545454545455*x_2 + 1)",
+      "1.5*x_1/(0.02*x_0 + 0.002*x_1 + 1) - 0.381818181818182*x_2/(0.0128205128205128*x_0 + 0.0555555555555556*x_1 + 0.0454545454545455*x_2 + 1)"
+    ]
+  ]
+}

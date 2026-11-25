@@ -1,0 +1,56 @@
+{
+  "const_description": "c_0: cell, c_1: K2, c_2: K3",
+  "const_names": [
+    "cell",
+    "K2",
+    "K3"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.0,
+      0.5
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000283",
+  "dataset_model_name": "Chance1943",
+  "dim": 4,
+  "eq": "-c_0*(-c_1*x_2 + x_0*x_1) | c_0*c_2*x_2 - c_0*(-c_1*x_2 + x_0*x_1) | -c_0*c_2*x_2 + c_0*(-c_1*x_2 + x_0*x_1) | c_0*c_2*x_2",
+  "eq_raw": "-cell*(E*X - K2*P) | K3*P*cell - cell*(E*X - K2*P) | -K3*P*cell + cell*(E*X - K2*P) | K3*P*cell",
+  "id": "chance",
+  "init": [
+    [
+      8.0,
+      1.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: X, x_1: E, x_2: P, x_3: Q",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Chance1943_Peroxidase_ES_Kinetics",
+  "source_xml": "Chance1943.xml",
+  "state_names": [
+    "X",
+    "E",
+    "P",
+    "Q"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0*x_1",
+      "-1.0*x_0*x_1 + 0.5*x_2",
+      "1.0*x_0*x_1 - 0.5*x_2",
+      "0.5*x_2"
+    ]
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "dataset_model_id": "BIOMD0000001036",
+  "dataset_model_name": "Cappuccio2007",
+  "id": "BIOMD0000001036",
+  "name": "Cappuccio2007",
+  "source_xml": "Cappuccio2007.xml",
+  "dim": 3,
+  "eq": "(1*c_13*(c_0*x_1 + c_2*x_0*x_2/(c_3 + x_2) + c_4) + (-1)*c_13*c_1*x_0)/c_13 | (1*c_13*c_5*x_1*(1 - c_6*x_1) + (-1)*c_13*c_7*x_0*x_1/(c_8 + x_1))/c_13 | (1*c_13*(c_9*x_0*x_1/(c_10 + x_1) + c_12) + (-1)*c_13*c_11*x_2)/c_13",
+  "eq_raw": "(1*Tumor_microenvironment*(c*Tumor_cells + p1*Effector_cells*IL_2/(g1 + IL_2) + s1) + (-1)*Tumor_microenvironment*mu2*Effector_cells)/Tumor_microenvironment | (1*Tumor_microenvironment*r2*Tumor_cells*(1 - b*Tumor_cells) + (-1)*Tumor_microenvironment*a*Effector_cells*Tumor_cells/(g2 + Tumor_cells))/Tumor_microenvironment | (1*Tumor_microenvironment*(p2*Effector_cells*Tumor_cells/(g3 + Tumor_cells) + s2) + (-1)*Tumor_microenvironment*mu3*IL_2)/Tumor_microenvironment",
+  "consts": [
+    [
+      1.009,
+      0.0378,
+      0.044,
+      0.02,
+      0.0,
+      0.123,
+      1.0,
+      0.018,
+      0.0001,
+      0.9,
+      1e-05,
+      1.8,
+      0.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1e-05,
+      1e-05,
+      1e-05
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*(1.009*x_1 + 0.044*x_0*x_2/(0.02 + x_2) + 0) + (-1)*1*0.0378*x_0)/1",
+      "(1*1*0.123*x_1*(1 - 1*x_1) + (-1)*1*0.018*x_0*x_1/(0.0001 + x_1))/1",
+      "(1*1*(0.9*x_0*x_1/(1e-05 + x_1) + 0) + (-1)*1*1.8*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "Effector_cells",
+    "Tumor_cells",
+    "IL_2"
+  ],
+  "const_names": [
+    "c",
+    "mu2",
+    "p1",
+    "g1",
+    "s1",
+    "r2",
+    "b",
+    "a",
+    "g2",
+    "p2",
+    "g3",
+    "mu3",
+    "s2",
+    "Tumor_microenvironment"
+  ],
+  "init_description": "x_0: Effector_cells, x_1: Tumor_cells, x_2: IL_2",
+  "const_description": "c_0: c, c_1: mu2, c_2: p1, c_3: g1, c_4: s1, c_5: r2, c_6: b, c_7: a, c_8: g2, c_9: p2, c_10: g3, c_11: mu3, c_12: s2, c_13: Tumor_microenvironment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> Effector_cells",
+      "Effector_cells -> 0",
+      "0 -> Tumor_cells",
+      "Tumor_cells -> 0",
+      "0 -> IL_2",
+      "IL_2 -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Effector_cells",
+      "Effector_cells -> 0",
+      "0 -> Tumor_cells",
+      "Tumor_cells -> 0",
+      "0 -> IL_2",
+      "IL_2 -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[14]*(k[1]*x[2] + k[3]*x[1]*x[3]/(k[4] + x[3]) + k[5]) + (-1)*k[14]*k[2]*x[1])/k[14]",
+      "(1*k[14]*k[6]*x[2]*(1 - k[7]*x[2]) + (-1)*k[14]*k[8]*x[1]*x[2]/(k[9] + x[2]))/k[14]",
+      "(1*k[14]*(k[10]*x[1]*x[2]/(k[11] + x[2]) + k[13]) + (-1)*k[14]*k[12]*x[3])/k[14]"
+    ],
+    "species_index_map": {
+      "x_0": "Effector_cells",
+      "x_1": "Tumor_cells",
+      "x_2": "IL_2"
+    },
+    "const_index_map": {
+      "c_0": "c",
+      "c_1": "mu2",
+      "c_2": "p1",
+      "c_3": "g1",
+      "c_4": "s1",
+      "c_5": "r2",
+      "c_6": "b",
+      "c_7": "a",
+      "c_8": "g2",
+      "c_9": "p2",
+      "c_10": "g3",
+      "c_11": "mu3",
+      "c_12": "s2",
+      "c_13": "Tumor_microenvironment"
+    }
+  }
+}

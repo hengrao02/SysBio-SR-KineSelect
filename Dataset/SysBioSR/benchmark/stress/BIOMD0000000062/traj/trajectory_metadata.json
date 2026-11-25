@@ -1,0 +1,85 @@
+{
+  "system_id": "BIOMD0000000062",
+  "state_names": [
+    "Enz",
+    "Ts"
+  ],
+  "const_names": [
+    "Enzyme_dilution__mu",
+    "compartment",
+    "Enzyme_synthesis__Ot",
+    "Enzyme_synthesis__k1",
+    "Enzyme_synthesis__ki1",
+    "Enzyme_synthesis__nH",
+    "Tex",
+    "Tomax",
+    "e_val",
+    "f_val",
+    "tryptophan_dilution__mu",
+    "tryptophan_consumption__g",
+    "tryptophan_consumption__Kg",
+    "tryptophan_synthesis__Ki2",
+    "tryptophan_synthesis__k2"
+  ],
+  "default_consts": [
+    0.01,
+    1.0,
+    0.0033,
+    65.0,
+    3.53,
+    1.92,
+    0.14,
+    100.0,
+    0.9,
+    380.0,
+    0.01,
+    25.0,
+    0.2,
+    810.0,
+    25.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.29162062654882337,
+        1.1461102716242697
+      ],
+      "relative_scale_vs_default": [
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        0.29162062654882337,
+        1.1461102716242697
+      ],
+      "state_scale_from_default_trajectory": [
+        0.9720687551627446,
+        3.820367572080899
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2244226332,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.32534372629962477,
+        "peak_ratio_per_state": [
+          1.000003183726735,
+          1.0000871029275615
+        ],
+        "max_peak_ratio": 1.0000871029275615
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

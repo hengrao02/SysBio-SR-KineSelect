@@ -1,0 +1,72 @@
+{
+  "const_description": "c_0: compartment, c_1: k_2, c_2: k_3, c_3: k_1, c_4: ModelValue_11, c_5: k_4, c_6: k_p, c_7: k_m_2, c_8: k_m_1, c_9: k, c_10: k_5",
+  "const_names": [
+    "compartment",
+    "k_2",
+    "k_3",
+    "k_1",
+    "ModelValue_11",
+    "k_4",
+    "k_p",
+    "k_m_2",
+    "k_m_1",
+    "k",
+    "k_5"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.0001,
+      0.0001,
+      0.0001,
+      1.0,
+      3.0,
+      0.097,
+      80.0,
+      2.2,
+      0.035,
+      0.003
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000812",
+  "dataset_model_name": "Galante2012",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 - c_0*c_2*x_0 + c_0*c_3*x_2*(c_4 - x_0) | -c_0*c_5*x_1*x_2 + c_0*c_6*(c_4 - x_0)/(c_7*x_2*(c_4 + c_8 - x_0)) | c_0*c_1*x_0 - c_0*c_10*x_2^2 - c_0*c_3*x_2*(c_4 - x_0) - c_0*c_5*x_1*x_2 + c_0*c_9*x_2 | -c_0*c_10*x_3^2 + c_0*c_9*x_3",
+  "eq_raw": "C_Cancer_Uncomplexed*compartment*k_1*(ModelValue_11 - X_Complex) - X_Complex*compartment*k_2 - X_Complex*compartment*k_3 | -C_Cancer_Uncomplexed*P_Perforin*compartment*k_4 + compartment*k_p*(ModelValue_11 - X_Complex)/(C_Cancer_Uncomplexed*k_m_2*(ModelValue_11 - X_Complex + k_m_1)) | -C_Cancer_Uncomplexed^2*compartment*k_5 - C_Cancer_Uncomplexed*P_Perforin*compartment*k_4 + C_Cancer_Uncomplexed*compartment*k - C_Cancer_Uncomplexed*compartment*k_1*(ModelValue_11 - X_Complex) + X_Complex*compartment*k_2 | -T_ast^2*compartment*k_5 + T_ast*compartment*k",
+  "id": "Galante2012___B7_H1_and_a_Mathematical_Model_for_Cytotoxic_T_Cell_and_Tumor_Cell_Interaction",
+  "init": [
+    [
+      0.0,
+      0.315,
+      1.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: X_Complex, x_1: P_Perforin, x_2: C_Cancer_Uncomplexed, x_3: T_ast",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 5,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction",
+  "source_xml": "Galante2012.xml",
+  "state_names": [
+    "X_Complex",
+    "P_Perforin",
+    "C_Cancer_Uncomplexed",
+    "T_ast"
+  ],
+  "substituted": [
+    [
+      "-0.0002*x_0 + 0.0001*x_2*(-x_0 + 1.0)",
+      "-3.0*x_1*x_2 + 0.0012125*(-x_0 + 1.0)/(x_2*(-x_0 + 3.2))",
+      "0.0001*x_0 - 3.0*x_1*x_2 - 0.003*x_2^2 - 0.0001*x_2*(-x_0 + 1.0) + 0.035*x_2",
+      "-0.003*x_3^2 + 0.035*x_3"
+    ]
+  ]
+}

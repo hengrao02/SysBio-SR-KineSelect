@@ -1,0 +1,14 @@
+# Shared benchmark execution defaults; compose with a partition and method.
+run_type: batch
+results_root: ../../Results
+benchmark_definition: ../../Dataset/SysBioSR/benchmark/benchmark.yaml
+dataset_version: sysbiosr-1.0.0-rc.2
+
+trajectory_name: default
+eval_trajectory_names: [perturbed]
+
+limit: null
+skip_existing: false
+continue_on_error: true
+recursive: true
+batch_num_workers: 1

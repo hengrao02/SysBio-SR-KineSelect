@@ -1,0 +1,98 @@
+{
+  "system_id": "BIOMD0000000840",
+  "state_names": [
+    "M",
+    "C1",
+    "C2",
+    "A",
+    "T"
+  ],
+  "const_names": [
+    "lambda",
+    "rho",
+    "alpha_1",
+    "alpha_2",
+    "beta",
+    "delta",
+    "epsilon",
+    "gamma_1",
+    "gamma_2",
+    "gamma_3",
+    "compartment"
+  ],
+  "default_consts": [
+    3000000.0,
+    1e-06,
+    0.22,
+    0.45,
+    0.14,
+    0.05,
+    0.03,
+    0.24,
+    0.293,
+    8e-10,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        37600000.0,
+        5640000.0,
+        3760000.0,
+        2000000.0,
+        700000.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        49911376.39251147,
+        3210153.2145698513,
+        4195285.759369127,
+        1882923.6881023995,
+        875669.9172580749
+      ],
+      "relative_scale_vs_default": [
+        1.3274302232050923,
+        0.5691761018740871,
+        1.1157674891939169,
+        0.9414618440511997,
+        1.2509570246543926
+      ],
+      "absolute_offset_from_default": [
+        12311376.392511472,
+        -2429846.7854301487,
+        435285.75936912745,
+        -117076.31189760054,
+        175669.91725807486
+      ],
+      "state_scale_from_default_trajectory": [
+        37600000.0,
+        11371067.612148108,
+        3760000.0,
+        3446001.61376486,
+        700000.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3794578196,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.32743022320509235,
+        "peak_ratio_per_state": [
+          1.3274302232050923,
+          1.0785800469916373,
+          1.1157674891939169,
+          1.0386266007300968,
+          1.2509570246543926
+        ],
+        "max_peak_ratio": 1.3274302232050923
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

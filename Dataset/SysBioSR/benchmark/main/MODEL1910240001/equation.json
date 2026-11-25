@@ -1,0 +1,77 @@
+{
+  "const_description": "c_0: compartment, c_1: k_2, c_2: k_m_2b, c_3: ModelValue_6_0, c_4: ModelValue_7_0, c_5: B_0, c_6: k_plus_a, c_7: k_1, c_8: k_rec, c_9: E_0, c_10: k_4, c_11: k_3",
+  "const_names": [
+    "compartment",
+    "k_2",
+    "k_m_2b",
+    "ModelValue_6_0",
+    "ModelValue_7_0",
+    "B_0",
+    "k_plus_a",
+    "k_1",
+    "k_rec",
+    "E_0",
+    "k_4",
+    "k_3"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.42,
+      0.04,
+      1800.0,
+      33.0,
+      600.0,
+      1800.0,
+      3000.0,
+      0.05,
+      150.0,
+      0.222,
+      1.19
+    ]
+  ],
+  "dataset_model_id": "MODEL1910240001",
+  "dataset_model_name": "Petrov2018",
+  "dim": 5,
+  "eq": "c_0*c_1*x_3 - c_0*c_2*x_0 + c_0*c_3*c_4*x_1 - c_0*c_5*c_6*x_0 - c_0*c_7*x_0*x_2 | -c_0*c_3*c_4*x_1 + c_0*c_5*c_6*x_0 | c_0*c_1*x_3 - c_0*c_7*x_0*x_2 + c_0*c_8*(1 - x_2/c_9) | -c_0*c_1*x_3 + c_0*c_10*x_4 - c_0*c_11*x_3 + c_0*c_7*x_0*x_2 | -c_0*c_10*x_4 + c_0*c_11*x_3 - c_0*c_8*(1 - x_2/c_9)",
+  "eq_raw": "-B_0*compartment*k_plus_a*y1 + ModelValue_6_0*ModelValue_7_0*compartment*y2 - compartment*k_1*y1*y3 + compartment*k_2*y4 - compartment*k_m_2b*y1 | B_0*compartment*k_plus_a*y1 - ModelValue_6_0*ModelValue_7_0*compartment*y2 | -compartment*k_1*y1*y3 + compartment*k_2*y4 + compartment*k_rec*(1 - y3/E_0) | compartment*k_1*y1*y3 - compartment*k_2*y4 - compartment*k_3*y4 + compartment*k_4*y5 | compartment*k_3*y4 - compartment*k_4*y5 - compartment*k_rec*(1 - y3/E_0)",
+  "id": "Petrov2018___C_547_a_6_methyluracil_derivative_with_long_lasting_binding_and_rebinding_on_acetylcholinesterase",
+  "init": [
+    [
+      0.0,
+      0.0,
+      75.0,
+      0.0,
+      75.0
+    ]
+  ],
+  "init_description": "x_0: y1, x_1: y2, x_2: y3, x_3: y4, x_4: y5",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 2,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Petrov2018 - C-547 a 6-methyluracil derivative with long-lasting binding and rebinding on acetylcholinesterase",
+  "source_xml": "Petrov2018.xml",
+  "state_names": [
+    "y1",
+    "y2",
+    "y3",
+    "y4",
+    "y5"
+  ],
+  "substituted": [
+    [
+      "-3000.0*x_0*x_2 - 1080000.04*x_0 + 59400.0*x_1 + 0.42*x_3",
+      "1080000.0*x_0 - 59400.0*x_1",
+      "-3000.0*x_0*x_2 - 0.000333333333333333*x_2 + 0.42*x_3 + 0.05",
+      "3000.0*x_0*x_2 - 1.61*x_3 + 0.222*x_4",
+      "0.000333333333333333*x_2 + 1.19*x_3 - 0.222*x_4 - 0.05"
+    ]
+  ]
+}

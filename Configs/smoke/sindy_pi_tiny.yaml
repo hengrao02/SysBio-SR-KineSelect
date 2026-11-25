@@ -1,0 +1,6 @@
+# Execution smoke: fixed threshold, all LHS candidates, then full-data refit.
+inherits: ../sindy_pi/single_system.yaml
+experiment_id: sysbiosr-sindy-pi-smoke-v1
+optimize_hyperparams: false
+threshold: 0.01
+stlsq_iterations: 5

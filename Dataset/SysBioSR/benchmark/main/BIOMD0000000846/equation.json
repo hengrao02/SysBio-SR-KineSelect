@@ -1,0 +1,61 @@
+{
+  "const_description": "c_0: compartment, c_1: r, c_2: K, c_3: phi_tilde, c_4: r_tilde, c_5: alpha, c_6: mu",
+  "const_names": [
+    "compartment",
+    "r",
+    "K",
+    "phi_tilde",
+    "r_tilde",
+    "alpha",
+    "mu"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.339,
+      894700000.0,
+      5e-12,
+      0.2,
+      0.1,
+      0.0866
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000846",
+  "dataset_model_name": "Gulbudak2019",
+  "dim": 3,
+  "eq": "c_0*c_1*x_0*(1 - (x_0 + x_1)/c_2) - c_0*c_3*x_0*x_2 - c_0*x_0/24 | c_0*c_3*x_0*x_2 + c_0*c_4*x_1*(1 - (x_0 + x_1)/c_2) - c_0*x_1/20 | -c_0*c_3*x_0*x_2 + c_0*c_5*x_1 - c_0*c_6*x_2",
+  "eq_raw": "-S*V_C*compartment*phi_tilde + S*compartment*r*(1 - (C + S)/K) - S*compartment/24 | C*compartment*r_tilde*(1 - (C + S)/K) - C*compartment/20 + S*V_C*compartment*phi_tilde | C*alpha*compartment - S*V_C*compartment*phi_tilde - V_C*compartment*mu",
+  "id": "Gulbudak2019_2___Heterogeneous_viral_strategies_promote_coexistence_in_virus_microbe_systems__Chronic",
+  "init": [
+    [
+      830000000.0,
+      0.0,
+      33200000.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: C, x_2: V_C",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Gulbudak2019.2 - Heterogeneous viral strategies promote coexistence in virus-microbe systems (Chronic)",
+  "source_xml": "Gulbudak2019.xml",
+  "state_names": [
+    "S",
+    "C",
+    "V_C"
+  ],
+  "substituted": [
+    [
+      "-5.0e-12*x_0*x_2 + 0.339*x_0*(-1.11769308147983e-9*x_0 - 1.11769308147983e-9*x_1 + 1) - 0.0416666666666667*x_0",
+      "5.0e-12*x_0*x_2 + 0.2*x_1*(-1.11769308147983e-9*x_0 - 1.11769308147983e-9*x_1 + 1) - 0.05*x_1",
+      "-5.0e-12*x_0*x_2 + 0.1*x_1 - 0.0866*x_2"
+    ]
+  ]
+}

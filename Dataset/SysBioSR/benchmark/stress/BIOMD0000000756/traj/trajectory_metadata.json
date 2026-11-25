@@ -1,0 +1,111 @@
+{
+  "system_id": "BIOMD0000000756",
+  "state_names": [
+    "T",
+    "E",
+    "I",
+    "S"
+  ],
+  "const_names": [
+    "a",
+    "c",
+    "aa",
+    "g2",
+    "u2",
+    "p1",
+    "g1",
+    "p2",
+    "g3",
+    "u3",
+    "alpha",
+    "g4",
+    "gamma",
+    "u1",
+    "p3",
+    "p4",
+    "q1",
+    "q2",
+    "theta",
+    "k",
+    "tumor_microenvironment"
+  ],
+  "default_consts": [
+    0.18,
+    0.035,
+    1.0,
+    100000.0,
+    10.0,
+    0.1245,
+    20000000.0,
+    0.27,
+    20000000.0,
+    10.0,
+    0.001,
+    1000.0,
+    10.0,
+    0.03,
+    5.0,
+    2.84,
+    10.0,
+    0.1121,
+    1000000.0,
+    10000000000.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0,
+        10.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1.4067118787157555,
+        1.1122400085365154,
+        9.858464160472023,
+        0.000914836066182334
+      ],
+      "relative_scale_vs_default": [
+        1.4067118787157555,
+        1.1122400085365154,
+        0.9858464160472022,
+        null
+      ],
+      "absolute_offset_from_default": [
+        0.40671187871575554,
+        0.11224000853651539,
+        -0.1415358395279771,
+        0.000914836066182334
+      ],
+      "state_scale_from_default_trajectory": [
+        104208.79635553077,
+        51730.30817175566,
+        25313.423938311695,
+        0.003049453553941113
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 282619547,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3,
+        "peak_ratio_per_state": [
+          0.9982017670899551,
+          0.999228462435113,
+          1.0005501793991476,
+          0.9974045777237913
+        ],
+        "max_peak_ratio": 1.0005501793991476
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

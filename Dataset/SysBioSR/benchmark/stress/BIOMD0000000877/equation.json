@@ -1,0 +1,138 @@
+{
+  "dataset_model_id": "BIOMD0000000877",
+  "dataset_model_name": "Ontah2019",
+  "id": "BIOMD0000000877",
+  "name": "Ontah2019",
+  "source_xml": "Ontah2019.xml",
+  "dim": 4,
+  "eq": "(1*c_12*c_0*x_0*(1 - (x_0 + x_1)/c_1) + (-1)*c_12*c_2*x_0*x_2/(x_0 + x_1 + c_3) + (-1)*c_12*c_4*x_0*x_3/(c_5 + x_3))/c_12 | (1*c_12*c_2*x_0*x_2/(x_0 + x_1 + c_3) + (-1)*c_12*c_7*x_1*x_3/(c_5 + x_3) + (-1)*c_12*c_6*x_1)/c_12 | ((-1)*c_12*c_2*x_0*x_2/(x_0 + x_1 + c_3) + 1*c_12*c_8*c_6*x_1 + (-1)*c_12*c_9*x_2)/c_12 | (1*c_12*c_10 + (-1)*c_12*c_11*x_3)/c_12",
+  "eq_raw": "(1*compartment*r*U*(1 - (U + I)/K) + (-1)*compartment*beta*U*V/(U + I + alpha) + (-1)*compartment*delta_u*U*C/(K_c + C))/compartment | (1*compartment*beta*U*V/(U + I + alpha) + (-1)*compartment*delta_i*I*C/(K_c + C) + (-1)*compartment*delta*I)/compartment | ((-1)*compartment*beta*U*V/(U + I + alpha) + 1*compartment*b*delta*I + (-1)*compartment*gamma*V)/compartment | (1*compartment*mu + (-1)*compartment*psi*C)/compartment",
+  "consts": [
+    [
+      0.1,
+      2139.0,
+      0.01,
+      0.5,
+      50.0,
+      10000.0,
+      0.5,
+      60.0,
+      0.5,
+      0.1,
+      150.0,
+      4.17,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      100.0,
+      10.0,
+      10.0,
+      30.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.1*x_0*(1 - (x_0 + x_1)/2139) + (-1)*1*0.01*x_0*x_2/(x_0 + x_1 + 0.5) + (-1)*1*50*x_0*x_3/(10000 + x_3))/1",
+      "(1*1*0.01*x_0*x_2/(x_0 + x_1 + 0.5) + (-1)*1*60*x_1*x_3/(10000 + x_3) + (-1)*1*0.5*x_1)/1",
+      "((-1)*1*0.01*x_0*x_2/(x_0 + x_1 + 0.5) + 1*1*0.5*0.5*x_1 + (-1)*1*0.1*x_2)/1",
+      "(1*1*150 + (-1)*1*4.17*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "U",
+    "I",
+    "V",
+    "C"
+  ],
+  "const_names": [
+    "r",
+    "K",
+    "beta",
+    "alpha",
+    "delta_u",
+    "K_c",
+    "delta",
+    "delta_i",
+    "b",
+    "gamma",
+    "mu",
+    "psi",
+    "compartment"
+  ],
+  "init_description": "x_0: U, x_1: I, x_2: V, x_3: C",
+  "const_description": "c_0: r, c_1: K, c_2: beta, c_3: alpha, c_4: delta_u, c_5: K_c, c_6: delta, c_7: delta_i, c_8: b, c_9: gamma, c_10: mu, c_11: psi, c_12: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 9,
+    "n_reconfigured_reactions": 9,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> U",
+      "U + V -> I",
+      "U -> 0",
+      "I -> 0",
+      "I -> 0",
+      "0 -> V",
+      "V -> 0",
+      "0 -> C",
+      "C -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> U",
+      "U + V -> I",
+      "U -> 0",
+      "I -> 0",
+      "I -> 0",
+      "0 -> V",
+      "V -> 0",
+      "0 -> C",
+      "C -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[13]*k[1]*x[1]*(1 - (x[1] + x[2])/k[2]) + (-1)*k[13]*k[3]*x[1]*x[3]/(x[1] + x[2] + k[4]) + (-1)*k[13]*k[5]*x[1]*x[4]/(k[6] + x[4]))/k[13]",
+      "(1*k[13]*k[3]*x[1]*x[3]/(x[1] + x[2] + k[4]) + (-1)*k[13]*k[8]*x[2]*x[4]/(k[6] + x[4]) + (-1)*k[13]*k[7]*x[2])/k[13]",
+      "((-1)*k[13]*k[3]*x[1]*x[3]/(x[1] + x[2] + k[4]) + 1*k[13]*k[9]*k[7]*x[2] + (-1)*k[13]*k[10]*x[3])/k[13]",
+      "(1*k[13]*k[11] + (-1)*k[13]*k[12]*x[4])/k[13]"
+    ],
+    "species_index_map": {
+      "x_0": "U",
+      "x_1": "I",
+      "x_2": "V",
+      "x_3": "C"
+    },
+    "const_index_map": {
+      "c_0": "r",
+      "c_1": "K",
+      "c_2": "beta",
+      "c_3": "alpha",
+      "c_4": "delta_u",
+      "c_5": "K_c",
+      "c_6": "delta",
+      "c_7": "delta_i",
+      "c_8": "b",
+      "c_9": "gamma",
+      "c_10": "mu",
+      "c_11": "psi",
+      "c_12": "compartment"
+    }
+  }
+}

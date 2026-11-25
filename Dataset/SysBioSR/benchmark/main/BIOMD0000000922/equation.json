@@ -1,0 +1,112 @@
+{
+  "dataset_model_id": "BIOMD0000000922",
+  "dataset_model_name": "Turner2015",
+  "id": "BIOMD0000000922",
+  "name": "Turner2015",
+  "source_xml": "Turner2015.xml",
+  "dim": 3,
+  "eq": "1*c_9*(c_0*c_1 - x_0*(c_2 + c_3))/c_9 | 1*c_9*(x_0*c_2 - x_1*(c_5 + c_8) - c_4*x_1^2)/c_9 | 1*c_9*(x_1*c_5 - x_2*(c_6 + c_7))/c_9",
+  "eq_raw": "1*compartment*(Ar*ep - Population_of_Eggs*(Te + Me))/compartment | 1*compartment*(Population_of_Eggs*Te - Population_of_Larvae*(Tl + Ml) - K0*Population_of_Larvae^2)/compartment | 1*compartment*(Population_of_Larvae*Tl - Population_of_Pupae*(Tp + Mp))/compartment",
+  "consts": [
+    [
+      20.0,
+      30.0,
+      0.361,
+      0.05,
+      0.0002,
+      0.134,
+      0.342,
+      0.0025,
+      0.0501,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      10000.0,
+      5000.0,
+      3000.0
+    ]
+  ],
+  "substituted": [
+    [
+      "1*1*(20*30 - x_0*(0.361 + 0.05))/1",
+      "1*1*(x_0*0.361 - x_1*(0.134 + 0.0501) - 0.0002*x_1^2)/1",
+      "1*1*(x_1*0.134 - x_2*(0.342 + 0.0025))/1"
+    ]
+  ],
+  "state_names": [
+    "Population_of_Eggs",
+    "Population_of_Larvae",
+    "Population_of_Pupae"
+  ],
+  "const_names": [
+    "Ar",
+    "ep",
+    "Te",
+    "Me",
+    "K0",
+    "Tl",
+    "Tp",
+    "Mp",
+    "Ml",
+    "compartment"
+  ],
+  "init_description": "x_0: Population_of_Eggs, x_1: Population_of_Larvae, x_2: Population_of_Pupae",
+  "const_description": "c_0: Ar, c_1: ep, c_2: Te, c_3: Me, c_4: K0, c_5: Tl, c_6: Tp, c_7: Mp, c_8: Ml, c_9: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 3,
+    "n_reconfigured_reactions": 3,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> Population_of_Eggs",
+      "0 -> Population_of_Larvae",
+      "0 -> Population_of_Pupae"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Population_of_Eggs",
+      "0 -> Population_of_Larvae",
+      "0 -> Population_of_Pupae"
+    ],
+    "maple_odes": [
+      "1*k[10]*(k[1]*k[2] - x[1]*(k[3] + k[4]))/k[10]",
+      "1*k[10]*(x[1]*k[3] - x[2]*(k[6] + k[9]) - k[5]*x[2]^2)/k[10]",
+      "1*k[10]*(x[2]*k[6] - x[3]*(k[7] + k[8]))/k[10]"
+    ],
+    "species_index_map": {
+      "x_0": "Population_of_Eggs",
+      "x_1": "Population_of_Larvae",
+      "x_2": "Population_of_Pupae"
+    },
+    "const_index_map": {
+      "c_0": "Ar",
+      "c_1": "ep",
+      "c_2": "Te",
+      "c_3": "Me",
+      "c_4": "K0",
+      "c_5": "Tl",
+      "c_6": "Tp",
+      "c_7": "Mp",
+      "c_8": "Ml",
+      "c_9": "compartment"
+    }
+  }
+}

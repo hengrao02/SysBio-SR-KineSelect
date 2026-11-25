@@ -1,0 +1,57 @@
+{
+  "system_id": "BIOMD0000000815",
+  "state_names": [
+    "x_Cancer",
+    "y_Immune_System"
+  ],
+  "const_names": [
+    "compartment"
+  ],
+  "default_consts": [
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.0005,
+        0.01
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.0006152467573014477,
+        0.006581898014748441
+      ],
+      "relative_scale_vs_default": [
+        1.2304935146028955,
+        0.6581898014748441
+      ],
+      "absolute_offset_from_default": [
+        0.00011524675730144773,
+        -0.003418101985251559
+      ],
+      "state_scale_from_default_trajectory": [
+        1.9988927917189214,
+        0.19576616285698467
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1978074563,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.5919969558602471,
+        "peak_ratio_per_state": [
+          1.0004504362922422,
+          0.5565214210351659
+        ],
+        "max_peak_ratio": 1.0004504362922422
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

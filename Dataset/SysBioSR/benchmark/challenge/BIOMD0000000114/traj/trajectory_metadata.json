@@ -1,0 +1,75 @@
+{
+  "system_id": "BIOMD0000000114",
+  "state_names": [
+    "x",
+    "y"
+  ],
+  "const_names": [
+    "k",
+    "alpha",
+    "n",
+    "a",
+    "k1",
+    "beta",
+    "gamma",
+    "cytoplasm",
+    "ER",
+    "extracellular"
+  ],
+  "default_consts": [
+    0.01,
+    5.0,
+    4.0,
+    3.0,
+    2.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.5278714843458191,
+        1.279971182083964
+      ],
+      "relative_scale_vs_default": [
+        0.5278714843458191,
+        1.279971182083964
+      ],
+      "absolute_offset_from_default": [
+        -0.4721285156541809,
+        0.2799711820839641
+      ],
+      "state_scale_from_default_trajectory": [
+        46.848307201312885,
+        25.705954127151635
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 450847182,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9556043145779443,
+        "peak_ratio_per_state": [
+          1.0003211140718964,
+          1.0022467299849669
+        ],
+        "max_peak_ratio": 1.0022467299849669
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

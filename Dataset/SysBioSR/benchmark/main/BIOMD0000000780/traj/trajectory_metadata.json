@@ -1,0 +1,95 @@
+{
+  "system_id": "BIOMD0000000780",
+  "state_names": [
+    "S",
+    "N",
+    "T",
+    "M"
+  ],
+  "const_names": [
+    "a",
+    "d",
+    "u1",
+    "u2",
+    "r1",
+    "e1",
+    "r2",
+    "e2",
+    "u3",
+    "b",
+    "r3",
+    "e3",
+    "tme"
+  ],
+  "default_consts": [
+    0.02,
+    0.02,
+    0.2,
+    0.4,
+    0.8,
+    0.01,
+    0.8,
+    0.04,
+    0.1,
+    0.001,
+    0.5,
+    0.01,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.1,
+        0.2,
+        0.1,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.06417515011882728,
+        0.24795000392367506,
+        0.11138220882611159,
+        0.011635771031489474
+      ],
+      "relative_scale_vs_default": [
+        0.6417515011882727,
+        1.2397500196183753,
+        1.1138220882611158,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -0.035824849881172724,
+        0.047950003923675044,
+        0.011382208826111587,
+        0.011635771031489474
+      ],
+      "state_scale_from_default_trajectory": [
+        0.2112835408529776,
+        0.43329331890596584,
+        0.1,
+        0.03878590343829825
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2368842354,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.30000000000000004,
+        "peak_ratio_per_state": [
+          0.9728224789418088,
+          1.000024474536643,
+          1.1138220882611158,
+          0.9806199230409954
+        ],
+        "max_peak_ratio": 1.1138220882611158
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "const_description": "c_0: chloroplast, c_1: CO2, c_2: Vcmax, c_3: Kc, c_4: O2, c_5: Ko, c_6: Q, c_7: alpha, c_8: teta, c_9: Gamma, c_10: Nt, c_11: Rp",
+  "const_names": [
+    "chloroplast",
+    "CO2",
+    "Vcmax",
+    "Kc",
+    "O2",
+    "Ko",
+    "Q",
+    "alpha",
+    "teta",
+    "Gamma",
+    "Nt",
+    "Rp"
+  ],
+  "consts": [
+    [
+      1.0,
+      245.0,
+      2.53232284114507,
+      406.066146391504,
+      210.0,
+      276.900084789612,
+      1000.0,
+      0.3,
+      0.9,
+      42.8926627111176,
+      0.5,
+      3.2
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000384",
+  "dataset_model_name": "Arnold2011",
+  "dim": 2,
+  "eq": "2*c_0*(c_1*c_2/(2*(c_1 + c_3*(c_4/c_5 + 1))) + 0.00384615384615385*c_1*c_6*c_7/((-9*c_8 + 10)*(c_1 + 2*c_9)) - Abs(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((c_1 + 2*c_9)*(9*c_8 - 10)))/2) - c_0*c_2*x_0*x_1/(c_10*c_11) + 0.1575*c_0*c_3*c_4*(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((-9*c_8 + 10)*(c_1 + 2*c_9)) - Abs(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((c_1 + 2*c_9)*(9*c_8 - 10))))/(c_1*c_5) | -2*c_0*(c_1*c_2/(2*(c_1 + c_3*(c_4/c_5 + 1))) + 0.00384615384615385*c_1*c_6*c_7/((-9*c_8 + 10)*(c_1 + 2*c_9)) - Abs(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((c_1 + 2*c_9)*(9*c_8 - 10)))/2) + 0.0153846153846154*c_0*c_6*c_7*(c_10 - x_1)/(c_10*(-9*c_8 + 10)) - 0.21*c_0*c_3*c_4*(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((-9*c_8 + 10)*(c_1 + 2*c_9)) - Abs(c_1*c_2/(c_1 + c_3*(c_4/c_5 + 1)) + 0.00769230769230769*c_1*c_6*c_7/((c_1 + 2*c_9)*(9*c_8 - 10))))/(c_1*c_5)",
+  "eq_raw": "-NADPH*PGA*Vcmax*chloroplast/(Nt*Rp) + 2*chloroplast*(0.00384615384615385*CO2*Q*alpha/((-9*teta + 10)*(CO2 + 2*Gamma)) + CO2*Vcmax/(2*(CO2 + Kc*(1 + O2/Ko))) - Abs(0.00769230769230769*CO2*Q*alpha/((CO2 + 2*Gamma)*(9*teta - 10)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko)))/2) + 0.1575*Kc*O2*chloroplast*(0.00769230769230769*CO2*Q*alpha/((-9*teta + 10)*(CO2 + 2*Gamma)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko)) - Abs(0.00769230769230769*CO2*Q*alpha/((CO2 + 2*Gamma)*(9*teta - 10)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko))))/(CO2*Ko) | -2*chloroplast*(0.00384615384615385*CO2*Q*alpha/((-9*teta + 10)*(CO2 + 2*Gamma)) + CO2*Vcmax/(2*(CO2 + Kc*(1 + O2/Ko))) - Abs(0.00769230769230769*CO2*Q*alpha/((CO2 + 2*Gamma)*(9*teta - 10)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko)))/2) + 0.0153846153846154*Q*alpha*chloroplast*(-NADPH + Nt)/(Nt*(-9*teta + 10)) - 0.21*Kc*O2*chloroplast*(0.00769230769230769*CO2*Q*alpha/((-9*teta + 10)*(CO2 + 2*Gamma)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko)) - Abs(0.00769230769230769*CO2*Q*alpha/((CO2 + 2*Gamma)*(9*teta - 10)) + CO2*Vcmax/(CO2 + Kc*(1 + O2/Ko))))/(CO2*Ko)",
+  "id": "Arnold2011",
+  "init": [
+    [
+      2.4,
+      0.21
+    ]
+  ],
+  "init_description": "x_0: PGA, x_1: NADPH",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 6,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Arnold2011_Medlyn2002_RuBisCO-CalvinCycle",
+  "source_xml": "Arnold2011.xml",
+  "state_names": [
+    "PGA",
+    "NADPH"
+  ],
+  "substituted": [
+    [
+      "-1.58270177571567*x_0*x_1 + 1.55000252832095",
+      "-4.8582995951417*x_1 + 0.793764283444979"
+    ]
+  ]
+}

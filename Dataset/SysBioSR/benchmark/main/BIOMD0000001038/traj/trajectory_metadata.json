@@ -1,0 +1,84 @@
+{
+  "system_id": "BIOMD0000001038",
+  "state_names": [
+    "Normal_cells",
+    "Tumor_cells",
+    "Vitamins"
+  ],
+  "const_names": [
+    "r",
+    "beta1",
+    "gamma",
+    "alpha1",
+    "alpha2",
+    "beta2",
+    "k1",
+    "k2",
+    "c1",
+    "c2",
+    "Whole_organism"
+  ],
+  "default_consts": [
+    0.4312,
+    2.99e-06,
+    0.9817,
+    0.4426,
+    0.4,
+    0.2291,
+    0.8976,
+    0.9611,
+    0.2215,
+    0.4975,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0,
+        5.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1.096051600238641,
+        1.2312656017371644,
+        3.383896776279438
+      ],
+      "relative_scale_vs_default": [
+        1.096051600238641,
+        1.2312656017371644,
+        0.6767793552558876
+      ],
+      "absolute_offset_from_default": [
+        0.0960516002386409,
+        0.23126560173716437,
+        -1.616103223720562
+      ],
+      "state_scale_from_default_trajectory": [
+        4.440778577452628,
+        1.614704696947634,
+        5.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3081479929,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.6035094913617618,
+        "peak_ratio_per_state": [
+          0.3967560632055989,
+          0.762532990747283,
+          0.6767793552558877
+        ],
+        "max_peak_ratio": 0.762532990747283
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

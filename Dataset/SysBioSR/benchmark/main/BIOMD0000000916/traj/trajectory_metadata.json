@@ -1,0 +1,88 @@
+{
+  "system_id": "BIOMD0000000916",
+  "state_names": [
+    "The_FOD_in_the_circulation__X1",
+    "The_FOD_in_the_metabolizing_tissues__X4",
+    "The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3",
+    "The_FOD_in_the_gallbladder___intestinal_lumen__X5",
+    "The_cumulative_FOD_excreted_in_the_urine__X2"
+  ],
+  "const_names": [
+    "K3",
+    "compartment",
+    "K4",
+    "K5",
+    "K1",
+    "K2"
+  ],
+  "default_consts": [
+    26.6,
+    1.0,
+    1.2,
+    1.2,
+    3.6,
+    1.2
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1.0856312596759286,
+        0.206133596744317,
+        0.04261822571357195,
+        0.037953350833039155,
+        0.25684593703752534
+      ],
+      "relative_scale_vs_default": [
+        1.0856312596759286,
+        null,
+        null,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        0.08563125967592855,
+        0.206133596744317,
+        0.04261822571357195,
+        0.037953350833039155,
+        0.25684593703752534
+      ],
+      "state_scale_from_default_trajectory": [
+        1.0,
+        0.6871119891477233,
+        0.14206075237857316,
+        0.12651116944346386,
+        0.8561531234584179
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2607639114,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.7440350672489242,
+        "peak_ratio_per_state": [
+          1.0856312596759283,
+          1.2990148493607276,
+          1.7440350672489242,
+          1.4370011962997462,
+          1.6106821841946695
+        ],
+        "max_peak_ratio": 1.7440350672489242
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

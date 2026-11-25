@@ -1,0 +1,11 @@
+# Frozen paper formulation. Hill laws are part of the main method, not an opt-in.
+max_reactant_order: 2
+max_product_order: 2
+max_stoich_per_species: 2
+substrate_laws: [mass_action, mm]
+modifier_laws: [none, linear, hill_activation, hill_inhibition]
+K_grid: [0.1, 0.5, 1.0, 2.0, 5.0, 10.0]
+hill_n_values: [1, 2, 4]
+species_K_grid: null
+kinetic_preset: null
+kinetic_preset_phase: null

@@ -1,0 +1,72 @@
+{
+  "const_description": "c_0: Blood, c_1: T, c_2: k, c_3: u, c_4: beta, c_5: p, c_6: z, c_7: alpha, c_8: delta, c_9: pi, c_10: sigma",
+  "const_names": [
+    "Blood",
+    "T",
+    "k",
+    "u",
+    "beta",
+    "p",
+    "z",
+    "alpha",
+    "delta",
+    "pi",
+    "sigma"
+  ],
+  "consts": [
+    [
+      1.0,
+      200000000.0,
+      4.31e-06,
+      0.04,
+      2.05e-09,
+      0.2,
+      0.9,
+      0.288,
+      16.0,
+      300.0,
+      3.75
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000967",
+  "dataset_model_name": "McLean1991",
+  "dim": 4,
+  "eq": "c_0*c_1/(c_2*x_3 + 1) - c_0*c_3*x_0 - c_0*c_4*c_5*x_0*x_3*(-c_6 + 1) - c_0*c_4*x_0*x_3*(-c_5 + 1)*(-c_6 + 1) | -c_0*c_3*x_1 + c_0*c_4*c_5*x_0*x_3*(-c_6 + 1) - c_0*c_7*x_1 | c_0*c_4*x_0*x_3*(-c_5 + 1)*(-c_6 + 1) + c_0*c_7*x_1 - c_0*c_8*x_2 | -c_0*c_10*x_3 + c_0*c_9*x_2",
+  "eq_raw": "-Blood*R*V*beta*p*(-z + 1) - Blood*R*V*beta*(-p + 1)*(-z + 1) - Blood*R*u + Blood*T/(V*k + 1) | -Blood*L*alpha - Blood*L*u + Blood*R*V*beta*p*(-z + 1) | -Blood*E*delta + Blood*L*alpha + Blood*R*V*beta*(-p + 1)*(-z + 1) | Blood*E*pi - Blood*V*sigma",
+  "id": "McLean1991___Behaviour_of_HIV_in_the_presence_of_zidovudine",
+  "init": [
+    [
+      100000000.0,
+      1000000.0,
+      0.0,
+      7000000.0
+    ]
+  ],
+  "init_description": "x_0: R, x_1: L, x_2: E, x_3: V",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "McLean1991 - Behaviour of HIV in the presence of zidovudine",
+  "source_xml": "McLean1991.xml",
+  "state_names": [
+    "R",
+    "L",
+    "E",
+    "V"
+  ],
+  "substituted": [
+    [
+      "-2.05e-10*x_0*x_3 - 0.04*x_0 + 200000000.0/(4.31e-6*x_3 + 1)",
+      "4.1e-11*x_0*x_3 - 0.328*x_1",
+      "1.64e-10*x_0*x_3 + 0.288*x_1 - 16.0*x_2",
+      "300.0*x_2 - 3.75*x_3"
+    ]
+  ]
+}

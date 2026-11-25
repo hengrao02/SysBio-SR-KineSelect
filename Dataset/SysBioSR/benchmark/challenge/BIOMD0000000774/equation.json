@@ -1,0 +1,112 @@
+{
+  "dataset_model_id": "BIOMD0000000774",
+  "dataset_model_name": "Wodarz2018",
+  "id": "BIOMD0000000774",
+  "name": "Wodarz2018",
+  "source_xml": "Wodarz2018.xml",
+  "dim": 2,
+  "eq": "(1*c_10*c_1/(1 + c_3*x_1^c_5)*x_0*(2*c_2/(1 + c_4*x_1^c_6) - 1) + 1*c_10*c_7/(1 + c_8*x_0^c_9)*x_1)/c_10 | ((-1)*c_10*c_7/(1 + c_8*x_0^c_9)*x_1 + 1*c_10*2*c_1/(1 + c_3*x_1^c_5)*x_0*(1 - c_2/(1 + c_4*x_1^c_6)) + (-1)*c_10*c_0*x_1)/c_10",
+  "eq_raw": "(1*tme*r_0/(1 + h1*D^k1)*S*(2*p_0/(1 + h2*D^k2) - 1) + 1*tme*g_0/(1 + h3*S^k3)*D)/tme | ((-1)*tme*g_0/(1 + h3*S^k3)*D + 1*tme*2*r_0/(1 + h1*D^k1)*S*(1 - p_0/(1 + h2*D^k2)) + (-1)*tme*a*D)/tme",
+  "consts": [
+    [
+      0.0025,
+      0.01,
+      0.7,
+      0.0001,
+      0.0001,
+      1.0,
+      1.0,
+      0.0035,
+      0.01,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.01/(1 + 0.0001*x_1^1)*x_0*(2*0.7/(1 + 0.0001*x_1^1) - 1) + 1*1*0.0035/(1 + 0.01*x_0^1)*x_1)/1",
+      "((-1)*1*0.0035/(1 + 0.01*x_0^1)*x_1 + 1*1*2*0.01/(1 + 0.0001*x_1^1)*x_0*(1 - 0.7/(1 + 0.0001*x_1^1)) + (-1)*1*0.0025*x_1)/1"
+    ]
+  ],
+  "state_names": [
+    "S",
+    "D"
+  ],
+  "const_names": [
+    "a",
+    "r_0",
+    "p_0",
+    "h1",
+    "h2",
+    "k1",
+    "k2",
+    "g_0",
+    "h3",
+    "k3",
+    "tme"
+  ],
+  "init_description": "x_0: S, x_1: D",
+  "const_description": "c_0: a, c_1: r_0, c_2: p_0, c_3: h1, c_4: h2, c_5: k1, c_6: k2, c_7: g_0, c_8: h3, c_9: k3, c_10: tme",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 4,
+    "n_reconfigured_reactions": 4,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> S",
+      "D -> S",
+      "0 -> D",
+      "D -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> S",
+      "D -> S",
+      "0 -> D",
+      "D -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[14]*k[5]/(1 + k[7]*x[2]^k[9])*x[1]*(2*k[6]/(1 + k[8]*x[2]^k[10]) - 1) + 1*k[14]*k[11]/(1 + k[12]*x[1]^k[13])*x[2])/k[14]",
+      "((-1)*k[14]*k[11]/(1 + k[12]*x[1]^k[13])*x[2] + 1*k[14]*2*k[5]/(1 + k[7]*x[2]^k[9])*x[1]*(1 - k[6]/(1 + k[8]*x[2]^k[10])) + (-1)*k[14]*k[1]*x[2])/k[14]"
+    ],
+    "species_index_map": {
+      "x_0": "S",
+      "x_1": "D"
+    },
+    "const_index_map": {
+      "c_0": "a",
+      "c_1": "r_0",
+      "c_2": "p_0",
+      "c_3": "h1",
+      "c_4": "h2",
+      "c_5": "k1",
+      "c_6": "k2",
+      "c_7": "g_0",
+      "c_8": "h3",
+      "c_9": "k3",
+      "c_10": "tme"
+    }
+  }
+}

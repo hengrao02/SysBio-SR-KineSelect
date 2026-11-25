@@ -1,0 +1,69 @@
+{
+  "const_description": "c_0: beta, c_1: delta, c_2: kappa, c_3: rho, c_4: zeta, c_5: sigma, c_6: alpha, c_7: gamma",
+  "const_names": [
+    "beta",
+    "delta",
+    "kappa",
+    "rho",
+    "zeta",
+    "sigma",
+    "alpha",
+    "gamma"
+  ],
+  "consts": [
+    [
+      0.0095,
+      0.0001,
+      0.0001,
+      0.05,
+      0.0001,
+      0.0001,
+      0.005,
+      0.0001
+    ]
+  ],
+  "dataset_model_id": "MODEL1008060002",
+  "dataset_model_name": "Munz2009",
+  "dim": 5,
+  "eq": "-c_0*x_0*x_2 | c_0*x_0*x_2 - c_1*x_1 - c_2*x_1 - c_3*x_1 | c_3*x_1 + c_4*x_3 - c_5*x_2 - c_6*x_0*x_2 | c_1*x_0 + c_1*x_1 - c_4*x_3 + c_6*x_0*x_2 + c_7*x_4 | c_2*x_1 + c_5*x_2 - c_7*x_4",
+  "eq_raw": "-S*Z*beta | -I*delta - I*kappa - I*rho + S*Z*beta | I*rho + R*zeta - S*Z*alpha - Z*sigma | I*delta + Q*gamma - R*zeta + S*Z*alpha + S*delta | I*kappa - Q*gamma + Z*sigma",
+  "id": "MODEL1008060002",
+  "init": [
+    [
+      500.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: I, x_2: Z, x_3: R, x_4: Q",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Munz2009 - Zombie SIZRQ",
+  "source_xml": "Munz2009.xml",
+  "state_names": [
+    "S",
+    "I",
+    "Z",
+    "R",
+    "Q"
+  ],
+  "substituted": [
+    [
+      "-0.0095*x_0*x_2",
+      "0.0095*x_0*x_2 - 0.0502*x_1",
+      "-0.005*x_0*x_2 + 0.05*x_1 - 0.0001*x_2 + 0.0001*x_3",
+      "0.005*x_0*x_2 + 0.0001*x_0 + 0.0001*x_1 - 0.0001*x_3 + 0.0001*x_4",
+      "0.0001*x_1 + 0.0001*x_2 - 0.0001*x_4"
+    ]
+  ]
+}

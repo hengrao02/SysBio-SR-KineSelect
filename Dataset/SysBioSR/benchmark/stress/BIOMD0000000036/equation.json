@@ -1,0 +1,66 @@
+{
+  "dataset_model_id": "BIOMD0000000036",
+  "dataset_model_name": "Tyson1999",
+  "id": "Tyson1999",
+  "name": "Tyson1999_CircClock",
+  "source_xml": "Tyson1999.xml",
+  "dim": 2,
+  "eq": "c_0*c_1/(1 + x_1^2*(1 - 2/((8*c_3*x_1 + 1)^0.5 + 1))^2/(4*c_2^2)) - c_0*c_4*x_0 | c_0*c_5*x_0 - c_0*c_6*x_1 - c_0*(c_8*x_1 + 2*c_9*x_1/((8*c_10*x_1 + 1)^0.5 + 1))/(c_7 + x_1)",
+  "eq_raw": "-CYTOPLASM*M*mRNAD__D + CYTOPLASM*TC__Vm/(P^2*(1 - 2/((8*P*TC__Keq + 1)^0.5 + 1))^2/(4*TC__Pcrit^2) + 1) | CYTOPLASM*M*TL__V - CYTOPLASM*P*ProteinD__D - CYTOPLASM*(2*DBT__k1*P/((8*DBT__Keq*P + 1)^0.5 + 1) + DBT__k2*P)/(DBT__J + P)",
+  "consts": [
+    [
+      1.0,
+      1.0,
+      0.1,
+      200.0,
+      0.1,
+      0.5,
+      0.1,
+      0.05,
+      0.03,
+      10.0,
+      200.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "-0.1*x_0 + 1.0/(25.0*x_1^2*(1 - 2/(40.0*(x_1 + 0.000625)^0.5 + 1))^2 + 1)",
+      "0.5*x_0 - 0.1*x_1 - 1.0*(0.03*x_1 + 20.0*x_1/(40.0*(x_1 + 0.000625)^0.5 + 1))/(x_1 + 0.05)"
+    ]
+  ],
+  "state_names": [
+    "M",
+    "P"
+  ],
+  "const_names": [
+    "CYTOPLASM",
+    "TC__Vm",
+    "TC__Pcrit",
+    "TC__Keq",
+    "mRNAD__D",
+    "TL__V",
+    "ProteinD__D",
+    "DBT__J",
+    "DBT__k2",
+    "DBT__k1",
+    "DBT__Keq"
+  ],
+  "init_description": "x_0: M, x_1: P",
+  "const_description": "c_0: CYTOPLASM, c_1: TC__Vm, c_2: TC__Pcrit, c_3: TC__Keq, c_4: mRNAD__D, c_5: TL__V, c_6: ProteinD__D, c_7: DBT__J, c_8: DBT__k2, c_9: DBT__k1, c_10: DBT__Keq",
+  "meta": {
+    "n_assignment_rules": 0,
+    "n_rate_rules": 0,
+    "n_initial_assignments": 0,
+    "n_events": 0,
+    "has_piecewise": false,
+    "has_delay": false,
+    "has_time_dependency": false,
+    "warnings": []
+  }
+}

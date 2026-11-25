@@ -1,0 +1,60 @@
+{
+  "const_description": "c_0: binding__kB, c_1: extracellular, c_2: endocytosis__kT, c_3: endosome, c_4: translocation__kL",
+  "const_names": [
+    "binding__kB",
+    "extracellular",
+    "endocytosis__kT",
+    "endosome",
+    "translocation__kL"
+  ],
+  "consts": [
+    [
+      0.058,
+      1.0,
+      0.141,
+      1.0,
+      0.013
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000267",
+  "dataset_model_name": "Lebeda2008",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 | c_0*c_1*x_0 - c_1*c_2*x_1 | c_1*c_2*x_1 - c_3*c_4*x_2 | c_3*c_4*x_2",
+  "eq_raw": "-binding__kB*extracellular*free | binding__kB*extracellular*free - bound*endocytosis__kT*extracellular | bound*endocytosis__kT*extracellular - endosome*translocate*translocation__kL | endosome*translocate*translocation__kL",
+  "id": "Lebeda2008_BoNT_Paralysis_3stepModel",
+  "init": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: free, x_1: bound, x_2: translocate, x_3: lytic",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Lebeda2008 - BoNT paralysis (3 step model)",
+  "source_xml": "Lebeda2008.xml",
+  "state_names": [
+    "free",
+    "bound",
+    "translocate",
+    "lytic"
+  ],
+  "substituted": [
+    [
+      "-0.058*x_0",
+      "0.058*x_0 - 0.141*x_1",
+      "0.141*x_1 - 0.013*x_2",
+      "0.013*x_2"
+    ]
+  ]
+}

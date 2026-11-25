@@ -1,0 +1,4 @@
+inherits: ../base.yaml
+
+systems_root: ../../../Dataset/SysBioSR/benchmark/challenge
+benchmark_partition: challenge

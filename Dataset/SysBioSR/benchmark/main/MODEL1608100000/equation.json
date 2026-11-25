@@ -1,0 +1,54 @@
+{
+  "const_description": "c_0: R1__v, c_1: compartment, c_2: R2__k1, c_3: R3__k1, c_4: R4__k1",
+  "const_names": [
+    "R1__v",
+    "compartment",
+    "R2__k1",
+    "R3__k1",
+    "R4__k1"
+  ],
+  "consts": [
+    [
+      5.0,
+      1.0,
+      0.03,
+      0.1,
+      0.03
+    ]
+  ],
+  "dataset_model_id": "MODEL1608100000",
+  "dataset_model_name": "Aguilera2017",
+  "dim": 2,
+  "eq": "c_0*c_1 - c_1*c_2*x_0 | c_1*c_3*x_0 - c_1*c_4*x_1",
+  "eq_raw": "R1__v*compartment - R2__k1*compartment*mRNA | -Protein*R4__k1*compartment + R3__k1*compartment*mRNA",
+  "id": "MODEL1608100000",
+  "init": [
+    [
+      10.0,
+      100.0
+    ]
+  ],
+  "init_description": "x_0: mRNA, x_1: Protein",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Aguilera2017 - Model for gene constitutive expression circuit",
+  "source_xml": "Aguilera2017.xml",
+  "state_names": [
+    "mRNA",
+    "Protein"
+  ],
+  "substituted": [
+    [
+      "-0.03*x_0 + 5.0",
+      "0.1*x_0 - 0.03*x_1"
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+# Frozen coefficient fitting, adaptive K-grid, and rollout numerics.
+l2_lambda: 1.0e-6
+negative_state_policy: clip_or_fail
+negative_state_tol: 1.0e-10
+rate_threshold_ratio: 5.0
+rollout_timeout: 300.0
+
+sindy_K_grid_mode: species_quantile
+sindy_species_K_quantiles: [0.05, 0.50]
+sindy_species_K_positive_eps: 1.0e-12
+sindy_species_K_positive_rel_eps: 1.0e-6
+sindy_species_K_floor: 1.0e-12
+sindy_species_K_dedup_rtol: 0.10
+
+sindy_active_threshold: 1.0e-4
+sindy_numerical_zero_threshold: 1.0e-14
+sindy_top_k_per_reaction: 1
+sindy_delta_mod: 0.05
+sindy_delta_sat: 0.05

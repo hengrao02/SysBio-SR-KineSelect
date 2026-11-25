@@ -1,0 +1,69 @@
+{
+  "system_id": "BIOMD0000000799",
+  "state_names": [
+    "x_Normal_Hematopoietic_Stem_Cell",
+    "y_Leukemic_Cell"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c",
+    "A",
+    "B",
+    "C",
+    "compartment"
+  ],
+  "default_consts": [
+    0.3,
+    0.5,
+    0.1,
+    0.3,
+    0.5,
+    0.1,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        4.5,
+        1.5
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        5.66876323615038,
+        2.0165425708622227
+      ],
+      "relative_scale_vs_default": [
+        1.2597251635889735,
+        1.3443617139081485
+      ],
+      "absolute_offset_from_default": [
+        1.1687632361503804,
+        0.5165425708622227
+      ],
+      "state_scale_from_default_trajectory": [
+        4.5,
+        1.5
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3600725705,
+      "attempt_index": 2,
+      "candidate_label": "auto_attempt_2",
+      "sanity_metrics": {
+        "max_rel_diff": 0.34436171390814846,
+        "peak_ratio_per_state": [
+          1.2597251635889735,
+          1.3443617139081485
+        ],
+        "max_peak_ratio": 1.3443617139081485
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

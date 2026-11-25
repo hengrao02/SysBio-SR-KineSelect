@@ -1,0 +1,112 @@
+{
+  "dataset_model_id": "BIOMD0000000573",
+  "dataset_model_name": "Aguilera2014",
+  "id": "BIOMD0000000573",
+  "name": "Aguilera2014",
+  "source_xml": "Aguilera2014.xml",
+  "dim": 2,
+  "eq": "(1*c_0*c_1 + 1*c_0*c_3*x_0/(c_2 + x_0) + (-1)*c_0*c_4*x_0*x_1 + (-1)*c_0*c_5*x_0)/c_0 | (1*c_0*c_6 + (-1)*c_0*c_7*x_0*x_1 + (-1)*c_0*c_8*x_1)/c_0",
+  "eq_raw": "(1*compartment*__lp_r2_v + 1*compartment*__lp_r3_Vmax*V/(__lp_r3_Km + V) + (-1)*compartment*__lp_r4_k1*V*C + (-1)*compartment*__lp_r5_k1*V)/compartment | (1*compartment*__lp_r6_v + (-1)*compartment*__lp_r7_k1*V*C + (-1)*compartment*__lp_r8_k1*C)/compartment",
+  "consts": [
+    [
+      1.0,
+      0.00134,
+      380.0,
+      0.134,
+      0.0295,
+      6.85e-05,
+      0.07,
+      0.927,
+      5.01e-05
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.00134 + 1*1*0.134*x_0/(380 + x_0) + (-1)*1*0.0295*x_0*x_1 + (-1)*1*6.85e-05*x_0)/1",
+      "(1*1*0.07 + (-1)*1*0.927*x_0*x_1 + (-1)*1*5.01e-05*x_1)/1"
+    ]
+  ],
+  "state_names": [
+    "V",
+    "C"
+  ],
+  "const_names": [
+    "compartment",
+    "__lp_r2_v",
+    "__lp_r3_Km",
+    "__lp_r3_Vmax",
+    "__lp_r4_k1",
+    "__lp_r5_k1",
+    "__lp_r6_v",
+    "__lp_r7_k1",
+    "__lp_r8_k1"
+  ],
+  "init_description": "x_0: V, x_1: C",
+  "const_description": "c_0: compartment, c_1: __lp_r2_v, c_2: __lp_r3_Km, c_3: __lp_r3_Vmax, c_4: __lp_r4_k1, c_5: __lp_r5_k1, c_6: __lp_r6_v, c_7: __lp_r7_k1, c_8: __lp_r8_k1",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 7,
+    "n_reconfigured_reactions": 7,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> V",
+      "V -> 2*V",
+      "C + V -> C",
+      "V -> 0",
+      "0 -> C",
+      "C + V -> V",
+      "C -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> V",
+      "V -> 2*V",
+      "C + V -> C",
+      "V -> 0",
+      "0 -> C",
+      "C + V -> V",
+      "C -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[1]*k[2] + 1*k[1]*k[4]*x[1]/(k[3] + x[1]) + (-1)*k[1]*k[5]*x[1]*x[2] + (-1)*k[1]*k[6]*x[1])/k[1]",
+      "(1*k[1]*k[7] + (-1)*k[1]*k[8]*x[1]*x[2] + (-1)*k[1]*k[9]*x[2])/k[1]"
+    ],
+    "species_index_map": {
+      "x_0": "V",
+      "x_1": "C"
+    },
+    "const_index_map": {
+      "c_0": "compartment",
+      "c_1": "__lp_r2_v",
+      "c_2": "__lp_r3_Km",
+      "c_3": "__lp_r3_Vmax",
+      "c_4": "__lp_r4_k1",
+      "c_5": "__lp_r5_k1",
+      "c_6": "__lp_r6_v",
+      "c_7": "__lp_r7_k1",
+      "c_8": "__lp_r8_k1"
+    }
+  }
+}

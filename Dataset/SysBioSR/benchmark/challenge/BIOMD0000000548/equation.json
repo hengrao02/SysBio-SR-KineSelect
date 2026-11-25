@@ -1,0 +1,55 @@
+{
+  "dataset_model_id": "BIOMD0000000548",
+  "dataset_model_name": "Sneppen2009",
+  "id": "MODEL1409100000",
+  "name": "Sneppen2009 - Modeling proteasome dynamics in Parkinson's disease",
+  "source_xml": "Sneppen2009.xml",
+  "dim": 3,
+  "eq": "c_0/(x_1 + 1) - c_1*x_0*x_1 | -c_1*x_0*x_1 + c_2 + c_3*x_2 - x_1 | c_1*x_0*x_1 - c_3*x_2",
+  "eq_raw": "-F*P*gamma + m/(P + 1) | C*nu - F*P*gamma - P + sigma | -C*nu + F*P*gamma",
+  "consts": [
+    [
+      25.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      135.0,
+      0.0,
+      18.0
+    ]
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0*x_1 + 25.0/(x_1 + 1)",
+      "-1.0*x_0*x_1 - x_1 + 1.0*x_2 + 1.0",
+      "1.0*x_0*x_1 - 1.0*x_2"
+    ]
+  ],
+  "state_names": [
+    "F",
+    "P",
+    "C"
+  ],
+  "const_names": [
+    "m",
+    "gamma",
+    "sigma",
+    "nu"
+  ],
+  "init_description": "x_0: F, x_1: P, x_2: C",
+  "const_description": "c_0: m, c_1: gamma, c_2: sigma, c_3: nu",
+  "meta": {
+    "n_assignment_rules": 0,
+    "n_rate_rules": 3,
+    "n_initial_assignments": 0,
+    "n_events": 0,
+    "has_piecewise": false,
+    "has_delay": false,
+    "has_time_dependency": false,
+    "warnings": []
+  }
+}

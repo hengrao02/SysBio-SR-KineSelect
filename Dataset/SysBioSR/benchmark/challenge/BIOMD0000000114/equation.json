@@ -1,0 +1,110 @@
+{
+  "dataset_model_id": "BIOMD0000000114",
+  "dataset_model_name": "Somogyi1990",
+  "id": "BIOMD0000000114",
+  "name": "Somogyi1990",
+  "source_xml": "Somogyi1990.xml",
+  "dim": 2,
+  "eq": "((-1)*(c_0*x_0*c_7 - c_4*x_1*c_8) + (-1)*c_1*x_1^c_2/(c_3^c_2 + x_1^c_2)*x_0*c_7)/c_8 | (1*c_6*c_7 + 1*(c_0*x_0*c_7 - c_4*x_1*c_8) + (-1)*c_5*x_1*c_9 + 1*c_1*x_1^c_2/(c_3^c_2 + x_1^c_2)*x_0*c_7)/c_7",
+  "eq_raw": "((-1)*(k*x*cytoplasm - k1*y*ER) + (-1)*alpha*y^n/(a^n + y^n)*x*cytoplasm)/ER | (1*gamma*cytoplasm + 1*(k*x*cytoplasm - k1*y*ER) + (-1)*beta*y*extracellular + 1*alpha*y^n/(a^n + y^n)*x*cytoplasm)/cytoplasm",
+  "consts": [
+    [
+      0.01,
+      5.0,
+      4.0,
+      3.0,
+      2.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "((-1)*(0.01*x_0*1 - 2*x_1*1) + (-1)*5*x_1^4/(3^4 + x_1^4)*x_0*1)/1",
+      "(1*1*1 + 1*(0.01*x_0*1 - 2*x_1*1) + (-1)*1*x_1*1 + 1*5*x_1^4/(3^4 + x_1^4)*x_0*1)/1"
+    ]
+  ],
+  "state_names": [
+    "x",
+    "y"
+  ],
+  "const_names": [
+    "k",
+    "alpha",
+    "n",
+    "a",
+    "k1",
+    "beta",
+    "gamma",
+    "cytoplasm",
+    "ER",
+    "extracellular"
+  ],
+  "init_description": "x_0: x, x_1: y",
+  "const_description": "c_0: k, c_1: alpha, c_2: n, c_3: a, c_4: k1, c_5: beta, c_6: gamma, c_7: cytoplasm, c_8: ER, c_9: extracellular",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 4,
+    "n_reconfigured_reactions": 5,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> y",
+      "x <-> y",
+      "y -> 0",
+      "x -> y"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> y",
+      "x -> y",
+      "y -> x",
+      "y -> 0",
+      "x -> y"
+    ],
+    "maple_odes": [
+      "((-1)*(k[1]*x[1]*k[9] - k[5]*x[2]*k[10]) + (-1)*k[2]*x[2]^k[3]/(k[4]^k[3] + x[2]^k[3])*x[1]*k[9])/k[10]",
+      "(1*k[8]*k[9] + 1*(k[1]*x[1]*k[9] - k[5]*x[2]*k[10]) + (-1)*k[6]*x[2]*k[11] + 1*k[2]*x[2]^k[3]/(k[4]^k[3] + x[2]^k[3])*x[1]*k[9])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "x",
+      "x_1": "y"
+    },
+    "const_index_map": {
+      "c_0": "k",
+      "c_1": "alpha",
+      "c_2": "n",
+      "c_3": "a",
+      "c_4": "k1",
+      "c_5": "beta",
+      "c_6": "gamma",
+      "c_7": "cytoplasm",
+      "c_8": "ER",
+      "c_9": "extracellular"
+    }
+  }
+}

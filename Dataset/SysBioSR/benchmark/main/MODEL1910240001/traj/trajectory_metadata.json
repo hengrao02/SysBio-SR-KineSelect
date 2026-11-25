@@ -1,0 +1,100 @@
+{
+  "system_id": "MODEL1910240001",
+  "state_names": [
+    "y1",
+    "y2",
+    "y3",
+    "y4",
+    "y5"
+  ],
+  "const_names": [
+    "compartment",
+    "k_2",
+    "k_m_2b",
+    "ModelValue_6_0",
+    "ModelValue_7_0",
+    "B_0",
+    "k_plus_a",
+    "k_1",
+    "k_rec",
+    "E_0",
+    "k_4",
+    "k_3"
+  ],
+  "default_consts": [
+    1.0,
+    0.42,
+    0.04,
+    1800.0,
+    33.0,
+    600.0,
+    1800.0,
+    3000.0,
+    0.05,
+    150.0,
+    0.222,
+    1.19
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.0,
+        0.0,
+        75.0,
+        0.0,
+        75.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        6.564050135775129e-06,
+        0.00011934635740098334,
+        40.904640031291315,
+        3.521162628809058,
+        47.05279848983066
+      ],
+      "relative_scale_vs_default": [
+        null,
+        null,
+        0.5453952004172176,
+        null,
+        0.6273706465310754
+      ],
+      "absolute_offset_from_default": [
+        6.564050135775129e-06,
+        0.00011934635740098334,
+        -34.095359968708685,
+        3.521162628809058,
+        -27.947201510169343
+      ],
+      "state_scale_from_default_trajectory": [
+        2.188016711925043e-05,
+        0.00039782119133661113,
+        75.10035549639534,
+        11.737208762696861,
+        75.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1234121112,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.5473097543224618,
+        "peak_ratio_per_state": [
+          1.2340031012285007,
+          1.2340031668580147,
+          0.5466072532678119,
+          0.6745150194203087,
+          0.6273706465310754
+        ],
+        "max_peak_ratio": 1.2340031668580147
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

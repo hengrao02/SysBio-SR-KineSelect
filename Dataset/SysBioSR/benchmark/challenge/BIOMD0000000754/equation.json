@@ -1,0 +1,138 @@
+{
+  "dataset_model_id": "BIOMD0000000754",
+  "dataset_model_name": "Figueredo2013",
+  "id": "BIOMD0000000754",
+  "name": "Figueredo2013",
+  "source_xml": "Figueredo2013.xml",
+  "dim": 3,
+  "eq": "(1*c_13*c_0*x_0 + (-1)*c_13*c_0*c_1*x_0*x_0 + (-1)*c_13*c_3*x_1*x_0/(c_4 + x_0))/c_13 | ((-1)*c_13*c_7*x_1 + 1*c_13*c_2*x_0 + 1*c_13*c_8*x_1*x_2/(c_9 + x_2) + 1*c_13*c_5)/c_13 | (1*c_13*c_6 + (-1)*c_13*c_12*x_2 + 1*c_13*c_10*x_1*x_0/(c_11 + x_0))/c_13",
+  "eq_raw": "(1*tumor_microenvironment*a*T + (-1)*tumor_microenvironment*a*b*T*T + (-1)*tumor_microenvironment*aa*E*T/(g2 + T))/tumor_microenvironment | ((-1)*tumor_microenvironment*u2*E + 1*tumor_microenvironment*c*T + 1*tumor_microenvironment*p1*E*I/(g1 + I) + 1*tumor_microenvironment*s1)/tumor_microenvironment | (1*tumor_microenvironment*s2 + (-1)*tumor_microenvironment*u3*I + 1*tumor_microenvironment*p2*E*T/(g3 + T))/tumor_microenvironment",
+  "consts": [
+    [
+      0.18,
+      1e-09,
+      0.05,
+      1.0,
+      100000.0,
+      0.0,
+      0.0,
+      0.03,
+      0.1245,
+      20000000.0,
+      5.0,
+      1000.0,
+      10.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      50.0,
+      10.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.18*x_0 + (-1)*1*0.18*1e-09*x_0*x_0 + (-1)*1*1*x_1*x_0/(100000 + x_0))/1",
+      "((-1)*1*0.03*x_1 + 1*1*0.05*x_0 + 1*1*0.1245*x_1*x_2/(20000000 + x_2) + 1*1*0)/1",
+      "(1*1*0 + (-1)*1*10*x_2 + 1*1*5*x_1*x_0/(1000 + x_0))/1"
+    ]
+  ],
+  "state_names": [
+    "T",
+    "E",
+    "I"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c",
+    "aa",
+    "g2",
+    "s1",
+    "s2",
+    "u2",
+    "p1",
+    "g1",
+    "p2",
+    "g3",
+    "u3",
+    "tumor_microenvironment"
+  ],
+  "init_description": "x_0: T, x_1: E, x_2: I",
+  "const_description": "c_0: a, c_1: b, c_2: c, c_3: aa, c_4: g2, c_5: s1, c_6: s2, c_7: u2, c_8: p1, c_9: g1, c_10: p2, c_11: g3, c_12: u3, c_13: tumor_microenvironment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 10,
+    "n_reconfigured_reactions": 10,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> 0",
+      "E -> 0",
+      "0 -> E",
+      "0 -> E",
+      "0 -> E",
+      "0 -> I",
+      "I -> 0",
+      "0 -> I"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> 0",
+      "E -> 0",
+      "0 -> E",
+      "0 -> E",
+      "0 -> E",
+      "0 -> I",
+      "I -> 0",
+      "0 -> I"
+    ],
+    "maple_odes": [
+      "(1*k[14]*k[1]*x[1] + (-1)*k[14]*k[1]*k[2]*x[1]*x[1] + (-1)*k[14]*k[4]*x[2]*x[1]/(k[5] + x[1]))/k[14]",
+      "((-1)*k[14]*k[8]*x[2] + 1*k[14]*k[3]*x[1] + 1*k[14]*k[9]*x[2]*x[3]/(k[10] + x[3]) + 1*k[14]*k[6])/k[14]",
+      "(1*k[14]*k[7] + (-1)*k[14]*k[13]*x[3] + 1*k[14]*k[11]*x[2]*x[1]/(k[12] + x[1]))/k[14]"
+    ],
+    "species_index_map": {
+      "x_0": "T",
+      "x_1": "E",
+      "x_2": "I"
+    },
+    "const_index_map": {
+      "c_0": "a",
+      "c_1": "b",
+      "c_2": "c",
+      "c_3": "aa",
+      "c_4": "g2",
+      "c_5": "s1",
+      "c_6": "s2",
+      "c_7": "u2",
+      "c_8": "p1",
+      "c_9": "g1",
+      "c_10": "p2",
+      "c_11": "g3",
+      "c_12": "u3",
+      "c_13": "tumor_microenvironment"
+    }
+  }
+}

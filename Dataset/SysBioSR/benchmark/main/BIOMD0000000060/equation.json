@@ -1,0 +1,70 @@
+{
+  "const_description": "c_0: Closed_state_1__ka_minus, c_1: Closed_state_1__ka_plus, c_2: Closed_state_1__Ca, c_3: Closed_state_1__n, c_4: Open_state_2__kb_minus, c_5: Open_state_2__kb_plus, c_6: Open_state_2__Ca, c_7: Open_state_2__m, c_8: Closed_State_2__kc_minus, c_9: Closed_State_2__kc_plus",
+  "const_names": [
+    "Closed_state_1__ka_minus",
+    "Closed_state_1__ka_plus",
+    "Closed_state_1__Ca",
+    "Closed_state_1__n",
+    "Open_state_2__kb_minus",
+    "Open_state_2__kb_plus",
+    "Open_state_2__Ca",
+    "Open_state_2__m",
+    "Closed_State_2__kc_minus",
+    "Closed_State_2__kc_plus"
+  ],
+  "consts": [
+    [
+      28.8,
+      1500.0,
+      0.9,
+      4.0,
+      385.9,
+      1500.0,
+      0.9,
+      3.0,
+      0.1,
+      1.75
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000060",
+  "dataset_model_name": "Keizer1996",
+  "dim": 4,
+  "eq": "c_0*x_2 - c_1*c_2^c_3*x_0 | -c_4*x_1 + c_5*c_6^c_7*x_2 | -c_0*x_2 + c_1*c_2^c_3*x_0 + c_4*x_1 - c_5*c_6^c_7*x_2 + c_8*x_3 - c_9*x_2 | -c_8*x_3 + c_9*x_2",
+  "eq_raw": "-Closed_state_1__Ca^Closed_state_1__n*Closed_state_1__ka_plus*Pc1 + Closed_state_1__ka_minus*Po1 | Open_state_2__Ca^Open_state_2__m*Open_state_2__kb_plus*Po1 - Open_state_2__kb_minus*Po2 | Closed_State_2__kc_minus*Pc2 - Closed_State_2__kc_plus*Po1 + Closed_state_1__Ca^Closed_state_1__n*Closed_state_1__ka_plus*Pc1 - Closed_state_1__ka_minus*Po1 - Open_state_2__Ca^Open_state_2__m*Open_state_2__kb_plus*Po1 + Open_state_2__kb_minus*Po2 | -Closed_State_2__kc_minus*Pc2 + Closed_State_2__kc_plus*Po1",
+  "id": "Keizer1996_Ryanodine_receptor_adaptation",
+  "init": [
+    [
+      0.963,
+      0.0,
+      0.0,
+      0.037
+    ]
+  ],
+  "init_description": "x_0: Pc1, x_1: Po2, x_2: Po1, x_3: Pc2",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Keizer1996_Ryanodine_receptor_adaptation",
+  "source_xml": "Keizer1996.xml",
+  "state_names": [
+    "Pc1",
+    "Po2",
+    "Po1",
+    "Pc2"
+  ],
+  "substituted": [
+    [
+      "-984.15*x_0 + 28.8*x_2",
+      "-385.9*x_1 + 1093.5*x_2",
+      "984.15*x_0 + 385.9*x_1 - 1124.05*x_2 + 0.1*x_3",
+      "1.75*x_2 - 0.1*x_3"
+    ]
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "const_description": "c_0: cell, c_1: k1, c_2: k2, c_3: k3, c_4: k5, c_5: k4, c_6: g, c_7: K",
+  "const_names": [
+    "cell",
+    "k1",
+    "k2",
+    "k3",
+    "k5",
+    "k4",
+    "g",
+    "K"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.5,
+      1.0,
+      0.001,
+      0.1,
+      0.06,
+      1.0,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000001057",
+  "dataset_model_name": "Nikolov2020",
+  "dim": 2,
+  "eq": "c_0*c_1 + c_0*c_2*x_1 - c_0*c_3*x_0 | -c_0*c_4*x_1 + c_0*c_5*x_0^c_6/(c_7 + x_0^c_6)",
+  "eq_raw": "-TFp53*cell*k3 + cell*k1 + cell*k2*miR34a | TFp53^g*cell*k4/(K + TFp53^g) - cell*k5*miR34a",
+  "id": "Nikolov2020___p53_miR34_model",
+  "init": [
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: TFp53, x_1: miR34a",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Nikolov2020 - p53-miR34 model",
+  "source_xml": "Nikolov2020.xml",
+  "state_names": [
+    "TFp53",
+    "miR34a"
+  ],
+  "substituted": [
+    [
+      "-0.001*x_0 + 1.0*x_1 + 0.5",
+      "0.06*x_0^1.0/(x_0^1.0 + 1.0) - 0.1*x_1"
+    ]
+  ]
+}

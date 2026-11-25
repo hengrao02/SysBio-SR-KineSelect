@@ -1,0 +1,3 @@
+final_selection_mode: fpms
+fpms_criteria: DR_KX
+fpms_active_threshold: 1.0e-14

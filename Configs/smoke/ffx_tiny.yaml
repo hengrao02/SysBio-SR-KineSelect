@@ -1,0 +1,4 @@
+inherits: ../ffx/single_system.yaml
+experiment_id: sysbiosr-ffx-smoke-v1
+optimize_hyperparams: false
+fit_timeout_seconds: 120.0

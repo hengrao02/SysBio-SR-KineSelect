@@ -1,0 +1,56 @@
+{
+  "const_description": "c_0: kr, c_1: kf, c_2: kcat",
+  "const_names": [
+    "kr",
+    "kf",
+    "kcat"
+  ],
+  "consts": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "MODEL1503180002",
+  "dataset_model_name": "Smallbone2015",
+  "dim": 4,
+  "eq": "c_0*x_2 - c_1*x_0*x_1 | c_0*x_2 - c_1*x_0*x_1 + c_2*x_2 | -c_0*x_2 + c_1*x_0*x_1 - c_2*x_2 | c_2*x_2",
+  "eq_raw": "-E*S*kf + ES*kr | -E*S*kf + ES*kcat + ES*kr | E*S*kf - ES*kcat - ES*kr | ES*kcat",
+  "id": "MODEL1503180002",
+  "init": [
+    [
+      1.0,
+      0.001,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: E, x_2: ES, x_3: P",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 3,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Smallbone2015 - Michaelis Menten",
+  "source_xml": "Smallbone2015.xml",
+  "state_names": [
+    "S",
+    "E",
+    "ES",
+    "P"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0*x_1 + 1.0*x_2",
+      "-1.0*x_0*x_1 + 2.0*x_2",
+      "1.0*x_0*x_1 - 2.0*x_2",
+      "1.0*x_2"
+    ]
+  ]
+}

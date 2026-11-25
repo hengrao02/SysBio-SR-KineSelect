@@ -1,0 +1,160 @@
+{
+  "dataset_model_id": "BIOMD0000000770",
+  "dataset_model_name": "Eftimie2017",
+  "id": "BIOMD0000000770",
+  "name": "Eftimie2017",
+  "source_xml": "Eftimie2017.xml",
+  "dim": 4,
+  "eq": "(1*c_16*c_0*x_2 + 1*c_16*c_6*x_0*x_2*(1 - (x_0 + x_1)/c_4) + (-1)*c_16*c_12*x_0)/c_16 | (1*c_16*c_1*x_3 + 1*c_16*c_7*x_1*x_3*(1 - (x_1 + x_0)/c_4) + (-1)*c_16*c_13*x_1)/c_16 | (1*c_16*c_2*x_0 + 1*c_16*c_8*x_2*(1 - (x_2 + x_3)/c_5) + (-1)*c_16*c_14*x_2 + (-1)*c_16*c_11*x_2 + 1*c_16*c_10*x_3)/c_16 | (1*c_16*c_11*x_2 + (-1)*c_16*c_10*x_3 + 1*c_16*c_3*x_1 + 1*c_16*c_9*x_3*x_1*(1 - (x_3 + x_2)/c_5) + (-1)*c_16*c_15*x_3)/c_16",
+  "eq_raw": "(1*tme*ah1*M1 + 1*tme*ph1*H1*M1*(1 - (H1 + H2)/m1) + (-1)*tme*eh1*H1)/tme | (1*tme*ah2*M2 + 1*tme*ph2*H2*M2*(1 - (H2 + H1)/m1) + (-1)*tme*eh2*H2)/tme | (1*tme*am1*H1 + 1*tme*pm1*M1*(1 - (M1 + M2)/m2) + (-1)*tme*em1*M1 + (-1)*tme*rm2*M1 + 1*tme*rm1*M2)/tme | (1*tme*rm2*M1 + (-1)*tme*rm1*M2 + 1*tme*am2*H2 + 1*tme*pm2*M2*H2*(1 - (M2 + M1)/m2) + (-1)*tme*em2*M2)/tme",
+  "consts": [
+    [
+      0.008,
+      0.001,
+      0.001,
+      0.001,
+      100000000.0,
+      1000000000.0,
+      0.09,
+      0.09,
+      0.02,
+      0.02,
+      0.09,
+      0.05,
+      0.03,
+      0.03,
+      0.02,
+      0.02,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.0,
+      0.0,
+      100.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.008*x_2 + 1*1*0.09*x_0*x_2*(1 - (x_0 + x_1)/100000000) + (-1)*1*0.03*x_0)/1",
+      "(1*1*0.001*x_3 + 1*1*0.09*x_1*x_3*(1 - (x_1 + x_0)/100000000) + (-1)*1*0.03*x_1)/1",
+      "(1*1*0.001*x_0 + 1*1*0.02*x_2*(1 - (x_2 + x_3)/1000000000) + (-1)*1*0.02*x_2 + (-1)*1*0.05*x_2 + 1*1*0.09*x_3)/1",
+      "(1*1*0.05*x_2 + (-1)*1*0.09*x_3 + 1*1*0.001*x_1 + 1*1*0.02*x_3*x_1*(1 - (x_3 + x_2)/1000000000) + (-1)*1*0.02*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "H1",
+    "H2",
+    "M1",
+    "M2"
+  ],
+  "const_names": [
+    "ah1",
+    "ah2",
+    "am1",
+    "am2",
+    "m1",
+    "m2",
+    "ph1",
+    "ph2",
+    "pm1",
+    "pm2",
+    "rm1",
+    "rm2",
+    "eh1",
+    "eh2",
+    "em1",
+    "em2",
+    "tme"
+  ],
+  "init_description": "x_0: H1, x_1: H2, x_2: M1, x_3: M2",
+  "const_description": "c_0: ah1, c_1: ah2, c_2: am1, c_3: am2, c_4: m1, c_5: m2, c_6: ph1, c_7: ph2, c_8: pm1, c_9: pm2, c_10: rm1, c_11: rm2, c_12: eh1, c_13: eh2, c_14: em1, c_15: em2, c_16: tme",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 14,
+    "n_reconfigured_reactions": 14,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> H1",
+      "0 -> H1",
+      "H1 -> 0",
+      "0 -> H2",
+      "0 -> H2",
+      "H2 -> 0",
+      "0 -> M1",
+      "0 -> M1",
+      "M1 -> 0",
+      "M1 -> M2",
+      "M2 -> M1",
+      "0 -> M2",
+      "0 -> M2",
+      "M2 -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> H1",
+      "0 -> H1",
+      "H1 -> 0",
+      "0 -> H2",
+      "0 -> H2",
+      "H2 -> 0",
+      "0 -> M1",
+      "0 -> M1",
+      "M1 -> 0",
+      "M1 -> M2",
+      "M2 -> M1",
+      "0 -> M2",
+      "0 -> M2",
+      "M2 -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[17]*k[1]*x[3] + 1*k[17]*k[7]*x[1]*x[3]*(1 - (x[1] + x[2])/k[5]) + (-1)*k[17]*k[13]*x[1])/k[17]",
+      "(1*k[17]*k[2]*x[4] + 1*k[17]*k[8]*x[2]*x[4]*(1 - (x[2] + x[1])/k[5]) + (-1)*k[17]*k[14]*x[2])/k[17]",
+      "(1*k[17]*k[3]*x[1] + 1*k[17]*k[9]*x[3]*(1 - (x[3] + x[4])/k[6]) + (-1)*k[17]*k[15]*x[3] + (-1)*k[17]*k[12]*x[3] + 1*k[17]*k[11]*x[4])/k[17]",
+      "(1*k[17]*k[12]*x[3] + (-1)*k[17]*k[11]*x[4] + 1*k[17]*k[4]*x[2] + 1*k[17]*k[10]*x[4]*x[2]*(1 - (x[4] + x[3])/k[6]) + (-1)*k[17]*k[16]*x[4])/k[17]"
+    ],
+    "species_index_map": {
+      "x_0": "H1",
+      "x_1": "H2",
+      "x_2": "M1",
+      "x_3": "M2"
+    },
+    "const_index_map": {
+      "c_0": "ah1",
+      "c_1": "ah2",
+      "c_2": "am1",
+      "c_3": "am2",
+      "c_4": "m1",
+      "c_5": "m2",
+      "c_6": "ph1",
+      "c_7": "ph2",
+      "c_8": "pm1",
+      "c_9": "pm2",
+      "c_10": "rm1",
+      "c_11": "rm2",
+      "c_12": "eh1",
+      "c_13": "eh2",
+      "c_14": "em1",
+      "c_15": "em2",
+      "c_16": "tme"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "const_description": "c_0: compartment, c_1: lambda_C, c_2: C_K, c_3: eta, c_4: d_T, c_5: I_12, c_6: T_N, c_7: lambda_TI_12, c_8: ModelValue_11, c_9: sigma, c_10: ModelValue_10, c_11: ModelValue_12, c_12: ModelValue_18, c_13: ModelValue_13, c_14: K_I_12, c_15: I_2, c_16: lambda_TI_2, c_17: K_I_2, c_18: d_A, c_19: mu_PA",
+  "const_names": [
+    "compartment",
+    "lambda_C",
+    "C_K",
+    "eta",
+    "d_T",
+    "I_12",
+    "T_N",
+    "lambda_TI_12",
+    "ModelValue_11",
+    "sigma",
+    "ModelValue_10",
+    "ModelValue_12",
+    "ModelValue_18",
+    "ModelValue_13",
+    "K_I_12",
+    "I_2",
+    "lambda_TI_2",
+    "K_I_2",
+    "d_A",
+    "mu_PA"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.425,
+      0.8725,
+      57.5,
+      0.025,
+      1.5e-10,
+      0.0006,
+      8.81,
+      1.1615e-06,
+      0.002,
+      1.365e-18,
+      5.84e-07,
+      10.0,
+      50.5,
+      1.5e-10,
+      2.37e-11,
+      0.5,
+      2.37e-11,
+      0.7115,
+      105954000.0
+    ]
+  ],
+  "dataset_model_id": "MODEL1908270001",
+  "dataset_model_name": "Nikolopoulou2018",
+  "dim": 3,
+  "eq": "c_0*c_1*x_0*(1 - x_0/c_2) - c_0*c_3*x_0*x_1 | c_0*c_15*c_16*x_1/((1 + c_8*c_9*x_1*(c_11 - c_12*x_2)*(c_13*x_0 + x_1)/c_10)*(c_15 + c_17)) - c_0*c_4*x_1 + c_0*c_5*c_6*c_7/((1 + c_8*c_9*x_1*(c_11 - c_12*x_2)*(c_13*x_0 + x_1)/c_10)*(c_14 + c_5)) | -c_0*c_18*x_2 - c_0*c_19*x_1*x_2*(c_11 - c_12*x_2) + c_0*x_2",
+  "eq_raw": "-C*T*compartment*eta + C*compartment*lambda_C*(-C/C_K + 1) | I_12*T_N*compartment*lambda_TI_12/((1 + ModelValue_11*T*sigma*(-A*ModelValue_18 + ModelValue_12)*(C*ModelValue_13 + T)/ModelValue_10)*(I_12 + K_I_12)) + I_2*T*compartment*lambda_TI_2/((1 + ModelValue_11*T*sigma*(-A*ModelValue_18 + ModelValue_12)*(C*ModelValue_13 + T)/ModelValue_10)*(I_2 + K_I_2)) - T*compartment*d_T | -A*T*compartment*mu_PA*(-A*ModelValue_18 + ModelValue_12) - A*compartment*d_A + A*compartment",
+  "id": "Nikolopoulou2018___Tumour_immune_dynamics_with_an_immune_checkpoint_inhibitor",
+  "init": [
+    [
+      0.3968,
+      0.006,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: C, x_1: T, x_2: A",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 5,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Nikolopoulou2018 - Tumour-immune dynamics with an immune checkpoint inhibitor",
+  "source_xml": "Nikolopoulou2018.xml",
+  "state_names": [
+    "C",
+    "T",
+    "A"
+  ],
+  "substituted": [
+    [
+      "-57.5*x_0*x_1 + 0.425*x_0*(-1.14613180515759*x_0 + 1)",
+      "-0.025*x_1 + 0.25*x_1/(1701831501.8315*x_1*(-10.0*x_2 + 5.84e-7)*(50.5*x_0 + x_1) + 1) + 0.002643/(1701831501.8315*x_1*(-10.0*x_2 + 5.84e-7)*(50.5*x_0 + x_1) + 1)",
+      "-105954000.0*x_1*x_2*(-10.0*x_2 + 5.84e-7) + 0.2885*x_2"
+    ]
+  ]
+}

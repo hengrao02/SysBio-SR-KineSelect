@@ -1,0 +1,112 @@
+{
+  "dataset_model_id": "BIOMD0000000894",
+  "dataset_model_name": "Bose2011",
+  "id": "BIOMD0000000894",
+  "name": "Bose2011",
+  "source_xml": "Bose2011.xml",
+  "dim": 3,
+  "eq": "(1*c_7*((1 + c_1*(1 - c_2*c_0) + 1/2*c_2*c_4*c_0)*x_0 + c_2*(1 + c_1*c_0)*x_2) + (-1)*c_7*(x_0*x_0 + x_0*x_1))/c_7 | (1*c_7*x_1*x_2 + (-1)*c_7*(c_5 - c_3)*x_1)/c_7 | (1*c_7*(c_1*(1 - c_2*c_0) + c_2*c_4*c_0)*x_0 + (-1)*c_7*(c_6 - (c_1*(1 + c_2*c_0) + c_2*(1 + 1/2*c_4*c_0)))*x_2)/c_7",
+  "eq_raw": "(1*compartment*((1 + R*(1 - Dx*tau) + 1/2*Dx*Dz*tau)*x + Dx*(1 + R*tau)*z) + (-1)*compartment*(x*x + x*y))/compartment | (1*compartment*y*z + (-1)*compartment*(p - Dy)*y)/compartment | (1*compartment*(R*(1 - Dx*tau) + Dx*Dz*tau)*x + (-1)*compartment*(mu - (R*(1 + Dx*tau) + Dx*(1 + 1/2*Dz*tau)))*z)/compartment",
+  "consts": [
+    [
+      0.3,
+      1.0,
+      2.1,
+      0.01,
+      1.2,
+      0.06,
+      20.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1e-06,
+      0.01,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*((1 + 1*(1 - 2.1*0.3) + 1/2*2.1*1.2*0.3)*x_0 + 2.1*(1 + 1*0.3)*x_2) + (-1)*1*(x_0*x_0 + x_0*x_1))/1",
+      "(1*1*x_1*x_2 + (-1)*1*(0.06 - 0.01)*x_1)/1",
+      "(1*1*(1*(1 - 2.1*0.3) + 2.1*1.2*0.3)*x_0 + (-1)*1*(20 - (1*(1 + 2.1*0.3) + 2.1*(1 + 1/2*1.2*0.3)))*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "x",
+    "y",
+    "z"
+  ],
+  "const_names": [
+    "tau",
+    "R",
+    "Dx",
+    "Dy",
+    "Dz",
+    "p",
+    "mu",
+    "compartment"
+  ],
+  "init_description": "x_0: x, x_1: y, x_2: z",
+  "const_description": "c_0: tau, c_1: R, c_2: Dx, c_3: Dy, c_4: Dz, c_5: p, c_6: mu, c_7: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> x",
+      "x -> 0",
+      "0 -> y",
+      "y -> 0",
+      "0 -> z",
+      "z -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> x",
+      "x -> 0",
+      "0 -> y",
+      "y -> 0",
+      "0 -> z",
+      "z -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[9]*((1 + k[3]*(1 - k[4]*k[2]) + 1/2*k[4]*k[6]*k[2])*x[1] + k[4]*(1 + k[3]*k[2])*x[3]) + (-1)*k[9]*(x[1]*x[1] + x[1]*x[2]))/k[9]",
+      "(1*k[9]*x[2]*x[3] + (-1)*k[9]*(k[7] - k[5])*x[2])/k[9]",
+      "(1*k[9]*(k[3]*(1 - k[4]*k[2]) + k[4]*k[6]*k[2])*x[1] + (-1)*k[9]*(k[8] - (k[3]*(1 + k[4]*k[2]) + k[4]*(1 + 1/2*k[6]*k[2])))*x[3])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "x",
+      "x_1": "y",
+      "x_2": "z"
+    },
+    "const_index_map": {
+      "c_0": "tau",
+      "c_1": "R",
+      "c_2": "Dx",
+      "c_3": "Dy",
+      "c_4": "Dz",
+      "c_5": "p",
+      "c_6": "mu",
+      "c_7": "compartment"
+    }
+  }
+}

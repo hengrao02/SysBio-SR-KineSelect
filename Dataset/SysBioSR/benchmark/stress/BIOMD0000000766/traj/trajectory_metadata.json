@@ -1,0 +1,108 @@
+{
+  "system_id": "BIOMD0000000766",
+  "state_names": [
+    "U",
+    "I",
+    "M",
+    "E",
+    "V"
+  ],
+  "const_names": [
+    "r",
+    "K",
+    "dv",
+    "du",
+    "hu",
+    "he",
+    "hv",
+    "delta",
+    "pm",
+    "m",
+    "pe",
+    "de",
+    "dt",
+    "w",
+    "b",
+    "tme"
+  ],
+  "default_consts": [
+    0.927,
+    181820000.0,
+    0.0038,
+    2.0,
+    1.0,
+    1000.0,
+    10000.0,
+    1.0,
+    2.5,
+    10000.0,
+    0.4,
+    0.1,
+    5e-09,
+    2.042,
+    1000.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1000000.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1062507.8008867295,
+        23.058523777695992,
+        1.3042985897114732,
+        6493.328498475598,
+        0.8196799228309215
+      ],
+      "relative_scale_vs_default": [
+        1.0625078008867295,
+        null,
+        1.3042985897114732,
+        null,
+        0.8196799228309215
+      ],
+      "absolute_offset_from_default": [
+        62507.8008867295,
+        23.058523777695992,
+        0.30429858971147317,
+        6493.328498475598,
+        -0.1803200771690785
+      ],
+      "state_scale_from_default_trajectory": [
+        181614114.1181708,
+        76.86174592565331,
+        9999.71658109728,
+        21644.428328251994,
+        36227.58874139102
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2291263770,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.9999989243934357,
+        "peak_ratio_per_state": [
+          0.028795068398896843,
+          0.3,
+          0.8425004552441099,
+          0.6341836422166139,
+          0.12586687329392146
+        ],
+        "max_peak_ratio": 0.8425004552441099
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

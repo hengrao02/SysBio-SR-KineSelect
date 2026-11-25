@@ -1,0 +1,100 @@
+{
+  "system_id": "MODEL2005070001",
+  "state_names": [
+    "C",
+    "K",
+    "Rp"
+  ],
+  "const_names": [
+    "compartment",
+    "VC_s",
+    "E",
+    "Vs_m",
+    "Ks_E",
+    "Kp",
+    "V2_m",
+    "gamma",
+    "K2",
+    "Vd_E_m",
+    "Kd_C",
+    "V1_m",
+    "K1_C",
+    "K1",
+    "V4_m",
+    "K4",
+    "RE",
+    "V3_m",
+    "K3"
+  ],
+  "default_consts": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.1,
+    1.0,
+    40.0,
+    1.0,
+    0.0001,
+    1000.0,
+    0.005,
+    50.0,
+    0.1,
+    0.0001,
+    3.0,
+    0.0001,
+    1.0,
+    3000.0,
+    0.0001
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.7345872845799614,
+        0.537424515747073,
+        0.8680127760173931
+      ],
+      "relative_scale_vs_default": [
+        0.7345872845799614,
+        0.537424515747073,
+        0.8680127760173931
+      ],
+      "absolute_offset_from_default": [
+        -0.26541271542003864,
+        -0.46257548425292705,
+        -0.13198722398260687
+      ],
+      "state_scale_from_default_trajectory": [
+        1.0,
+        2394.19283588191,
+        179803.00180087722
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 5438479,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.2654127154200384,
+        "peak_ratio_per_state": [
+          0.7345872845799615,
+          0.9998117573178065,
+          0.9999992659343087
+        ],
+        "max_peak_ratio": 0.9999992659343087
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

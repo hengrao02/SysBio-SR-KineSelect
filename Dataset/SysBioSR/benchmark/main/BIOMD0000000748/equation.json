@@ -1,0 +1,130 @@
+{
+  "dataset_model_id": "BIOMD0000000748",
+  "dataset_model_name": "Phan2017",
+  "id": "BIOMD0000000748",
+  "name": "Phan2017",
+  "source_xml": "Phan2017.xml",
+  "dim": 4,
+  "eq": "(1*c_8*c_0*x_0 + (-1)*c_8*c_0*x_0*x_0 + (-1)*c_8*c_0*x_0*x_1 + (-1)*c_8*c_1*x_0*x_2)/c_8 | ((-1)*c_8*c_2*x_1*x_3 + (-1)*c_8*x_1 + 1*c_8*c_1*x_0*x_2)/c_8 | (1*c_8*c_7*x_1 + (-1)*c_8*c_4*x_2 + (-1)*c_8*c_3*x_2*x_3 + (-1)*c_8*c_1*x_0*x_2)/c_8 | (1*c_8*c_5*x_1*x_3 + (-1)*c_8*c_6*x_3)/c_8",
+  "eq_raw": "(1*tumor_microenvironment*r*x + (-1)*tumor_microenvironment*r*x*x + (-1)*tumor_microenvironment*r*x*y + (-1)*tumor_microenvironment*a*x*v)/tumor_microenvironment | ((-1)*tumor_microenvironment*c*y*z + (-1)*tumor_microenvironment*y + 1*tumor_microenvironment*a*x*v)/tumor_microenvironment | (1*tumor_microenvironment*b*y + (-1)*tumor_microenvironment*e*v + (-1)*tumor_microenvironment*d*v*z + (-1)*tumor_microenvironment*a*x*v)/tumor_microenvironment | (1*tumor_microenvironment*m*y*z + (-1)*tumor_microenvironment*n*z)/tumor_microenvironment",
+  "consts": [
+    [
+      0.36,
+      0.11,
+      0.48,
+      0.16,
+      0.2,
+      0.6,
+      0.036,
+      9.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.99,
+      0.01,
+      0.01,
+      0.01
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.36*x_0 + (-1)*1*0.36*x_0*x_0 + (-1)*1*0.36*x_0*x_1 + (-1)*1*0.11*x_0*x_2)/1",
+      "((-1)*1*0.48*x_1*x_3 + (-1)*1*x_1 + 1*1*0.11*x_0*x_2)/1",
+      "(1*1*9*x_1 + (-1)*1*0.2*x_2 + (-1)*1*0.16*x_2*x_3 + (-1)*1*0.11*x_0*x_2)/1",
+      "(1*1*0.6*x_1*x_3 + (-1)*1*0.036*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "x",
+    "y",
+    "v",
+    "z"
+  ],
+  "const_names": [
+    "r",
+    "a",
+    "c",
+    "d",
+    "e",
+    "m",
+    "n",
+    "b",
+    "tumor_microenvironment"
+  ],
+  "init_description": "x_0: x, x_1: y, x_2: v, x_3: z",
+  "const_description": "c_0: r, c_1: a, c_2: c, c_3: d, c_4: e, c_5: m, c_6: n, c_7: b, c_8: tumor_microenvironment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 11,
+    "n_reconfigured_reactions": 11,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> x",
+      "x -> 0",
+      "x -> 0",
+      "y -> 0",
+      "y -> 0",
+      "0 -> v",
+      "v -> 0",
+      "v -> 0",
+      "0 -> z",
+      "z -> 0",
+      "v + x -> y"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> x",
+      "x -> 0",
+      "x -> 0",
+      "y -> 0",
+      "y -> 0",
+      "0 -> v",
+      "v -> 0",
+      "v -> 0",
+      "0 -> z",
+      "z -> 0",
+      "v + x -> y"
+    ],
+    "maple_odes": [
+      "(1*k[9]*k[1]*x[1] + (-1)*k[9]*k[1]*x[1]*x[1] + (-1)*k[9]*k[1]*x[1]*x[2] + (-1)*k[9]*k[2]*x[1]*x[3])/k[9]",
+      "((-1)*k[9]*k[3]*x[2]*x[4] + (-1)*k[9]*x[2] + 1*k[9]*k[2]*x[1]*x[3])/k[9]",
+      "(1*k[9]*k[8]*x[2] + (-1)*k[9]*k[5]*x[3] + (-1)*k[9]*k[4]*x[3]*x[4] + (-1)*k[9]*k[2]*x[1]*x[3])/k[9]",
+      "(1*k[9]*k[6]*x[2]*x[4] + (-1)*k[9]*k[7]*x[4])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "x",
+      "x_1": "y",
+      "x_2": "v",
+      "x_3": "z"
+    },
+    "const_index_map": {
+      "c_0": "r",
+      "c_1": "a",
+      "c_2": "c",
+      "c_3": "d",
+      "c_4": "e",
+      "c_5": "m",
+      "c_6": "n",
+      "c_7": "b",
+      "c_8": "tumor_microenvironment"
+    }
+  }
+}

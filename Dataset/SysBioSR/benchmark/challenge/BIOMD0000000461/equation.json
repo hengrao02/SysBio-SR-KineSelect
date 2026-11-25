@@ -1,0 +1,109 @@
+{
+  "dataset_model_id": "BIOMD0000000461",
+  "dataset_model_name": "Liebal2012",
+  "id": "BIOMD0000000461",
+  "name": "Liebal2012",
+  "source_xml": "Liebal2012.xml",
+  "dim": 3,
+  "eq": "(1*(c_7*c_1 - c_0*x_0) + (-1)*((-c_4*x_1) + c_5*x_0/(1 + x_2)) + (-1)*((-c_2*x_2) + c_3*x_0/(1 + x_2)))/c_6 | 1*((-c_4*x_1) + c_5*x_0/(1 + x_2))/c_6 | 1*((-c_2*x_2) + c_3*x_0/(1 + x_2))/c_6",
+  "eq_raw": "(1*(IPTG*kbs - kbd*sigb) + (-1)*((-kzd*lacz) + kzs*sigb/(1 + x)) + (-1)*((-kxd*x) + kxs*sigb/(1 + x)))/compartment | 1*((-kzd*lacz) + kzs*sigb/(1 + x))/compartment | 1*((-kxd*x) + kxs*sigb/(1 + x))/compartment",
+  "consts": [
+    [
+      0.044,
+      100.0,
+      9.0,
+      0.76,
+      0.041,
+      0.0004,
+      1.0,
+      100.0
+    ]
+  ],
+  "init": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*(100*100 - 0.044*x_0) + (-1)*((-0.041*x_1) + 0.0004*x_0/(1 + x_2)) + (-1)*((-9*x_2) + 0.76*x_0/(1 + x_2)))/1",
+      "1*((-0.041*x_1) + 0.0004*x_0/(1 + x_2))/1",
+      "1*((-9*x_2) + 0.76*x_0/(1 + x_2))/1"
+    ]
+  ],
+  "state_names": [
+    "sigb",
+    "lacz",
+    "x"
+  ],
+  "const_names": [
+    "kbd",
+    "kbs",
+    "kxd",
+    "kxs",
+    "kzd",
+    "kzs",
+    "compartment",
+    "IPTG"
+  ],
+  "init_description": "x_0: sigb, x_1: lacz, x_2: x",
+  "const_description": "c_0: kbd, c_1: kbs, c_2: kxd, c_3: kxs, c_4: kzd, c_5: kzs, c_6: compartment, c_7: IPTG",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 3,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "IPTG <-> sigb",
+      "sigb <-> lacz",
+      "sigb <-> x"
+    ],
+    "reconfigured_reaction_network": [
+      "IPTG -> sigb",
+      "sigb -> IPTG",
+      "sigb -> lacz",
+      "lacz -> sigb",
+      "sigb -> x",
+      "x -> sigb"
+    ],
+    "maple_odes": [
+      "(1*(k[8]*k[2] - k[1]*x[1]) + (-1)*((-k[5]*x[2]) + k[6]*x[1]/(1 + x[3])) + (-1)*((-k[3]*x[3]) + k[4]*x[1]/(1 + x[3])))/k[7]",
+      "1*((-k[5]*x[2]) + k[6]*x[1]/(1 + x[3]))/k[7]",
+      "1*((-k[3]*x[3]) + k[4]*x[1]/(1 + x[3]))/k[7]"
+    ],
+    "species_index_map": {
+      "x_0": "sigb",
+      "x_1": "lacz",
+      "x_2": "x"
+    },
+    "const_index_map": {
+      "c_0": "kbd",
+      "c_1": "kbs",
+      "c_2": "kxd",
+      "c_3": "kxs",
+      "c_4": "kzd",
+      "c_5": "kzs",
+      "c_6": "compartment",
+      "c_7": "IPTG"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "system_id": "BIOMD0000000798",
+  "state_names": [
+    "S",
+    "A",
+    "D",
+    "L",
+    "T"
+  ],
+  "const_names": [
+    "ps",
+    "pa",
+    "pl",
+    "ds",
+    "da",
+    "dl",
+    "ud",
+    "ut",
+    "k1",
+    "k2",
+    "a",
+    "y",
+    "bone_marrow"
+  ],
+  "default_consts": [
+    0.5,
+    0.43,
+    0.27,
+    0.14,
+    0.44,
+    0.05,
+    0.275,
+    0.3,
+    1.0,
+    1.0,
+    0.015,
+    0.01,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.1,
+        0.0,
+        0.0,
+        0.1,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.07632612626305098,
+        0.14180348909538099,
+        0.22683239558174825,
+        0.14403353231963326,
+        0.007190485691589871
+      ],
+      "relative_scale_vs_default": [
+        0.7632612626305098,
+        null,
+        null,
+        1.4403353231963325,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -0.023673873736949028,
+        0.14180348909538099,
+        0.22683239558174825,
+        0.04403353231963325,
+        0.007190485691589871
+      ],
+      "state_scale_from_default_trajectory": [
+        0.719999998142367,
+        0.47267829698460334,
+        0.7561079852724942,
+        0.14954906626146183,
+        0.023968285638632906
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3927738037,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 1.4033129439515926,
+        "peak_ratio_per_state": [
+          0.9999999990629747,
+          0.8380911399076276,
+          0.8311123132900684,
+          1.5779117248247223,
+          1.6209197535606277
+        ],
+        "max_peak_ratio": 1.6209197535606277
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

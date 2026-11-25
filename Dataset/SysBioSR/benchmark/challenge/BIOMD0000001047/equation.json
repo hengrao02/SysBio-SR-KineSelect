@@ -1,0 +1,66 @@
+{
+  "const_description": "c_0: cell_1___plasma_membrane, c_1: rho, c_2: ModelValue_1, c_3: ModelValue_3, c_4: cell_2___plasma_membrane, c_5: ModelValue_4, c_6: ModelValue_0, c_7: mu",
+  "const_names": [
+    "cell_1___plasma_membrane",
+    "rho",
+    "ModelValue_1",
+    "ModelValue_3",
+    "cell_2___plasma_membrane",
+    "ModelValue_4",
+    "ModelValue_0",
+    "mu"
+  ],
+  "consts": [
+    [
+      1.0,
+      1.0,
+      100.0,
+      2.0,
+      1.0,
+      2.0,
+      0.01,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000001047",
+  "dataset_model_name": "Collier1996",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 + c_0/(c_1*(c_2*x_2^c_3 + 1)) | -c_1*c_4*x_1 + c_4/(c_1*(c_2*x_3^c_3 + 1)) | -c_0*c_7*x_2 + c_0*x_1^c_5/(c_6 + x_1^c_5) | -c_4*c_7*x_3 + c_4*x_0^c_5/(c_6 + x_0^c_5)",
+  "eq_raw": "-cell_1___plasma_membrane*delta1*rho + cell_1___plasma_membrane/(rho*(ModelValue_1*notch1^ModelValue_3 + 1)) | -cell_2___plasma_membrane*delta2*rho + cell_2___plasma_membrane/(rho*(ModelValue_1*notch2^ModelValue_3 + 1)) | cell_1___plasma_membrane*delta2^ModelValue_4/(ModelValue_0 + delta2^ModelValue_4) - cell_1___plasma_membrane*mu*notch1 | cell_2___plasma_membrane*delta1^ModelValue_4/(ModelValue_0 + delta1^ModelValue_4) - cell_2___plasma_membrane*mu*notch2",
+  "id": "Collier1996___Delta_Notch_intercellular_signalling_and_lateral_inhibition",
+  "init": [
+    [
+      0.999999999999985,
+      0.99,
+      0.999999999999987,
+      0.99
+    ]
+  ],
+  "init_description": "x_0: delta1, x_1: delta2, x_2: notch1, x_3: notch2",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 4,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Collier1996 - Delta Notch intercellular signalling and lateral inhibition",
+  "source_xml": "Collier1996.xml",
+  "state_names": [
+    "delta1",
+    "delta2",
+    "notch1",
+    "notch2"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0 + 1.0/(100.0*x_2^2.0 + 1)",
+      "-1.0*x_1 + 1.0/(100.0*x_3^2.0 + 1)",
+      "1.0*x_1^2.0/(x_1^2.0 + 0.01) - 1.0*x_2",
+      "1.0*x_0^2.0/(x_0^2.0 + 0.01) - 1.0*x_3"
+    ]
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "const_description": "c_0: kdegIL1, c_1: kdegADAMTS5mRNA, c_2: krelADAMTS5mRNAmiR140, c_3: ksynmiR140, c_4: kdegmiR140, c_5: kbinADAMTS5mRNAmiR140, c_6: kdegmiR140byIL1, c_7: ksynADAMTS5mRNA",
+  "const_names": [
+    "kdegIL1",
+    "kdegADAMTS5mRNA",
+    "krelADAMTS5mRNAmiR140",
+    "ksynmiR140",
+    "kdegmiR140",
+    "kbinADAMTS5mRNAmiR140",
+    "kdegmiR140byIL1",
+    "ksynADAMTS5mRNA"
+  ],
+  "consts": [
+    [
+      0.0004,
+      0.00014,
+      0.01,
+      0.0018,
+      8e-06,
+      5e-05,
+      8e-07,
+      0.001
+    ]
+  ],
+  "dataset_model_id": "MODEL1705170001",
+  "dataset_model_name": "Proctor2017",
+  "dim": 5,
+  "eq": "-c_0*x_0 | c_1*x_4 + c_2*x_4 + c_3*x_2 - c_4*x_1 - c_5*x_1*x_3 - c_6*x_0*x_1 | 0 | c_2*x_4 - c_5*x_1*x_3 + c_7*x_0 | -c_1*x_4 - c_2*x_4 + c_5*x_1*x_3",
+  "eq_raw": "-IL1*kdegIL1 | -ADAMTS5_mRNA*kbinADAMTS5mRNAmiR140*miR140 + ADAMTS5_mRNA_miR140*kdegADAMTS5mRNA + ADAMTS5_mRNA_miR140*krelADAMTS5mRNAmiR140 - IL1*kdegmiR140byIL1*miR140 - kdegmiR140*miR140 + ksynmiR140*miR140_gene | 0 | -ADAMTS5_mRNA*kbinADAMTS5mRNAmiR140*miR140 + ADAMTS5_mRNA_miR140*krelADAMTS5mRNAmiR140 + IL1*ksynADAMTS5mRNA | ADAMTS5_mRNA*kbinADAMTS5mRNAmiR140*miR140 - ADAMTS5_mRNA_miR140*kdegADAMTS5mRNA - ADAMTS5_mRNA_miR140*krelADAMTS5mRNAmiR140",
+  "id": "MODEL1705170001",
+  "init": [
+    [
+      500.0,
+      500.0,
+      2.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: IL1, x_1: miR140, x_2: miR140_gene, x_3: ADAMTS5_mRNA, x_4: ADAMTS5_mRNA_miR140",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Proctor2017- Role of microRNAs in osteoarthritis (miR140-IL1 coherent feed forward)",
+  "source_xml": "Proctor2017.xml",
+  "state_names": [
+    "IL1",
+    "miR140",
+    "miR140_gene",
+    "ADAMTS5_mRNA",
+    "ADAMTS5_mRNA_miR140"
+  ],
+  "substituted": [
+    [
+      "-0.0004*x_0",
+      "-8.0e-7*x_0*x_1 - 5.0e-5*x_1*x_3 - 8.0e-6*x_1 + 0.0018*x_2 + 0.01014*x_4",
+      "0",
+      "0.001*x_0 - 5.0e-5*x_1*x_3 + 0.01*x_4",
+      "5.0e-5*x_1*x_3 - 0.01014*x_4"
+    ]
+  ]
+}

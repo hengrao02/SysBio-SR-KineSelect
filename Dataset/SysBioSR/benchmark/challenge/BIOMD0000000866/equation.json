@@ -1,0 +1,105 @@
+{
+  "dataset_model_id": "BIOMD0000000866",
+  "dataset_model_name": "Simon2019",
+  "id": "BIOMD0000000866",
+  "name": "Simon2019",
+  "source_xml": "Simon2019.xml",
+  "dim": 3,
+  "eq": "(1*c_0*c_1*c_6 + (-1)*c_0*x_2*c_3*x_0/(c_2 + x_0) + (-1)*c_0*c_5*x_0)/c_0 | (1*c_0*x_2*c_3*x_0/(c_2 + x_0) + (-1)*c_0*c_4*x_1)/c_0 | 0/c_0",
+  "eq_raw": "(1*compartment*__lp_r2_k1*p100t + (-1)*compartment*NIK*__lp_r3_kcat*p100/(__lp_r3_Km + p100) + (-1)*compartment*__lp_r5_k1*p100)/compartment | (1*compartment*NIK*__lp_r3_kcat*p100/(__lp_r3_Km + p100) + (-1)*compartment*__lp_r4_k1*p52)/compartment | 0/compartment",
+  "consts": [
+    [
+      1.0,
+      0.2,
+      10.0,
+      0.05,
+      0.00038,
+      0.00038,
+      2.5
+    ]
+  ],
+  "init": [
+    [
+      0.0,
+      0.0,
+      10.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.2*2.5 + (-1)*1*x_2*0.05*x_0/(10 + x_0) + (-1)*1*0.00038*x_0)/1",
+      "(1*1*x_2*0.05*x_0/(10 + x_0) + (-1)*1*0.00038*x_1)/1",
+      "0/1"
+    ]
+  ],
+  "state_names": [
+    "p100",
+    "p52",
+    "NIK"
+  ],
+  "const_names": [
+    "compartment",
+    "__lp_r2_k1",
+    "__lp_r3_Km",
+    "__lp_r3_kcat",
+    "__lp_r4_k1",
+    "__lp_r5_k1",
+    "p100t"
+  ],
+  "init_description": "x_0: p100, x_1: p52, x_2: NIK",
+  "const_description": "c_0: compartment, c_1: __lp_r2_k1, c_2: __lp_r3_Km, c_3: __lp_r3_kcat, c_4: __lp_r4_k1, c_5: __lp_r5_k1, c_6: p100t",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 4,
+    "n_reconfigured_reactions": 4,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "p100t -> p100",
+      "p100 -> p52",
+      "p52 -> 0",
+      "p100 -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "p100t -> p100",
+      "p100 -> p52",
+      "p52 -> 0",
+      "p100 -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[2]*k[3]*k[8] + (-1)*k[2]*x[3]*k[5]*x[1]/(k[4] + x[1]) + (-1)*k[2]*k[7]*x[1])/k[2]",
+      "(1*k[2]*x[3]*k[5]*x[1]/(k[4] + x[1]) + (-1)*k[2]*k[6]*x[2])/k[2]",
+      "0/k[2]"
+    ],
+    "species_index_map": {
+      "x_0": "p100",
+      "x_1": "p52",
+      "x_2": "NIK"
+    },
+    "const_index_map": {
+      "c_0": "compartment",
+      "c_1": "__lp_r2_k1",
+      "c_2": "__lp_r3_Km",
+      "c_3": "__lp_r3_kcat",
+      "c_4": "__lp_r4_k1",
+      "c_5": "__lp_r5_k1",
+      "c_6": "p100t"
+    }
+  }
+}

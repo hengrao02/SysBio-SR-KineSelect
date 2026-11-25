@@ -1,0 +1,129 @@
+{
+  "dataset_model_id": "BIOMD0000000876",
+  "dataset_model_name": "Aavani2019",
+  "id": "BIOMD0000000876",
+  "name": "Aavani2019",
+  "source_xml": "Aavani2019.xml",
+  "dim": 4,
+  "eq": "(1*c_9*c_3*c_0 + (-1)*c_9*c_3*x_0 + (-1)*c_9*c_2*x_0*x_3)/c_9 | ((-1)*c_9*c_4*x_1 + 1*c_9*c_2*x_0*x_3 + (-1)*c_9*c_6*x_2*x_1)/c_9 | ((-1)*c_9*c_7*x_2 + 1*c_9*c_8*x_0*x_3*x_2/(c_0 + x_2))/c_9 | ((-1)*c_9*c_5*x_3 + 1*c_9*c_4*c_1*x_1)/c_9",
+  "eq_raw": "(1*compartment*lambda*C_ast + (-1)*compartment*lambda*C_Uninfected_CD4 + (-1)*compartment*beta*C_Uninfected_CD4*V_Virus)/compartment | ((-1)*compartment*a*I_Infected_CD4 + 1*compartment*beta*C_Uninfected_CD4*V_Virus + (-1)*compartment*rho*F_CTL*I_Infected_CD4)/compartment | ((-1)*compartment*b*F_CTL + 1*compartment*e*C_Uninfected_CD4*V_Virus*F_CTL/(C_ast + F_CTL))/compartment | ((-1)*compartment*k*V_Virus + 1*compartment*a*N*I_Infected_CD4)/compartment",
+  "consts": [
+    [
+      1000.0,
+      2000.0,
+      5.75e-05,
+      0.01,
+      1.0,
+      23.0,
+      1.0,
+      0.1,
+      0.001,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1000.0,
+      1.0,
+      1.0,
+      200.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.01*1000 + (-1)*1*0.01*x_0 + (-1)*1*5.75e-05*x_0*x_3)/1",
+      "((-1)*1*1*x_1 + 1*1*5.75e-05*x_0*x_3 + (-1)*1*1*x_2*x_1)/1",
+      "((-1)*1*0.1*x_2 + 1*1*0.001*x_0*x_3*x_2/(1000 + x_2))/1",
+      "((-1)*1*23*x_3 + 1*1*1*2000*x_1)/1"
+    ]
+  ],
+  "state_names": [
+    "C_Uninfected_CD4",
+    "I_Infected_CD4",
+    "F_CTL",
+    "V_Virus"
+  ],
+  "const_names": [
+    "C_ast",
+    "N",
+    "beta",
+    "lambda",
+    "a",
+    "k",
+    "rho",
+    "b",
+    "e",
+    "compartment"
+  ],
+  "init_description": "x_0: C_Uninfected_CD4, x_1: I_Infected_CD4, x_2: F_CTL, x_3: V_Virus",
+  "const_description": "c_0: C_ast, c_1: N, c_2: beta, c_3: lambda, c_4: a, c_5: k, c_6: rho, c_7: b, c_8: e, c_9: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 9,
+    "n_reconfigured_reactions": 9,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> C_Uninfected_CD4",
+      "C_Uninfected_CD4 -> 0",
+      "I_Infected_CD4 -> 0",
+      "F_CTL -> 0",
+      "V_Virus -> 0",
+      "C_Uninfected_CD4 -> I_Infected_CD4",
+      "I_Infected_CD4 -> 0",
+      "0 -> F_CTL",
+      "0 -> V_Virus"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> C_Uninfected_CD4",
+      "C_Uninfected_CD4 -> 0",
+      "I_Infected_CD4 -> 0",
+      "F_CTL -> 0",
+      "V_Virus -> 0",
+      "C_Uninfected_CD4 -> I_Infected_CD4",
+      "I_Infected_CD4 -> 0",
+      "0 -> F_CTL",
+      "0 -> V_Virus"
+    ],
+    "maple_odes": [
+      "(1*k[12]*k[4]*k[1] + (-1)*k[12]*k[4]*x[1] + (-1)*k[12]*k[3]*x[1]*x[4])/k[12]",
+      "((-1)*k[12]*k[5]*x[2] + 1*k[12]*k[3]*x[1]*x[4] + (-1)*k[12]*k[9]*x[3]*x[2])/k[12]",
+      "((-1)*k[12]*k[10]*x[3] + 1*k[12]*k[11]*x[1]*x[4]*x[3]/(k[1] + x[3]))/k[12]",
+      "((-1)*k[12]*k[6]*x[4] + 1*k[12]*k[5]*k[2]*x[2])/k[12]"
+    ],
+    "species_index_map": {
+      "x_0": "C_Uninfected_CD4",
+      "x_1": "I_Infected_CD4",
+      "x_2": "F_CTL",
+      "x_3": "V_Virus"
+    },
+    "const_index_map": {
+      "c_0": "C_ast",
+      "c_1": "N",
+      "c_2": "beta",
+      "c_3": "lambda",
+      "c_4": "a",
+      "c_5": "k",
+      "c_6": "rho",
+      "c_7": "b",
+      "c_8": "e",
+      "c_9": "compartment"
+    }
+  }
+}

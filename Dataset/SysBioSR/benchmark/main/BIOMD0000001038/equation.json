@@ -1,0 +1,121 @@
+{
+  "dataset_model_id": "BIOMD0000001038",
+  "dataset_model_name": "Alharbi2019",
+  "id": "BIOMD0000001038",
+  "name": "Alharbi2019",
+  "source_xml": "Alharbi2019.xml",
+  "dim": 3,
+  "eq": "(1*c_10*(c_0*x_0*(1 - c_1*x_0) + c_8*x_0*x_2) + (-1)*c_10*c_2*x_0*x_1)/c_10 | (1*c_10*(c_3*x_1*(1 - c_4*x_1) + c_5*x_0*x_1) + (-1)*c_10*c_9*x_1*x_2)/c_10 | (1*c_10*c_6 + (-1)*c_10*c_7*x_2)/c_10",
+  "eq_raw": "(1*Whole_organism*(r*Normal_cells*(1 - beta1*Normal_cells) + c1*Normal_cells*Vitamins) + (-1)*Whole_organism*gamma*Normal_cells*Tumor_cells)/Whole_organism | (1*Whole_organism*(alpha1*Tumor_cells*(1 - alpha2*Tumor_cells) + beta2*Normal_cells*Tumor_cells) + (-1)*Whole_organism*c2*Tumor_cells*Vitamins)/Whole_organism | (1*Whole_organism*k1 + (-1)*Whole_organism*k2*Vitamins)/Whole_organism",
+  "consts": [
+    [
+      0.4312,
+      2.99e-06,
+      0.9817,
+      0.4426,
+      0.4,
+      0.2291,
+      0.8976,
+      0.9611,
+      0.2215,
+      0.4975,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0,
+      5.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*(0.4312*x_0*(1 - 2.99e-06*x_0) + 0.2215*x_0*x_2) + (-1)*1*0.9817*x_0*x_1)/1",
+      "(1*1*(0.4426*x_1*(1 - 0.4*x_1) + 0.2291*x_0*x_1) + (-1)*1*0.4975*x_1*x_2)/1",
+      "(1*1*0.8976 + (-1)*1*0.9611*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "Normal_cells",
+    "Tumor_cells",
+    "Vitamins"
+  ],
+  "const_names": [
+    "r",
+    "beta1",
+    "gamma",
+    "alpha1",
+    "alpha2",
+    "beta2",
+    "k1",
+    "k2",
+    "c1",
+    "c2",
+    "Whole_organism"
+  ],
+  "init_description": "x_0: Normal_cells, x_1: Tumor_cells, x_2: Vitamins",
+  "const_description": "c_0: r, c_1: beta1, c_2: gamma, c_3: alpha1, c_4: alpha2, c_5: beta2, c_6: k1, c_7: k2, c_8: c1, c_9: c2, c_10: Whole_organism",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> Normal_cells",
+      "Normal_cells -> 0",
+      "0 -> Tumor_cells",
+      "Tumor_cells -> 0",
+      "0 -> Vitamins",
+      "Vitamins -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Normal_cells",
+      "Normal_cells -> 0",
+      "0 -> Tumor_cells",
+      "Tumor_cells -> 0",
+      "0 -> Vitamins",
+      "Vitamins -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[11]*(k[1]*x[1]*(1 - k[2]*x[1]) + k[9]*x[1]*x[3]) + (-1)*k[11]*k[3]*x[1]*x[2])/k[11]",
+      "(1*k[11]*(k[4]*x[2]*(1 - k[5]*x[2]) + k[6]*x[1]*x[2]) + (-1)*k[11]*k[10]*x[2]*x[3])/k[11]",
+      "(1*k[11]*k[7] + (-1)*k[11]*k[8]*x[3])/k[11]"
+    ],
+    "species_index_map": {
+      "x_0": "Normal_cells",
+      "x_1": "Tumor_cells",
+      "x_2": "Vitamins"
+    },
+    "const_index_map": {
+      "c_0": "r",
+      "c_1": "beta1",
+      "c_2": "gamma",
+      "c_3": "alpha1",
+      "c_4": "alpha2",
+      "c_5": "beta2",
+      "c_6": "k1",
+      "c_7": "k2",
+      "c_8": "c1",
+      "c_9": "c2",
+      "c_10": "Whole_organism"
+    }
+  }
+}

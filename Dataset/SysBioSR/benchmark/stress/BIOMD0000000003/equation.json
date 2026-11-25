@@ -1,0 +1,132 @@
+{
+  "dataset_model_id": "BIOMD0000000003",
+  "dataset_model_name": "Goldbeter1991",
+  "id": "BIOMD0000000003",
+  "name": "Goldbeter1991",
+  "source_xml": "Goldbeter1991.xml",
+  "dim": 3,
+  "eq": "(1*c_3*c_4 + (-1)*x_0*c_3*c_5 + (-1)*x_0*c_3*c_6*x_2*(x_0 + c_7)^(-1))/c_3 | (1*c_3*(1 + (-1)*x_1)*x_0*c_0*(x_0 + c_2)^(-1)*(c_8 + (-1)*x_1 + 1)^(-1) + (-1)*c_3*x_1*c_9*(c_10 + x_1)^(-1))/c_3 | (1*c_3*x_1*c_1*(1 + (-1)*x_2)*(c_11 + (-1)*x_2 + 1)^(-1) + (-1)*c_3*c_13*x_2*(c_12 + x_2)^(-1))/c_3",
+  "eq_raw": "(1*cell*__lp_r2_vi + (-1)*C*cell*__lp_r3_kd + (-1)*C*cell*__lp_r4_vd*X*(C + __lp_r4_Kd)^(-1))/cell | (1*cell*(1 + (-1)*M)*C*VM1*(C + Kc)^(-1)*(__lp_r5_K1 + (-1)*M + 1)^(-1) + (-1)*cell*M*__lp_r6_V2*(__lp_r6_K2 + M)^(-1))/cell | (1*cell*M*VM3*(1 + (-1)*X)*(__lp_r7_K3 + (-1)*X + 1)^(-1) + (-1)*cell*__lp_r8_V4*X*(__lp_r8_K4 + X)^(-1))/cell",
+  "consts": [
+    [
+      3.0,
+      1.0,
+      0.5,
+      1.0,
+      0.025,
+      0.01,
+      0.25,
+      0.02,
+      0.005,
+      1.5,
+      0.005,
+      0.005,
+      0.005,
+      0.5
+    ]
+  ],
+  "init": [
+    [
+      0.23901494118204017,
+      0.008987225703866234,
+      9.08824000739145e-05
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.025 + (-1)*x_0*1*0.01 + (-1)*x_0*1*0.25*x_2*(x_0 + 0.02)^(-1))/1",
+      "(1*1*(1 + (-1)*x_1)*x_0*3*(x_0 + 0.5)^(-1)*(0.005 + (-1)*x_1 + 1)^(-1) + (-1)*1*x_1*1.5*(0.005 + x_1)^(-1))/1",
+      "(1*1*x_1*1*(1 + (-1)*x_2)*(0.005 + (-1)*x_2 + 1)^(-1) + (-1)*1*0.5*x_2*(0.005 + x_2)^(-1))/1"
+    ]
+  ],
+  "state_names": [
+    "C",
+    "M",
+    "X"
+  ],
+  "const_names": [
+    "VM1",
+    "VM3",
+    "Kc",
+    "cell",
+    "__lp_r2_vi",
+    "__lp_r3_kd",
+    "__lp_r4_vd",
+    "__lp_r4_Kd",
+    "__lp_r5_K1",
+    "__lp_r6_V2",
+    "__lp_r6_K2",
+    "__lp_r7_K3",
+    "__lp_r8_K4",
+    "__lp_r8_V4"
+  ],
+  "init_description": "x_0: C, x_1: M, x_2: X",
+  "const_description": "c_0: VM1, c_1: VM3, c_2: Kc, c_3: cell, c_4: __lp_r2_vi, c_5: __lp_r3_kd, c_6: __lp_r4_vd, c_7: __lp_r4_Kd, c_8: __lp_r5_K1, c_9: __lp_r6_V2, c_10: __lp_r6_K2, c_11: __lp_r7_K3, c_12: __lp_r8_K4, c_13: __lp_r8_V4",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 7,
+    "n_reconfigured_reactions": 7,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> C",
+      "C -> 0",
+      "C -> 0",
+      "0 -> M",
+      "M -> 0",
+      "0 -> X",
+      "X -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> C",
+      "C -> 0",
+      "C -> 0",
+      "0 -> M",
+      "M -> 0",
+      "0 -> X",
+      "X -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[6]*k[7] + (-1)*x[1]*k[6]*k[8] + (-1)*x[1]*k[6]*k[9]*x[3]*(x[1] + k[10])^(-1))/k[6]",
+      "(1*k[6]*(1 + (-1)*x[2])*x[1]*k[3]*(x[1] + k[5])^(-1)*(k[11] + (-1)*x[2] + 1)^(-1) + (-1)*k[6]*x[2]*k[12]*(k[13] + x[2])^(-1))/k[6]",
+      "(1*k[6]*x[2]*k[4]*(1 + (-1)*x[3])*(k[14] + (-1)*x[3] + 1)^(-1) + (-1)*k[6]*k[16]*x[3]*(k[15] + x[3])^(-1))/k[6]"
+    ],
+    "species_index_map": {
+      "x_0": "C",
+      "x_1": "M",
+      "x_2": "X"
+    },
+    "const_index_map": {
+      "c_0": "VM1",
+      "c_1": "VM3",
+      "c_2": "Kc",
+      "c_3": "cell",
+      "c_4": "__lp_r2_vi",
+      "c_5": "__lp_r3_kd",
+      "c_6": "__lp_r4_vd",
+      "c_7": "__lp_r4_Kd",
+      "c_8": "__lp_r5_K1",
+      "c_9": "__lp_r6_V2",
+      "c_10": "__lp_r6_K2",
+      "c_11": "__lp_r7_K3",
+      "c_12": "__lp_r8_K4",
+      "c_13": "__lp_r8_V4"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+method: ffx
+experiment_id: sysbiosr-ffx-v1
+finite_difference_order: 2
+smoother_window_length: null
+optimize_hyperparams: true
+hyper_opt_eval_fraction: 0.3
+sorting_metric: r2
+ode_integrator: solve_ivp
+rollout_rtol: 0.001
+rollout_atol: 1.0e-06
+rollout_timeout: 1.0
+fit_timeout_seconds: null

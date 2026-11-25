@@ -1,0 +1,71 @@
+{
+  "const_description": "c_0: alpha_tr, c_1: kd, c_2: mu, c_3: ka, c_4: ld, c_5: lm, c_6: la, c_7: delta, c_8: lambda",
+  "const_names": [
+    "alpha_tr",
+    "kd",
+    "mu",
+    "ka",
+    "ld",
+    "lm",
+    "la",
+    "delta",
+    "lambda"
+  ],
+  "consts": [
+    [
+      30.5,
+      0.334,
+      0.79,
+      0.000822,
+      4.49,
+      0.175,
+      1.15,
+      0.486,
+      0.00316
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000413",
+  "dataset_model_name": "Band2012",
+  "dim": 5,
+  "eq": "c_0 + c_1*x_2 - c_2*x_0 - c_3*x_0*x_1 | c_1*x_2 - c_3*x_0*x_1 | -c_1*x_2 + c_3*x_0*x_1 + c_4*x_3 + c_5*x_3 - c_6*x_2*x_4 | -c_4*x_3 - c_5*x_3 + c_6*x_2*x_4 | c_4*x_3 - c_6*x_2*x_4 + c_7 - c_8*x_4",
+  "eq_raw": "-TIR1*auxin*ka + alpha_tr - auxin*mu + auxinTIR1*kd | -TIR1*auxin*ka + auxinTIR1*kd | TIR1*auxin*ka - VENUS*auxinTIR1*la - auxinTIR1*kd + auxinTIR1VENUS*ld + auxinTIR1VENUS*lm | VENUS*auxinTIR1*la - auxinTIR1VENUS*ld - auxinTIR1VENUS*lm | -VENUS*auxinTIR1*la - VENUS*lambda + auxinTIR1VENUS*ld + delta",
+  "id": "DIIVENUS_fullmodel",
+  "init": [
+    [
+      7.38,
+      15.4,
+      0.28,
+      2.78,
+      40.4
+    ]
+  ],
+  "init_description": "x_0: auxin, x_1: TIR1, x_2: auxinTIR1, x_3: auxinTIR1VENUS, x_4: VENUS",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Band2012_DII-Venus_FullModel",
+  "source_xml": "Band2012.xml",
+  "state_names": [
+    "auxin",
+    "TIR1",
+    "auxinTIR1",
+    "auxinTIR1VENUS",
+    "VENUS"
+  ],
+  "substituted": [
+    [
+      "-0.000822*x_0*x_1 - 0.79*x_0 + 0.334*x_2 + 30.5",
+      "-0.000822*x_0*x_1 + 0.334*x_2",
+      "0.000822*x_0*x_1 - 1.15*x_2*x_4 - 0.334*x_2 + 4.665*x_3",
+      "1.15*x_2*x_4 - 4.665*x_3",
+      "-1.15*x_2*x_4 + 4.49*x_3 - 0.00316*x_4 + 0.486"
+    ]
+  ]
+}

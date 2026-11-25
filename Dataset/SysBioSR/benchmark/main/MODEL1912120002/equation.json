@@ -1,0 +1,74 @@
+{
+  "const_description": "c_0: compartment, c_1: s, c_2: r, c_3: k, c_4: d1, c_5: alpha, c_6: c, c_7: n1, c_8: d2, c_9: d3, c_10: beta, c_11: nr",
+  "const_names": [
+    "compartment",
+    "s",
+    "r",
+    "k",
+    "d1",
+    "alpha",
+    "c",
+    "n1",
+    "d2",
+    "d3",
+    "beta",
+    "nr"
+  ],
+  "consts": [
+    [
+      1.0,
+      1.0,
+      1.99,
+      36000000.0,
+      0.01,
+      2.25e-07,
+      0.0,
+      0.5,
+      1.0,
+      6.0,
+      2.9,
+      0.0
+    ]
+  ],
+  "dataset_model_id": "MODEL1912120002",
+  "dataset_model_name": "Sandip2013",
+  "dim": 4,
+  "eq": "c_0*(c_1 + c_2*x_0*(1 - (x_0 + 1)/c_3)) - c_0*(c_4*x_0 + c_5*x_0*x_2*(-c_6*c_7 + 1)) | c_0*c_5*x_0*x_2*(-c_6*c_7 + 1) - c_0*c_8*x_1 | c_0*c_10*x_1*(-c_11/2 - c_7/2 + 1) - c_0*c_9*x_2 | c_0*c_10*x_1*(c_11/2 + c_7/2) - c_0*c_9*x_3",
+  "eq_raw": "compartment*(T*r*(1 - (T + 1)/k) + s) - compartment*(T*VI*alpha*(-c*n1 + 1) + T*d1) | -I*compartment*d2 + T*VI*alpha*compartment*(-c*n1 + 1) | I*beta*compartment*(-n1/2 - nr/2 + 1) - VI*compartment*d3 | I*beta*compartment*(n1/2 + nr/2) - VNI*compartment*d3",
+  "id": "Sandip2013___Modeling_the_dynamics_of_hepatitis_C_virus_with_combined_antiviral_drug_therapy__interferon_and_ribavirin",
+  "init": [
+    [
+      17000000.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: T, x_1: I, x_2: VI, x_3: VNI",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Sandip2013 - Modeling the dynamics of hepatitis C virus with combined antiviral drug therapy: interferon and ribavirin.",
+  "source_xml": "Sandip2013.xml",
+  "state_names": [
+    "T",
+    "I",
+    "VI",
+    "VNI"
+  ],
+  "substituted": [
+    [
+      "-2.25e-7*x_0*x_2 + 1.99*x_0*(-2.77777777777778e-8*x_0 + 0.999999972222222) - 0.01*x_0 + 1.0",
+      "2.25e-7*x_0*x_2 - 1.0*x_1",
+      "2.175*x_1 - 6.0*x_2",
+      "0.725*x_1 - 6.0*x_3"
+    ]
+  ]
+}

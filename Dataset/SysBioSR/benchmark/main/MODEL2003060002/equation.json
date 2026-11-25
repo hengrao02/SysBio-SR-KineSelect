@@ -1,0 +1,65 @@
+{
+  "const_description": "c_0: compartment, c_1: Sauxin, c_2: Tauxin, c_3: SIAA, c_4: TIAA, c_5: alpha_reg, c_6: SARF, c_7: TARF, c_8: beta",
+  "const_names": [
+    "compartment",
+    "Sauxin",
+    "Tauxin",
+    "SIAA",
+    "TIAA",
+    "alpha_reg",
+    "SARF",
+    "TARF",
+    "beta"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.02,
+      10.0,
+      1.0,
+      333.0,
+      150.0,
+      25.0,
+      2.0,
+      0.003
+    ]
+  ],
+  "dataset_model_id": "MODEL2003060002",
+  "dataset_model_name": "Grigolon2018",
+  "dim": 3,
+  "eq": "c_0*(c_1 - x_0/c_2) | c_0*(c_3 - c_5*x_0*x_1 - x_1/c_4) | c_0*(c_6 - c_8*x_1*x_2 - x_2/c_7)",
+  "eq_raw": "compartment*(Sauxin - auxin/Tauxin) | compartment*(-IAA*alpha_reg*auxin - IAA/TIAA + SIAA) | compartment*(-ARF*IAA*beta - ARF/TARF + SARF)",
+  "id": "Grigolon2018_Responses_to_auxin_signals",
+  "init": [
+    [
+      1.0,
+      -350.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: auxin, x_1: IAA, x_2: ARF",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Grigolon2018 - Responses to auxin signals",
+  "source_xml": "Grigolon2018.xml",
+  "state_names": [
+    "auxin",
+    "IAA",
+    "ARF"
+  ],
+  "substituted": [
+    [
+      "-0.1*x_0 + 0.02",
+      "-150.0*x_0*x_1 - 0.003003003003003*x_1 + 1.0",
+      "-0.003*x_1*x_2 - 0.5*x_2 + 25.0"
+    ]
+  ]
+}

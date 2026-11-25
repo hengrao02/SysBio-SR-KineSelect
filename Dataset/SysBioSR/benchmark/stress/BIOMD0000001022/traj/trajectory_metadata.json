@@ -1,0 +1,87 @@
+{
+  "system_id": "BIOMD0000001022",
+  "state_names": [
+    "T",
+    "I",
+    "S",
+    "N"
+  ],
+  "const_names": [
+    "rho",
+    "xi",
+    "h",
+    "delta",
+    "alpha",
+    "p_s",
+    "m_s",
+    "Tumor",
+    "Lymph_node"
+  ],
+  "default_consts": [
+    6.0,
+    0.035,
+    571.0,
+    0.019,
+    0.0025,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        0.0,
+        0.0,
+        1000000.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1.0,
+        0.0,
+        0.0,
+        2000000.0
+      ],
+      "relative_scale_vs_default": [
+        1.0,
+        null,
+        null,
+        2.0
+      ],
+      "absolute_offset_from_default": [
+        0.0,
+        0.0,
+        0.0,
+        1000000.0
+      ],
+      "state_scale_from_default_trajectory": [
+        138250275.98676398,
+        4985265.564722448,
+        95458.79799276436,
+        1000000.0
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 1732779570,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 1.0628735849409634,
+        "peak_ratio_per_state": [
+          0.0689845690306085,
+          0.34222964713094955,
+          0.3413536927764879,
+          2.0
+        ],
+        "max_peak_ratio": 2.0
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

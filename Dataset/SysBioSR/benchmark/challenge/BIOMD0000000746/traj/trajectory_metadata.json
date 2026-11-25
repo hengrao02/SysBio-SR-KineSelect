@@ -1,0 +1,95 @@
+{
+  "system_id": "BIOMD0000000746",
+  "state_names": [
+    "C",
+    "E",
+    "B",
+    "P"
+  ],
+  "const_names": [
+    "r",
+    "alpha1",
+    "k",
+    "a1",
+    "a2",
+    "delta",
+    "alpha2",
+    "u1",
+    "u2",
+    "b",
+    "alpha3",
+    "u3",
+    "bladder_cancer_tme"
+  ],
+  "default_consts": [
+    0.0033,
+    1.1e-07,
+    2000.0,
+    0.25,
+    0.052,
+    151932.0,
+    3.45e-10,
+    0.041,
+    0.1,
+    650000.0,
+    1.25e-07,
+    166.32,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        100000.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        150000.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "relative_scale_vs_default": [
+        1.5,
+        null,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        50000.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state_scale_from_default_trajectory": [
+        121896.23938216503,
+        1e-06,
+        6483887.986513469,
+        913.492066941096
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 316093468,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.49999999999999956,
+        "peak_ratio_per_state": [
+          1.4999999999999996,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "max_peak_ratio": 1.4999999999999996
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

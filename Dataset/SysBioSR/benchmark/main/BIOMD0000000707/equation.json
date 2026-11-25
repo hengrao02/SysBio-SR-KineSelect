@@ -1,0 +1,139 @@
+{
+  "dataset_model_id": "BIOMD0000000707",
+  "dataset_model_name": "Revilla2003",
+  "id": "BIOMD0000000707",
+  "name": "Revilla2003",
+  "source_xml": "Revilla2003.xml",
+  "dim": 5,
+  "eq": "(1*c_10*c_1 + (-1)*c_10*c_0*x_0 + (-1)*c_10*c_2*x_0*x_1)/c_10 | (1*c_10*c_6*x_2 + (-1)*c_10*c_7*x_1)/c_10 | (1*c_10*c_2*x_0*x_1 + (-1)*c_10*c_3*x_2 + (-1)*c_10*c_4*x_3*x_2)/c_10 | (1*c_10*c_8*x_4 + (-1)*c_10*c_9*x_3)/c_10 | (1*c_10*c_4*x_3*x_2 + (-1)*c_10*c_5*x_4)/c_10",
+  "eq_raw": "(1*Plasma*lamda + (-1)*Plasma*d*Normal_Th_cells + (-1)*Plasma*beta*Normal_Th_cells*Pathogen_Virus)/Plasma | (1*Plasma*k*Single_Infected_Th_Cells + (-1)*Plasma*u*Pathogen_Virus)/Plasma | (1*Plasma*beta*Normal_Th_cells*Pathogen_Virus + (-1)*Plasma*a*Single_Infected_Th_Cells + (-1)*Plasma*alpha*Recombinant_Virus*Single_Infected_Th_Cells)/Plasma | (1*Plasma*c*Double_Infected_Th_Cells + (-1)*Plasma*q*Recombinant_Virus)/Plasma | (1*Plasma*alpha*Recombinant_Virus*Single_Infected_Th_Cells + (-1)*Plasma*b*Double_Infected_Th_Cells)/Plasma",
+  "consts": [
+    [
+      0.01,
+      2.0,
+      0.004,
+      0.33,
+      0.004,
+      2.0,
+      50.0,
+      2.0,
+      2000.0,
+      2.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      3.0,
+      149.0,
+      6.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*2 + (-1)*1*0.01*x_0 + (-1)*1*0.004*x_0*x_1)/1",
+      "(1*1*50*x_2 + (-1)*1*2*x_1)/1",
+      "(1*1*0.004*x_0*x_1 + (-1)*1*0.33*x_2 + (-1)*1*0.004*x_3*x_2)/1",
+      "(1*1*2000*x_4 + (-1)*1*2*x_3)/1",
+      "(1*1*0.004*x_3*x_2 + (-1)*1*2*x_4)/1"
+    ]
+  ],
+  "state_names": [
+    "Normal_Th_cells",
+    "Pathogen_Virus",
+    "Single_Infected_Th_Cells",
+    "Recombinant_Virus",
+    "Double_Infected_Th_Cells"
+  ],
+  "const_names": [
+    "d",
+    "lamda",
+    "beta",
+    "a",
+    "alpha",
+    "b",
+    "k",
+    "u",
+    "c",
+    "q",
+    "Plasma"
+  ],
+  "init_description": "x_0: Normal_Th_cells, x_1: Pathogen_Virus, x_2: Single_Infected_Th_Cells, x_3: Recombinant_Virus, x_4: Double_Infected_Th_Cells",
+  "const_description": "c_0: d, c_1: lamda, c_2: beta, c_3: a, c_4: alpha, c_5: b, c_6: k, c_7: u, c_8: c, c_9: q, c_10: Plasma",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 10,
+    "n_reconfigured_reactions": 10,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> Normal_Th_cells",
+      "Normal_Th_cells -> 0",
+      "Normal_Th_cells -> Single_Infected_Th_Cells",
+      "Single_Infected_Th_Cells -> 0",
+      "Single_Infected_Th_Cells -> Double_Infected_Th_Cells",
+      "0 -> Pathogen_Virus",
+      "Double_Infected_Th_Cells -> 0",
+      "0 -> Recombinant_Virus",
+      "Pathogen_Virus -> 0",
+      "Recombinant_Virus -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> Normal_Th_cells",
+      "Normal_Th_cells -> 0",
+      "Normal_Th_cells -> Single_Infected_Th_Cells",
+      "Single_Infected_Th_Cells -> 0",
+      "Single_Infected_Th_Cells -> Double_Infected_Th_Cells",
+      "0 -> Pathogen_Virus",
+      "Double_Infected_Th_Cells -> 0",
+      "0 -> Recombinant_Virus",
+      "Pathogen_Virus -> 0",
+      "Recombinant_Virus -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[11]*k[2] + (-1)*k[11]*k[1]*x[1] + (-1)*k[11]*k[3]*x[1]*x[2])/k[11]",
+      "(1*k[11]*k[7]*x[3] + (-1)*k[11]*k[8]*x[2])/k[11]",
+      "(1*k[11]*k[3]*x[1]*x[2] + (-1)*k[11]*k[4]*x[3] + (-1)*k[11]*k[5]*x[4]*x[3])/k[11]",
+      "(1*k[11]*k[9]*x[5] + (-1)*k[11]*k[10]*x[4])/k[11]",
+      "(1*k[11]*k[5]*x[4]*x[3] + (-1)*k[11]*k[6]*x[5])/k[11]"
+    ],
+    "species_index_map": {
+      "x_0": "Normal_Th_cells",
+      "x_1": "Pathogen_Virus",
+      "x_2": "Single_Infected_Th_Cells",
+      "x_3": "Recombinant_Virus",
+      "x_4": "Double_Infected_Th_Cells"
+    },
+    "const_index_map": {
+      "c_0": "d",
+      "c_1": "lamda",
+      "c_2": "beta",
+      "c_3": "a",
+      "c_4": "alpha",
+      "c_5": "b",
+      "c_6": "k",
+      "c_7": "u",
+      "c_8": "c",
+      "c_9": "q",
+      "c_10": "Plasma"
+    }
+  }
+}

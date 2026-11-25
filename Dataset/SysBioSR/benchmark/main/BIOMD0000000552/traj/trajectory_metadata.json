@@ -1,0 +1,65 @@
+{
+  "system_id": "BIOMD0000000552",
+  "state_names": [
+    "a",
+    "b"
+  ],
+  "const_names": [
+    "k1",
+    "k2",
+    "k3",
+    "k4",
+    "Brain"
+  ],
+  "default_consts": [
+    0.007,
+    0.33,
+    0.0042,
+    0.01,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        50.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        42.15244922679902,
+        8.690324506565712
+      ],
+      "relative_scale_vs_default": [
+        0.8430489845359804,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -7.847550773200979,
+        8.690324506565712
+      ],
+      "state_scale_from_default_trajectory": [
+        50.0,
+        28.96774835521904
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1663131699,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.6378729808282424,
+        "peak_ratio_per_state": [
+          0.8430489845359804,
+          1.054284052296204
+        ],
+        "max_peak_ratio": 1.054284052296204
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

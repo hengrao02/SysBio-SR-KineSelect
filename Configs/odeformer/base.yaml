@@ -1,0 +1,14 @@
+method: odeformer
+experiment_id: sysbiosr-odeformer-v1
+checkpoint_path: ~/.cache/sysbiosr/odeformer/odeformer.pt
+device: cuda:0
+beam_size: 50
+beam_temperature: 0.1
+max_input_points: 10000
+max_generated_output_len: 200
+rescale: true
+sort_metric: r2
+random_seed: 0
+rollout_rtol: 0.001
+rollout_atol: 1.0e-06
+rollout_timeout: 1.0

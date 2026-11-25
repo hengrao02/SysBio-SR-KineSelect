@@ -1,0 +1,102 @@
+{
+  "system_id": "MODEL1908270001",
+  "state_names": [
+    "C",
+    "T",
+    "A"
+  ],
+  "const_names": [
+    "compartment",
+    "lambda_C",
+    "C_K",
+    "eta",
+    "d_T",
+    "I_12",
+    "T_N",
+    "lambda_TI_12",
+    "ModelValue_11",
+    "sigma",
+    "ModelValue_10",
+    "ModelValue_12",
+    "ModelValue_18",
+    "ModelValue_13",
+    "K_I_12",
+    "I_2",
+    "lambda_TI_2",
+    "K_I_2",
+    "d_A",
+    "mu_PA"
+  ],
+  "default_consts": [
+    1.0,
+    0.425,
+    0.8725,
+    57.5,
+    0.025,
+    1.5e-10,
+    0.0006,
+    8.81,
+    1.1615e-06,
+    0.002,
+    1.365e-18,
+    5.84e-07,
+    10.0,
+    50.5,
+    1.5e-10,
+    2.37e-11,
+    0.5,
+    2.37e-11,
+    0.7115,
+    105954000.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.3968,
+        0.006,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.02,
+        0.004,
+        0.0
+      ],
+      "relative_scale_vs_default": [
+        0.05040322580645162,
+        0.6666666666666666,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -0.37679999999999997,
+        -0.002,
+        0.0
+      ],
+      "state_scale_from_default_trajectory": [
+        0.6414393714095421,
+        0.006,
+        1e-06
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 4293530522,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 16.434496124366923,
+        "peak_ratio_per_state": [
+          0.07739245930583195,
+          16.760726754286225,
+          0.0
+        ],
+        "max_peak_ratio": 16.760726754286225
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

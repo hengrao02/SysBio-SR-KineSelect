@@ -1,0 +1,65 @@
+{
+  "system_id": "BIOMD0000001024",
+  "state_names": [
+    "Expanding_CAR_T_cells",
+    "Tumor_cells"
+  ],
+  "const_names": [
+    "rho",
+    "k_E",
+    "g",
+    "d",
+    "Whole_organism_blood"
+  ],
+  "default_consts": [
+    0.0018,
+    0.16,
+    0.15,
+    0.00015,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        10.0,
+        900.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        5.8313979794244855,
+        1084.2051282848681
+      ],
+      "relative_scale_vs_default": [
+        0.5831397979424485,
+        1.2046723647609645
+      ],
+      "absolute_offset_from_default": [
+        -4.1686020205755145,
+        184.20512828486812
+      ],
+      "state_scale_from_default_trajectory": [
+        14556.461965395989,
+        1228.9519893282738
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3713634114,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3735622196052195,
+        "peak_ratio_per_state": [
+          1.1867888581910553,
+          1.1847066074316184
+        ],
+        "max_peak_ratio": 1.1867888581910553
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

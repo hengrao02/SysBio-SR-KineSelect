@@ -1,0 +1,9 @@
+# Execution smoke only; not a historical numerical comparison.
+inherits: ../pysr/single_system.yaml
+experiment_id: sysbiosr-pysr-smoke-v1
+optimize_hyperparams: false
+niterations: 2
+populations: 4
+population_size: 16
+maxsize: 12
+ncycles_per_iteration: 100

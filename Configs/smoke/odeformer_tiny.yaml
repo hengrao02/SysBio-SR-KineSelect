@@ -1,0 +1,4 @@
+inherits: ../odeformer/single_system.yaml
+experiment_id: sysbiosr-odeformer-smoke-v1
+device: cpu
+beam_size: 5

@@ -1,0 +1,89 @@
+{
+  "dataset_model_id": "BIOMD0000000006",
+  "dataset_model_name": "Tyson1991",
+  "id": "BIOMD0000000006",
+  "name": "Tyson1991",
+  "source_xml": "Tyson1991.xml",
+  "dim": 2,
+  "eq": "c_2*(x_1 - x_0)*(c_3/c_2 + x_0^2) - c_1*x_0 | c_0 - c_1*x_0",
+  "eq_raw": "k4*(v - u)*(k4prime/k4 + u^2) - k6*u | kappa - k6*u",
+  "consts": [
+    [
+      0.015,
+      1.0,
+      180.0,
+      0.018
+    ]
+  ],
+  "init": [
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "180*(x_1 - x_0)*(0.018/180 + x_0^2) - 1*x_0",
+      "0.015 - 1*x_0"
+    ]
+  ],
+  "state_names": [
+    "u",
+    "v"
+  ],
+  "const_names": [
+    "kappa",
+    "k6",
+    "k4",
+    "k4prime"
+  ],
+  "init_description": "x_0: u, x_1: v",
+  "const_description": "c_0: kappa, c_1: k6, c_2: k4, c_3: k4prime",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 1,
+    "n_reactions": 3,
+    "n_reconfigured_reactions": 3,
+    "has_initial_conditions": false,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [
+      "z = v - u"
+    ],
+    "reaction_network": [
+      "u -> 0",
+      "z -> u"
+    ],
+    "reconfigured_reaction_network": [
+      "u -> 0",
+      "z -> u"
+    ],
+    "maple_odes": [
+      "k[3]*(x[2] - x[1])*(k[4]/k[3] + x[1]^2) - k[2]*x[1]",
+      "k[1] - k[2]*x[1]"
+    ],
+    "species_index_map": {
+      "x_0": "u",
+      "x_1": "v"
+    },
+    "const_index_map": {
+      "c_0": "kappa",
+      "c_1": "k6",
+      "c_2": "k4",
+      "c_3": "k4prime"
+    }
+  }
+}

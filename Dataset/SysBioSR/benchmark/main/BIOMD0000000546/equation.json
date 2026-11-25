@@ -1,0 +1,59 @@
+{
+  "const_description": "c_0: default, c_1: rho_E, c_2: beta_a, c_3: delta_Es, c_4: pi_a, c_5: c_V",
+  "const_names": [
+    "default",
+    "rho_E",
+    "beta_a",
+    "delta_Es",
+    "pi_a",
+    "c_V"
+  ],
+  "consts": [
+    [
+      1.0,
+      6.2e-08,
+      1e-06,
+      0.6,
+      100.0,
+      4.2
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000546",
+  "dataset_model_name": "Miao2010",
+  "dim": 3,
+  "eq": "-c_0^2*c_2*x_0*x_2 + c_0*c_1*x_0 | c_0^2*c_2*x_0*x_2 - c_0*c_3*x_1 | c_0*c_4*x_1 - c_0*c_5*x_2",
+  "eq_raw": "-beta_a*default^2*s1*s3 + default*rho_E*s1 | beta_a*default^2*s1*s3 - default*delta_Es*s2 | -c_V*default*s3 + default*pi_a*s2",
+  "id": "Miao2010___Innate_and_adaptive_immune_responses_to_primary_Influenza_A_Virus_infection",
+  "init": [
+    [
+      580000.0,
+      0.0,
+      1000.0
+    ]
+  ],
+  "init_description": "x_0: s1, x_1: s2, x_2: s3",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Miao2010 - Innate and adaptive immune responses to primary Influenza A Virus infection_1_1",
+  "source_xml": "Miao2010.xml",
+  "state_names": [
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "substituted": [
+    [
+      "-1.0e-6*x_0*x_2 + 6.2e-8*x_0",
+      "1.0e-6*x_0*x_2 - 0.6*x_1",
+      "100.0*x_1 - 4.2*x_2"
+    ]
+  ]
+}

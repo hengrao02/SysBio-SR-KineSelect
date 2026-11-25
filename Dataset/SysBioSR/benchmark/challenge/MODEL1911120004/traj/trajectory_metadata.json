@@ -1,0 +1,123 @@
+{
+  "system_id": "MODEL1911120004",
+  "state_names": [
+    "Ci",
+    "Ce",
+    "K",
+    "P"
+  ],
+  "const_names": [
+    "compartment",
+    "v1",
+    "k6",
+    "k5",
+    "v2",
+    "n",
+    "k2",
+    "v3",
+    "m",
+    "p",
+    "gamma2",
+    "k4",
+    "k3",
+    "a2",
+    "a0",
+    "cm0",
+    "h",
+    "d0",
+    "k0",
+    "a1",
+    "d3",
+    "alpha1",
+    "gamma1",
+    "alpha2",
+    "d2",
+    "beta",
+    "d1"
+  ],
+  "default_consts": [
+    1.0,
+    0.04,
+    0.06,
+    0.1567,
+    0.833,
+    2.0,
+    1.0,
+    10.853,
+    2.0,
+    4.0,
+    2.0,
+    2.0,
+    0.9,
+    0.002,
+    0.03,
+    1.5,
+    1.0,
+    0.5,
+    0.8,
+    0.9384,
+    0.39,
+    0.4,
+    0.1,
+    0.49542,
+    0.74,
+    0.648,
+    0.39
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.25,
+        0.25,
+        0.375,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.35891113107626205,
+        0.25562879143779216,
+        0.36424018478650916,
+        0.33764776902067567
+      ],
+      "relative_scale_vs_default": [
+        1.4356445243050482,
+        1.0225151657511686,
+        0.9713071594306911,
+        null
+      ],
+      "absolute_offset_from_default": [
+        0.10891113107626205,
+        0.005628791437792158,
+        -0.010759815213490842,
+        0.33764776902067567
+      ],
+      "state_scale_from_default_trajectory": [
+        0.2550650537672815,
+        0.7948770649412171,
+        0.7382145236171456,
+        1.1254925634022523
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 977562311,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.4269935432849668,
+        "peak_ratio_per_state": [
+          1.4071356533370056,
+          1.0002731328764136,
+          0.9999489693429867,
+          0.9998482939776799
+        ],
+        "max_peak_ratio": 1.4071356533370056
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

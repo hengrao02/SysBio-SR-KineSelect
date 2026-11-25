@@ -1,0 +1,79 @@
+{
+  "system_id": "MODEL1909050002",
+  "state_names": [
+    "A_1_b",
+    "C_4_T"
+  ],
+  "const_names": [
+    "compartment",
+    "k_clear_u",
+    "P",
+    "R_Cap",
+    "xi",
+    "R_K_grogh",
+    "K_D",
+    "V",
+    "epsilon",
+    "ModelValue_1",
+    "ModelValue_2",
+    "k_e"
+  ],
+  "default_consts": [
+    1.0,
+    0.02,
+    5e-06,
+    8.0,
+    0.082,
+    75.0,
+    4e-08,
+    3.58,
+    0.25,
+    150.0,
+    0.25,
+    0.002
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        8.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        5.889543251408658,
+        3e-07
+      ],
+      "relative_scale_vs_default": [
+        0.7361929064260823,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -2.110456748591342,
+        3e-07
+      ],
+      "state_scale_from_default_trajectory": [
+        8.0,
+        1e-06
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1882947192,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3,
+        "peak_ratio_per_state": [
+          0.7361929064260823,
+          0.3287657698075386
+        ],
+        "max_peak_ratio": 0.7361929064260823
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

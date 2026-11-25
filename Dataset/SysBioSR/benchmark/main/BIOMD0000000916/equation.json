@@ -1,0 +1,65 @@
+{
+  "const_description": "c_0: K3, c_1: compartment, c_2: K4, c_3: K5, c_4: K1, c_5: K2",
+  "const_names": [
+    "K3",
+    "compartment",
+    "K4",
+    "K5",
+    "K1",
+    "K2"
+  ],
+  "consts": [
+    [
+      26.6,
+      1.0,
+      1.2,
+      1.2,
+      3.6,
+      1.2
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000916",
+  "dataset_model_name": "Kraan199",
+  "dim": 5,
+  "eq": "-c_0*c_1*x_0 | c_0*c_1*x_0 - c_1*c_4*x_1 - c_1*(c_2*x_1 - c_3*x_3) | c_1*c_5*x_3 | -c_1*c_5*x_3 + c_1*(c_2*x_1 - c_3*x_3) | c_1*c_4*x_1",
+  "eq_raw": "-K3*The_FOD_in_the_circulation__X1*compartment | -K1*The_FOD_in_the_metabolizing_tissues__X4*compartment + K3*The_FOD_in_the_circulation__X1*compartment - compartment*(K4*The_FOD_in_the_metabolizing_tissues__X4 - K5*The_FOD_in_the_gallbladder___intestinal_lumen__X5) | K2*The_FOD_in_the_gallbladder___intestinal_lumen__X5*compartment | -K2*The_FOD_in_the_gallbladder___intestinal_lumen__X5*compartment + compartment*(K4*The_FOD_in_the_metabolizing_tissues__X4 - K5*The_FOD_in_the_gallbladder___intestinal_lumen__X5) | K1*The_FOD_in_the_metabolizing_tissues__X4*compartment",
+  "id": "New_Model",
+  "init": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: The_FOD_in_the_circulation__X1, x_1: The_FOD_in_the_metabolizing_tissues__X4, x_2: The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3, x_3: The_FOD_in_the_gallbladder___intestinal_lumen__X5, x_4: The_cumulative_FOD_excreted_in_the_urine__X2",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Kraan199_Kinetics of Cortisol Metabolism and Excretion.",
+  "source_xml": "Kraan199.xml",
+  "state_names": [
+    "The_FOD_in_the_circulation__X1",
+    "The_FOD_in_the_metabolizing_tissues__X4",
+    "The_cumulative_FOD_excreted_in_the_non_urinary_pool__X3",
+    "The_FOD_in_the_gallbladder___intestinal_lumen__X5",
+    "The_cumulative_FOD_excreted_in_the_urine__X2"
+  ],
+  "substituted": [
+    [
+      "-26.6*x_0",
+      "26.6*x_0 - 4.8*x_1 + 1.2*x_3",
+      "1.2*x_3",
+      "1.2*x_1 - 2.4*x_3",
+      "3.6*x_1"
+    ]
+  ]
+}

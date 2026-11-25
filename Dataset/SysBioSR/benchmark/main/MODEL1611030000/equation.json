@@ -1,0 +1,65 @@
+{
+  "const_description": "c_0: c1, c_1: q, c_2: p, c_3: eps, c_4: alfa, c_5: deg__k1",
+  "const_names": [
+    "c1",
+    "q",
+    "p",
+    "eps",
+    "alfa",
+    "deg__k1"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.75,
+      0.001,
+      9.0,
+      45.0,
+      0.3
+    ]
+  ],
+  "dataset_model_id": "MODEL1611030000",
+  "dataset_model_name": "Guisoni2016",
+  "dim": 5,
+  "eq": "c_0*c_1*x_1 - 3*c_0*c_2*x_0*x_4 | -c_0*c_1*x_1 + 2*c_0*c_1*x_2 - 2*c_0*c_2*c_3*x_1*x_4 + 3*c_0*c_2*x_0*x_4 | -2*c_0*c_1*x_2 + 3*c_0*c_1*x_3 - c_0*c_2*c_3^2*x_2*x_4 + 2*c_0*c_2*c_3*x_1*x_4 | -3*c_0*c_1*x_3 + c_0*c_2*c_3^2*x_2*x_4 | c_0*c_1*x_1 + 2*c_0*c_1*x_2 + 3*c_0*c_1*x_3 - c_0*c_2*c_3^2*x_2*x_4 - 2*c_0*c_2*c_3*x_1*x_4 - 3*c_0*c_2*x_0*x_4 + c_0*c_4*x_0 - c_0*c_5*x_4",
+  "eq_raw": "-3*c1*ft*p*r0 + c1*q*r1 | -2*c1*eps*ft*p*r1 + 3*c1*ft*p*r0 - c1*q*r1 + 2*c1*q*r2 | -c1*eps^2*ft*p*r2 + 2*c1*eps*ft*p*r1 - 2*c1*q*r2 + 3*c1*q*r3 | c1*eps^2*ft*p*r2 - 3*c1*q*r3 | alfa*c1*r0 - c1*deg__k1*ft - c1*eps^2*ft*p*r2 - 2*c1*eps*ft*p*r1 - 3*c1*ft*p*r0 + c1*q*r1 + 2*c1*q*r2 + 3*c1*q*r3",
+  "id": "MODEL1611030000",
+  "init": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      10.0
+    ]
+  ],
+  "init_description": "x_0: r0, x_1: r1, x_2: r2, x_3: r3, x_4: ft",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Guisoni2016 - Cis-regulatory system (CRS) can drive sustained oscillations",
+  "source_xml": "Guisoni2016.xml",
+  "state_names": [
+    "r0",
+    "r1",
+    "r2",
+    "r3",
+    "ft"
+  ],
+  "substituted": [
+    [
+      "-0.003*x_0*x_4 + 0.75*x_1",
+      "0.003*x_0*x_4 - 0.018*x_1*x_4 - 0.75*x_1 + 1.5*x_2",
+      "0.018*x_1*x_4 - 0.081*x_2*x_4 - 1.5*x_2 + 2.25*x_3",
+      "0.081*x_2*x_4 - 2.25*x_3",
+      "-0.003*x_0*x_4 + 45.0*x_0 - 0.018*x_1*x_4 + 0.75*x_1 - 0.081*x_2*x_4 + 1.5*x_2 + 2.25*x_3 - 0.3*x_4"
+    ]
+  ]
+}

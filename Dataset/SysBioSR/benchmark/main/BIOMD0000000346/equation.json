@@ -1,0 +1,81 @@
+{
+  "dataset_model_id": "BIOMD0000000346",
+  "dataset_model_name": "FitzHugh1961",
+  "id": "BIOMD0000000346",
+  "name": "FitzHugh1961",
+  "source_xml": "FitzHugh1961.xml",
+  "dim": 2,
+  "eq": "c_2*(x_0 + (-x_0^3/3) + x_1 + c_3) | (-1/c_2)*(x_0 + (-c_0) + c_1*x_1)",
+  "eq_raw": "c*(x + (-x^3/3) + y + z) | (-1/c)*(x + (-a) + b*y)",
+  "consts": [
+    [
+      0.7,
+      0.8,
+      3.0,
+      -0.4
+    ]
+  ],
+  "init": [
+    [
+      -1.0,
+      0.5
+    ]
+  ],
+  "substituted": [
+    [
+      "3*(x_0 + (-x_0^3/3) + x_1 + -0.4)",
+      "(-1/3)*(x_0 + (-0.7) + 0.8*x_1)"
+    ]
+  ],
+  "state_names": [
+    "x",
+    "y"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c",
+    "z"
+  ],
+  "init_description": "x_0: x, x_1: y",
+  "const_description": "c_0: a, c_1: b, c_2: c, c_3: z",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 0,
+    "n_reconfigured_reactions": 0,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [],
+    "reconfigured_reaction_network": [],
+    "maple_odes": [
+      "k[3]*(x[1] + (-x[1]^3/3) + x[2] + k[4])",
+      "(-1/k[3])*(x[1] + (-k[1]) + k[2]*x[2])"
+    ],
+    "species_index_map": {
+      "x_0": "x",
+      "x_1": "y"
+    },
+    "const_index_map": {
+      "c_0": "a",
+      "c_1": "b",
+      "c_2": "c",
+      "c_3": "z"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "const_description": "c_0: compartment_1, c_1: reaction_1__v, c_2: reaction_4__k1, c_3: reaction_3__k1, c_4: reaction_2__k1, c_5: reaction_7__k1, c_6: reaction_5__k1, c_7: reaction_10__k1, c_8: reaction_6__k1, c_9: reaction_8__k1, c_10: reaction_11__k1, c_11: reaction_9__k1, c_12: reaction_12__k1",
+  "const_names": [
+    "compartment_1",
+    "reaction_1__v",
+    "reaction_4__k1",
+    "reaction_3__k1",
+    "reaction_2__k1",
+    "reaction_7__k1",
+    "reaction_5__k1",
+    "reaction_10__k1",
+    "reaction_6__k1",
+    "reaction_8__k1",
+    "reaction_11__k1",
+    "reaction_9__k1",
+    "reaction_12__k1"
+  ],
+  "consts": [
+    [
+      1.0,
+      300.0,
+      0.135,
+      0.0549,
+      0.000113,
+      0.1,
+      9.9e-05,
+      0.0182,
+      0.001619,
+      0.0167,
+      10.0,
+      0.167,
+      0.27
+    ]
+  ],
+  "dataset_model_id": "MODEL1303140000",
+  "dataset_model_name": "Mazemondet2012",
+  "dim": 5,
+  "eq": "c_0*c_1 - c_0*c_4*x_0 - c_0*c_5*x_0*x_2 + c_2*x_4 - c_3*x_0 | c_0*c_10*x_2*x_3 + c_0*c_7*x_2 - c_0*c_8*x_1 - c_0*c_9*x_1 + c_6*x_4 | -c_0*c_10*x_2*x_3 - c_0*c_11*x_2 - c_0*c_7*x_2 + c_0*c_8*x_1 | -c_0*c_12*x_3 | -c_2*x_4 + c_3*x_0",
+  "eq_raw": "compartment_1*reaction_1__v - compartment_1*reaction_2__k1*species_1 - compartment_1*reaction_7__k1*species_1*species_3 - reaction_3__k1*species_1 + reaction_4__k1*species_6 | compartment_1*reaction_10__k1*species_3 + compartment_1*reaction_11__k1*species_3*species_4 - compartment_1*reaction_6__k1*species_2 - compartment_1*reaction_8__k1*species_2 + reaction_5__k1*species_6 | -compartment_1*reaction_10__k1*species_3 - compartment_1*reaction_11__k1*species_3*species_4 + compartment_1*reaction_6__k1*species_2 - compartment_1*reaction_9__k1*species_3 | -compartment_1*reaction_12__k1*species_4 | reaction_3__k1*species_1 - reaction_4__k1*species_6",
+  "id": "MODEL1303140000",
+  "init": [
+    [
+      16365.0,
+      4.0,
+      0.0,
+      1000.0,
+      6655.0
+    ]
+  ],
+  "init_description": "x_0: species_1, x_1: species_2, x_2: species_3, x_3: species_4, x_4: species_6",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Mazemondet2012 - beta-catenin dynamics in human neural progenitor cells",
+  "source_xml": "Mazemondet2012.xml",
+  "state_names": [
+    "species_1",
+    "species_2",
+    "species_3",
+    "species_4",
+    "species_6"
+  ],
+  "substituted": [
+    [
+      "-0.1*x_0*x_2 - 0.055013*x_0 + 0.135*x_4 + 300.0",
+      "-0.018319*x_1 + 10.0*x_2*x_3 + 0.0182*x_2 + 9.9e-5*x_4",
+      "0.001619*x_1 - 10.0*x_2*x_3 - 0.1852*x_2",
+      "-0.27*x_3",
+      "0.0549*x_0 - 0.135*x_4"
+    ]
+  ]
+}

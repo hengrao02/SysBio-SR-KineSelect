@@ -1,0 +1,127 @@
+{
+  "dataset_model_id": "BIOMD0000000891",
+  "dataset_model_name": "Khajanchi2019",
+  "id": "BIOMD0000000891",
+  "name": "Khajanchi2019",
+  "source_xml": "Khajanchi2019.xml",
+  "dim": 3,
+  "eq": "(1*c_12*c_0*x_0*(1 - x_0) + (-1)*c_12*(c_1*x_1 + c_2*x_2)/(x_0 + c_3)*x_0)/c_12 | (1*c_12*c_4*x_1*(1 - x_1) + (-1)*c_12*c_5*x_0*x_1/(x_0 + c_6))/c_12 | (1*c_12*c_7*x_0*x_2/(c_8 + x_0) + (-1)*c_12*(c_9*x_2 + c_10*x_0*x_2/(x_0 + c_11)))/c_12",
+  "eq_raw": "(1*compartment*r_1*u*(1 - u) + (-1)*compartment*(alpha_1*v + alpha_2*w)/(u + k_1)*u)/compartment | (1*compartment*r_2*v*(1 - v) + (-1)*compartment*alpha_3*u*v/(u + k_2))/compartment | (1*compartment*gamma_1*u*w/(k_3 + u) + (-1)*compartment*(mu_1*w + alpha_4*u*w/(u + k_4)))/compartment",
+  "consts": [
+    [
+      0.4822,
+      0.069943,
+      2.74492,
+      0.90305,
+      0.3307,
+      0.0194,
+      0.030584,
+      0.1245,
+      2.8743,
+      0.0074,
+      0.01694,
+      0.378918,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.1,
+      0.55,
+      0.2
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.4822*x_0*(1 - x_0) + (-1)*1*(0.069943*x_1 + 2.74492*x_2)/(x_0 + 0.90305)*x_0)/1",
+      "(1*1*0.3307*x_1*(1 - x_1) + (-1)*1*0.0194*x_0*x_1/(x_0 + 0.030584))/1",
+      "(1*1*0.1245*x_0*x_2/(2.8743 + x_0) + (-1)*1*(0.0074*x_2 + 0.01694*x_0*x_2/(x_0 + 0.378918)))/1"
+    ]
+  ],
+  "state_names": [
+    "u",
+    "v",
+    "w"
+  ],
+  "const_names": [
+    "r_1",
+    "alpha_1",
+    "alpha_2",
+    "k_1",
+    "r_2",
+    "alpha_3",
+    "k_2",
+    "gamma_1",
+    "k_3",
+    "mu_1",
+    "alpha_4",
+    "k_4",
+    "compartment"
+  ],
+  "init_description": "x_0: u, x_1: v, x_2: w",
+  "const_description": "c_0: r_1, c_1: alpha_1, c_2: alpha_2, c_3: k_1, c_4: r_2, c_5: alpha_3, c_6: k_2, c_7: gamma_1, c_8: k_3, c_9: mu_1, c_10: alpha_4, c_11: k_4, c_12: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 6,
+    "n_reconfigured_reactions": 6,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> u",
+      "u -> 0",
+      "0 -> v",
+      "v -> 0",
+      "0 -> w",
+      "w -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> u",
+      "u -> 0",
+      "0 -> v",
+      "v -> 0",
+      "0 -> w",
+      "w -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[13]*k[1]*x[1]*(1 - x[1]) + (-1)*k[13]*(k[2]*x[2] + k[3]*x[3])/(x[1] + k[4])*x[1])/k[13]",
+      "(1*k[13]*k[5]*x[2]*(1 - x[2]) + (-1)*k[13]*k[6]*x[1]*x[2]/(x[1] + k[7]))/k[13]",
+      "(1*k[13]*k[8]*x[1]*x[3]/(k[9] + x[1]) + (-1)*k[13]*(k[10]*x[3] + k[11]*x[1]*x[3]/(x[1] + k[12])))/k[13]"
+    ],
+    "species_index_map": {
+      "x_0": "u",
+      "x_1": "v",
+      "x_2": "w"
+    },
+    "const_index_map": {
+      "c_0": "r_1",
+      "c_1": "alpha_1",
+      "c_2": "alpha_2",
+      "c_3": "k_1",
+      "c_4": "r_2",
+      "c_5": "alpha_3",
+      "c_6": "k_2",
+      "c_7": "gamma_1",
+      "c_8": "k_3",
+      "c_9": "mu_1",
+      "c_10": "alpha_4",
+      "c_11": "k_4",
+      "c_12": "compartment"
+    }
+  }
+}

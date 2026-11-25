@@ -1,0 +1,69 @@
+{
+  "const_description": "c_0: compartment, c_1: mu_APC, c_2: alpha_im, c_3: b, c_4: a_pem, c_5: alpha_eff, c_6: b_pem, c_7: mu_eff, c_8: gamma_mel, c_9: nu_mel, c_10: g",
+  "const_names": [
+    "compartment",
+    "mu_APC",
+    "alpha_im",
+    "b",
+    "a_pem",
+    "alpha_eff",
+    "b_pem",
+    "mu_eff",
+    "gamma_mel",
+    "nu_mel",
+    "g"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.231,
+      1161.0,
+      37040.0,
+      5005.0,
+      0.8318,
+      0.9,
+      0.1777,
+      0.003269,
+      0.1245,
+      20190000.0
+    ]
+  ],
+  "dataset_model_id": "MODEL1911150001",
+  "dataset_model_name": "Tsur2019",
+  "dim": 3,
+  "eq": "-c_0*c_1*x_0 + c_0*c_2*x_2/(c_3 + x_2) | c_0*c_4*c_5*x_0 - c_0*c_6*c_7*x_1 | c_0*c_8*x_2 - c_0*c_9*x_1*x_2/(c_10 + x_2)",
+  "eq_raw": "-A_pc*compartment*mu_APC + M_el*alpha_im*compartment/(M_el + b) | A_pc*a_pem*alpha_eff*compartment - T_il*b_pem*compartment*mu_eff | -M_el*T_il*compartment*nu_mel/(M_el + g) + M_el*compartment*gamma_mel",
+  "id": "Tsur2019___Predicting_response_to_pembrolizumab_in_metastatic_melanoma_by_a_new_personalization_algorithm",
+  "init": [
+    [
+      1.0,
+      1.0,
+      50.0
+    ]
+  ],
+  "init_description": "x_0: A_pc, x_1: T_il, x_2: M_el",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Tsur2019 - Predicting response to pembrolizumab in metastatic melanoma by a new personalization algorithm",
+  "source_xml": "Tsur2019.xml",
+  "state_names": [
+    "A_pc",
+    "T_il",
+    "M_el"
+  ],
+  "substituted": [
+    [
+      "-0.231*x_0 + 1161.0*x_2/(x_2 + 37040.0)",
+      "4163.159*x_0 - 0.15993*x_1",
+      "-0.1245*x_1*x_2/(x_2 + 20190000.0) + 0.003269*x_2"
+    ]
+  ]
+}

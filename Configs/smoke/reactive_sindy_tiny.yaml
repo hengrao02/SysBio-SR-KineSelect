@@ -1,0 +1,5 @@
+inherits: ../reactive_sindy/single_system.yaml
+experiment_id: sysbiosr-reactive-sindy-smoke-v1
+optimize_hyperparams: false
+alpha: 0.001
+optimizer_max_iter: 200

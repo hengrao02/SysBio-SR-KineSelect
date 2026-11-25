@@ -1,0 +1,63 @@
+{
+  "dataset_model_id": "BIOMD0000000670",
+  "dataset_model_name": "Owen1998",
+  "id": "Owen1998___tumour_growth_model",
+  "name": "Owen1998 - tumour growth model",
+  "source_xml": "Owen1998.xml",
+  "dim": 3,
+  "eq": "c_0*(c_1*x_2 + 1) - c_2*x_0 - c_3*x_0*x_2^2 + c_4*x_0*x_2*(c_5 + 1)/(c_5 + x_0 + x_1 + x_2) | x_1*(c_5 + 1)/(c_5 + x_0 + x_1 + x_2) - x_1 | -c_6*x_0*x_2^2 + c_7*x_2*(c_5 + 1)/(c_5 + x_0 + x_1 + x_2) - x_2",
+  "eq_raw": "A*l*m*(N + 1)/(N + l + m + n) + I*(S*m + 1) - K_l*l*m^2 - delta_l*l | n*(N + 1)/(N + l + m + n) - n | -K_m*l*m^2 + m*xi*(N + 1)/(N + l + m + n) - m",
+  "consts": [
+    [
+      0.01,
+      62.5,
+      0.1,
+      17.857,
+      0.025,
+      1.0,
+      25.0,
+      2.0
+    ]
+  ],
+  "init": [
+    [
+      0.0999999999999985,
+      0.899999999999988,
+      0.899999999999988
+    ]
+  ],
+  "substituted": [
+    [
+      "-17.857*x_0*x_2^2 + 0.05*x_0*x_2/(x_0 + x_1 + x_2 + 1.0) - 0.1*x_0 + 0.625*x_2 + 0.01",
+      "-x_1 + 2.0*x_1/(x_0 + x_1 + x_2 + 1.0)",
+      "-25.0*x_0*x_2^2 - x_2 + 4.0*x_2/(x_0 + x_1 + x_2 + 1.0)"
+    ]
+  ],
+  "state_names": [
+    "l",
+    "n",
+    "m"
+  ],
+  "const_names": [
+    "I",
+    "S",
+    "delta_l",
+    "K_l",
+    "A",
+    "N",
+    "K_m",
+    "xi"
+  ],
+  "init_description": "x_0: l, x_1: n, x_2: m",
+  "const_description": "c_0: I, c_1: S, c_2: delta_l, c_3: K_l, c_4: A, c_5: N, c_6: K_m, c_7: xi",
+  "meta": {
+    "n_assignment_rules": 0,
+    "n_rate_rules": 3,
+    "n_initial_assignments": 0,
+    "n_events": 0,
+    "has_piecewise": false,
+    "has_delay": false,
+    "has_time_dependency": false,
+    "warnings": []
+  }
+}

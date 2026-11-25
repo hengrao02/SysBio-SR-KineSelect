@@ -1,0 +1,78 @@
+{
+  "const_description": "c_0: Macrophage, c_1: b1, c_2: q1, c_3: p2, c_4: l2, c_5: S1, c_6: a1, c_7: n1, c_8: k1, c_9: b2, c_10: q2, c_11: S2, c_12: p1, c_13: l1, c_14: a2, c_15: n2, c_16: k2",
+  "const_names": [
+    "Macrophage",
+    "b1",
+    "q1",
+    "p2",
+    "l2",
+    "S1",
+    "a1",
+    "n1",
+    "k1",
+    "b2",
+    "q2",
+    "S2",
+    "p1",
+    "l1",
+    "a2",
+    "n2",
+    "k2"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.05,
+      5.0,
+      1.0,
+      1.0,
+      3.75,
+      5.0,
+      6.0,
+      1.0,
+      0.05,
+      5.0,
+      3.75,
+      0.5,
+      1.0,
+      5.0,
+      6.0,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000001060",
+  "dataset_model_name": "Frank2021",
+  "dim": 2,
+  "eq": "c_0*c_1 - c_0*c_2*x_0 + c_0*c_3^c_4*(c_5 + c_6*x_0^c_7/(c_8^c_7 + x_0^c_7))/(c_3^c_4 + x_1^c_4) | -c_0*c_10*x_1 + c_0*c_11*c_12^c_13/(c_12^c_13 + x_0^c_13) + c_0*c_14*x_1^c_15/(c_16^c_15 + x_1^c_15) + c_0*c_9",
+  "eq_raw": "Macrophage*b1 + Macrophage*p2^l2*(S1 + a1*x1^n1/(k1^n1 + x1^n1))/(p2^l2 + x2^l2) - Macrophage*q1*x1 | Macrophage*S2*p1^l1/(p1^l1 + x1^l1) + Macrophage*a2*x2^n2/(k2^n2 + x2^n2) + Macrophage*b2 - Macrophage*q2*x2",
+  "id": "Frank2021___Macrophage_polarization",
+  "init": [
+    [
+      1.2,
+      2.0
+    ]
+  ],
+  "init_description": "x_0: x1, x_1: x2",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 4,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Frank2021 - Macrophage polarization",
+  "source_xml": "Frank2021.xml",
+  "state_names": [
+    "x1",
+    "x2"
+  ],
+  "substituted": [
+    [
+      "-5.0*x_0 + 0.05 + 1.0*(5.0*x_0^6.0/(x_0^6.0 + 1.0) + 3.75)/(x_1^1.0 + 1.0)",
+      "-5.0*x_1 + 5.0*x_1^6.0/(x_1^6.0 + 1.0) + 0.05 + 1.875/(x_0^1.0 + 0.5)"
+    ]
+  ]
+}

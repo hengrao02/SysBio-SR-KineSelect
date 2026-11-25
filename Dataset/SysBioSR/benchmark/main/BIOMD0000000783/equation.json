@@ -1,0 +1,119 @@
+{
+  "dataset_model_id": "BIOMD0000000783",
+  "dataset_model_name": "Dong2014",
+  "id": "BIOMD0000000783",
+  "name": "Dong2014",
+  "source_xml": "Dong2014.xml",
+  "dim": 3,
+  "eq": "(1*c_8*c_0*x_0*(1 - c_1*x_0) + (-1)*c_8*x_0*x_1)/c_8 | (1*c_8*c_3*x_0*x_1 + (-1)*c_8*c_2*x_1 + 1*c_8*c_6*x_1*x_2)/c_8 | (1*c_8*c_4 + 1*c_8*c_7*x_0*x_2 + (-1)*c_8*c_5*x_2)/c_8",
+  "eq_raw": "(1*compartment*alpha*x_Tumor_Cells*(1 - beta*x_Tumor_Cells) + (-1)*compartment*x_Tumor_Cells*y_Effector_Cells)/compartment | (1*compartment*omega_1*x_Tumor_Cells*y_Effector_Cells + (-1)*compartment*delta_1*y_Effector_Cells + 1*compartment*rho*y_Effector_Cells*z_Helper_T_Cells)/compartment | (1*compartment*sigma_2 + 1*compartment*omega_2*x_Tumor_Cells*z_Helper_T_Cells + (-1)*compartment*delta_2*z_Helper_T_Cells)/compartment",
+  "consts": [
+    [
+      1.636,
+      0.002,
+      0.3743,
+      0.04,
+      0.38,
+      0.055,
+      0.01,
+      0.002,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*1.636*x_0*(1 - 0.002*x_0) + (-1)*1*x_0*x_1)/1",
+      "(1*1*0.04*x_0*x_1 + (-1)*1*0.3743*x_1 + 1*1*0.01*x_1*x_2)/1",
+      "(1*1*0.38 + 1*1*0.002*x_0*x_2 + (-1)*1*0.055*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "x_Tumor_Cells",
+    "y_Effector_Cells",
+    "z_Helper_T_Cells"
+  ],
+  "const_names": [
+    "alpha",
+    "beta",
+    "delta_1",
+    "omega_1",
+    "sigma_2",
+    "delta_2",
+    "rho",
+    "omega_2",
+    "compartment"
+  ],
+  "init_description": "x_0: x_Tumor_Cells, x_1: y_Effector_Cells, x_2: z_Helper_T_Cells",
+  "const_description": "c_0: alpha, c_1: beta, c_2: delta_1, c_3: omega_1, c_4: sigma_2, c_5: delta_2, c_6: rho, c_7: omega_2, c_8: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 8,
+    "n_reconfigured_reactions": 8,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> x_Tumor_Cells",
+      "x_Tumor_Cells -> 0",
+      "0 -> y_Effector_Cells",
+      "y_Effector_Cells -> 0",
+      "0 -> y_Effector_Cells",
+      "0 -> z_Helper_T_Cells",
+      "0 -> z_Helper_T_Cells",
+      "z_Helper_T_Cells -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> x_Tumor_Cells",
+      "x_Tumor_Cells -> 0",
+      "0 -> y_Effector_Cells",
+      "y_Effector_Cells -> 0",
+      "0 -> y_Effector_Cells",
+      "0 -> z_Helper_T_Cells",
+      "0 -> z_Helper_T_Cells",
+      "z_Helper_T_Cells -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[9]*k[1]*x[1]*(1 - k[2]*x[1]) + (-1)*k[9]*x[1]*x[2])/k[9]",
+      "(1*k[9]*k[4]*x[1]*x[2] + (-1)*k[9]*k[3]*x[2] + 1*k[9]*k[7]*x[2]*x[3])/k[9]",
+      "(1*k[9]*k[5] + 1*k[9]*k[8]*x[1]*x[3] + (-1)*k[9]*k[6]*x[3])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "x_Tumor_Cells",
+      "x_1": "y_Effector_Cells",
+      "x_2": "z_Helper_T_Cells"
+    },
+    "const_index_map": {
+      "c_0": "alpha",
+      "c_1": "beta",
+      "c_2": "delta_1",
+      "c_3": "omega_1",
+      "c_4": "sigma_2",
+      "c_5": "delta_2",
+      "c_6": "rho",
+      "c_7": "omega_2",
+      "c_8": "compartment"
+    }
+  }
+}

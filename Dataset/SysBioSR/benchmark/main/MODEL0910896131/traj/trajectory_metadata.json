@@ -1,0 +1,67 @@
+{
+  "system_id": "MODEL0910896131",
+  "state_names": [
+    "VV7",
+    "VV6"
+  ],
+  "const_names": [
+    "SRK",
+    "tu",
+    "SR",
+    "VVE",
+    "SRK2",
+    "SR2"
+  ],
+  "default_consts": [
+    5.0,
+    1.0,
+    1.0,
+    0.743224,
+    10000.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.00366525,
+        0.0101913
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.004595991891965056,
+        0.01057040244755207
+      ],
+      "relative_scale_vs_default": [
+        1.2539368097578762,
+        1.0371986348701412
+      ],
+      "absolute_offset_from_default": [
+        0.0009307418919650562,
+        0.0003791024475520693
+      ],
+      "state_scale_from_default_trajectory": [
+        0.0036652500000000005,
+        0.0101913
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3271926081,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.2539368097578762,
+        "peak_ratio_per_state": [
+          1.2539368097578762,
+          1.0371986348701412
+        ],
+        "max_peak_ratio": 1.2539368097578762
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

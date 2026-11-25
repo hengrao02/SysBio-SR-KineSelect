@@ -1,0 +1,81 @@
+{
+  "const_description": "c_0: Gpp_p__V2, c_1: compartment, c_2: Gpp_p__K2g3p, c_3: Gpp_p__Phi, c_4: Gpp_p__K2phi, c_5: Gpd_p__Vf1, c_6: Gpd_p__K1dhap, c_7: Gpd_p__K1nadh, c_8: DHAP, c_9: Gpd_p__K1g3p, c_10: Gpd_p__NAD, c_11: Gpd_p__K1nad, c_12: Gpd_p__NADH, c_13: Gpd_p__ADP, c_14: Gpd_p__K1adp, c_15: Gpd_p__ATP, c_16: Gpd_p__K1atp, c_17: Gpd_p__F16BP, c_18: Gpd_p__K1f16bp, c_19: Gpd_p__Keq1",
+  "const_names": [
+    "Gpp_p__V2",
+    "compartment",
+    "Gpp_p__K2g3p",
+    "Gpp_p__Phi",
+    "Gpp_p__K2phi",
+    "Gpd_p__Vf1",
+    "Gpd_p__K1dhap",
+    "Gpd_p__K1nadh",
+    "DHAP",
+    "Gpd_p__K1g3p",
+    "Gpd_p__NAD",
+    "Gpd_p__K1nad",
+    "Gpd_p__NADH",
+    "Gpd_p__ADP",
+    "Gpd_p__K1adp",
+    "Gpd_p__ATP",
+    "Gpd_p__K1atp",
+    "Gpd_p__F16BP",
+    "Gpd_p__K1f16bp",
+    "Gpd_p__Keq1"
+  ],
+  "consts": [
+    [
+      53.0,
+      1.0,
+      3.5,
+      1.0,
+      1.0,
+      47.0,
+      0.54,
+      0.023,
+      0.59,
+      1.2,
+      1.45,
+      0.93,
+      1.87,
+      2.17,
+      2.0,
+      2.37,
+      0.73,
+      6.01,
+      4.8,
+      10000.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000076",
+  "dataset_model_name": "Cronwright2002",
+  "dim": 1,
+  "eq": "-c_0*c_1*x_0/(c_2*(1 + x_0/c_2)*(c_3/c_4 + 1)) + c_1*c_5*(-c_10*x_0/c_19 + c_12*c_8)/(c_6*c_7*(1 + x_0/c_9 + c_8/c_6)*(c_10/c_11 + c_12/c_7 + 1)*(c_13/c_14 + c_15/c_16 + c_17/c_18 + 1))",
+  "eq_raw": "-G3P*Gpp_p__V2*compartment/(Gpp_p__K2g3p*(1 + Gpp_p__Phi/Gpp_p__K2phi)*(G3P/Gpp_p__K2g3p + 1)) + Gpd_p__Vf1*compartment*(DHAP*Gpd_p__NADH - G3P*Gpd_p__NAD/Gpd_p__Keq1)/(Gpd_p__K1dhap*Gpd_p__K1nadh*(1 + Gpd_p__NADH/Gpd_p__K1nadh + Gpd_p__NAD/Gpd_p__K1nad)*(DHAP/Gpd_p__K1dhap + G3P/Gpd_p__K1g3p + 1)*(Gpd_p__ADP/Gpd_p__K1adp + Gpd_p__ATP/Gpd_p__K1atp + Gpd_p__F16BP/Gpd_p__K1f16bp + 1))",
+  "id": "Cronwright2002_Glycerol_Synthesis",
+  "init": [
+    [
+      0.0
+    ]
+  ],
+  "init_description": "x_0: G3P",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Cronwright2002_Glycerol_Synthesis",
+  "source_xml": "Cronwright2002.xml",
+  "state_names": [
+    "G3P"
+  ],
+  "substituted": [
+    [
+      "-7.57142857142857*x_0/(0.285714285714286*x_0 + 1) + 6.85387272786312*(-0.000145*x_0 + 1.1033)/(0.833333333333333*x_0 + 2.09259259259259)"
+    ]
+  ]
+}

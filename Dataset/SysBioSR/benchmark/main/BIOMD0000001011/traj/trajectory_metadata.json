@@ -1,0 +1,72 @@
+{
+  "system_id": "BIOMD0000001011",
+  "state_names": [
+    "CAR_T_cells",
+    "Leukaemic_B_cells",
+    "B_cells_healthy"
+  ],
+  "const_names": [
+    "tao_B",
+    "rho_L",
+    "tao_C",
+    "alpha",
+    "compartment"
+  ],
+  "default_consts": [
+    60.0,
+    0.03333333333,
+    14.0,
+    4.5e-11,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        10000000.0,
+        50000000000.0,
+        25000000000.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        7131977.5167715745,
+        28504049373.06546,
+        30463784228.477585
+      ],
+      "relative_scale_vs_default": [
+        0.7131977516771575,
+        0.5700809874613092,
+        1.2185513691391034
+      ],
+      "absolute_offset_from_default": [
+        -2868022.4832284255,
+        -21495950626.93454,
+        5463784228.477585
+      ],
+      "state_scale_from_default_trajectory": [
+        16400703044.108006,
+        57398206388.64746,
+        25000000000.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1368855040,
+      "attempt_index": 2,
+      "candidate_label": "auto_attempt_2",
+      "sanity_metrics": {
+        "max_rel_diff": 0.6749303386893907,
+        "peak_ratio_per_state": [
+          0.7004804875882142,
+          0.606981644922083,
+          1.2185513691391034
+        ],
+        "max_peak_ratio": 1.2185513691391034
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

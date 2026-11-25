@@ -1,0 +1,96 @@
+{
+  "const_description": "c_0: cytosol, c_1: vin__v0, c_2: beta, c_3: vin__v1, c_4: extracellular, c_5: v5__K, c_6: v4__Kf, c_7: intravesicular, c_8: v2__Vm2, c_9: v2__K2, c_10: v3__Vm3, c_11: v3__Ka, c_12: v3__Ky, c_13: v3__Kz, c_14: v6__Vp, c_15: v8__epsilon, c_16: v7__Vd, c_17: v7__n, c_18: v7__Kp, c_19: v7__Kd",
+  "const_names": [
+    "cytosol",
+    "vin__v0",
+    "beta",
+    "vin__v1",
+    "extracellular",
+    "v5__K",
+    "v4__Kf",
+    "intravesicular",
+    "v2__Vm2",
+    "v2__K2",
+    "v3__Vm3",
+    "v3__Ka",
+    "v3__Ky",
+    "v3__Kz",
+    "v6__Vp",
+    "v8__epsilon",
+    "v7__Vd",
+    "v7__n",
+    "v7__Kp",
+    "v7__Kd"
+  ],
+  "consts": [
+    [
+      1.0,
+      2.0,
+      0.5,
+      1.0,
+      1.0,
+      10.0,
+      1.0,
+      1.0,
+      6.5,
+      0.1,
+      19.5,
+      0.2,
+      0.2,
+      0.3,
+      2.5,
+      0.1,
+      80.0,
+      4.0,
+      1.0,
+      0.4
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000044",
+  "dataset_model_name": "Borghans1997",
+  "dim": 4,
+  "eq": "-c_0*(c_1 + c_2*c_3) + c_4*c_5*x_1 | c_0*c_10*x_1^4*x_2^4*x_3^2/((c_11^4 + x_2^4)*(c_12^2 + x_3^2)*(c_13^4 + x_1^4)) + c_0*c_6*x_3 + c_0*(c_1 + c_2*c_3) - c_4*c_5*x_1 - c_7*c_8*x_1^2/(c_9^2 + x_1^2) | c_0*c_14*c_2 - c_0*c_15*x_2 - c_0*c_16*x_1^c_17*x_2^2/((c_18^2 + x_2^2)*(c_19^c_17 + x_1^c_17)) | -c_0*c_10*x_1^4*x_2^4*x_3^2/((c_11^4 + x_2^4)*(c_12^2 + x_3^2)*(c_13^4 + x_1^4)) - c_0*c_6*x_3 + c_7*c_8*x_1^2/(c_9^2 + x_1^2)",
+  "eq_raw": "Z*extracellular*v5__K - cytosol*(beta*vin__v1 + vin__v0) | A^4*Y^2*Z^4*cytosol*v3__Vm3/((A^4 + v3__Ka^4)*(Y^2 + v3__Ky^2)*(Z^4 + v3__Kz^4)) + Y*cytosol*v4__Kf - Z^2*intravesicular*v2__Vm2/(Z^2 + v2__K2^2) - Z*extracellular*v5__K + cytosol*(beta*vin__v1 + vin__v0) | -A^2*Z^v7__n*cytosol*v7__Vd/((A^2 + v7__Kp^2)*(Z^v7__n + v7__Kd^v7__n)) - A*cytosol*v8__epsilon + beta*cytosol*v6__Vp | -A^4*Y^2*Z^4*cytosol*v3__Vm3/((A^4 + v3__Ka^4)*(Y^2 + v3__Ky^2)*(Z^4 + v3__Kz^4)) - Y*cytosol*v4__Kf + Z^2*intravesicular*v2__Vm2/(Z^2 + v2__K2^2)",
+  "id": "Goldbeter_Calcium_Oscillation_based_on_CICR_AND_CA_Activated_degradation_of_IP3",
+  "init": [
+    [
+      1000.0,
+      0.0,
+      0.45,
+      0.36
+    ],
+    [
+      997.6579587258084,
+      0.15843183231508143,
+      1.4181784390399121,
+      2.5436094418787567
+    ]
+  ],
+  "init_description": "x_0: EC, x_1: Z, x_2: A, x_3: Y",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Borghans1997 - Calcium Oscillation - Model 2",
+  "source_xml": "Borghans1997.xml",
+  "state_names": [
+    "EC",
+    "Z",
+    "A",
+    "Y"
+  ],
+  "substituted": [
+    [
+      "10.0*x_1 - 2.5",
+      "19.5*x_1^4*x_2^4*x_3^2/((x_1^4 + 0.0081)*(x_2^4 + 0.0016)*(x_3^2 + 0.04)) - 6.5*x_1^2/(x_1^2 + 0.01) - 10.0*x_1 + 1.0*x_3 + 2.5",
+      "-80.0*x_1^4.0*x_2^2/((x_1^4.0 + 0.0256)*(x_2^2 + 1.0)) - 0.1*x_2 + 1.25",
+      "-19.5*x_1^4*x_2^4*x_3^2/((x_1^4 + 0.0081)*(x_2^4 + 0.0016)*(x_3^2 + 0.04)) + 6.5*x_1^2/(x_1^2 + 0.01) - 1.0*x_3"
+    ]
+  ]
+}

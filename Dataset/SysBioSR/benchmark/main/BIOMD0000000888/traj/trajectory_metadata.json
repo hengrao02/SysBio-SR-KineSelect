@@ -1,0 +1,113 @@
+{
+  "system_id": "BIOMD0000000888",
+  "state_names": [
+    "T",
+    "N",
+    "D",
+    "L"
+  ],
+  "const_names": [
+    "a",
+    "b",
+    "c_1",
+    "c_2",
+    "d_1",
+    "d_2",
+    "d_3",
+    "e",
+    "f_1",
+    "f_2",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "s_1",
+    "s_2",
+    "u",
+    "r_1",
+    "g_1",
+    "h_1",
+    "compartment"
+  ],
+  "default_consts": [
+    0.431,
+    2.17e-08,
+    3.5e-06,
+    1e-07,
+    1e-06,
+    4e-06,
+    0.0001,
+    0.0412,
+    1e-08,
+    0.01,
+    0.024,
+    3.42e-10,
+    0.02,
+    1e-07,
+    1e-07,
+    13000.0,
+    480.0,
+    1.8e-08,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        100.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        138.71817319414004,
+        1.2452818563599202,
+        1.29122064451313,
+        0.7414306778023044
+      ],
+      "relative_scale_vs_default": [
+        1.3871817319414004,
+        1.2452818563599202,
+        1.29122064451313,
+        0.7414306778023044
+      ],
+      "absolute_offset_from_default": [
+        38.718173194140036,
+        0.24528185635992017,
+        0.29122064451313,
+        -0.2585693221976956
+      ],
+      "state_scale_from_default_trajectory": [
+        1090.3955685930302,
+        307448.0638643373,
+        2083.1856783344488,
+        3336.3905372210124
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1563869365,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.3878306154260746,
+        "peak_ratio_per_state": [
+          1.3878306154260747,
+          0.9999596514172447,
+          1.0754516137792274,
+          1.2271622697245246
+        ],
+        "max_peak_ratio": 1.3878306154260747
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

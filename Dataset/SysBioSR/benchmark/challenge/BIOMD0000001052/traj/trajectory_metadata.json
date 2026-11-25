@@ -1,0 +1,94 @@
+{
+  "system_id": "BIOMD0000001052",
+  "state_names": [
+    "I",
+    "N",
+    "T"
+  ],
+  "const_names": [
+    "Tissue",
+    "sigma",
+    "delta",
+    "mu",
+    "mu1",
+    "rho",
+    "m",
+    "rho1",
+    "m1",
+    "r",
+    "gamma",
+    "beta1",
+    "alpha1",
+    "beta2",
+    "alpha3",
+    "alpha2"
+  ],
+  "default_consts": [
+    1.0,
+    0.7,
+    0.57,
+    0.813,
+    0.3634,
+    0.271,
+    0.813,
+    0.7829,
+    0.862,
+    0.4312,
+    0.9314,
+    2.99e-06,
+    0.4426,
+    1.189,
+    0.1469,
+    0.4
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.999999999999994,
+        0.999999999999993,
+        1.22
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1.4490280790584202,
+        1.0030599740455952,
+        1.0136379041061048
+      ],
+      "relative_scale_vs_default": [
+        1.449028079058429,
+        1.0030599740456023,
+        0.8308507410705777
+      ],
+      "absolute_offset_from_default": [
+        0.44902807905842623,
+        0.0030599740456022095,
+        -0.2063620958938952
+      ],
+      "state_scale_from_default_trajectory": [
+        1.091721696032329,
+        0.999999999999993,
+        2.3194698177631543
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1658605513,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.4113026980139169,
+        "peak_ratio_per_state": [
+          1.3272870588948251,
+          1.0030599740456023,
+          0.8890670287577218
+        ],
+        "max_peak_ratio": 1.3272870588948251
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

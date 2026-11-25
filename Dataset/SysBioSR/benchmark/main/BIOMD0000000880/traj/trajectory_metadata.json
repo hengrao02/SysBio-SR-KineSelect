@@ -1,0 +1,99 @@
+{
+  "system_id": "BIOMD0000000880",
+  "state_names": [
+    "T_Tumor_Cells",
+    "L_CD8_T_Cells",
+    "D_Dendritic_Cells",
+    "H_CD4_T_Cells"
+  ],
+  "const_names": [
+    "a_1",
+    "a_2",
+    "a_3",
+    "b_1__1",
+    "b_2__1",
+    "b_3__1",
+    "e",
+    "alpha_1",
+    "alpha_2",
+    "beta_1",
+    "beta_2",
+    "beta_3",
+    "u_1",
+    "u_2",
+    "compartment"
+  ],
+  "default_consts": [
+    0.431,
+    0.234,
+    0.017,
+    1.02e-09,
+    1.25e-05,
+    0.0005,
+    1.04e-08,
+    4.2e-08,
+    8e-10,
+    2e-05,
+    2e-05,
+    2e-05,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1000000.0,
+        10.0,
+        10.0,
+        5.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1192324.2367895297,
+        7.987696694973353,
+        11.865530803119428,
+        3.192605510705148
+      ],
+      "relative_scale_vs_default": [
+        1.1923242367895297,
+        0.7987696694973353,
+        1.1865530803119428,
+        0.6385211021410295
+      ],
+      "absolute_offset_from_default": [
+        192324.23678952968,
+        -2.012303305026647,
+        1.8655308031194284,
+        -1.8073944892948521
+      ],
+      "state_scale_from_default_trajectory": [
+        980392110.4433638,
+        17093.5189796833,
+        79598.59543020975,
+        14.774096204457699
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2591368488,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.38932511579032053,
+        "peak_ratio_per_state": [
+          0.9999999951996369,
+          0.9993765418844809,
+          0.9999722526478403,
+          0.6318365194176304
+        ],
+        "max_peak_ratio": 0.9999999951996369
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

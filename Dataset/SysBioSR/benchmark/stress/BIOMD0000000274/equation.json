@@ -1,0 +1,113 @@
+{
+  "dataset_model_id": "BIOMD0000000274",
+  "dataset_model_name": "Rattanakul2003",
+  "id": "BIOMD0000000274",
+  "name": "Rattanakul2003",
+  "source_xml": "Rattanakul2003.xml",
+  "dim": 3,
+  "eq": "c_2/(c_10 + x_1) - c_7*x_0 | c_0*((c_3 + c_4*x_0)*x_1*x_2/(c_11 + x_0^2) - c_8*x_1) | c_0*c_1*(c_5*x_0 - (c_9*x_2 + c_6*x_0*x_2/(c_12 + x_0)))",
+  "eq_raw": "a1/(k1 + y) - b1*x | epsilon*((a2 + a3*x)*y*z/(k2 + x^2) - b2*y) | epsilon*delta*(a4*x - (b3*z + a5*x*z/(k3 + x)))",
+  "consts": [
+    [
+      0.1,
+      0.9,
+      0.05,
+      0.009,
+      0.675,
+      0.01,
+      0.005,
+      0.1,
+      0.3,
+      0.01,
+      0.1,
+      0.5,
+      0.025
+    ]
+  ],
+  "init": [
+    [
+      2.0,
+      1.0,
+      0.15
+    ]
+  ],
+  "substituted": [
+    [
+      "0.05/(0.1 + x_1) - 0.1*x_0",
+      "0.1*((0.009 + 0.675*x_0)*x_1*x_2/(0.5 + x_0^2) - 0.3*x_1)",
+      "0.1*0.9*(0.01*x_0 - (0.01*x_2 + 0.005*x_0*x_2/(0.025 + x_0)))"
+    ]
+  ],
+  "state_names": [
+    "x",
+    "y",
+    "z"
+  ],
+  "const_names": [
+    "epsilon",
+    "delta",
+    "a1",
+    "a2",
+    "a3",
+    "a4",
+    "a5",
+    "b1",
+    "b2",
+    "b3",
+    "k1",
+    "k2",
+    "k3"
+  ],
+  "init_description": "x_0: x, x_1: y, x_2: z",
+  "const_description": "c_0: epsilon, c_1: delta, c_2: a1, c_3: a2, c_4: a3, c_5: a4, c_6: a5, c_7: b1, c_8: b2, c_9: b3, c_10: k1, c_11: k2, c_12: k3",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 0,
+    "n_reconfigured_reactions": 0,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [],
+    "reconfigured_reaction_network": [],
+    "maple_odes": [
+      "k[3]/(k[11] + x[2]) - k[8]*x[1]",
+      "k[1]*((k[4] + k[5]*x[1])*x[2]*x[3]/(k[12] + x[1]^2) - k[9]*x[2])",
+      "k[1]*k[2]*(k[6]*x[1] - (k[10]*x[3] + k[7]*x[1]*x[3]/(k[13] + x[1])))"
+    ],
+    "species_index_map": {
+      "x_0": "x",
+      "x_1": "y",
+      "x_2": "z"
+    },
+    "const_index_map": {
+      "c_0": "epsilon",
+      "c_1": "delta",
+      "c_2": "a1",
+      "c_3": "a2",
+      "c_4": "a3",
+      "c_5": "a4",
+      "c_6": "a5",
+      "c_7": "b1",
+      "c_8": "b2",
+      "c_9": "b3",
+      "c_10": "k1",
+      "c_11": "k2",
+      "c_12": "k3"
+    }
+  }
+}

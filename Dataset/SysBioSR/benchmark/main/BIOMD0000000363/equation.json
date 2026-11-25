@@ -1,0 +1,60 @@
+{
+  "const_description": "c_0: compartment, c_1: r1__k1, c_2: r3__k1, c_3: r2__k1, c_4: r4__k1",
+  "const_names": [
+    "compartment",
+    "r1__k1",
+    "r3__k1",
+    "r2__k1",
+    "r4__k1"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.005,
+      1e-05,
+      0.01,
+      2.5e-05
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000363",
+  "dataset_model_name": "Lee2010",
+  "dim": 4,
+  "eq": "-c_0*c_1*x_0 - c_0*c_2*x_0 | c_0*c_1*x_0 - c_0*c_3*x_1 | c_0*c_3*x_1 + c_0*c_4*x_3 | c_0*c_2*x_0 - c_0*c_4*x_3",
+  "eq_raw": "-II*compartment*r1__k1 - II*compartment*r3__k1 | II*compartment*r1__k1 - M*compartment*r2__k1 | M*compartment*r2__k1 + P2*compartment*r4__k1 | II*compartment*r3__k1 - P2*compartment*r4__k1",
+  "id": "Model_1",
+  "init": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: II, x_1: M, x_2: IIa, x_3: P2",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Lee2010_ThrombinActivation_OneForm_minimal",
+  "source_xml": "Lee2010.xml",
+  "state_names": [
+    "II",
+    "M",
+    "IIa",
+    "P2"
+  ],
+  "substituted": [
+    [
+      "-0.00501*x_0",
+      "0.005*x_0 - 0.01*x_1",
+      "0.01*x_1 + 2.5e-5*x_3",
+      "1.0e-5*x_0 - 2.5e-5*x_3"
+    ]
+  ]
+}

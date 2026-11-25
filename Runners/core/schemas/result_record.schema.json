@@ -1,0 +1,849 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sysbiosr.runtime.result_record.v2",
+  "title": "SysBioSR formal result record",
+  "description": "Format for one registered-method summary.json result. Records include scientific settings, the evaluated model, numerical metrics and completion status.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "status",
+    "failure_reason",
+    "error",
+    "method",
+    "system",
+    "original_equation",
+    "generated_equation",
+    "fit_config",
+    "artifacts",
+    "metrics",
+    "trajectory_evaluation",
+    "reaction_evaluation",
+    "run_config",
+    "complete"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "timeout",
+        "skipped",
+        "invalid"
+      ]
+    },
+    "failure_reason": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/failureReason"
+        }
+      ]
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "kineselectsr",
+        "reactive_sindy",
+        "sisr",
+        "sindy",
+        "pysr",
+        "sindy_pi",
+        "odeformer",
+        "ffx"
+      ]
+    },
+    "system": {
+      "$ref": "#/$defs/system"
+    },
+    "original_equation": {
+      "$ref": "#/$defs/originalEquation"
+    },
+    "generated_equation": {
+      "$ref": "#/$defs/generatedEquation"
+    },
+    "fit_config": {
+      "$ref": "#/$defs/fitConfig"
+    },
+    "artifacts": {
+      "$ref": "#/$defs/artifacts"
+    },
+    "metrics": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/trajectoryMetrics"
+        }
+      ]
+    },
+    "trajectory_evaluation": {
+      "$ref": "#/$defs/trajectoryEvaluation"
+    },
+    "reaction_evaluation": {
+      "$ref": "#/$defs/reactionEvaluation"
+    },
+    "run_config": {
+      "type": "object"
+    },
+    "record_kind": {
+      "type": "string"
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "success"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "failure_reason": {
+            "type": "null"
+          },
+          "error": {
+            "type": "null"
+          },
+          "generated_equation": {
+            "properties": {
+              "best": {
+                "type": "string",
+                "minLength": 1
+              },
+              "best_substituted": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "metrics": {
+            "$ref": "#/$defs/includedTrajectoryMetrics"
+          },
+          "trajectory_evaluation": {
+            "properties": {
+              "included_in_aggregation": {
+                "const": true
+              },
+              "exclusion_reason": {
+                "type": "null"
+              }
+            }
+          },
+          "artifacts": {
+            "properties": {
+              "generated_trajectory_csv": {
+                "$ref": "#/$defs/relativeArtifactPath"
+              },
+              "overlay_plot": {
+                "$ref": "#/$defs/relativeArtifactPath"
+              }
+            },
+            "not": {
+              "required": [
+                "failure"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "failed",
+              "timeout",
+              "skipped",
+              "invalid"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "failure_reason": {
+            "$ref": "#/$defs/failureReason"
+          },
+          "trajectory_evaluation": {
+            "properties": {
+              "included_in_aggregation": {
+                "const": false
+              },
+              "exclusion_reason": {
+                "$ref": "#/$defs/failureReason"
+              }
+            }
+          },
+          "artifacts": {
+            "required": [
+              "failure"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "failureReason": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"
+    },
+    "relativeArtifactPath": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?![A-Za-z]:[\\\\/])(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+    },
+    "nullableArtifactPath": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/relativeArtifactPath"
+        }
+      ]
+    },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "system": {
+      "type": "object",
+      "required": [
+        "system_id",
+        "state_names",
+        "const_names",
+        "trajectory_name"
+      ],
+      "properties": {
+        "system_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_names": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "const_names": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "trajectory_name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "originalEquation": {
+      "type": "object",
+      "required": [
+        "eq",
+        "eq_raw",
+        "substituted",
+        "state_names",
+        "const_names"
+      ],
+      "properties": {
+        "eq": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "eq_raw": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "substituted": {
+          "type": [
+            "array",
+            "null"
+          ]
+        },
+        "state_names": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/stringArray"
+            }
+          ]
+        },
+        "const_names": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/stringArray"
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "generatedEquation": {
+      "type": "object",
+      "required": [
+        "best",
+        "best_substituted"
+      ],
+      "properties": {
+        "best": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "best_substituted": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "fitConfig": {
+      "type": "object",
+      "required": [
+        "run_type",
+        "trajectory_name",
+        "dataset_version",
+        "benchmark_partition",
+        "experiment_id",
+        "run_seed"
+      ],
+      "properties": {
+        "run_type": {
+          "const": "single"
+        },
+        "trajectory_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "benchmark_partition": {
+          "type": "string",
+          "enum": [
+            "main",
+            "challenge",
+            "stress"
+          ]
+        },
+        "experiment_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_seed": {
+          "type": "integer"
+        },
+        "reaction_metrics": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "verify_data_integrity": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "generated_trajectory_csv",
+        "overlay_plot",
+        "environment",
+        "resolved_config"
+      ],
+      "properties": {
+        "generated_trajectory_csv": {
+          "$ref": "#/$defs/nullableArtifactPath"
+        },
+        "overlay_plot": {
+          "$ref": "#/$defs/nullableArtifactPath"
+        },
+        "environment": {
+          "$ref": "#/$defs/relativeArtifactPath"
+        },
+        "resolved_config": {
+          "$ref": "#/$defs/relativeArtifactPath"
+        },
+        "failure": {
+          "$ref": "#/$defs/relativeArtifactPath"
+        }
+      },
+      "additionalProperties": true
+    },
+    "metricLink": {
+      "type": "object",
+      "required": [
+        "metric_version",
+        "included_in_aggregation",
+        "exclusion_reason"
+      ],
+      "properties": {
+        "metric_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "included_in_aggregation": {
+          "type": "boolean"
+        },
+        "exclusion_reason": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/failureReason"
+            }
+          ]
+        }
+      }
+    },
+    "trajectoryMetrics": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/metricLink"
+        },
+        {
+          "type": "object",
+          "required": [
+            "overall",
+            "per_state"
+          ],
+          "properties": {
+            "overall": {
+              "type": "object",
+              "required": [
+                "rmse_mean",
+                "nrmse_mean",
+                "nmse_mean",
+                "r2_mean",
+                "max_abs_err_max"
+              ],
+              "properties": {
+                "rmse_mean": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "nrmse_mean": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "nmse_mean": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "r2_mean": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "max_abs_err_max": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            },
+            "per_state": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "rmse",
+                  "nrmse",
+                  "nmse",
+                  "r2",
+                  "max_abs_err",
+                  "final_abs_err"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "rmse": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "nrmse": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "nmse": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "r2": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "max_abs_err": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "final_abs_err": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "included_in_aggregation": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "included_in_aggregation"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "exclusion_reason": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "exclusion_reason": {
+                    "$ref": "#/$defs/failureReason"
+                  }
+                }
+              }
+            }
+          ],
+          "additionalProperties": true
+        }
+      ]
+    },
+    "includedTrajectoryMetrics": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/trajectoryMetrics"
+        },
+        {
+          "properties": {
+            "included_in_aggregation": {
+              "const": true
+            },
+            "exclusion_reason": {
+              "type": "null"
+            }
+          }
+        }
+      ]
+    },
+    "trajectoryEvaluation": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/metricLink"
+        },
+        {
+          "type": "object",
+          "required": [
+            "protocol",
+            "initial_condition_source",
+            "metadata_initial_condition_present",
+            "metadata_initial_condition_bitwise_match",
+            "metadata_initial_condition_max_abs_diff"
+          ],
+          "properties": {
+            "protocol": {
+              "type": "string",
+              "minLength": 1
+            },
+            "initial_condition_source": {
+              "const": "trajectory_first_observation"
+            },
+            "metadata_initial_condition_present": {
+              "type": "boolean"
+            },
+            "metadata_initial_condition_bitwise_match": {
+              "type": "boolean"
+            },
+            "metadata_initial_condition_max_abs_diff": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0.0
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "included_in_aggregation": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "included_in_aggregation"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "exclusion_reason": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "exclusion_reason": {
+                    "$ref": "#/$defs/failureReason"
+                  }
+                }
+              }
+            }
+          ],
+          "additionalProperties": true
+        }
+      ]
+    },
+    "reactionEvaluation": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/metricLink"
+        },
+        {
+          "type": "object",
+          "required": [
+            "enabled"
+          ],
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "success",
+                "empty_prediction",
+                "invalid"
+              ]
+            },
+            "prediction_source": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "prediction_extraction_error": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "prediction_extraction_metadata": {
+              "type": "object"
+            },
+            "options": {
+              "type": "object"
+            },
+            "scores": {
+              "type": "object"
+            },
+            "modifier_diagnostics": {
+              "type": "object"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "enabled": {
+                    "const": false
+                  }
+                },
+                "required": [
+                  "enabled"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "included_in_aggregation": {
+                    "const": false
+                  },
+                  "exclusion_reason": {
+                    "$ref": "#/$defs/failureReason"
+                  }
+                },
+                "not": {
+                  "required": [
+                    "status"
+                  ]
+                }
+              },
+              "else": {
+                "required": [
+                  "status"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "included_in_aggregation": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "included_in_aggregation"
+                ]
+              },
+              "then": {
+                "required": [
+                  "status",
+                  "prediction_source",
+                  "prediction_extraction_error",
+                  "prediction_extraction_metadata",
+                  "options",
+                  "scores",
+                  "modifier_diagnostics"
+                ],
+                "properties": {
+                  "enabled": {
+                    "const": true
+                  },
+                  "status": {
+                    "enum": [
+                      "success",
+                      "empty_prediction"
+                    ]
+                  },
+                  "exclusion_reason": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "exclusion_reason": {
+                    "$ref": "#/$defs/failureReason"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "invalid"
+                  }
+                },
+                "required": [
+                  "status"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "included_in_aggregation": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          ],
+          "additionalProperties": true
+        }
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,73 @@
+{
+  "const_description": "c_0: lambda, c_1: d, c_2: beta, c_3: gamma, c_4: phi, c_5: a0, c_6: eta, c_7: a1, c_8: k, c_9: u",
+  "const_names": [
+    "lambda",
+    "d",
+    "beta",
+    "gamma",
+    "phi",
+    "a0",
+    "eta",
+    "a1",
+    "k",
+    "u"
+  ],
+  "consts": [
+    [
+      10.0,
+      0.1,
+      0.1,
+      0.5,
+      0.1,
+      0.1,
+      0.01,
+      0.2,
+      1.0,
+      1.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000686",
+  "dataset_model_name": "Wodarz2007",
+  "dim": 5,
+  "eq": "c_0 - c_1*x_0 - c_2*x_0*x_4 - c_3*x_0*x_4 | c_2*x_0*x_4 + c_4*x_3 - c_5*x_1 - c_6*x_1 | c_6*x_1 - c_7*x_2 | -c_1*x_3 + c_3*x_0*x_4 - c_4*x_3 | c_8*x_2 - c_9*x_4",
+  "eq_raw": "-beta*v*x - d*x - gamma*v*x + lambda | L*phi - a0*y0 + beta*v*x - eta*y0 | -a1*y1 + eta*y0 | -L*d - L*phi + gamma*v*x | k*y1 - u*v",
+  "id": "Wodarz2007_CTL_inflation_Model_A",
+  "init": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: x, x_1: y0, x_2: y1, x_3: L, x_4: v",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 5,
+    "warnings": []
+  },
+  "name": "Wodarz2007 - Basic Model of Cytomegalovirus Infection",
+  "source_xml": "Wodarz2007.xml",
+  "state_names": [
+    "x",
+    "y0",
+    "y1",
+    "L",
+    "v"
+  ],
+  "substituted": [
+    [
+      "-0.6*x_0*x_4 - 0.1*x_0 + 10.0",
+      "0.1*x_0*x_4 - 0.11*x_1 + 0.1*x_3",
+      "0.01*x_1 - 0.2*x_2",
+      "0.5*x_0*x_4 - 0.2*x_3",
+      "1.0*x_2 - 1.0*x_4"
+    ]
+  ]
+}

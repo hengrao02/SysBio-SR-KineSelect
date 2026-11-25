@@ -1,0 +1,68 @@
+{
+  "const_description": "c_0: compartment, c_1: k_clear_u, c_2: P, c_3: R_Cap, c_4: xi, c_5: R_K_grogh, c_6: K_D, c_7: V, c_8: epsilon, c_9: ModelValue_1, c_10: ModelValue_2, c_11: k_e",
+  "const_names": [
+    "compartment",
+    "k_clear_u",
+    "P",
+    "R_Cap",
+    "xi",
+    "R_K_grogh",
+    "K_D",
+    "V",
+    "epsilon",
+    "ModelValue_1",
+    "ModelValue_2",
+    "k_e"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.02,
+      5e-06,
+      8.0,
+      0.082,
+      75.0,
+      4e-08,
+      3.58,
+      0.25,
+      150.0,
+      0.25,
+      0.002
+    ]
+  ],
+  "dataset_model_id": "MODEL1909050002",
+  "dataset_model_name": "Ribba2018",
+  "dim": 2,
+  "eq": "-c_0*c_1*x_0 + 2*c_0*c_2*c_3*c_4*(c_6*c_7*x_1/(c_8*(c_6 + c_9/c_10)) - x_0)/c_5^2 | 2*c_0*c_2*c_3*c_4*(-c_6*x_1/(c_8*(c_6 + c_9/c_10)) + x_0/c_7)/c_5^2 - c_0*c_11*c_9*x_1/(c_10*(c_6 + c_9/c_10))",
+  "eq_raw": "-A_1_b*compartment*k_clear_u + 2*P*R_Cap*compartment*xi*(-A_1_b + C_4_T*K_D*V/(epsilon*(K_D + ModelValue_1/ModelValue_2)))/R_K_grogh^2 | -C_4_T*ModelValue_1*compartment*k_e/(ModelValue_2*(K_D + ModelValue_1/ModelValue_2)) + 2*P*R_Cap*compartment*xi*(A_1_b/V - C_4_T*K_D/(epsilon*(K_D + ModelValue_1/ModelValue_2)))/R_K_grogh^2",
+  "id": "Ribba2018___Mathematical_Model_of_Tumor_Uptake_for_Immunocytokine_Based_Cancer_Immunotherapy",
+  "init": [
+    [
+      8.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: A_1_b, x_1: C_4_T",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 2,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Ribba2018 - Mathematical Model of Tumor Uptake for Immunocytokine-Based Cancer Immunotherapy",
+  "source_xml": "Ribba2018.xml",
+  "state_names": [
+    "A_1_b",
+    "C_4_T"
+  ],
+  "substituted": [
+    [
+      "-0.0200000011662222*x_0 + 1.11335348140726e-18*x_1",
+      "3.25760397268777e-10*x_0 - 0.00199999999986667*x_1"
+    ]
+  ]
+}

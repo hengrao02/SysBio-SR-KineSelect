@@ -1,0 +1,63 @@
+{
+  "const_description": "c_0: USA, c_1: omega, c_2: R_fixed, c_3: gamma, c_4: sigma",
+  "const_names": [
+    "USA",
+    "omega",
+    "R_fixed",
+    "gamma",
+    "sigma"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.01667,
+      3.0,
+      0.05556,
+      0.19231
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000979",
+  "dataset_model_name": "Malkov2020",
+  "dim": 5,
+  "eq": "c_0*c_1*x_3 - c_0*c_2*c_3*x_0*x_2/x_4 | c_0*c_2*c_3*x_0*x_2/x_4 - c_0*c_4*x_1 | -c_0*c_3*x_2 + c_0*c_4*x_1 | -c_0*c_1*x_3 + c_0*c_3*x_2 | 0",
+  "eq_raw": "-Infected*R_fixed*Susceptible*USA*gamma/Total_population + Recovered*USA*omega | -Exposed*USA*sigma + Infected*R_fixed*Susceptible*USA*gamma/Total_population | Exposed*USA*sigma - Infected*USA*gamma | Infected*USA*gamma - Recovered*USA*omega | 0",
+  "id": "Malkov2020___SEIRS_model_of_COVID_19_transmission_with_reinfection",
+  "init": [
+    [
+      315283090.04,
+      14439817.0,
+      330052.96,
+      0.0,
+      330052960.0
+    ]
+  ],
+  "init_description": "x_0: Susceptible, x_1: Exposed, x_2: Infected, x_3: Recovered, x_4: Total_population",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 2,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Malkov2020 - SEIRS model of COVID-19 transmission with reinfection",
+  "source_xml": "Malkov2020.xml",
+  "state_names": [
+    "Susceptible",
+    "Exposed",
+    "Infected",
+    "Recovered",
+    "Total_population"
+  ],
+  "substituted": [
+    [
+      "-0.16668*x_0*x_2/x_4 + 0.01667*x_3",
+      "0.16668*x_0*x_2/x_4 - 0.19231*x_1",
+      "0.19231*x_1 - 0.05556*x_2",
+      "0.05556*x_2 - 0.01667*x_3",
+      "0"
+    ]
+  ]
+}

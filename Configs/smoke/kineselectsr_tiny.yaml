@@ -1,0 +1,24 @@
+# Deterministic CPU smoke profile. This is not the paper search budget.
+inherits:
+  - ../kineselectsr/formal/method_fpms.yaml
+
+experiment_id: sysbiosr-kineselectsr-smoke-v1
+
+run_type: single
+results_root: ../../Results
+system_dir: ../../Dataset/SysBioSR/benchmark/main/BIOMD0000000417
+benchmark_definition: ../../Dataset/SysBioSR/benchmark/benchmark.yaml
+benchmark_partition: main
+dataset_version: sysbiosr-1.0.0-rc.2
+trajectory_name: default
+eval_trajectory_names: [perturbed]
+
+population_size: 4
+num_generations: 0
+min_reactions: 1
+max_reactions: 1
+tournament_size: 1
+rollout_per_island: 4
+rollout_timeout: 5.0
+random_seed: 7
+verbose: false

@@ -1,0 +1,96 @@
+{
+  "const_description": "c_0: Dex, c_1: kms, c_2: n, c_3: J, c_4: kmd, c_5: system, c_6: chk2c, c_7: kcp2d, c_8: kicd, c_9: kp2, c_10: Jp, c_11: kica, c_12: kcps, c_13: chk2, c_14: kcpd, c_15: kp1, c_16: ka, c_17: kd",
+  "const_names": [
+    "Dex",
+    "kms",
+    "n",
+    "J",
+    "kmd",
+    "system",
+    "chk2c",
+    "kcp2d",
+    "kicd",
+    "kp2",
+    "Jp",
+    "kica",
+    "kcps",
+    "chk2",
+    "kcpd",
+    "kp1",
+    "ka",
+    "kd"
+  ],
+  "consts": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      0.3,
+      0.1,
+      1.0,
+      0.0,
+      0.0525,
+      0.01,
+      0.1,
+      0.05,
+      20.0,
+      0.5,
+      0.0,
+      0.525,
+      10.0,
+      100.0,
+      0.01
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000216",
+  "dataset_model_name": "Hong2009",
+  "dim": 5,
+  "eq": "c_0 + c_1*x_1^c_2/(c_3^c_2 + x_1^c_2) - c_4*c_5*x_0 | -c_11*c_5*x_1*x_3 + c_5*c_6*x_4 + c_5*c_7*x_4 + c_5*c_8*x_4 + c_9*x_4/(c_10 + x_2 + 2*x_3 + 2*x_4) | c_12*c_5*x_0 - c_13*c_5*x_2 - c_14*c_5*x_2 - c_15*x_2/(c_10 + x_2 + 2*x_3 + 2*x_4) - 2*c_16*c_5*x_2^2 + 2*c_17*c_5*x_3 | -c_11*c_5*x_1*x_3 - c_13*c_5*x_3 + c_16*c_5*x_2^2 - c_17*c_5*x_3 - c_5*c_7*x_3 + c_5*c_8*x_4 - c_9*x_3/(c_10 + x_2 + 2*x_3 + 2*x_4) | c_11*c_5*x_1*x_3 - c_5*c_6*x_4 - c_5*c_7*x_4 - c_5*c_8*x_4 - c_9*x_4/(c_10 + x_2 + 2*x_3 + 2*x_4)",
+  "eq_raw": "Dex - M*kmd*system + TF^n*kms/(J^n + TF^n) | -CP2*TF*kica*system + IC*chk2c*system + IC*kcp2d*system + IC*kicd*system + IC*kp2/(CP + 2*CP2 + 2*IC + Jp) | -2*CP^2*ka*system - CP*chk2*system - CP*kcpd*system - CP*kp1/(CP + 2*CP2 + 2*IC + Jp) + 2*CP2*kd*system + M*kcps*system | CP^2*ka*system - CP2*TF*kica*system - CP2*chk2*system - CP2*kcp2d*system - CP2*kd*system - CP2*kp2/(CP + 2*CP2 + 2*IC + Jp) + IC*kicd*system | CP2*TF*kica*system - IC*chk2c*system - IC*kcp2d*system - IC*kicd*system - IC*kp2/(CP + 2*CP2 + 2*IC + Jp)",
+  "id": "Hong2009_CircadianClock",
+  "init": [
+    [
+      1.4,
+      0.13,
+      0.037,
+      0.046,
+      0.37
+    ],
+    [
+      0.7547512909985574,
+      0.010339238907460482,
+      0.030377159950350698,
+      0.2924750544076919,
+      0.48966076109254064
+    ]
+  ],
+  "init_description": "x_0: M, x_1: TF, x_2: CP, x_3: CP2, x_4: IC",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Hong2009_CircadianClock",
+  "source_xml": "Hong2009.xml",
+  "state_names": [
+    "M",
+    "TF",
+    "CP",
+    "CP2",
+    "IC"
+  ],
+  "substituted": [
+    [
+      "-0.1*x_0 + 1.0*x_1^2.0/(x_1^2.0 + 0.09)",
+      "-20.0*x_1*x_3 + 0.0625*x_4 + 0.1*x_4/(x_2 + 2*x_3 + 2*x_4 + 0.05)",
+      "0.5*x_0 - 200.0*x_2^2 - 0.525*x_2 - 10.0*x_2/(x_2 + 2*x_3 + 2*x_4 + 0.05) + 0.02*x_3",
+      "-20.0*x_1*x_3 + 100.0*x_2^2 - 0.0625*x_3 - 0.1*x_3/(x_2 + 2*x_3 + 2*x_4 + 0.05) + 0.01*x_4",
+      "20.0*x_1*x_3 - 0.0625*x_4 - 0.1*x_4/(x_2 + 2*x_3 + 2*x_4 + 0.05)"
+    ]
+  ]
+}

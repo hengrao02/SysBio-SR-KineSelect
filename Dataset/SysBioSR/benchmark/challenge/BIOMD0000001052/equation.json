@@ -1,0 +1,79 @@
+{
+  "const_description": "c_0: Tissue, c_1: sigma, c_2: delta, c_3: mu, c_4: mu1, c_5: rho, c_6: m, c_7: rho1, c_8: m1, c_9: r, c_10: gamma, c_11: beta1, c_12: alpha1, c_13: beta2, c_14: alpha3, c_15: alpha2",
+  "const_names": [
+    "Tissue",
+    "sigma",
+    "delta",
+    "mu",
+    "mu1",
+    "rho",
+    "m",
+    "rho1",
+    "m1",
+    "r",
+    "gamma",
+    "beta1",
+    "alpha1",
+    "beta2",
+    "alpha3",
+    "alpha2"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.7,
+      0.57,
+      0.813,
+      0.3634,
+      0.271,
+      0.813,
+      0.7829,
+      0.862,
+      0.4312,
+      0.9314,
+      2.99e-06,
+      0.4426,
+      1.189,
+      0.1469,
+      0.4
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000001052",
+  "dataset_model_name": "Alharbi2020",
+  "dim": 3,
+  "eq": "c_0*c_1 - c_0*c_2*x_0 - c_0*c_3*x_0*x_1 - c_0*c_4*x_0*x_2 + c_0*c_5*x_0*x_1/(c_6 + x_1) + c_0*c_7*x_0*x_2/(c_8 + x_2) | -c_0*c_10*x_1*x_2 - c_0*c_11*c_9*x_1^2 - c_0*c_9*x_0*x_1 + c_0*c_9*x_1 | -c_0*c_12*c_15*x_2^2 + c_0*c_12*x_2 + c_0*c_13*x_1*x_2 - c_0*c_14*x_0*x_2",
+  "eq_raw": "-I*N*Tissue*mu + I*N*Tissue*rho/(N + m) - I*T*Tissue*mu1 + I*T*Tissue*rho1/(T + m1) - I*Tissue*delta + Tissue*sigma | -I*N*Tissue*r - N^2*Tissue*beta1*r - N*T*Tissue*gamma + N*Tissue*r | -I*T*Tissue*alpha3 + N*T*Tissue*beta2 - T^2*Tissue*alpha1*alpha2 + T*Tissue*alpha1",
+  "id": "Alharbi2020___Tumor_and_immune_system_competition",
+  "init": [
+    [
+      0.999999999999994,
+      0.999999999999993,
+      1.22
+    ]
+  ],
+  "init_description": "x_0: I, x_1: N, x_2: T",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Alharbi2020 - Tumor and immune system competition",
+  "source_xml": "Alharbi2020.xml",
+  "state_names": [
+    "I",
+    "N",
+    "T"
+  ],
+  "substituted": [
+    [
+      "-0.813*x_0*x_1 + 0.271*x_0*x_1/(x_1 + 0.813) - 0.3634*x_0*x_2 + 0.7829*x_0*x_2/(x_2 + 0.862) - 0.57*x_0 + 0.7",
+      "-0.4312*x_0*x_1 - 1.289288e-6*x_1^2 - 0.9314*x_1*x_2 + 0.4312*x_1",
+      "-0.1469*x_0*x_2 + 1.189*x_1*x_2 - 0.17704*x_2^2 + 0.4426*x_2"
+    ]
+  ]
+}

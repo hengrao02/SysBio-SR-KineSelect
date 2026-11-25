@@ -1,0 +1,104 @@
+{
+  "system_id": "MODEL7743212613",
+  "state_names": [
+    "s125",
+    "s128",
+    "s135",
+    "s160",
+    "s164"
+  ],
+  "const_names": [
+    "k26",
+    "k27",
+    "k19",
+    "k20p",
+    "k18",
+    "k14p1",
+    "k14p2",
+    "k15p1",
+    "k15p2",
+    "k15p3",
+    "k22",
+    "k21p1",
+    "k21p2",
+    "k21p3"
+  ],
+  "default_consts": [
+    5e-07,
+    0.0004,
+    0.0,
+    0.000625,
+    0.0003,
+    0.001,
+    0.0001359,
+    3.397e-09,
+    0.0001359,
+    0.015,
+    0.5,
+    2e-05,
+    0.0001359,
+    0.015
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.0,
+        0.0,
+        0.06,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        2.28058974149469e-05,
+        0.03161147463095693,
+        0.08439552779639059,
+        0.01278388668036835,
+        0.03870606738677761
+      ],
+      "relative_scale_vs_default": [
+        null,
+        null,
+        1.4065921299398432,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        2.28058974149469e-05,
+        0.03161147463095693,
+        0.024395527796390593,
+        0.01278388668036835,
+        0.03870606738677761
+      ],
+      "state_scale_from_default_trajectory": [
+        7.6019658049823e-05,
+        0.10537158210318978,
+        0.06,
+        0.04261295560122783,
+        0.12902022462259202
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3488584667,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.8320906905501281,
+        "peak_ratio_per_state": [
+          0.861043484286751,
+          0.9077595557217414,
+          1.5356061084272707,
+          0.38023105143167824,
+          0.6854932038817683
+        ],
+        "max_peak_ratio": 1.5356061084272707
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

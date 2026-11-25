@@ -1,0 +1,54 @@
+{
+  "const_description": "c_0: Brain, c_1: k1, c_2: k2, c_3: k3, c_4: k4",
+  "const_names": [
+    "Brain",
+    "k1",
+    "k2",
+    "k3",
+    "k4"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.007,
+      0.33,
+      0.0042,
+      0.01
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000553",
+  "dataset_model_name": "Ehrenstein1997",
+  "dim": 2,
+  "eq": "-c_0*c_1*x_0*x_1 | c_0*c_2 - c_0*c_3*x_0 - c_0*c_4*x_1",
+  "eq_raw": "-Brain*a*b*k1 | -Brain*a*k3 - Brain*b*k4 + Brain*k2",
+  "id": "MODEL1410200000",
+  "init": [
+    [
+      50.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: a, x_1: b",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Ehrenstein1997 - The choline-leakage hypothesis in Alzheimer's disease",
+  "source_xml": "Ehrenstein1997.xml",
+  "state_names": [
+    "a",
+    "b"
+  ],
+  "substituted": [
+    [
+      "-0.007*x_0*x_1",
+      "-0.0042*x_0 - 0.01*x_1 + 0.33"
+    ]
+  ]
+}

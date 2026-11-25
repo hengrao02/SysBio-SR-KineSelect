@@ -1,0 +1,100 @@
+{
+  "dataset_model_id": "BIOMD0000000521",
+  "dataset_model_name": "Ribba2012",
+  "id": "BIOMD0000000521",
+  "name": "Ribba2012",
+  "source_xml": "Ribba2012.xml",
+  "dim": 4,
+  "eq": "(-c_5)*x_0 | c_0*x_1*(1 - (x_1 + x_2 + x_3)/c_6) + c_2*x_3 - c_1*x_1 - c_4*x_0*c_5*x_1 | c_1 - c_4*x_0*c_5*x_2 | c_4*x_0*c_5*x_2 - c_2*x_3 - c_3*x_3",
+  "eq_raw": "(-KDE)*C | lambda_P*P*(1 - (P + Q + Qp)/K) + k_Qp_P*Qp - k_PQ*P - gamma*C*KDE*P | k_PQ - gamma*C*KDE*Q | gamma*C*KDE*Q - k_Qp_P*Qp - delta_QP*Qp",
+  "consts": [
+    [
+      0.121,
+      0.00295,
+      0.0031,
+      0.0087,
+      0.729,
+      0.24,
+      100.0
+    ]
+  ],
+  "init": [
+    [
+      1.0,
+      7.13,
+      41.2,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(-0.24)*x_0",
+      "0.121*x_1*(1 - (x_1 + x_2 + x_3)/100) + 0.0031*x_3 - 0.00295*x_1 - 0.729*x_0*0.24*x_1",
+      "0.00295 - 0.729*x_0*0.24*x_2",
+      "0.729*x_0*0.24*x_2 - 0.0031*x_3 - 0.0087*x_3"
+    ]
+  ],
+  "state_names": [
+    "C",
+    "P",
+    "Q",
+    "Qp"
+  ],
+  "const_names": [
+    "lambda_P",
+    "k_PQ",
+    "k_Qp_P",
+    "delta_QP",
+    "gamma",
+    "KDE",
+    "K"
+  ],
+  "init_description": "x_0: C, x_1: P, x_2: Q, x_3: Qp",
+  "const_description": "c_0: lambda_P, c_1: k_PQ, c_2: k_Qp_P, c_3: delta_QP, c_4: gamma, c_5: KDE, c_6: K",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 0,
+    "n_reconfigured_reactions": 0,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [],
+    "reconfigured_reaction_network": [],
+    "maple_odes": [
+      "(-k[9])*x[1]",
+      "k[4]*x[2]*(1 - (x[2] + x[3] + x[4])/k[10]) + k[6]*x[4] - k[5]*x[2] - k[8]*x[1]*k[9]*x[2]",
+      "k[5] - k[8]*x[1]*k[9]*x[3]",
+      "k[8]*x[1]*k[9]*x[3] - k[6]*x[4] - k[7]*x[4]"
+    ],
+    "species_index_map": {
+      "x_0": "C",
+      "x_1": "P",
+      "x_2": "Q",
+      "x_3": "Qp"
+    },
+    "const_index_map": {
+      "c_0": "lambda_P",
+      "c_1": "k_PQ",
+      "c_2": "k_Qp_P",
+      "c_3": "delta_QP",
+      "c_4": "gamma",
+      "c_5": "KDE",
+      "c_6": "K"
+    }
+  }
+}

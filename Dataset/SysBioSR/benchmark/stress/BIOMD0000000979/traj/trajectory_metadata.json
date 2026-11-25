@@ -1,0 +1,86 @@
+{
+  "system_id": "BIOMD0000000979",
+  "state_names": [
+    "Susceptible",
+    "Exposed",
+    "Infected",
+    "Recovered",
+    "Total_population"
+  ],
+  "const_names": [
+    "USA",
+    "omega",
+    "R_fixed",
+    "gamma",
+    "sigma"
+  ],
+  "default_consts": [
+    1.0,
+    0.01667,
+    3.0,
+    0.05556,
+    0.19231
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        315283090.04,
+        14439817.0,
+        330052.96,
+        0.0,
+        330052960.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        350197869.5448304,
+        16740500.944080321,
+        459952.2477052148,
+        53602778.43213737,
+        405247837.74088687
+      ],
+      "relative_scale_vs_default": [
+        1.110741047039347,
+        1.159329162141066,
+        1.393571042978117,
+        null,
+        1.2278267031475398
+      ],
+      "absolute_offset_from_default": [
+        34914779.50483036,
+        2300683.944080321,
+        129899.28770521475,
+        53602778.43213737,
+        75194877.74088687
+      ],
+      "state_scale_from_default_trajectory": [
+        315283090.04,
+        30293924.76251532,
+        88263813.75123452,
+        178675928.10712457,
+        330052960.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 1934880933,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.29999999999999993,
+        "peak_ratio_per_state": [
+          1.1134118490362968,
+          1.1538923023918224,
+          1.1762103547181846,
+          1.2715018603005683,
+          1.2278267031475398
+        ],
+        "max_peak_ratio": 1.2715018603005683
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

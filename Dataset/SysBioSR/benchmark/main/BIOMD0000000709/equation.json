@@ -1,0 +1,147 @@
+{
+  "dataset_model_id": "BIOMD0000000709",
+  "dataset_model_name": "Liu2017",
+  "id": "BIOMD0000000709",
+  "name": "Liu2017",
+  "source_xml": "Liu2017.xml",
+  "dim": 5,
+  "eq": "(1*c_12*c_0*x_0*(1 - x_0/c_9)*(x_0/c_10 - 1) + (-1)*c_12*c_1*x_0*x_1)/c_12 | (1*c_12*c_1*x_0*x_1 + (-1)*c_12*c_2*x_1 + (-1)*c_12*c_3*x_1)/c_12 | (1*c_11*c_4 + (-1)*c_5*x_1*x_2 + (-1)*c_11*c_6*x_2)/c_11 | (1*c_5*x_1*x_2 + (-1)*c_11*c_6*x_3 + (-1)*c_11*c_8*x_3 + (-1)*c_11*c_7*x_3)/c_11 | (1*c_11*c_7*x_3 + (-1)*c_11*c_6*x_4)/c_11",
+  "eq_raw": "(1*Avian_population*r_a*S_a*(1 - S_a/M_a)*(S_a/m_a - 1) + (-1)*Avian_population*beta_a*S_a*I_a)/Avian_population | (1*Avian_population*beta_a*S_a*I_a + (-1)*Avian_population*mu_a*I_a + (-1)*Avian_population*delta_a*I_a)/Avian_population | (1*compartment*pi_h + (-1)*beta_h*I_a*S_h + (-1)*compartment*mu_h*S_h)/compartment | (1*beta_h*I_a*S_h + (-1)*compartment*mu_h*I_h + (-1)*compartment*delta_h*I_h + (-1)*compartment*gamma*I_h)/compartment | (1*compartment*gamma*I_h + (-1)*compartment*mu_h*R_h)/compartment",
+  "consts": [
+    [
+      0.005,
+      1.8e-08,
+      0.00034246,
+      0.0004,
+      30.0,
+      6e-09,
+      3.91e-05,
+      0.1,
+      0.3445,
+      50000.0,
+      800.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      100000.0,
+      1000.0,
+      1000000.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.005*x_0*(1 - x_0/50000)*(x_0/800 - 1) + (-1)*1*1.8e-08*x_0*x_1)/1",
+      "(1*1*1.8e-08*x_0*x_1 + (-1)*1*0.00034246*x_1 + (-1)*1*0.0004*x_1)/1",
+      "(1*1*30 + (-1)*6e-09*x_1*x_2 + (-1)*1*3.91e-05*x_2)/1",
+      "(1*6e-09*x_1*x_2 + (-1)*1*3.91e-05*x_3 + (-1)*1*0.3445*x_3 + (-1)*1*0.1*x_3)/1",
+      "(1*1*0.1*x_3 + (-1)*1*3.91e-05*x_4)/1"
+    ]
+  ],
+  "state_names": [
+    "S_a",
+    "I_a",
+    "S_h",
+    "I_h",
+    "R_h"
+  ],
+  "const_names": [
+    "r_a",
+    "beta_a",
+    "mu_a",
+    "delta_a",
+    "pi_h",
+    "beta_h",
+    "mu_h",
+    "gamma",
+    "delta_h",
+    "M_a",
+    "m_a",
+    "compartment",
+    "Avian_population"
+  ],
+  "init_description": "x_0: S_a, x_1: I_a, x_2: S_h, x_3: I_h, x_4: R_h",
+  "const_description": "c_0: r_a, c_1: beta_a, c_2: mu_a, c_3: delta_a, c_4: pi_h, c_5: beta_h, c_6: mu_h, c_7: gamma, c_8: delta_h, c_9: M_a, c_10: m_a, c_11: compartment, c_12: Avian_population",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 11,
+    "n_reconfigured_reactions": 11,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> S_a",
+      "S_a -> I_a",
+      "I_a -> 0",
+      "I_a -> 0",
+      "0 -> S_h",
+      "S_h -> I_h",
+      "S_h -> 0",
+      "I_h -> 0",
+      "I_h -> 0",
+      "I_h -> R_h",
+      "R_h -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> S_a",
+      "S_a -> I_a",
+      "I_a -> 0",
+      "I_a -> 0",
+      "0 -> S_h",
+      "S_h -> I_h",
+      "S_h -> 0",
+      "I_h -> 0",
+      "I_h -> 0",
+      "I_h -> R_h",
+      "R_h -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[14]*k[1]*x[1]*(1 - x[1]/k[11])*(x[1]/k[12] - 1) + (-1)*k[14]*k[3]*x[1]*x[2])/k[14]",
+      "(1*k[14]*k[3]*x[1]*x[2] + (-1)*k[14]*k[4]*x[2] + (-1)*k[14]*k[5]*x[2])/k[14]",
+      "(1*k[13]*k[6] + (-1)*k[7]*x[2]*x[3] + (-1)*k[13]*k[8]*x[3])/k[13]",
+      "(1*k[7]*x[2]*x[3] + (-1)*k[13]*k[8]*x[4] + (-1)*k[13]*k[10]*x[4] + (-1)*k[13]*k[9]*x[4])/k[13]",
+      "(1*k[13]*k[9]*x[4] + (-1)*k[13]*k[8]*x[5])/k[13]"
+    ],
+    "species_index_map": {
+      "x_0": "S_a",
+      "x_1": "I_a",
+      "x_2": "S_h",
+      "x_3": "I_h",
+      "x_4": "R_h"
+    },
+    "const_index_map": {
+      "c_0": "r_a",
+      "c_1": "beta_a",
+      "c_2": "mu_a",
+      "c_3": "delta_a",
+      "c_4": "pi_h",
+      "c_5": "beta_h",
+      "c_6": "mu_h",
+      "c_7": "gamma",
+      "c_8": "delta_h",
+      "c_9": "M_a",
+      "c_10": "m_a",
+      "c_11": "compartment",
+      "c_12": "Avian_population"
+    }
+  }
+}

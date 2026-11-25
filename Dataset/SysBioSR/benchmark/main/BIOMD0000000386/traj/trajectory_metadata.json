@@ -1,0 +1,81 @@
+{
+  "system_id": "BIOMD0000000386",
+  "state_names": [
+    "PGA",
+    "NADPH"
+  ],
+  "const_names": [
+    "chloroplast",
+    "Vcmax",
+    "CO2",
+    "Kc",
+    "O2",
+    "Ko",
+    "gm",
+    "Rd",
+    "Gamma",
+    "J",
+    "TPU",
+    "Nt",
+    "Rp"
+  ],
+  "default_consts": [
+    1.0,
+    0.0307602623029146,
+    24.5,
+    27.2372124161502,
+    21.0,
+    16.5788431231261,
+    0.0307740792044142,
+    0.0307674936008629,
+    3.74116898182615,
+    0.0307678189755062,
+    0.0307585098788555,
+    0.5,
+    3.2
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        2.4,
+        0.21
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        2.4672164084358505,
+        0.3044027661551624
+      ],
+      "relative_scale_vs_default": [
+        1.028006836848271,
+        1.4495369816912496
+      ],
+      "absolute_offset_from_default": [
+        0.06721640843585064,
+        0.09440276615516238
+      ],
+      "state_scale_from_default_trajectory": [
+        4.890893540220769,
+        0.21
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3804996118,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.44953698169124945,
+        "peak_ratio_per_state": [
+          0.9818177598462415,
+          1.4495369816912496
+        ],
+        "max_peak_ratio": 1.4495369816912496
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

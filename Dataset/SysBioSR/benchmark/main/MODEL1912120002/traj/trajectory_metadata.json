@@ -1,0 +1,93 @@
+{
+  "system_id": "MODEL1912120002",
+  "state_names": [
+    "T",
+    "I",
+    "VI",
+    "VNI"
+  ],
+  "const_names": [
+    "compartment",
+    "s",
+    "r",
+    "k",
+    "d1",
+    "alpha",
+    "c",
+    "n1",
+    "d2",
+    "d3",
+    "beta",
+    "nr"
+  ],
+  "default_consts": [
+    1.0,
+    1.0,
+    1.99,
+    36000000.0,
+    0.01,
+    2.25e-07,
+    0.0,
+    0.5,
+    1.0,
+    6.0,
+    2.9,
+    0.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        17000000.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        20000000.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relative_scale_vs_default": [
+        1.1764705882352942,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absolute_offset_from_default": [
+        3000000.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state_scale_from_default_trajectory": [
+        35817420.506309286,
+        22853580.446322177,
+        8229155.669494869,
+        2743051.8898316235
+      ],
+      "ic_generation_protocol": "manual_override_v1",
+      "global_seed": 0,
+      "system_seed": 2802000298,
+      "attempt_index": 1,
+      "candidate_label": "manual_override",
+      "sanity_metrics": {
+        "max_rel_diff": 0.08375812544824521,
+        "peak_ratio_per_state": [
+          1.0000012305890886,
+          0.999941681256309,
+          0.9999306639958311,
+          0.9999306639958307
+        ],
+        "max_peak_ratio": 1.0000012305890886
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

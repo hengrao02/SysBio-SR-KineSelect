@@ -1,0 +1,12 @@
+# Example full-baseline run on one released benchmark system.
+inherits:
+  - ./base.yaml
+
+run_type: single
+results_root: ../../Results
+system_dir: ../../Dataset/SysBioSR/benchmark/challenge/BIOMD0000000076
+trajectory_name: default
+eval_trajectory_names: [perturbed]
+dataset_version: sysbiosr-1.0.0-rc.2
+benchmark_partition: challenge
+benchmark_definition: ../../Dataset/SysBioSR/benchmark/benchmark.yaml

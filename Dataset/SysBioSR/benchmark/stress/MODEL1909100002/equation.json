@@ -1,0 +1,90 @@
+{
+  "const_description": "c_0: compartment, c_1: C_0, c_2: k_c, c_3: ModelValue_2, c_4: ModelValue_1, c_5: lambda_c, c_6: K_c, c_7: lambda_p, c_8: P_0, c_9: k_p, c_10: ModelValue_6, c_11: ModelValue_0, c_12: k_r, c_13: lambda_r, c_14: gamma_c, c_15: ModelValue_11, c_16: ModelValue_9, c_17: lambda_t, c_18: k_t, c_19: K_t",
+  "const_names": [
+    "compartment",
+    "C_0",
+    "k_c",
+    "ModelValue_2",
+    "ModelValue_1",
+    "lambda_c",
+    "K_c",
+    "lambda_p",
+    "P_0",
+    "k_p",
+    "ModelValue_6",
+    "ModelValue_0",
+    "k_r",
+    "lambda_r",
+    "gamma_c",
+    "ModelValue_11",
+    "ModelValue_9",
+    "lambda_t",
+    "k_t",
+    "K_t"
+  ],
+  "consts": [
+    [
+      1.0,
+      1000000.0,
+      0.075,
+      0.075,
+      100000.0,
+      1e-07,
+      0.1,
+      0.15,
+      100000.0,
+      0.2,
+      0.2,
+      1000000.0,
+      0.2,
+      0.22,
+      0.02,
+      0.22,
+      0.15,
+      0.3,
+      3300.0,
+      0.1
+    ]
+  ],
+  "dataset_model_id": "MODEL1909100002",
+  "dataset_model_name": "Louzoun2014",
+  "dim": 4,
+  "eq": "-c_0*c_5*x_0*x_3/(c_6 - x_2 + 1) + c_0*x_0^0.75*(-(x_0/c_1)^0.25 + 1)*(c_2 + 20*c_3*x_1/c_4) | -c_0*c_7*x_1 + c_0*x_1*(1 - x_1/c_8)*(20*c_10*x_0/(c_11/100 + x_0) + c_9) | c_0*c_12 - c_0*x_2*(c_13 + c_14*x_0 + 0.02*c_15*x_1/(c_4*(1 - c_16/c_10))) | -c_0*c_17*x_3 + c_0*c_18*x_2/(c_19 - x_2 + 1)",
+  "eq_raw": "C^0.75*compartment*(-(C/C_0)^0.25 + 1)*(k_c + 20*ModelValue_2*P/ModelValue_1) - C*T*compartment*lambda_c/(K_c - R + 1) | -P*compartment*lambda_p + P*compartment*(-P/P_0 + 1)*(20*C*ModelValue_6/(C + ModelValue_0/100) + k_p) | -R*compartment*(C*gamma_c + lambda_r + 0.02*ModelValue_11*P/(ModelValue_1*(1 - ModelValue_9/ModelValue_6))) + compartment*k_r | R*compartment*k_t/(K_t - R + 1) - T*compartment*lambda_t",
+  "id": "Louzoun2014___A_mathematical_model_for_pancreatic_cancer_growth_and_treatments",
+  "init": [
+    [
+      200.0,
+      99250.0,
+      0.0,
+      0.091
+    ]
+  ],
+  "init_description": "x_0: C, x_1: P, x_2: R, x_3: T",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 5,
+    "n_events": 0,
+    "n_initial_assignments": 6,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Louzoun2014 - A mathematical model for pancreatic cancer growth and treatments",
+  "source_xml": "Louzoun2014.xml",
+  "state_names": [
+    "C",
+    "P",
+    "R",
+    "T"
+  ],
+  "substituted": [
+    [
+      "1.0*x_0^0.75*(-0.0316227766016838*x_0^0.25 + 1)*(1.5e-5*x_1 + 0.075) - 1.0e-7*x_0*x_3/(-x_2 + 1.1)",
+      "1.0*x_1*(-1.0e-5*x_1 + 1)*(4.0*x_0/(x_0 + 10000.0) + 0.2) - 0.15*x_1",
+      "-1.0*x_2*(0.02*x_0 + 1.76e-7*x_1 + 0.22) + 0.2",
+      "3300.0*x_2/(-x_2 + 1.1) - 0.3*x_3"
+    ]
+  ]
+}

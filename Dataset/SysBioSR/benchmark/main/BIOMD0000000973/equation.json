@@ -1,0 +1,56 @@
+{
+  "const_description": "c_0: Cell, c_1: k_1, c_2: k2, c_3: k1, c_4: k3, c_5: k_2",
+  "const_names": [
+    "Cell",
+    "k_1",
+    "k2",
+    "k1",
+    "k3",
+    "k_2"
+  ],
+  "consts": [
+    [
+      1.0,
+      6.6e-09,
+      7.5e-06,
+      0.00021,
+      1.16,
+      0.03
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000973",
+  "dataset_model_name": "Dasgupta2020",
+  "dim": 2,
+  "eq": "c_0*c_1*x_1 - 2*c_0*c_2*x_0^2 - c_0*c_3*x_0*x_1 | c_0*c_2*x_0^2 - c_0*c_4*x_1 - c_0*c_5*x_1^2",
+  "eq_raw": "-Cell*N*P*k1 + Cell*N*k_1 - 2*Cell*P^2*k2 | -Cell*N^2*k_2 - Cell*N*k3 + Cell*P^2*k2",
+  "id": "Dasgupta2020___Reduced_model_of_receptor_clusturing_and_aggregation",
+  "init": [
+    [
+      10000.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: P, x_1: N",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 1,
+    "n_events": 0,
+    "n_initial_assignments": 1,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Dasgupta2020 - Reduced model of receptor clusturing and aggregation",
+  "source_xml": "Dasgupta2020.xml",
+  "state_names": [
+    "P",
+    "N"
+  ],
+  "substituted": [
+    [
+      "-1.5e-5*x_0^2 - 0.00021*x_0*x_1 + 6.6e-9*x_1",
+      "7.5e-6*x_0^2 - 0.03*x_1^2 - 1.16*x_1"
+    ]
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "system_id": "BIOMD0000001031",
+  "state_names": [
+    "uninfected_cancer_cells",
+    "infected_cancer_cells",
+    "free_virus"
+  ],
+  "const_names": [
+    "f",
+    "h",
+    "m",
+    "Whole_organism",
+    "__lp_r4_k1"
+  ],
+  "default_consts": [
+    0.0,
+    0.15,
+    0.02,
+    1.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.6,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.7209396656280966,
+        0.04584750610837746,
+        0.7461403192639811
+      ],
+      "relative_scale_vs_default": [
+        1.201566109380161,
+        null,
+        1.4922806385279621
+      ],
+      "absolute_offset_from_default": [
+        0.12093966562809666,
+        0.04584750610837746,
+        0.24614031926398106
+      ],
+      "state_scale_from_default_trajectory": [
+        0.6,
+        0.15282502036125822,
+        0.6200626683368282
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3443788490,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.6945626881905052,
+        "peak_ratio_per_state": [
+          1.2015661093801608,
+          1.6243100341969317,
+          1.509009469827894
+        ],
+        "max_peak_ratio": 1.6243100341969317
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "system_id": "BIOMD0000000383",
+  "state_names": [
+    "PGA",
+    "NADPH"
+  ],
+  "const_names": [
+    "chloroplast",
+    "CO2",
+    "E",
+    "kc",
+    "Kc",
+    "O2",
+    "Ko",
+    "RuBP",
+    "Nt",
+    "Rp",
+    "I",
+    "f"
+  ],
+  "default_consts": [
+    1.0,
+    230.0,
+    1.33846153846154,
+    2.5,
+    460.0,
+    210.0,
+    330.0,
+    2.0,
+    0.5,
+    3.2,
+    1000.0,
+    0.23
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        2.4,
+        0.21
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        2.4726208658643314,
+        0.28420737771907423
+      ],
+      "relative_scale_vs_default": [
+        1.0302586941101382,
+        1.3533684653289249
+      ],
+      "absolute_offset_from_default": [
+        0.07262086586433147,
+        0.07420737771907424
+      ],
+      "state_scale_from_default_trajectory": [
+        5.449530617163803,
+        0.21
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 2583286467,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.35336846532892496,
+        "peak_ratio_per_state": [
+          0.9999999716531934,
+          1.3533684653289249
+        ],
+        "max_peak_ratio": 1.3533684653289249
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

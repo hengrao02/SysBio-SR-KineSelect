@@ -1,0 +1,113 @@
+{
+  "dataset_model_id": "BIOMD0000000767",
+  "dataset_model_name": "Macnamara2015",
+  "id": "BIOMD0000000767",
+  "name": "Macnamara2015",
+  "source_xml": "Macnamara2015.xml",
+  "dim": 3,
+  "eq": "(1*c_8*c_0*x_0*(1 - x_0/c_1) + (-1)*c_8*c_2*x_0*x_2/(c_3 + x_2))/c_8 | 0/c_8 | (1*c_8*c_5*x_1*x_0/(x_0 + c_4) + (-1)*c_8*c_6*x_2 + (-1)*c_8*c_7*x_0*x_2)/c_8",
+  "eq_raw": "(1*tme*r*U*(1 - U/K) + (-1)*tme*du*U*E/(he + E))/tme | 0/tme | (1*tme*pe*M*U/(U + hv) + (-1)*tme*de*E + (-1)*tme*dt*U*E)/tme",
+  "consts": [
+    [
+      0.927,
+      181820000.0,
+      2.0,
+      1000.0,
+      10000.0,
+      0.4,
+      0.1,
+      5e-09,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1000000.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.927*x_0*(1 - x_0/181820000) + (-1)*1*2*x_0*x_2/(1000 + x_2))/1",
+      "0/1",
+      "(1*1*0.4*x_1*x_0/(x_0 + 10000) + (-1)*1*0.1*x_2 + (-1)*1*5e-09*x_0*x_2)/1"
+    ]
+  ],
+  "state_names": [
+    "U",
+    "M",
+    "E"
+  ],
+  "const_names": [
+    "r",
+    "K",
+    "du",
+    "he",
+    "hv",
+    "pe",
+    "de",
+    "dt",
+    "tme"
+  ],
+  "init_description": "x_0: U, x_1: M, x_2: E",
+  "const_description": "c_0: r, c_1: K, c_2: du, c_3: he, c_4: hv, c_5: pe, c_6: de, c_7: dt, c_8: tme",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 5,
+    "n_reconfigured_reactions": 5,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> U",
+      "U -> 0",
+      "0 -> E",
+      "E -> 0",
+      "E -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> U",
+      "U -> 0",
+      "0 -> E",
+      "E -> 0",
+      "E -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[9]*k[1]*x[1]*(1 - x[1]/k[2]) + (-1)*k[9]*k[3]*x[1]*x[3]/(k[4] + x[3]))/k[9]",
+      "0/k[9]",
+      "(1*k[9]*k[6]*x[2]*x[1]/(x[1] + k[5]) + (-1)*k[9]*k[7]*x[3] + (-1)*k[9]*k[8]*x[1]*x[3])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "U",
+      "x_1": "M",
+      "x_2": "E"
+    },
+    "const_index_map": {
+      "c_0": "r",
+      "c_1": "K",
+      "c_2": "du",
+      "c_3": "he",
+      "c_4": "hv",
+      "c_5": "pe",
+      "c_6": "de",
+      "c_7": "dt",
+      "c_8": "tme"
+    }
+  }
+}

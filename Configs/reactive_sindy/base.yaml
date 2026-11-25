@@ -1,0 +1,44 @@
+# Frozen paper-entrypoint contract for Reactive SINDy.
+method: reactive_sindy
+experiment_id: sysbiosr-reactive-sindy-v3
+
+library_mode: enumerated
+max_reaction_order: 2
+include_fission: true
+include_double_conversion: true
+deduplicate_reactions: true
+
+derivative_method: numpy_gradient
+derivative_edge_order: 2
+short_trajectory_edge_order: 1
+drop_boundary_points: true
+normalize_library: true
+library_normalization: column_l2
+library_zero_norm_threshold: 1.0e-14
+library_scale_fit: full_effective_trajectory
+library_scale_refit: reuse_full_effective_scale
+derivative_block_policy: differentiate_full_then_split_effective
+
+optimize_hyperparams: true
+hyper_opt_eval_fraction: 0.3
+hyper_opt_split: chronological
+hyper_opt_train_steps_rounding: python_round_half_to_even
+alpha_scale_grid: [0.001, 0.01, 0.1, 0.5, 1.0]
+l1_ratio_grid: [1.0]
+alpha: null
+l1_ratio: 1.0
+alpha_max_normalizer: num_scalar_rows
+objective_normalizer: num_time_steps
+final_refit_derivative_blocks: full_effective_trajectory
+
+rate_threshold: 1.0e-8
+relative_rate_threshold: 1.0e-4
+sparsity_selection_tolerance: 0.05
+optimizer_method: L-BFGS-B
+optimizer_max_iter: 5000
+optimizer_tol: 1.0e-10
+
+ode_integrator: solve_ivp
+ode_method: RK45
+ode_rtol: 1.0e-3
+ode_atol: 1.0e-6

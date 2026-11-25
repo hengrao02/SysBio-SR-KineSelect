@@ -1,0 +1,105 @@
+{
+  "system_id": "BIOMD0000000797",
+  "state_names": [
+    "x_Tumor_Cells",
+    "y_CD4_T_Cells",
+    "z_Cytokine",
+    "w_Healthy_Tissue"
+  ],
+  "const_names": [
+    "r_1",
+    "b_1",
+    "c_1",
+    "a_1",
+    "delta_1",
+    "beta_1",
+    "alpha_1",
+    "mu_1",
+    "delta_2",
+    "beta_2",
+    "alpha_2",
+    "mu_2",
+    "r_2",
+    "b_2",
+    "delta_3",
+    "I_2",
+    "I_1",
+    "compartment"
+  ],
+  "default_consts": [
+    0.514,
+    1.02e-09,
+    0.2,
+    100000.0,
+    1.1e-10,
+    0.835,
+    1000.0,
+    0.1,
+    1e-07,
+    5.4,
+    1000.0,
+    34.0,
+    0.2822,
+    1e-09,
+    5.8e-11,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        67700.0,
+        1000000.0,
+        100000.0,
+        1000000000.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        88932.60521923703,
+        991280.4683423003,
+        89113.27397495297,
+        1464519444.2588058
+      ],
+      "relative_scale_vs_default": [
+        1.313627846665244,
+        0.9912804683423003,
+        0.8911327397495297,
+        1.4645194442588056
+      ],
+      "absolute_offset_from_default": [
+        21232.605219237026,
+        -8719.531657699728,
+        -10886.726025047028,
+        464519444.25880575
+      ],
+      "state_scale_from_default_trajectory": [
+        805243965.6579967,
+        1090434.5243424142,
+        172651.7063178056,
+        1000000000.0
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 4048323920,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.46451944425880576,
+        "peak_ratio_per_state": [
+          1.0000118774667752,
+          0.9718555067548589,
+          0.9718553144954241,
+          1.4645194442588056
+        ],
+        "max_peak_ratio": 1.4645194442588056
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

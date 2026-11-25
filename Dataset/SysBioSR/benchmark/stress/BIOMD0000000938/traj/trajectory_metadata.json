@@ -1,0 +1,90 @@
+{
+  "system_id": "BIOMD0000000938",
+  "state_names": [
+    "Cdk",
+    "Anaphase_promoting_complex_Phosphorylated",
+    "Securin"
+  ],
+  "const_names": [
+    "V_scdk",
+    "nuclear",
+    "k_d1cdk",
+    "k_dcdk",
+    "K_dcdk",
+    "K_dsec",
+    "V_1APC",
+    "K_1APC",
+    "k_2APC",
+    "Anaphase_promoting_complex_total",
+    "K_2APC",
+    "V_ssec",
+    "k_d1sec",
+    "k_dsec"
+  ],
+  "default_consts": [
+    0.06,
+    1.0,
+    0.01,
+    0.35,
+    0.01,
+    0.001,
+    0.15,
+    0.01,
+    0.3,
+    1.0,
+    0.01,
+    0.1,
+    0.01,
+    0.4
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.3,
+        0.0,
+        0.35
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.15170493713096542,
+        0.2930350039984238,
+        0.3430950446296204
+      ],
+      "relative_scale_vs_default": [
+        0.5056831237698848,
+        null,
+        0.9802715560846299
+      ],
+      "absolute_offset_from_default": [
+        -0.14829506286903457,
+        0.2930350039984238,
+        -0.006904955370379551
+      ],
+      "state_scale_from_default_trajectory": [
+        0.8948652952879109,
+        0.9767833466614128,
+        0.8495289061390141
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3483232734,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.5444643409733224,
+        "peak_ratio_per_state": [
+          1.0010224449143827,
+          1.001097618894686,
+          1.0228001679689396
+        ],
+        "max_peak_ratio": 1.0228001679689396
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

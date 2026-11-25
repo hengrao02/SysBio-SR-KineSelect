@@ -1,0 +1,77 @@
+{
+  "const_description": "c_0: vneHTA__k2neHTA, c_1: MG, c_2: vneHTA__k1neHTA, c_3: vGlxII__VGlxII, c_4: vGlxII__KmGlxIISLG, c_5: vGlxII__KmGlxIIGSH, c_6: vGlxII__KiGlxIIHTA, c_7: Lac, c_8: vGlxII__KmGlxIILac, c_9: vGlxII__KeqGlxII, c_10: vGlxI__KmGlxIGSH, c_11: vGlxI__KmGlxIHTA, c_12: vGlxI__KmGlxISLG, c_13: vGlxI__VfGlxI, c_14: vGlxI__VrGlxI",
+  "const_names": [
+    "vneHTA__k2neHTA",
+    "MG",
+    "vneHTA__k1neHTA",
+    "vGlxII__VGlxII",
+    "vGlxII__KmGlxIISLG",
+    "vGlxII__KmGlxIIGSH",
+    "vGlxII__KiGlxIIHTA",
+    "Lac",
+    "vGlxII__KmGlxIILac",
+    "vGlxII__KeqGlxII",
+    "vGlxI__KmGlxIGSH",
+    "vGlxI__KmGlxIHTA",
+    "vGlxI__KmGlxISLG",
+    "vGlxI__VfGlxI",
+    "vGlxI__VrGlxI"
+  ],
+  "consts": [
+    [
+      1.01,
+      0.01,
+      0.34,
+      0.00103,
+      0.32,
+      0.0228,
+      0.3,
+      0.0,
+      10000.0,
+      440000.0,
+      5.0,
+      0.53,
+      1.9,
+      0.0318,
+      3.26e-05
+    ]
+  ],
+  "dataset_model_id": "MODEL6624199343",
+  "dataset_model_name": "Martins2001",
+  "dim": 3,
+  "eq": "c_0*x_1 - c_1*c_2*x_0 + c_3*(-c_7*x_0/c_9 + x_2)/(c_4*(c_7/c_8 + 1 + x_1/c_6 + x_0/c_5 + x_2/c_4)) | -c_0*x_1 + c_1*c_2*x_0 - (-c_14*x_2/c_12 + c_13*x_1/c_11)/(1 + x_2/c_12 + x_1/c_11 + x_0/c_10) | -c_3*(-c_7*x_0/c_9 + x_2)/(c_4*(c_7/c_8 + 1 + x_1/c_6 + x_0/c_5 + x_2/c_4)) + (-c_14*x_2/c_12 + c_13*x_1/c_11)/(1 + x_2/c_12 + x_1/c_11 + x_0/c_10)",
+  "eq_raw": "-GSH*MG*vneHTA__k1neHTA + HTA*vneHTA__k2neHTA + vGlxII__VGlxII*(-GSH*Lac/vGlxII__KeqGlxII + SLG)/(vGlxII__KmGlxIISLG*(GSH/vGlxII__KmGlxIIGSH + HTA/vGlxII__KiGlxIIHTA + Lac/vGlxII__KmGlxIILac + SLG/vGlxII__KmGlxIISLG + 1)) | GSH*MG*vneHTA__k1neHTA - HTA*vneHTA__k2neHTA - (HTA*vGlxI__VfGlxI/vGlxI__KmGlxIHTA - SLG*vGlxI__VrGlxI/vGlxI__KmGlxISLG)/(GSH/vGlxI__KmGlxIGSH + HTA/vGlxI__KmGlxIHTA + SLG/vGlxI__KmGlxISLG + 1) | (HTA*vGlxI__VfGlxI/vGlxI__KmGlxIHTA - SLG*vGlxI__VrGlxI/vGlxI__KmGlxISLG)/(GSH/vGlxI__KmGlxIGSH + HTA/vGlxI__KmGlxIHTA + SLG/vGlxI__KmGlxISLG + 1) - vGlxII__VGlxII*(-GSH*Lac/vGlxII__KeqGlxII + SLG)/(vGlxII__KmGlxIISLG*(GSH/vGlxII__KmGlxIIGSH + HTA/vGlxII__KiGlxIIHTA + Lac/vGlxII__KmGlxIILac + SLG/vGlxII__KmGlxIISLG + 1))",
+  "id": "whatever",
+  "init": [
+    [
+      8.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "init_description": "x_0: GSH, x_1: HTA, x_2: SLG",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Martins2001_glyoxalase",
+  "source_xml": "Martins2001.xml",
+  "state_names": [
+    "GSH",
+    "HTA",
+    "SLG"
+  ],
+  "substituted": [
+    [
+      "-0.0034*x_0 + 1.01*x_1 + 0.00321875*x_2/(43.859649122807*x_0 + 3.33333333333333*x_1 + 3.125*x_2 + 1)",
+      "0.0034*x_0 - 1.01*x_1 - (0.06*x_1 - 1.71578947368421e-5*x_2)/(0.2*x_0 + 1.88679245283019*x_1 + 0.526315789473684*x_2 + 1)",
+      "-0.00321875*x_2/(43.859649122807*x_0 + 3.33333333333333*x_1 + 3.125*x_2 + 1) + (0.06*x_1 - 1.71578947368421e-5*x_2)/(0.2*x_0 + 1.88679245283019*x_1 + 0.526315789473684*x_2 + 1)"
+    ]
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "system_id": "BIOMD0000000044",
+  "state_names": [
+    "EC",
+    "Z",
+    "A",
+    "Y"
+  ],
+  "const_names": [
+    "cytosol",
+    "vin__v0",
+    "beta",
+    "vin__v1",
+    "extracellular",
+    "v5__K",
+    "v4__Kf",
+    "intravesicular",
+    "v2__Vm2",
+    "v2__K2",
+    "v3__Vm3",
+    "v3__Ka",
+    "v3__Ky",
+    "v3__Kz",
+    "v6__Vp",
+    "v8__epsilon",
+    "v7__Vd",
+    "v7__n",
+    "v7__Kp",
+    "v7__Kd"
+  ],
+  "default_consts": [
+    1.0,
+    2.0,
+    0.5,
+    1.0,
+    1.0,
+    10.0,
+    1.0,
+    1.0,
+    6.5,
+    0.1,
+    19.5,
+    0.2,
+    0.2,
+    0.3,
+    2.5,
+    0.1,
+    80.0,
+    4.0,
+    1.0,
+    0.4
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1000.0,
+        0.0,
+        0.45,
+        0.36
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        1137.8393722744033,
+        0.27980080512007266,
+        0.6575898063072236,
+        0.3106646619141776
+      ],
+      "relative_scale_vs_default": [
+        1.1378393722744033,
+        null,
+        1.4613106806827192,
+        0.8629573942060489
+      ],
+      "absolute_offset_from_default": [
+        137.83937227440333,
+        0.27980080512007266,
+        0.20758980630722362,
+        -0.04933533808582241
+      ],
+      "state_scale_from_default_trajectory": [
+        1000.0,
+        0.9326693504002422,
+        1.7391108126859436,
+        2.577451057406192
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 3071182442,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.8201915920470912,
+        "peak_ratio_per_state": [
+          1.1378691425244276,
+          0.9963527475505422,
+          0.9456989732351362,
+          1.0000067648806406
+        ],
+        "max_peak_ratio": 1.1378691425244276
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

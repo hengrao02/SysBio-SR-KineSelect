@@ -1,0 +1,122 @@
+{
+  "dataset_model_id": "BIOMD0000000875",
+  "dataset_model_name": "Nelson2000",
+  "id": "BIOMD0000000875",
+  "name": "Nelson2000",
+  "source_xml": "Nelson2000.xml",
+  "dim": 4,
+  "eq": "(1*c_7*c_5 + (-1)*c_7*c_6*x_0 + (-1)*c_7*c_0*x_2*x_0)/c_7 | (1*c_7*c_0*x_2*x_0 + (-1)*c_7*c_1*x_1)/c_7 | (1*c_7*(1 - c_4)*c_2*c_1*x_1 + (-1)*c_7*c_3*x_2)/c_7 | (1*c_7*c_4*c_2*c_1*x_1 + (-1)*c_7*c_3*x_3)/c_7",
+  "eq_raw": "(1*plasma*lambda + (-1)*plasma*delta1*T + (-1)*plasma*k*V_I*T)/plasma | (1*plasma*k*V_I*T + (-1)*plasma*delta*T_i)/plasma | (1*plasma*(1 - np)*N*delta*T_i + (-1)*plasma*c*V_I)/plasma | (1*plasma*np*N*delta*T_i + (-1)*plasma*c*V_NI)/plasma",
+  "consts": [
+    [
+      3.43e-08,
+      0.5,
+      480.0,
+      3.0,
+      0.5,
+      10.0,
+      0.03,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      180000.0,
+      1675.0,
+      134000.0,
+      0.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*10 + (-1)*1*0.03*x_0 + (-1)*1*3.43e-08*x_2*x_0)/1",
+      "(1*1*3.43e-08*x_2*x_0 + (-1)*1*0.5*x_1)/1",
+      "(1*1*(1 - 0.5)*480*0.5*x_1 + (-1)*1*3*x_2)/1",
+      "(1*1*0.5*480*0.5*x_1 + (-1)*1*3*x_3)/1"
+    ]
+  ],
+  "state_names": [
+    "T",
+    "T_i",
+    "V_I",
+    "V_NI"
+  ],
+  "const_names": [
+    "k",
+    "delta",
+    "N",
+    "c",
+    "np",
+    "lambda",
+    "delta1",
+    "plasma"
+  ],
+  "init_description": "x_0: T, x_1: T_i, x_2: V_I, x_3: V_NI",
+  "const_description": "c_0: k, c_1: delta, c_2: N, c_3: c, c_4: np, c_5: lambda, c_6: delta1, c_7: plasma",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 8,
+    "n_reconfigured_reactions": 9,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> T_i",
+      "T_i -> 0",
+      "0 -> V_I",
+      "0 -> V_NI",
+      "V_I <-> 0",
+      "V_NI -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> T",
+      "T -> 0",
+      "T -> T_i",
+      "T_i -> 0",
+      "0 -> V_I",
+      "0 -> V_NI",
+      "V_I -> 0",
+      "0 -> V_I",
+      "V_NI -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[9]*k[7] + (-1)*k[9]*k[8]*x[1] + (-1)*k[9]*k[1]*x[3]*x[1])/k[9]",
+      "(1*k[9]*k[1]*x[3]*x[1] + (-1)*k[9]*k[2]*x[2])/k[9]",
+      "(1*k[9]*(1 - k[5])*k[3]*k[2]*x[2] + (-1)*k[9]*k[4]*x[3])/k[9]",
+      "(1*k[9]*k[5]*k[3]*k[2]*x[2] + (-1)*k[9]*k[4]*x[4])/k[9]"
+    ],
+    "species_index_map": {
+      "x_0": "T",
+      "x_1": "T_i",
+      "x_2": "V_I",
+      "x_3": "V_NI"
+    },
+    "const_index_map": {
+      "c_0": "k",
+      "c_1": "delta",
+      "c_2": "N",
+      "c_3": "c",
+      "c_4": "np",
+      "c_5": "lambda",
+      "c_6": "delta1",
+      "c_7": "plasma"
+    }
+  }
+}

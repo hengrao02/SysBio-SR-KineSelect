@@ -1,0 +1,93 @@
+{
+  "system_id": "BIOMD0000001035",
+  "state_names": [
+    "uninfected_cancer_cells",
+    "infected_cancer_cells",
+    "free_virus",
+    "immune_cells"
+  ],
+  "const_names": [
+    "r_1",
+    "a",
+    "h_1",
+    "d_1",
+    "c",
+    "h_2",
+    "e",
+    "m_1",
+    "m_2",
+    "n",
+    "b",
+    "Whole_organism"
+  ],
+  "default_consts": [
+    0.36,
+    0.5,
+    0.36,
+    0.1278,
+    0.48,
+    0.16,
+    0.2,
+    0.6,
+    0.29,
+    0.16,
+    2.0,
+    1.0
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        0.5,
+        0.0,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.3994807598593885,
+        0.009249005282072807,
+        0.010974301383681447,
+        0.008640562448995947
+      ],
+      "relative_scale_vs_default": [
+        0.798961519718777,
+        null,
+        1.0974301383681446,
+        0.8640562448995948
+      ],
+      "absolute_offset_from_default": [
+        -0.10051924014061148,
+        0.009249005282072807,
+        0.0009743013836814463,
+        -0.001359437551004053
+      ],
+      "state_scale_from_default_trajectory": [
+        0.6092451862961266,
+        0.030830017606909357,
+        0.15413114358354182,
+        0.01780888212197502
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 619028271,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.5171052536534574,
+        "peak_ratio_per_state": [
+          0.9497664495098752,
+          1.0001875107330513,
+          1.0002652323634251,
+          0.5647549613751376
+        ],
+        "max_peak_ratio": 1.0002652323634251
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "model_id": "BIOMD0000000323",
+  "dataset_model_name": "Kim2011",
+  "dim": 3,
+  "state_names": [
+    "species_1",
+    "species_2",
+    "species_3"
+  ],
+  "equations_expanded": [
+    "-3.33333333333333*x_0/(3.33333333333333*x_0 + 1) + 1/(x_1**5 + 1)",
+    "-3.33333333333333*x_1/(3.33333333333333*x_1 + 1) + 1/(x_2**5 + 1)",
+    "-3.33333333333333*x_2/(3.33333333333333*x_2 + 1) + 1/(x_0**5 + 1)"
+  ],
+  "reactions": [
+    {
+      "reaction_id": "R1",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_1**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 1,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "R2",
+      "equation_idx": 0,
+      "reactants": [
+        1,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_0/(3.33333333333333*x_0 + 1)",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R3",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_2**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 2,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "R4",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_1/(3.33333333333333*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R5",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        1
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_0**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 0,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "R6",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_2/(3.33333333333333*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": 2,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "merged_reactions": [
+    {
+      "reaction_id": "MR1",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        1
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_0**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 0,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "MR2",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_1**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 1,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "MR3",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "1/(x_2**5 + 1)",
+      "substrates": [],
+      "modifiers": [
+        {
+          "species_idx": 2,
+          "law": "hill_inhibition",
+          "order": 1,
+          "K": 1,
+          "n": 5
+        }
+      ]
+    },
+    {
+      "reaction_id": "MR4",
+      "equation_idx": -1,
+      "reactants": [
+        1,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_0/(3.33333333333333*x_0 + 1)",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3000000000000003,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR5",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_1/(3.33333333333333*x_1 + 1)",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3000000000000003,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR6",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 1.0,
+      "kinetic_factor": "3.33333333333333*x_2/(3.33333333333333*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": 2,
+          "law": "mm",
+          "order": 1,
+          "K": 0.3000000000000003,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "validation_symbolic": true,
+  "validation_numerical": true,
+  "validation_symbolic_errors": [],
+  "validation_notes": [],
+  "max_abs_error": 0.0,
+  "max_rel_error": 0.0,
+  "status": "success",
+  "failure_reason": null,
+  "difficulty": "medium_hill_modifier"
+}

@@ -1,0 +1,59 @@
+{
+  "const_description": "c_0: compartment, c_1: r, c_2: K, c_3: eta, c_4: mu, c_5: beta",
+  "const_names": [
+    "compartment",
+    "r",
+    "K",
+    "eta",
+    "mu",
+    "beta"
+  ],
+  "consts": [
+    [
+      1.0,
+      0.339,
+      894700000.0,
+      1.5,
+      0.0866,
+      20.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000845",
+  "dataset_model_name": "Gulbudak2019",
+  "dim": 3,
+  "eq": "c_0*c_1*x_0*(1 - (x_0 + x_1)/c_2) - 1.73925271309261e-10*c_0*x_0*x_2 - c_0*x_0/24 | -c_0*c_3*x_1 + 1.73925271309261e-10*c_0*x_0*x_2 - c_0*x_1/24 | c_0*c_3*c_5*x_1 - c_0*c_4*x_2 - 1.73925271309261e-10*c_0*x_0*x_2",
+  "eq_raw": "-1.73925271309261e-10*S*V_L*compartment + S*compartment*r*(1 - (I + S)/K) - S*compartment/24 | -I*compartment*eta - I*compartment/24 + 1.73925271309261e-10*S*V_L*compartment | I*beta*compartment*eta - 1.73925271309261e-10*S*V_L*compartment - V_L*compartment*mu",
+  "id": "Gulbudak2019___Heterogeneous_viral_strategies_promote_coexistence_in_virus_microbe_systems",
+  "init": [
+    [
+      830000000.0,
+      0.0,
+      33200000.0
+    ]
+  ],
+  "init_description": "x_0: S, x_1: I, x_2: V_L",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 3,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Gulbudak2019.1 - Heterogeneous viral strategies promote coexistence in virus-microbe systems (Lytic)",
+  "source_xml": "Gulbudak2019.xml",
+  "state_names": [
+    "S",
+    "I",
+    "V_L"
+  ],
+  "substituted": [
+    [
+      "-1.73925271309261e-10*x_0*x_2 + 0.339*x_0*(-1.11769308147983e-9*x_0 - 1.11769308147983e-9*x_1 + 1) - 0.0416666666666667*x_0",
+      "1.73925271309261e-10*x_0*x_2 - 1.54166666666667*x_1",
+      "-1.73925271309261e-10*x_0*x_2 + 30.0*x_1 - 0.0866*x_2"
+    ]
+  ]
+}

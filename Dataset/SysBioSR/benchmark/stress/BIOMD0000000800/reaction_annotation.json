@@ -1,0 +1,652 @@
+{
+  "model_id": "BIOMD0000000800",
+  "dataset_model_name": "Precup2012",
+  "dim": 3,
+  "state_names": [
+    "x",
+    "y",
+    "z"
+  ],
+  "equations_expanded": [
+    "0.23*x_0**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1) + 0.23*x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1) - 0.01*x_0 + 0.23*x_0/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+    "0.45*x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1) + 0.45*x_1**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1) - 0.01*x_1 + 0.45*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+    "-0.46*x_0*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1) - 0.46*x_1*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1) - 0.01*x_2 + 0.23*x_2/(2.2e-8*x_0 + 2.2e-8*x_1 + 2.2e-8*x_2 + 1)"
+  ],
+  "reactions": [
+    {
+      "reaction_id": "R1",
+      "equation_idx": 0,
+      "reactants": [
+        1,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R2",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R3",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R4",
+      "equation_idx": 0,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R5",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R6",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R7",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_1**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R8",
+      "equation_idx": 1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R9",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_2",
+      "substrates": [
+        {
+          "species_idx": 2,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R10",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        1
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_2/(2.2e-8*x_0 + 2.2e-8*x_1 + 2.2e-8*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R11",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.46,
+      "kinetic_factor": "x_0*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "R12",
+      "equation_idx": 2,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.46,
+      "kinetic_factor": "x_1*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "merged_reactions": [
+    {
+      "reaction_id": "MR1",
+      "equation_idx": -1,
+      "reactants": [
+        1,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_0",
+      "substrates": [
+        {
+          "species_idx": 0,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR2",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        1,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_1",
+      "substrates": [
+        {
+          "species_idx": 1,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR3",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.01,
+      "kinetic_factor": "x_2",
+      "substrates": [
+        {
+          "species_idx": 2,
+          "law": "mass_action",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR4",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR5",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR6",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        1,
+        0,
+        0
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_0/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR7",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        0,
+        1
+      ],
+      "coefficient": 0.23,
+      "kinetic_factor": "x_2/(2.2e-8*x_0 + 2.2e-8*x_1 + 2.2e-8*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR8",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_0*x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR9",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_1**2/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR10",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        0
+      ],
+      "products": [
+        0,
+        1,
+        0
+      ],
+      "coefficient": 0.45,
+      "kinetic_factor": "x_1/(2.2e-8*x_0**2 + 4.4e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 1.000000022*x_0 + 2.2e-8*x_1**2 + 6.6e-8*x_1*x_2 + 1.000000022*x_1 + 4.4e-8*x_2**2 + 2.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR11",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.46,
+      "kinetic_factor": "x_0*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    },
+    {
+      "reaction_id": "MR12",
+      "equation_idx": -1,
+      "reactants": [
+        0,
+        0,
+        1
+      ],
+      "products": [
+        0,
+        0,
+        0
+      ],
+      "coefficient": 0.46,
+      "kinetic_factor": "x_1*x_2/(4.4e-8*x_0**2 + 8.8e-8*x_0*x_1 + 6.6e-8*x_0*x_2 + 2.000000022*x_0 + 4.4e-8*x_1**2 + 6.6e-8*x_1*x_2 + 2.000000022*x_1 + 2.2e-8*x_2**2 + 1.000000022*x_2 + 1)",
+      "substrates": [
+        {
+          "species_idx": null,
+          "law": "rational_saturation",
+          "order": 1,
+          "K": null,
+          "n": null
+        }
+      ],
+      "modifiers": []
+    }
+  ],
+  "validation_symbolic": true,
+  "validation_numerical": true,
+  "validation_symbolic_errors": [],
+  "validation_notes": [],
+  "max_abs_error": 0.0,
+  "max_rel_error": 0.0,
+  "status": "success",
+  "failure_reason": null,
+  "difficulty": "hard_rational_saturation"
+}

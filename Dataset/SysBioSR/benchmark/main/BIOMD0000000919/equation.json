@@ -1,0 +1,108 @@
+{
+  "dataset_model_id": "BIOMD0000000919",
+  "dataset_model_name": "Ledzewicz2013",
+  "id": "BIOMD0000000919",
+  "name": "Ledzewicz2013",
+  "source_xml": "Ledzewicz2013.xml",
+  "dim": 2,
+  "eq": "(1*c_8*c_0 + (-1)*c_8*c_3*x_0 + 1*c_8*c_5*(1 - c_1*x_1)*x_1*x_0)/c_8 | ((-1)*c_8*c_2*x_1*x_0 + 1*c_8*c_4*x_1*(1 - (x_1/c_6)^c_7))/c_8",
+  "eq_raw": "(1*compartment*alpha + (-1)*compartment*delta*y + 1*compartment*mu_I*(1 - beta*x)*x*y)/compartment | ((-1)*compartment*gamma*x*y + 1*compartment*mu_C*x*(1 - (x/x_inf)^v))/compartment",
+  "consts": [
+    [
+      0.1181,
+      0.00264,
+      1.0,
+      0.37451,
+      0.5599,
+      0.00484,
+      780.0,
+      1.0,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      0.1,
+      600.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*1*0.1181 + (-1)*1*0.37451*x_0 + 1*1*0.00484*(1 - 0.00264*x_1)*x_1*x_0)/1",
+      "((-1)*1*1*x_1*x_0 + 1*1*0.5599*x_1*(1 - (x_1/780)^1))/1"
+    ]
+  ],
+  "state_names": [
+    "y",
+    "x"
+  ],
+  "const_names": [
+    "alpha",
+    "beta",
+    "gamma",
+    "delta",
+    "mu_C",
+    "mu_I",
+    "x_inf",
+    "v",
+    "compartment"
+  ],
+  "init_description": "x_0: y, x_1: x",
+  "const_description": "c_0: alpha, c_1: beta, c_2: gamma, c_3: delta, c_4: mu_C, c_5: mu_I, c_6: x_inf, c_7: v, c_8: compartment",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 5,
+    "n_reconfigured_reactions": 5,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> y",
+      "y -> 0",
+      "0 -> y",
+      "x -> 0",
+      "0 -> x"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> y",
+      "y -> 0",
+      "0 -> y",
+      "x -> 0",
+      "0 -> x"
+    ],
+    "maple_odes": [
+      "(1*k[10]*k[1] + (-1)*k[10]*k[4]*x[1] + 1*k[10]*k[6]*(1 - k[2]*x[2])*x[2]*x[1])/k[10]",
+      "((-1)*k[10]*k[3]*x[2]*x[1] + 1*k[10]*k[5]*x[2]*(1 - (x[2]/k[7])^k[9]))/k[10]"
+    ],
+    "species_index_map": {
+      "x_0": "y",
+      "x_1": "x"
+    },
+    "const_index_map": {
+      "c_0": "alpha",
+      "c_1": "beta",
+      "c_2": "gamma",
+      "c_3": "delta",
+      "c_4": "mu_C",
+      "c_5": "mu_I",
+      "c_6": "x_inf",
+      "c_7": "v",
+      "c_8": "compartment"
+    }
+  }
+}

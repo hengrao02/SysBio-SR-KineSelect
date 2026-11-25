@@ -1,0 +1,87 @@
+{
+  "dataset_model_id": "BIOMD0000000414",
+  "dataset_model_name": "Band2012",
+  "id": "BIOMD0000000414",
+  "name": "Band2012",
+  "source_xml": "Band2012.xml",
+  "dim": 1,
+  "eq": "(1*c_1 + (-1)*c_2*c_1*x_0 + (-1)*c_1*x_0/(c_0*x_0 + c_3))/c_4",
+  "eq_raw": "(1*p2 + (-1)*lambda_star*p2*VENUS + (-1)*p2*VENUS/(p1_star*VENUS + qj_star))/cell",
+  "consts": [
+    [
+      0.056,
+      0.0053,
+      0.52,
+      0.16,
+      1.0
+    ]
+  ],
+  "init": [
+    [
+      1.0
+    ]
+  ],
+  "substituted": [
+    [
+      "(1*0.0053 + (-1)*0.52*0.0053*x_0 + (-1)*0.0053*x_0/(0.056*x_0 + 0.16))/1"
+    ]
+  ],
+  "state_names": [
+    "VENUS"
+  ],
+  "const_names": [
+    "p1_star",
+    "p2",
+    "lambda_star",
+    "qj_star",
+    "cell"
+  ],
+  "init_description": "x_0: VENUS",
+  "const_description": "c_0: p1_star, c_1: p2, c_2: lambda_star, c_3: qj_star, c_4: cell",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 3,
+    "n_reconfigured_reactions": 3,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [
+      "0 -> VENUS",
+      "VENUS -> 0",
+      "VENUS -> 0"
+    ],
+    "reconfigured_reaction_network": [
+      "0 -> VENUS",
+      "VENUS -> 0",
+      "VENUS -> 0"
+    ],
+    "maple_odes": [
+      "(1*k[2] + (-1)*k[3]*k[2]*x[1] + (-1)*k[2]*x[1]/(k[1]*x[1] + k[4]))/k[5]"
+    ],
+    "species_index_map": {
+      "x_0": "VENUS"
+    },
+    "const_index_map": {
+      "c_0": "p1_star",
+      "c_1": "p2",
+      "c_2": "lambda_star",
+      "c_3": "qj_star",
+      "c_4": "cell"
+    }
+  }
+}

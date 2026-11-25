@@ -1,0 +1,79 @@
+{
+  "system_id": "BIOMD0000000267",
+  "state_names": [
+    "free",
+    "bound",
+    "translocate",
+    "lytic"
+  ],
+  "const_names": [
+    "binding__kB",
+    "extracellular",
+    "endocytosis__kT",
+    "endosome",
+    "translocation__kL"
+  ],
+  "default_consts": [
+    0.058,
+    1.0,
+    0.141,
+    1.0,
+    0.013
+  ],
+  "trajectories": [
+    {
+      "name": "default",
+      "file": "traj_default.csv",
+      "initial_condition": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "perturbed",
+      "file": "traj_perturbed.csv",
+      "initial_condition": [
+        0.5190300596644363,
+        0.06633376782729439,
+        0.1898682958072085,
+        0.2993596289237591
+      ],
+      "relative_scale_vs_default": [
+        0.5190300596644363,
+        null,
+        null,
+        null
+      ],
+      "absolute_offset_from_default": [
+        -0.48096994033556373,
+        0.06633376782729439,
+        0.1898682958072085,
+        0.2993596289237591
+      ],
+      "state_scale_from_default_trajectory": [
+        1.0,
+        0.22111255942431465,
+        0.6328943193573616,
+        0.9978654297458637
+      ],
+      "ic_generation_protocol": "random_scale_aware_v1",
+      "global_seed": 0,
+      "system_seed": 350993409,
+      "attempt_index": 1,
+      "candidate_label": "auto_attempt_1",
+      "sanity_metrics": {
+        "max_rel_diff": 0.48096994033556373,
+        "peak_ratio_per_state": [
+          0.5190300596644363,
+          0.5972292014795588,
+          0.7702008967309659,
+          1.075384015991259
+        ],
+        "max_peak_ratio": 1.075384015991259
+      },
+      "review_status": "accepted"
+    }
+  ]
+}

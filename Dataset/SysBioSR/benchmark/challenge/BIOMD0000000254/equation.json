@@ -1,0 +1,94 @@
+{
+  "dataset_model_id": "BIOMD0000000254",
+  "dataset_model_name": "Bier2000",
+  "id": "BIOMD0000000254",
+  "name": "Bier2000",
+  "source_xml": "Bier2000.xml",
+  "dim": 4,
+  "eq": "c_0 - c_1*x_0*x_1 | 2*c_1*x_1*x_0 - c_2*x_1/(c_3 + x_1) + c_4*(x_3 - x_1) | c_0 - c_1*x_2*x_3 | 2*c_1*x_2*x_3 - c_2*x_3/(c_3 + x_3) - c_4*(x_3 - x_1)",
+  "eq_raw": "V_in - k1*G1*T1 | 2*k1*T1*G1 - kp*T1/(km + T1) + epsilon*(T2 - T1) | V_in - k1*G2*T2 | 2*k1*G2*T2 - kp*T2/(km + T2) - epsilon*(T2 - T1)",
+  "consts": [
+    [
+      0.36,
+      0.02,
+      6.0,
+      13.0,
+      0.01
+    ]
+  ],
+  "init": [
+    [
+      9.818349251052702,
+      0.7929095682443323,
+      9.324355655246805,
+      2.3294785591006457
+    ]
+  ],
+  "substituted": [
+    [
+      "0.36 - 0.02*x_0*x_1",
+      "2*0.02*x_1*x_0 - 6*x_1/(13 + x_1) + 0.01*(x_3 - x_1)",
+      "0.36 - 0.02*x_2*x_3",
+      "2*0.02*x_2*x_3 - 6*x_3/(13 + x_3) - 0.01*(x_3 - x_1)"
+    ]
+  ],
+  "state_names": [
+    "G1",
+    "T1",
+    "G2",
+    "T2"
+  ],
+  "const_names": [
+    "V_in",
+    "k1",
+    "kp",
+    "km",
+    "epsilon"
+  ],
+  "init_description": "x_0: G1, x_1: T1, x_2: G2, x_3: T2",
+  "const_description": "c_0: V_in, c_1: k1, c_2: kp, c_3: km, c_4: epsilon",
+  "meta": {
+    "source": "ODEBase_Maple",
+    "available_files": [
+      "constraints.txt",
+      "kinetic_matrix.txt",
+      "odes.txt",
+      "parameter_map.txt",
+      "parameters.txt",
+      "reaction_network.txt",
+      "reconfigured_reaction_network.txt",
+      "reconfigured_stoichiometric_matrix.txt",
+      "species_map.txt",
+      "stoichiometric_matrix.txt"
+    ],
+    "n_constraints": 0,
+    "n_reactions": 0,
+    "n_reconfigured_reactions": 0,
+    "has_initial_conditions": true,
+    "warnings": []
+  },
+  "odebase_meta": {
+    "constraints": [],
+    "reaction_network": [],
+    "reconfigured_reaction_network": [],
+    "maple_odes": [
+      "k[1] - k[2]*x[1]*x[2]",
+      "2*k[2]*x[2]*x[1] - k[3]*x[2]/(k[4] + x[2]) + k[5]*(x[4] - x[2])",
+      "k[1] - k[2]*x[3]*x[4]",
+      "2*k[2]*x[3]*x[4] - k[3]*x[4]/(k[4] + x[4]) - k[5]*(x[4] - x[2])"
+    ],
+    "species_index_map": {
+      "x_0": "G1",
+      "x_1": "T1",
+      "x_2": "G2",
+      "x_3": "T2"
+    },
+    "const_index_map": {
+      "c_0": "V_in",
+      "c_1": "k1",
+      "c_2": "kp",
+      "c_3": "km",
+      "c_4": "epsilon"
+    }
+  }
+}

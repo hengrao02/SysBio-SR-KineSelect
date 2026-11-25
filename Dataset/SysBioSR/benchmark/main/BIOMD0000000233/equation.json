@@ -1,0 +1,54 @@
+{
+  "const_description": "c_0: r4__k4, c_1: r2__k2, c_2: r3__k3, c_3: S, c_4: r1__k1",
+  "const_names": [
+    "r4__k4",
+    "r2__k2",
+    "r3__k3",
+    "S",
+    "r1__k1"
+  ],
+  "consts": [
+    [
+      1.5,
+      1.0,
+      1.0,
+      1.0,
+      8.0
+    ]
+  ],
+  "dataset_model_id": "BIOMD0000000233",
+  "dataset_model_name": "Wilhelm2009",
+  "dim": 2,
+  "eq": "-c_0*x_0 - c_1*x_0^2 - c_2*x_0*x_1 + 2*c_3*c_4*x_1 | c_1*x_0^2 - c_3*c_4*x_1",
+  "eq_raw": "2*S*Y*r1__k1 - X^2*r2__k2 - X*Y*r3__k3 - X*r4__k4 | -S*Y*r1__k1 + X^2*r2__k2",
+  "id": "Wilhelm2009_BistableReaction",
+  "init": [
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "init_description": "x_0: X, x_1: Y",
+  "meta": {
+    "has_delay": false,
+    "has_piecewise": false,
+    "has_time_dependency": false,
+    "n_assignment_rules": 0,
+    "n_events": 0,
+    "n_initial_assignments": 0,
+    "n_rate_rules": 0,
+    "warnings": []
+  },
+  "name": "Wilhelm2009_BistableReaction",
+  "source_xml": "Wilhelm2009.xml",
+  "state_names": [
+    "X",
+    "Y"
+  ],
+  "substituted": [
+    [
+      "-1.0*x_0^2 - 1.0*x_0*x_1 - 1.5*x_0 + 16.0*x_1",
+      "1.0*x_0^2 - 8.0*x_1"
+    ]
+  ]
+}

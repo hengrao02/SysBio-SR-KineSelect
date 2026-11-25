@@ -1,0 +1,5 @@
+inherits:
+  - ../benchmark/partitions/main.yaml
+  - ./base.yaml
+run_type: single
+system_dir: ../../Dataset/SysBioSR/benchmark/main/BIOMD0000000417
